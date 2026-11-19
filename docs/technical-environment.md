@@ -1,7 +1,7 @@
 # Course Copilot — Technical Environment
 
 **Course:** Cornell INFO 5940, Fall 2026 — Group 17  
-**Method:** AWS AI-DLC v1.0.1. Reconciled with the `candidate/course-copilot` Requirements Analysis decision register; runtime model and integration benchmarks will be verified before Construction.
+**Method:** AWS AI-DLC v1.0.1. Approved for the `candidate/course-copilot` Inception track (2026-11-19T19:26:39Z); runtime model and integration benchmarks will be verified before Construction.
 
 ## Language, framework, package management
 

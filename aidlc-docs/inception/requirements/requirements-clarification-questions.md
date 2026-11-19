@@ -1,6 +1,6 @@
 # Course Copilot — Targeted AI-DLC Requirements Clarification Questions
 
-**Status:** All eight clarifications resolved and integrated into `decision-register.md` and `requirements.md`; awaiting final Requirements Analysis stage gate approval.
+**Status:** All eight clarifications resolved and integrated into `decision-register.md` and `requirements.md` (Requirements Analysis approved on 2026-11-19T19:26:39Z).
 
 ## Clarification 1 — Q14: Can students correct AI-organized metadata?
 
@@ -116,4 +116,4 @@ X) Other — State the mandatory per-platform/per-format acceptance tests.
 - **Q35 + Q36:** Ollama with a named small local model, TypeScript end-to-end, subject to smoke tests.
 - **Q43:** partial property-based testing selected on the user's instruction to choose.
 
-**AI-DLC gate:** All eight responses have been reconciled with the decision register and requirements specification, and `requirements.md` is ready for final stage gate approval.
+**AI-DLC gate:** All eight responses have been reconciled with the decision register and requirements specification, and Requirements Analysis is approved in `aidlc-docs/audit.md` and `aidlc-docs/aidlc-state.md`.

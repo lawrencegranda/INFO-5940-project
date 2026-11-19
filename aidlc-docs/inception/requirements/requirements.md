@@ -1,8 +1,8 @@
-# Course Copilot — Requirements Specification
+# Course Copilot — Requirements Specification (APPROVED)
 
 **Course:** Cornell INFO 5940, Fall 2026 · Group 17  
 **Method:** AWS AI-DLC v1.0.1 · INCEPTION / Requirements Analysis  
-**Status:** **Complete specification awaiting stage gate approval** after reconciliation of 43 decisions and eight clarifications. Tracked in `aidlc-docs/aidlc-state.md` and `aidlc-docs/audit.md` on the `candidate/course-copilot` branch, separate from `main`.  
+**Status:** **Approved on 2026-11-19T19:26:39Z** after reconciliation of 43 decisions and eight clarifications. Approval is logged verbatim in `aidlc-docs/audit.md` and tracked in `aidlc-docs/aidlc-state.md`. This document is part of the `candidate/course-copilot` branch, separate from `main`.  
 **Source of decisions:** `requirement-verification-questions.md`, `requirements-clarification-questions.md`, `decision-register.md`, `aidlc-docs/audit.md`.
 
 ## 1. Intent analysis

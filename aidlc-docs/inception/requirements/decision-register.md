@@ -1,6 +1,6 @@
 # Course Copilot — Decision register (AI-DLC v1.0.1)
 
-**State:** All 43 requirement-question decisions resolved, eight clarifications explicitly accepted, and three further refinements integrated. **Ready for Requirements Analysis stage gate approval**, with full reconciliation logged in `aidlc-docs/audit.md`. This document is part of the `candidate/course-copilot` Inception track.
+**State:** All 43 requirement-question decisions resolved, eight clarifications explicitly accepted, and three further refinements integrated. **Requirements Analysis approved on 2026-11-19T19:26:39Z**, with full approval preserved in `aidlc-docs/audit.md`. This document is part of the `candidate/course-copilot` Inception track.
 
 ## Product intent and non-negotiable distinctions
 
@@ -88,5 +88,5 @@ The committed breadth (three authenticated LMS sites + arbitrary internet source
 
 - User-selected optional extensions: **Security No (Q41), Resiliency No (Q42), Property-Based Testing Partial (Q43)**.
 - Mandatory course rubric extension remains enforced.
-- All 43 original questions and eight clarifications are resolved. Ready for explicit user approval of Requirements Analysis before marking the stage complete in `aidlc-docs/aidlc-state.md` and proceeding to User Stories.
+- All 43 original questions and eight clarifications are resolved. **Requirements Analysis was explicitly approved at 2026-11-19T19:26:39Z (2:26:39 PM EST)** and is marked complete in `aidlc-docs/aidlc-state.md`, with the verbatim approval recorded in `aidlc-docs/audit.md`. User Stories is the next stage.
 - Course Copilot Requirements Analysis artifacts are tracked on `candidate/course-copilot` (separate from `main` while candidate proposals are evaluated).

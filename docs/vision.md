@@ -2,7 +2,7 @@
 
 **Course:** Cornell INFO 5940, Fall 2026, Group 17  
 **AI-DLC:** v1.0.1, Inception  
-**Review status:** Draft input for the `candidate/course-copilot` Requirements Analysis stage. A separate branch tracks an alternative Marketing Campaign Asset Copilot candidate; only the selected candidate will be merged into `main`.
+**Review status:** Approved for the `candidate/course-copilot` Inception track (2026-11-19T19:26:39Z). A separate branch tracks an alternative Marketing Campaign Asset Copilot candidate; only the selected candidate will be merged into `main`.
 
 ## Problem
 

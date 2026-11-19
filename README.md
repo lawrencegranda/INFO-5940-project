@@ -21,7 +21,7 @@ Cornell University · **INFO 5940: Special Topics in Information Science (AI Cha
 
 ## Candidate proposal: Course Copilot
 
-**Status:** Candidate being evaluated alongside **Marketing Campaign Asset Copilot**. The `candidate/course-copilot` branch keeps this candidate separate from `main`; Requirements Analysis is in progress (`aidlc-docs/aidlc-state.md`).
+**Status:** Candidate being evaluated alongside **Marketing Campaign Asset Copilot**. The `candidate/course-copilot` branch keeps this candidate separate from `main`; Requirements Analysis is complete and approved (`aidlc-docs/aidlc-state.md`), with User Stories next.
 
 ## 1. Problem & Rationale for Using LLMs
 
