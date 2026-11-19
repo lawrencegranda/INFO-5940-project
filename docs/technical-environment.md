@@ -1,7 +1,7 @@
 # Course Copilot — Technical Environment
 
 **Course:** Cornell INFO 5940, Fall 2026 — Group 17  
-**Method:** AWS AI-DLC v1.0.1. Draft input for the `candidate/course-copilot` Requirements Analysis stage; runtime model and integration benchmarks will be verified before Construction.
+**Method:** AWS AI-DLC v1.0.1. Reconciled with the `candidate/course-copilot` Requirements Analysis decision register; runtime model and integration benchmarks will be verified before Construction.
 
 ## Language, framework, package management
 
@@ -110,7 +110,7 @@ This is an illustrative example, **not** proof that the actual version-resolutio
 
 ## AI-DLC extension choices
 
-Mandatory course rubric rules are enabled. Optional extension selections (Security Baseline, Resiliency Baseline, Property-Based Testing) are pending the Requirements Analysis verification question gate (`aidlc-docs/aidlc-state.md`).
+Mandatory course rubric rules are enabled. Security and resiliency *optional* extensions are disabled; essential privacy/security still apply. Property-based testing is partially enabled. These choices match `aidlc-docs/inception/requirements/decision-register.md` and `aidlc-docs/aidlc-state.md`.
 
 ## Milestones
 

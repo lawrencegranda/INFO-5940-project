@@ -1,6 +1,6 @@
 # Course Copilot — Targeted AI-DLC Requirements Clarification Questions
 
-**Status:** Awaiting user responses on eight targeted follow-up clarifications before locking `decision-register.md` and generating `requirements.md`.
+**Status:** All eight clarifications resolved and integrated into `decision-register.md` and `requirements.md`; awaiting final Requirements Analysis stage gate approval.
 
 ## Clarification 1 — Q14: Can students correct AI-organized metadata?
 
@@ -14,7 +14,7 @@ C) **No post-save editing** — Preserve Q14=C literally. Students could only re
 
 X) Other — Describe exact editable fields and when.
 
-[Answer]: 
+[Answer]: A
 ## Clarification 2 — Q17: How far does the knowledge graph go in the MVP?
 
 **Why this is unresolved:** You want something similar to a knowledge graph, but a true open-ended graph and a hierarchy with typed edges are materially different projects.
@@ -27,7 +27,7 @@ C) **Simple hierarchy first** — Defer explicit relationship edges, which weake
 
 X) Other — Specify required node/edge types and views.
 
-[Answer]: 
+[Answer]: A
 ## Clarification 3 — Q18: Semantic similarity versus document identity
 
 **Why this is unresolved:** Combining Q18=A+C can accidentally merge unrelated documents (e.g. a syllabus and an announcement both discussing Homework 4).
@@ -40,7 +40,7 @@ C) **Deterministic identity only** — No semantic duplicate suggestions; easies
 
 X) Other — Describe merge rules.
 
-[Answer]: 
+[Answer]: A
 ## Clarification 4 — Q24: How to describe freshness without automatic syncing?
 
 **Why this is unresolved:** You chose B (assume old captures remain current), but new changes on LMS pages cannot be detected unless the user revisits/recaptures them.
@@ -53,7 +53,7 @@ C) **User-confirmed current** — Allow student to mark a source as reviewed, wi
 
 X) Other — Define freshness guarantee.
 
-[Answer]: 
+[Answer]: A — show URL and capture date; no routine stale warnings
 ## Clarification 5 — Q27: What if Jev is unavailable?
 
 **Why this is unresolved:** You answered 'already answered. manual maybe?' but Q27 asks for a failure-mode decision, not manual capture.
@@ -66,7 +66,7 @@ C) **Fail all search/ingestion** — Simplest error path but brittle during demo
 
 X) Other — Define fallback and user-visible notice.
 
-[Answer]: 
+[Answer]: A
 ## Clarification 6 — Q31: Which actual MCP client is the required first end-to-end test?
 
 **Why this is unresolved:** 'Local MCP' specifies transport, not which host is tested and documented.
@@ -79,7 +79,7 @@ C) **Both desktop and CLI clients** — More portable but additional testing/con
 
 X) Other — Name a concrete local MCP host and its test approach.
 
-[Answer]: 
+[Answer]: B — Codex CLI first
 ## Clarification 7 — Q37: Is any captured course text allowed to go to hosted Jev?
 
 **Why this is unresolved:** You chose local-first storage/Ollama by cost, but Jev is externally hosted. Using Jev for classification/ranking sends some input text off-device unless substituted.
@@ -92,7 +92,7 @@ C) **Hosted Jev may process complete text** — Simplifies classification but ra
 
 X) Other — Define exact transmission, consent, and redaction policy.
 
-[Answer]: 
+[Answer]: A
 ## Clarification 8 — Q5/Q6: What does 'all content types' require in the tested demo?
 
 **Why this is unresolved:** Your answer requires Canvas, Gradescope, EdStem, internet pages, PDF, images, screenshots, equations and embedded media. Those vary from plain text parsing to OCR and transcription.
@@ -105,7 +105,7 @@ C) **Prioritize fidelity for fewer formats** — Reduce required scope to HTML/P
 
 X) Other — State the mandatory per-platform/per-format acceptance tests.
 
-[Answer]: 
+[Answer]: B — extract all accessible content using native text, OCR/transcription when needed; explicit partial status for inaccessible media
 ## Notes on resolved interpretations (do not re-answer unless incorrect)
 
 - **Q19 + Q23:** preserve all versions, search only latest applicable by default; browsing history is allowed.
@@ -116,4 +116,4 @@ X) Other — State the mandatory per-platform/per-format acceptance tests.
 - **Q35 + Q36:** Ollama with a named small local model, TypeScript end-to-end, subject to smoke tests.
 - **Q43:** partial property-based testing selected on the user's instruction to choose.
 
-**AI-DLC gate:** Resolve all eight clarification items before finalizing `decision-register.md` and generating `requirements.md`.
+**AI-DLC gate:** All eight responses have been reconciled with the decision register and requirements specification, and `requirements.md` is ready for final stage gate approval.

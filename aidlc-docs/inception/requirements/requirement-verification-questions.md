@@ -1,6 +1,6 @@
 # Course Copilot — AI-DLC Requirements Verification Questions
 
-> **Status:** USER ANSWERS RECORDED; 8 TARGETED CLARIFICATIONS IN PROGRESS (`requirements-clarification-questions.md`). Original user responses are preserved verbatim alongside initial reconciled selections.
+> **Status:** All 43 answers resolved and locked against `decision-register.md` and the eight follow-up clarifications in `requirements-clarification-questions.md`. Original user responses are preserved verbatim alongside the canonical `[Answer]:` selection for each. Awaiting final Requirements Analysis stage gate approval.
 > **Methodology:** AI-DLC v1.0.1; INFO 5940 course extension applies.
 
 ## How to respond
@@ -30,7 +30,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 02 — What is the primary demonstration task?
 
@@ -53,7 +53,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** C
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 03 — How many courses should one user manage?
 
@@ -76,7 +76,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 04 — Which criterion makes the product succeed?
 
@@ -99,7 +99,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ## B. Capture and input
 
@@ -124,7 +124,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** C + custom
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Capture all three LMS platforms and arbitrary student-selected websites/papers/PDFs; visible access and per-format extraction are verified during Construction.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Capture all three LMS platforms and arbitrary student-selected websites/papers/PDFs; visible access and per-format extraction are verified during Construction.
 
 ### Question 06 — What content types are required?
 
@@ -147,7 +147,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** C
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Attempt complete authorized extraction of accessible HTML/PDF/images/equations/embedded media; use OCR or transcription when needed. Mark partial or inaccessible sources honestly, with manual import fallback.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Attempt complete authorized extraction of accessible HTML/PDF/images/equations/embedded media; use OCR or transcription when needed. Mark partial or inaccessible sources honestly, with manual import fallback.
 
 ### Question 07 — Which browser is the demo target?
 
@@ -170,7 +170,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 08 — How is content captured?
 
@@ -193,7 +193,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A + embedded discovery
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 09 — What import fallback is available?
 
@@ -216,7 +216,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 10 — How should content be assigned to a course and folder?
 
@@ -239,7 +239,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** C
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 11 — What happens when classification is uncertain?
 
@@ -262,7 +262,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ## C. Knowledge representation
 
@@ -287,7 +287,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 13 — What is the organizing structure?
 
@@ -310,7 +310,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 14 — Should users be able to correct auto-generated metadata?
 
@@ -333,7 +333,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B (Clarification 1 = A)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Editable course, folder, title, tags and source/authority notes, matching clarification 1.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Editable course, folder, title, tags and source/authority notes, matching clarification 1.
 
 ### Question 15 — Which knowledge index should be generated?
 
@@ -356,7 +356,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** C
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 16 — When should indexes be rebuilt?
 
@@ -379,7 +379,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 17 — Should cross-document relationships be explicit?
 
@@ -402,7 +402,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B (Clarification 2 = A)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Typed course/topic/document/version/fact relationships; graph-like behavior in SQLite rather than mandatory graph database, matching clarification 2.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Typed course/topic/document/version/fact relationships; graph-like behavior in SQLite rather than mandatory graph database, matching clarification 2.
 
 ## D. Versions, conflicts, and authority
 
@@ -427,7 +427,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A + C (bounded)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Source URL/identity plus content hash for recapture; semantic similarity may suggest links, never auto-merge, matching clarification 3.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Source URL/identity plus content hash for recapture; semantic similarity may suggest links, never auto-merge, matching clarification 3.
 
 ### Question 19 — What version history should remain available?
 
@@ -450,7 +450,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 20 — How is the default current answer selected?
 
@@ -473,7 +473,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 21 — Which contradictions should the MVP detect?
 
@@ -496,7 +496,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B + limited C
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Prioritize deadlines, exam logistics and assignment policies; broader conflicts only when substantive, not every textual difference.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Prioritize deadlines, exam logistics and assignment policies; broader conflicts only when substantive, not every textual difference.
 
 ### Question 22 — What should happen when sources conflict and priority is unclear?
 
@@ -519,7 +519,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 23 — Should historical/as-of questions be supported?
 
@@ -542,7 +542,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 24 — How are sources that cannot be refreshed treated?
 
@@ -565,7 +565,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A (Clarification 4 = A, non-alarmist presentation)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Show URL and capture date, with no routine staleness warnings on static documents; do not assert the live website is unchanged, matching final user refinement.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Show URL and capture date, with no routine staleness warnings on static documents; do not assert the live website is unchanged, matching final user refinement.
 
 ## E. Retrieval and Jev
 
@@ -590,7 +590,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 26 — Where should Jev participate in retrieval?
 
@@ -613,7 +613,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B (A included)
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 27 — What happens if Jev is unavailable or uncertain?
 
@@ -636,7 +636,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A (Clarification 5 = A)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Full-text and metadata-filtered fallback when Jev is unavailable; manual classification, matching clarification 5.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Full-text and metadata-filtered fallback when Jev is unavailable; manual classification, matching clarification 5.
 
 ### Question 28 — What should retrieval return to the assistant?
 
@@ -659,7 +659,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** X — two-step search/fetch
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Return compact ranked search previews, then fetch selected excerpts or full extracted content with a separate read-only MCP tool.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Return compact ranked search previews, then fetch selected excerpts or full extracted content with a separate read-only MCP tool.
 
 ### Question 29 — How should retrieval treat conflicting material?
 
@@ -682,7 +682,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 30 — Which evaluation tasks are required?
 
@@ -705,7 +705,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A + B
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Both manual demonstrations and automated fixtures; no formal large user study.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Both manual demonstrations and automated fixtures; no formal large user study.
 
 ## F. MCP and user experience
 
@@ -730,7 +730,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B (Clarification 6 = B, Codex CLI)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Codex CLI first as a local MCP client; remote/hosted options deferred, matching final user refinement.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Codex CLI first as a local MCP client; remote/hosted options deferred, matching final user refinement.
 
 ### Question 32 — Is direct ChatGPT support mandatory for the final demo?
 
@@ -753,7 +753,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 33 — Which MCP capabilities should the server expose first?
 
@@ -776,7 +776,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 34 — Should Course Copilot provide an embedded chat?
 
@@ -799,7 +799,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ## G. Implementation, privacy, and testing
 
@@ -826,7 +826,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 36 — What is the application implementation stack?
 
@@ -849,7 +849,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A (agent selection)
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 37 — Where should data be stored and processed?
 
@@ -872,7 +872,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A (agent selection)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Local data and Ollama by default; only minimal explicitly consented metadata or excerpts may reach hosted Jev, matching clarification 7.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Local data and Ollama by default; only minimal explicitly consented metadata or excerpts may reach hosted Jev, matching clarification 7.
 
 ### Question 38 — How should authenticated LMS access work?
 
@@ -895,7 +895,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 39 — Which level of collaboration/sharing is in the MVP?
 
@@ -918,7 +918,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** A
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 40 — What is the realistic demo dataset?
 
@@ -941,7 +941,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ## H. Optional AI-DLC extensions
 
@@ -964,7 +964,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 42 — Should the Resiliency Baseline extension be enabled?
 
@@ -985,7 +985,7 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B
 
-**Status:** Initial response recorded; pending final clarification reconciliation.
+**Status:** Locked and approved in `decision-register.md`.
 
 ### Question 43 — Should the Property-Based Testing extension be enabled?
 
@@ -1008,10 +1008,11 @@ Each question has a canonical `[Answer]:` letter (or X plus custom explanation).
 
 **Reconciled selection:** B (agent selection)
 
-**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Partial property-based tests for pure versioning/serialization logic, as accepted by the user.
+**Status:** Locked and approved in `decision-register.md`. **Final interpretation:** Partial property-based tests for pure versioning/serialization logic, as accepted by the user.
 
 ## Gate conditions
 
-- Total questions: **43**. All `43` responses recorded; eight targeted follow-up clarifications are open in `requirements-clarification-questions.md`.
-- Verify answers against `docs/vision.md` and `docs/technical-environment.md` before locking `decision-register.md` and generating `requirements.md`.
+- Total questions: **43**. All `43` responses recorded and reconciled with the eight follow-up clarifications in `requirements-clarification-questions.md`.
+- Verified against `docs/vision.md`, `docs/technical-environment.md`, and `decision-register.md`.
+- Ready for explicit Requirements Analysis stage gate approval (`aidlc-docs/audit.md`, `aidlc-docs/aidlc-state.md`).
 

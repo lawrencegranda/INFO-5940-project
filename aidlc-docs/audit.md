@@ -130,3 +130,33 @@ my answers. make sure to lock as decisions. make sure to review against the ques
 **Context**: Initial 43 answers recorded; 8 targeted follow-up clarifications issued.  
 **Evidence**: `aidlc-docs/inception/requirements/requirement-verification-questions.md`, `aidlc-docs/inception/requirements/requirements-clarification-questions.md`, `aidlc-docs/aidlc-state.md`.
 
+---
+
+## Requirements Analysis — Follow-Up Clarifications & Final Decision Lock
+**Timestamp**: 2026-11-19T18:36:12Z  
+**User Input**:
+```text
+all yout decisions are good.
+
+fix:
+Q24 - most documents will not need updates/versions, maybe. many wont change. so no need to question everything. but last date is important. also the link/url of where it was gotten from
+Q31 - sure, codex as first
+Q5/Q6 - fully extract the file / media / page. then maybe, if needed, not sure, transcribe to text?
+
+
+is anything else left?
+```
+**AI Response**: Integrated all 8 clarification resolutions and the three specific refinements into `requirements-clarification-questions.md` and locked all 43 decisions in `decision-register.md`:
+- **Q14 (Clarification 1 = A):** Allow user correction of course, folder, title, tags, and source/authority metadata after saving while keeping original snapshots immutable.
+- **Q17 (Clarification 2 = A):** Implement graph-ready typed relationships (`related`, `duplicate-suggestion`, `updates`, `supersedes`) in SQLite relational tables without requiring a dedicated graph database.
+- **Q18 (Clarification 3 = A):** Use normalized source URL/ID + content hash for deterministic version identity; semantic similarity suggests links/duplicates for review and never silently merges originals.
+- **Q24 (Clarification 4 = A, refined):** Always preserve and display original source URL and capture timestamp in source details; avoid blanket stale-warning badges on ordinary static documents and warn only on observed substantive conflicts, changes, or supersessions.
+- **Q27 (Clarification 5 = A):** Deterministic fallback to local full-text/metadata retrieval and manual filing when Jev is unavailable.
+- **Q31 (Clarification 6 = B, refined):** Codex CLI is the first required end-to-end client connected to the local read-only MCP server.
+- **Q37 (Clarification 7 = A):** Local storage and local Ollama by default; hosted Jev receives only minimal user-approved metadata/excerpts with explicit opt-in disclosure.
+- **Q5/Q6 (Clarification 8 = B, refined):** Capture full accessible pages, files, and discovered embedded media; extract native text first and apply OCR or audio/video transcription when needed for searchability, preserving originals and recording explicit `complete`/`partial`/`failed`/`unsupported` status.
+
+Generated the complete requirements specification (`aidlc-docs/inception/requirements/requirements.md`) containing 15 Functional Requirements (`FR-01` through `FR-15`), 7 Non-Functional Requirements (`NFR-01` through `NFR-07`), data model and retrieval behavior, 5 critical user journeys, scope boundaries, and milestone acceptance criteria. Updated `docs/vision.md`, `docs/technical-environment.md`, and `README.md`.  
+**Context**: All 43 verification questions and 8 clarifications resolved and locked; `requirements.md` generated.  
+**Evidence**: `aidlc-docs/inception/requirements/requirements-clarification-questions.md`, `aidlc-docs/inception/requirements/decision-register.md`, `aidlc-docs/inception/requirements/requirements.md`, `docs/vision.md`, `docs/technical-environment.md`, `README.md`.
+
