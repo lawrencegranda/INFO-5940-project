@@ -21,19 +21,21 @@ Cornell University · **INFO 5940: Special Topics in Information Science (AI Cha
 
 ## 1. Problem & Rationale for Using LLMs
 
-> **[TBD after team alignment meeting]** — Summarize the problem our product addresses, target users, and why an LLM is well-suited to solve it.
+**Marketing Campaign Asset Copilot** is a Chrome Side Panel for small marketing teams that reuse existing imagery across campaigns. A marketer preparing a deck or campaign often has to open files one at a time, guess which images fit the brief, and redo crops for each format. Searching by file name misses visual qualities such as clean backgrounds, subject placement, or a style that fits the campaign.
+
+A multimodal LLM can describe and tag the contents and composition of each image, then compare those descriptions with a natural-language brief. The app can explain why an asset fits, flag a requested format when nothing qualifies, and suggest a crop that keeps the main subject visible. The marketer reviews the recommendation and the actual crop before using it.
 
 ## 2. Planned LLM Integration
 
-> **[TBD after team alignment meeting]** — Detail how LLM capabilities power the product, which features depend on them, planned agent/tool patterns, and the planned model/provider (e.g., local via Ollama or hosted API).
+We plan to use Google Gemma 3 4B through local Ollama to index images and rank a shortlist for each campaign. The extension orchestrates library lookup, model ranking, crop validation, and preview generation. Browser code checks image dimensions and renders the output. Accepting, rejecting, or requesting a change informs future rankings through local preferences. The model receives only the inputs needed for each step, and the user controls which prepared asset is exported or inserted.
 
 ## 3. Project Scope & Feasibility
 
-> **[TBD after team alignment meeting]** — Define what the finished MVP will do by the December 16 final project deadline and why the scope is meaningful yet achievable.
+For the December 16 demo, the MVP will use one local image folder, a campaign brief, and a small set of channel formats. A marketer can find existing images, preview and adjust smart crops, give feedback, download approved variants, and directly insert an approved asset into Google Slides. We will test the Slides handoff early. Google Drive as a library source, image generation, copywriting, and automatic publishing are outside this scope. The [vision](docs/vision.md) and [technical environment](docs/technical-environment.md) describe the demo and the proposed stack.
 
 ## 4. Collaboration Plan
 
-- **Meetings**: *[TBD — add meeting cadence and in-person / Zoom split after team kickoff]*
+- **Meetings (proposed, pending team confirmation)**: Meet once a week in person for scope and design decisions and once on Zoom during milestone weeks for gate review. Use the team chat to coordinate and the draft PR to capture decisions and feedback between meetings.
 - **Async Communication**: Team group chat + GitHub Draft PR review comments.
 - **Inception Workflow (One Draft PR per Gate — Single-Writer Rule)**:
   1. **Take the baton**: `git pull origin main`, create one stage branch (e.g., `inception/01-requirements`), and immediately open a **Draft PR** on GitHub. Only one Inception Draft PR may be open at a time.
