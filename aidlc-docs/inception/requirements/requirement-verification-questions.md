@@ -1,11 +1,11 @@
 # Course Copilot — AI-DLC Requirements Verification Questions
 
-> **Status:** AWAITING USER RESPONSES. Record each selection after `[Answer]:` before Requirements Analysis reconciliation.
+> **Status:** USER ANSWERS RECORDED; 8 TARGETED CLARIFICATIONS IN PROGRESS (`requirements-clarification-questions.md`). Original user responses are preserved verbatim alongside initial reconciled selections.
 > **Methodology:** AI-DLC v1.0.1; INFO 5940 course extension applies.
 
 ## How to respond
 
-For each question, write the **option letter** after `[Answer]:`. You may choose **X** and provide a custom response. Suggested starting points are nonbinding: they are **not** team answers. Every question must be answered and inconsistencies resolved before the requirements approval gate.
+Each question has a canonical `[Answer]:` letter (or X plus custom explanation). The original free-form answer is preserved separately under **Original user response (verbatim)**, and the final reconciled selection is recorded in `decision-register.md`.
 
 ## A. Product, users, and success
 
@@ -23,8 +23,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — individual-first avoids identity and sharing infrastructure
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 02 — What is the primary demonstration task?
 
@@ -40,8 +46,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* C — demonstrates the distinctive version-aware retrieval value
 
-[Answer]: 
+[Answer]: C
+
+**Original user response (verbatim):** A+B = C
 ---
+
+**Reconciled selection:** C
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 03 — How many courses should one user manage?
 
@@ -57,8 +69,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — multiple courses without multi-user complexity
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 04 — Which criterion makes the product succeed?
 
@@ -74,8 +92,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — feasible, defensible comparison with baseline RAG
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ## B. Capture and input
 
@@ -93,8 +117,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — provide one reliable source and generic capture fallback
 
-[Answer]: 
+[Answer]: X — All Canvas/Gradescope/EdStem plus general websites, papers, and local files
+
+**Original user response (verbatim):** C + able to add things from internet easily (like articles or research papers, or other PDFs)
 ---
+
+**Reconciled selection:** C + custom
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Capture all three LMS platforms and arbitrary student-selected websites/papers/PDFs; visible access and per-format extraction are verified during Construction.
 
 ### Question 06 — What content types are required?
 
@@ -110,8 +140,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — covers common coursework without OCR/media complexity
 
-[Answer]: 
+[Answer]: C
+
+**Original user response (verbatim):** C / all
 ---
+
+**Reconciled selection:** C
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Attempt complete authorized extraction of accessible HTML/PDF/images/equations/embedded media; use OCR or transcription when needed. Mark partial or inaccessible sources honestly, with manual import fallback.
 
 ### Question 07 — Which browser is the demo target?
 
@@ -127,8 +163,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — smallest reliable extension target
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** chrome
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 08 — How is content captured?
 
@@ -144,8 +186,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — explicit capture, minimal permissions, predictable provenance
 
-[Answer]: 
+[Answer]: X — User-initiated Save, with discoverable embedded-resource detection
+
+**Original user response (verbatim):** A - but need to indentify if a file is embeded or similar
 ---
+
+**Reconciled selection:** A + embedded discovery
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 09 — What import fallback is available?
 
@@ -161,8 +209,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — improves demo reliability without auth integration
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 10 — How should content be assigned to a course and folder?
 
@@ -178,8 +232,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — transparent, low-risk intelligent organization
 
-[Answer]: 
+[Answer]: C
+
+**Original user response (verbatim):** C
 ---
+
+**Reconciled selection:** C
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 11 — What happens when classification is uncertain?
 
@@ -195,8 +255,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — preserve original user control
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ## C. Knowledge representation
 
@@ -214,8 +280,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — source fidelity and reproducibility
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 13 — What is the organizing structure?
 
@@ -231,8 +303,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — useful structure without graph-database overhead
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 14 — Should users be able to correct auto-generated metadata?
 
@@ -248,8 +326,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — editable metadata supports trustworthy organization
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** C - for now, we can revisit
 ---
+
+**Reconciled selection:** B (Clarification 1 = A)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Editable course, folder, title, tags and source/authority notes, matching clarification 1.
 
 ### Question 15 — Which knowledge index should be generated?
 
@@ -265,8 +349,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* C — strong course-wiki value; index references originals
 
-[Answer]: 
+[Answer]: C
+
+**Original user response (verbatim):** C - ideally a knowledge graph similar
 ---
+
+**Reconciled selection:** C
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 16 — When should indexes be rebuilt?
 
@@ -282,8 +372,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — easier freshness semantics
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 17 — Should cross-document relationships be explicit?
 
@@ -299,8 +395,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — directly supports version/conflict reasoning
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** ideally a knowledge graph similar
 ---
+
+**Reconciled selection:** B (Clarification 2 = A)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Typed course/topic/document/version/fact relationships; graph-like behavior in SQLite rather than mandatory graph database, matching clarification 2.
 
 ## D. Versions, conflicts, and authority
 
@@ -318,8 +420,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — deterministic baseline with user override for special cases
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A + C maybe
 ---
+
+**Reconciled selection:** A + C (bounded)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Source URL/identity plus content hash for recapture; semantic similarity may suggest links, never auto-merge, matching clarification 3.
 
 ### Question 19 — What version history should remain available?
 
@@ -335,8 +443,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — central product differentiator
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A maybe, but only access latest?
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 20 — How is the default current answer selected?
 
@@ -352,8 +466,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — deterministic, explainable authority rules
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 21 — Which contradictions should the MVP detect?
 
@@ -369,8 +489,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — narrow enough for validation, useful beyond one field
 
-[Answer]: 
+[Answer]: X — Systematic deadlines/logistics/assignment-policy checks, plus best-effort other substantive conflicts
+
+**Original user response (verbatim):** A + B +C (little on C). not EVERY contradiction, but substantivbe ones
 ---
+
+**Reconciled selection:** B + limited C
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Prioritize deadlines, exam logistics and assignment policies; broader conflicts only when substantive, not every textual difference.
 
 ### Question 22 — What should happen when sources conflict and priority is unclear?
 
@@ -386,8 +512,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — explicit, source-linked conflict status
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 23 — Should historical/as-of questions be supported?
 
@@ -403,8 +535,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — gives history without complicating normal queries
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 24 — How are sources that cannot be refreshed treated?
 
@@ -420,8 +558,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — accurate freshness disclosure without brittle syncing
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** A (Clarification 4 = A, non-alarmist presentation)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Show URL and capture date, with no routine staleness warnings on static documents; do not assert the live website is unchanged, matching final user refinement.
 
 ## E. Retrieval and Jev
 
@@ -439,8 +583,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — simplest baseline; evaluate hybrid search as enhancement
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B / knowledge search / RAG? similar
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 26 — Where should Jev participate in retrieval?
 
@@ -456,8 +606,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — targeted intelligent steps with measurable benefit
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** A/B maybe?
 ---
+
+**Reconciled selection:** B (A included)
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 27 — What happens if Jev is unavailable or uncertain?
 
@@ -473,8 +629,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — keeps the library usable
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** already answered. manual maybe?
 ---
+
+**Reconciled selection:** A (Clarification 5 = A)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Full-text and metadata-filtered fallback when Jev is unavailable; manual classification, matching clarification 5.
 
 ### Question 28 — What should retrieval return to the assistant?
 
@@ -490,8 +652,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — concise evidence for grounded answers
 
-[Answer]: 
+[Answer]: X — Two MCP tools: ranked preview search, followed by selected passage/full-content retrieval
+
+**Original user response (verbatim):** A + B? like give a list first of potential with summaries, and then another MCP to fetch the actual content of the doc. maybe in text? or file? not sure
 ---
+
+**Reconciled selection:** X — two-step search/fetch
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Return compact ranked search previews, then fetch selected excerpts or full extracted content with a separate read-only MCP tool.
 
 ### Question 29 — How should retrieval treat conflicting material?
 
@@ -507,8 +675,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — critical improvement over naïve RAG
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** already answered?  but maybe raise conflict and maybe B?
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 30 — Which evaluation tasks are required?
 
@@ -524,8 +698,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — enough rigor within course deadline
 
-[Answer]: 
+[Answer]: X — Manual end-to-end demo plus automated fixture tests
+
+**Original user response (verbatim):** A + B
 ---
+
+**Reconciled selection:** A + B
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Both manual demonstrations and automated fixtures; no formal large user study.
 
 ## F. MCP and user experience
 
@@ -543,8 +723,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A or B — choose one known-available local client and test it end to end
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** for now, local MCP? maybe hosted later?
 ---
+
+**Reconciled selection:** B (Clarification 6 = B, Codex CLI)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Codex CLI first as a local MCP client; remote/hosted options deferred, matching final user refinement.
 
 ### Question 32 — Is direct ChatGPT support mandatory for the final demo?
 
@@ -560,8 +746,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — avoid making a client entitlement the project critical path
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** local MCP is probably fine and neough
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 33 — Which MCP capabilities should the server expose first?
 
@@ -577,8 +769,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — sufficient for grounded assistant Q&A
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** read-only
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 34 — Should Course Copilot provide an embedded chat?
 
@@ -594,8 +792,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — inspect library and sources without competing with ChatGPT/Claude
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A no chat
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ## G. Implementation, privacy, and testing
 
@@ -615,8 +819,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A or B — choose one tested model, not an unverified provider matrix
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B - cheap and easy
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 36 — What is the application implementation stack?
 
@@ -632,8 +842,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — fewer languages and shared types
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** whichever is easiest and best
 ---
+
+**Reconciled selection:** A (agent selection)
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 37 — Where should data be stored and processed?
 
@@ -649,8 +865,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — restrictive by default; decide what explicit hosted calls are permitted
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** cheapest and best
 ---
+
+**Reconciled selection:** A (agent selection)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Local data and Ollama by default; only minimal explicitly consented metadata or excerpts may reach hosted Jev, matching clarification 7.
 
 ### Question 38 — How should authenticated LMS access work?
 
@@ -666,8 +888,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — no credential collection
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A / no API tokens
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 39 — Which level of collaboration/sharing is in the MVP?
 
@@ -683,8 +911,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* A — safe default and achievable MVP
 
-[Answer]: 
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
+
+**Reconciled selection:** A
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 40 — What is the realistic demo dataset?
 
@@ -700,8 +934,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* C — test repeatability and realistic usage
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B, we can do our own courses (like team members)
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ## H. Optional AI-DLC extensions
 
@@ -717,8 +957,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B for a local prototype, unless the team specifically wants stricter checks
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 42 — Should the Resiliency Baseline extension be enabled?
 
@@ -732,8 +978,14 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — local course demo, not a high-availability service
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
+
+**Reconciled selection:** B
+
+**Status:** Initial response recorded; pending final clarification reconciliation.
 
 ### Question 43 — Should the Property-Based Testing extension be enabled?
 
@@ -749,11 +1001,17 @@ For each question, write the **option letter** after `[Answer]:`. You may choose
 
 *Suggested starting point (not an answer):* B — useful for deterministic version invariants
 
-[Answer]: 
+[Answer]: B
+
+**Original user response (verbatim):** IDK, you think and pick
 ---
+
+**Reconciled selection:** B (agent selection)
+
+**Status:** Initial response recorded; pending final clarification reconciliation. **Final interpretation:** Partial property-based tests for pure versioning/serialization logic, as accepted by the user.
 
 ## Gate conditions
 
-- Total questions: **43**. Every `[Answer]:` field must be completed before Requirements Analysis reconciliation.
-- Verify answers against `docs/vision.md` and `docs/technical-environment.md` before generating `requirements.md`.
+- Total questions: **43**. All `43` responses recorded; eight targeted follow-up clarifications are open in `requirements-clarification-questions.md`.
+- Verify answers against `docs/vision.md` and `docs/technical-environment.md` before locking `decision-register.md` and generating `requirements.md`.
 

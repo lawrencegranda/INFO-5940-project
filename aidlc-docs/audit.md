@@ -74,3 +74,59 @@ make sure to pose all questions/unresolved things, clearly. explaining the optio
 **Context**: 43-question verification gate established; awaiting user responses.  
 **Evidence**: `aidlc-docs/inception/requirements/requirement-verification-questions.md`.
 
+---
+
+## Requirements Analysis — User Answers (43 Verification Questions) & Initial Reconciliation
+**Timestamp**: 2026-11-19T18:18:40Z  
+**User Input**:
+```text
+my answers. make sure to lock as decisions. make sure to review against the questions. reconcile. make sure good.
+
+1 A
+2 A+B = C
+3 B
+4 A
+5 C + able to add things from internet easily (like articles or research papers, or other PDFs)
+6 C / all
+7 chrome
+8 A - but need to indentify if a file is embeded or similar
+9 B 
+10 C
+11 A
+12 B
+13 B
+14 C - for now, we can revisit
+15 C - ideally a knowledge graph similar
+16 A
+17  ideally a knowledge graph similar
+18 A + C maybe
+19 A maybe, but only access latest?
+20 B
+21 A + B +C (little on C). not EVERY contradiction, but substantivbe ones
+22 B
+23 B
+24 B
+25 B / knowledge search / RAG? similar
+26 A/B maybe?
+27 - already answered. manual maybe?
+28 A + B? like give a list first of potential with summaries, and then another MCP to fetch the actual content of the doc. maybe in text? or file? not sure
+29 - already answered?  but maybe raise conflict and maybe B?
+30 A + B
+31 for now, local MCP? maybe hosted later?
+32 local MCP is probably fine and neough
+33 read-only
+34 A no chat
+35 B - cheap and easy
+36 whichever is easiest and best
+37 cheapest and best
+38 A / no API tokens
+39 A
+40 B, we can do our own courses (like team members)
+41 B
+42 B
+43 IDK, you think and pick
+```
+**AI Response**: Recorded all 43 verbatim responses in `requirement-verification-questions.md` and updated extension opt-ins in `aidlc-state.md`. Locked 35 clear decisions (including single-student private library, Chrome MV3 extension, local file upload fallback, immutable version preservation, explicit conflict surfacing, two-stage progressive MCP retrieval, read-only local MCP, no built-in chatbot, TypeScript + Node.js + SQLite + local Ollama `gemma3:4b`, Security Baseline disabled [Q41=B], Resiliency Baseline disabled [Q42=B], and partial Property-Based Testing enabled [Q43=B]). Generated 8 targeted follow-up clarification questions in `requirements-clarification-questions.md` to resolve ambiguities in Q14 (metadata correction), Q17 (knowledge-graph scope), Q18 (semantic similarity vs. deterministic identity), Q24 (freshness representation), Q27 (Jev fallback), Q31 (first tested MCP host), Q37 (hosted Jev privacy boundary), and Q5/Q6 (content/media extraction depth).  
+**Context**: Initial 43 answers recorded; 8 targeted follow-up clarifications issued.  
+**Evidence**: `aidlc-docs/inception/requirements/requirement-verification-questions.md`, `aidlc-docs/inception/requirements/requirements-clarification-questions.md`, `aidlc-docs/aidlc-state.md`.
+

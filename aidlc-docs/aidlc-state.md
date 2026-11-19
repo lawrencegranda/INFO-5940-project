@@ -32,9 +32,11 @@
 | Extension | Enabled | Decided At |
 |---|---|---|
 | INFO 5940 Course Rubric (mandatory) | Yes | Workflow start; always enforced |
-| Security Baseline (optional) | Pending | To be decided in Requirements Analysis (Q41) |
-| Resiliency Baseline (optional) | Pending | To be decided in Requirements Analysis (Q42) |
-| Property-Based Testing (optional) | Pending | To be decided in Requirements Analysis (Q43) |
+| Security Baseline (optional) | No | Requirements Analysis, Q41 = B |
+| Resiliency Baseline (optional) | No | Requirements Analysis, Q42 = B |
+| Property-Based Testing (optional) | Yes (Partial) | Requirements Analysis, Q43 = B |
+
+**Property-Based Testing scope:** Partial option B: pure transformations, serialization round trips, and versioning invariants.
 
 ## Stage Progress
 
@@ -42,7 +44,7 @@
 
 - [x] **Workspace Detection** — Greenfield repository verified; rule files active; reverse engineering skipped (2026-11-19T17:28:00Z).
 - [x] **Reverse Engineering** — SKIPPED (Greenfield).
-- [ ] **Requirements Analysis** — In progress.
+- [ ] **Requirements Analysis** — 43 verification responses recorded; 8 follow-up clarifications in progress (`requirements-clarification-questions.md`).
 - [ ] **User Stories** — Not started.
 - [ ] **Workflow Planning** — Not started.
 - [ ] **Application Design** — Not started.
@@ -57,4 +59,4 @@
 - [ ] **Operations** — Out of scope.
 
 ## Next Action
-Capture Course Copilot product vision and technical environment inputs, then generate the Requirements Analysis verification question gate.
+Resolve the 8 targeted follow-up clarification questions in `aidlc-docs/inception/requirements/requirements-clarification-questions.md`, lock `decision-register.md`, and generate `requirements.md`.
