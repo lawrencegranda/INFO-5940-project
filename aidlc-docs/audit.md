@@ -31,3 +31,34 @@ we want to brainstorm ideas, using AI-DLC. i want you to run AI-DLC on my idea. 
 **Context**: Workspace Detection completed; ready for initial product vision input.  
 **Evidence**: `aidlc-docs/aidlc-state.md`, `AGENTS.md`.
 
+---
+
+## Requirements Analysis — Initial Concept & Product Vision Input
+**Timestamp**: 2026-11-19T17:35:14Z  
+**User Input**:
+```text
+COURSE COPILOT - Lawrence Granda Zarzuela
+Students already use ChatGPT, Claude, and other AI tools for coursework, but course materials are scattered across logged-in sites and hard to share with those tools. Course Copilot is a course library: a browser extension saves pages from Canvas, Gradescope, or EdStem into the right course and folder, keeps their sources and versions, and makes them searchable through MCP—so students can ask their preferred AI assistant questions grounded in course materials.
+Capture and organize — Jev: Suggests the course and folder for each saved page. The student can confirm or correct it.
+Build course context — LLM: Summarizes saved materials and maintains a source-linked course index. It keeps original documents available and flags possible conflicts, such as a newer announcement changing a syllabus deadline, instead of silently replacing older information.
+Find and answer — ChatGPT, Claude, or another MCP-enabled assistant: Searches the course library and retrieves relevant passages and sources to answer the student’s question. The assistant handles the conversation; Course Copilot provides the organized, current course context.
+```
+**AI Response**: Conducted initial AI-DLC Inception feasibility assessment. Identified core value proposition as a student-controlled, version-aware course knowledge library exposed via MCP rather than a standalone chatbot. Evaluated feasibility of browser extension capture across Canvas, Gradescope, and EdStem, LLM-assisted categorization with user correction, immutable version preservation, conflict detection, and local MCP retrieval.  
+**Context**: Initial product vision and architectural boundary assessment.  
+**Evidence**: `docs/vision.md`, `docs/technical-environment.md`.
+
+---
+
+## Requirements Analysis — Technical Motivation & Retrieval Architecture Input
+**Timestamp**: 2026-11-19T17:40:10Z  
+**User Input**:
+```text
+motivation is that raw/naive chatgpt or claude with all the files/context, #1 context overload, #2 naive rag does not work well with versions, so contradicitons or changes can go unnoticed. need for more robust categorization or indexing. similar to second brain or LLM Wiki or Obsidian vault. better retrieval and more organized. maybe using Jev for retrieval too?
+
+
+using all of this, think, then make sure to run AI-DLC on it
+```
+**AI Response**: Analyzed technical motivation around three failure modes of naive RAG: (1) context overload from whole-course uploads, (2) version blindness when newer announcements supersede older syllabus deadlines, and (3) weak flat organization lacking typed relationships across courses, topics, documents, versions, and source passages. Framed Course Copilot as a structured, Obsidian/wiki-like knowledge layer with Jev assisting classification, routing, and reranking alongside explicit deterministic authority and versioning logic.  
+**Context**: Technical rationale and retrieval architecture refined in `docs/vision.md` and `docs/technical-environment.md`.  
+**Evidence**: `docs/vision.md`, `docs/technical-environment.md`.
+
