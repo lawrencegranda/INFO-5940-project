@@ -1,13 +1,13 @@
 # Course Copilot — AI-DLC Requirements Verification Questions
 
-> **Status:** USER ANSWERS RECORDED; RECONCILIATION IN PROGRESS. Explicit answers preserved verbatim. Pending/ambiguous items require team confirmation before gate approval.
+> **Status:** All 43 working answers resolved against the decision register and eight follow-up clarifications. Original user responses preserved verbatim, with a canonical [Answer] selection for each. Formal team approval of Requirements Analysis is still pending.
 > **Methodology:** AI-DLC v1.0.1; INFO 5940 course extension applies. This draft is on the Course Copilot Draft PR branch for team review.
 
 ## How to respond
 
-For each question, write the **option letter** after `[Answer]:`. You may choose **X** and provide a custom response. Suggested starting points are nonbinding: they are **not** team answers. Every question must be answered and inconsistencies resolved before the requirements approval gate.
+Each question has a canonical `[Answer]:` letter (or X plus custom explanation). The original free-form answer is preserved separately. The team should review these interpretations before approving Requirements Analysis.
 
-User responses are recorded verbatim in `[Answer]:` fields, including mixed choices and remarks. The **Reconciled selection** and **Status** notes distinguish locked requirements from interpretations and unresolved conflicts. Proposed options are NOT approvals.
+Original user responses are recorded verbatim under **Original user response**. The canonical `[Answer]:` fields capture the later reconciled decisions; the entire file remains a working proposal until the team approves.
 
 ## A. Product, users, and success
 
@@ -25,12 +25,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — individual-first avoids identity and sharing infrastructure
 
-**[Answer]:** A
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** One student, private library
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 02 — What is the primary demonstration task?
 
@@ -46,12 +48,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* C — demonstrates the distinctive version-aware retrieval value
 
-**[Answer]:** A+B = C
+[Answer]: C
+
+**Original user response (verbatim):** A+B = C
 ---
 
 **Reconciled selection:** C
 
-**Status:** Locked. **Interpretation:** Both version/deadline and conceptual grounded-Q&A demos
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 03 — How many courses should one user manage?
 
@@ -67,12 +71,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — multiple courses without multi-user complexity
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Multiple independent courses per student
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 04 — Which criterion makes the product succeed?
 
@@ -88,14 +94,16 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — feasible, defensible comparison with baseline RAG
 
-**[Answer]:** A
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
 
 ## B. Capture and input
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** Success criterion: end-to-end demo; automated tests still required under Q30
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 05 — Which sources must work in the final MVP?
 
@@ -111,12 +119,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — provide one reliable source and generic capture fallback
 
-**[Answer]:** C + able to add things from internet easily (like articles or research papers, or other PDFs)
+[Answer]: X — All Canvas/Gradescope/EdStem plus general websites, papers, and local files
+
+**Original user response (verbatim):** C + able to add things from internet easily (like articles or research papers, or other PDFs)
 ---
 
 **Reconciled selection:** C + custom
 
-**Status:** Locked. **Interpretation:** Test Canvas, Gradescope, and EdStem capture; easy import from arbitrary web pages, papers, and PDFs. High scope risk
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Capture all three LMS platforms and arbitrary student-selected websites/papers/PDFs; visible access and per-format extraction are verified during Construction.
 
 ### Question 06 — What content types are required?
 
@@ -132,12 +142,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — covers common coursework without OCR/media complexity
 
-**[Answer]:** C / all
+[Answer]: C
+
+**Original user response (verbatim):** C / all
 ---
 
 **Reconciled selection:** C
 
-**Status:** Locked (high-risk scope). **Interpretation:** HTML, PDFs, images/screenshots, equations, embedded media; exact extraction depth pending clarification
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Attempt complete authorized extraction of accessible HTML/PDF/images/equations/embedded media; use OCR or transcription when needed. Mark partial or inaccessible sources honestly, with manual import fallback.
 
 ### Question 07 — Which browser is the demo target?
 
@@ -153,12 +165,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — smallest reliable extension target
 
-**[Answer]:** chrome
+[Answer]: A
+
+**Original user response (verbatim):** chrome
 ---
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** Chrome Manifest V3 first
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 08 — How is content captured?
 
@@ -174,12 +188,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — explicit capture, minimal permissions, predictable provenance
 
-**[Answer]:** A - but need to indentify if a file is embeded or similar
+[Answer]: X — User-initiated Save, with discoverable embedded-resource detection
+
+**Original user response (verbatim):** A - but need to indentify if a file is embeded or similar
 ---
 
 **Reconciled selection:** A + embedded discovery
 
-**Status:** Locked. **Interpretation:** User-initiated capture; detect linked/embedded documents for optional inclusion
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 09 — What import fallback is available?
 
@@ -195,12 +211,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — improves demo reliability without auth integration
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Browser extension and local file upload
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 10 — How should content be assigned to a course and folder?
 
@@ -216,12 +234,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — transparent, low-risk intelligent organization
 
-**[Answer]:** C
+[Answer]: C
+
+**Original user response (verbatim):** C
 ---
 
 **Reconciled selection:** C
 
-**Status:** Locked. **Interpretation:** Jev suggests course/folder, auto-save only above confidence threshold; below threshold require review
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 11 — What happens when classification is uncertain?
 
@@ -237,14 +257,16 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — preserve original user control
 
-**[Answer]:** A
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
 
 ## C. Knowledge representation
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** Require user confirmation when categorization is uncertain
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 12 — What original content is retained?
 
@@ -260,12 +282,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — source fidelity and reproducibility
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Preserve original snapshots/files, text, metadata and provenance
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 13 — What is the organizing structure?
 
@@ -281,12 +305,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — useful structure without graph-database overhead
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Course/folder/document hierarchy, tags, typed relationships; no graph DB required
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 14 — Should users be able to correct auto-generated metadata?
 
@@ -302,12 +328,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — editable metadata supports trustworthy organization
 
-**[Answer]:** C - for now, we can revisit
+[Answer]: B
+
+**Original user response (verbatim):** C - for now, we can revisit
 ---
 
 **Reconciled selection:** C
 
-**Status:** Pending — conflicts with user’s original product definition. **Interpretation:** No manual correction per letter C conflicts with initial ability to confirm/correct and Q11
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Editable course, folder, title, tags and source/authority notes, matching clarification 1.
 
 ### Question 15 — Which knowledge index should be generated?
 
@@ -323,12 +351,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* C — strong course-wiki value; index references originals
 
-**[Answer]:** C - ideally a knowledge graph similar
+[Answer]: C
+
+**Original user response (verbatim):** C - ideally a knowledge graph similar
 ---
 
 **Reconciled selection:** C
 
-**Status:** Locked. **Interpretation:** Document summaries and source-linked hierarchical course/topic index; graph-ready
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 16 — When should indexes be rebuilt?
 
@@ -344,12 +374,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — easier freshness semantics
 
-**[Answer]:** A
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** Incremental index updating after saves/changes
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 17 — Should cross-document relationships be explicit?
 
@@ -365,14 +397,16 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — directly supports version/conflict reasoning
 
-**[Answer]:** ideally a knowledge graph similar
+[Answer]: B
+
+**Original user response (verbatim):** ideally a knowledge graph similar
 ---
 
 ## D. Versions, conflicts, and authority
 
 **Reconciled selection:** B (proposed)
 
-**Status:** Pending — graph ambition. **Interpretation:** Typed edges for related, duplicate, updates, supersedes; full knowledge graph optional
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Typed course/topic/document/version/fact relationships; graph-like behavior in SQLite rather than mandatory graph database, matching clarification 2.
 
 ### Question 18 — How should the system recognize a re-captured page?
 
@@ -388,12 +422,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — deterministic baseline with user override for special cases
 
-**[Answer]:** A + C maybe
+[Answer]: A
+
+**Original user response (verbatim):** A + C maybe
 ---
 
 **Reconciled selection:** A + C (bounded)
 
-**Status:** Pending — merge semantics. **Interpretation:** URL+content hash determine actual recaptured versions; semantic similarity suggests relationships, not automatic destructive merge
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Source URL/identity plus content hash for recapture; semantic similarity may suggest links, never auto-merge, matching clarification 3.
 
 ### Question 19 — What version history should remain available?
 
@@ -409,12 +445,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — central product differentiator
 
-**[Answer]:** A maybe, but only access latest?
+[Answer]: A
+
+**Original user response (verbatim):** A maybe, but only access latest?
 ---
 
 **Reconciled selection:** A
 
-**Status:** Reconciled. **Interpretation:** Keep every observed version; default retrieval latest applicable and let user inspect historical versions
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 20 — How is the default current answer selected?
 
@@ -430,12 +468,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — deterministic, explainable authority rules
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Use explicit source authority, publication/effective dates, and supersession; flag uncertainty
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 21 — Which contradictions should the MVP detect?
 
@@ -451,12 +491,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — narrow enough for validation, useful beyond one field
 
-**[Answer]:** A + B +C (little on C). not EVERY contradiction, but substantivbe ones
+[Answer]: X — Systematic deadlines/logistics/assignment-policy checks, plus best-effort other substantive conflicts
+
+**Original user response (verbatim):** A + B +C (little on C). not EVERY contradiction, but substantivbe ones
 ---
 
 **Reconciled selection:** B + limited C
 
-**Status:** Reconciled. **Interpretation:** Systematic deadline/exam logistics/assignment-policy checks; other substantive conflicts best-effort
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Prioritize deadlines, exam logistics and assignment policies; broader conflicts only when substantive, not every textual difference.
 
 ### Question 22 — What should happen when sources conflict and priority is unclear?
 
@@ -472,12 +514,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — explicit, source-linked conflict status
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Expose both sources and uncertainty where priority not safely resolved
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 23 — Should historical/as-of questions be supported?
 
@@ -493,12 +537,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — gives history without complicating normal queries
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Default searchable corpus is latest applicable; history browsable but no historical query filter required
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 24 — How are sources that cannot be refreshed treated?
 
@@ -514,14 +560,16 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — accurate freshness disclosure without brittle syncing
 
-**[Answer]:** B
+[Answer]: A
+
+**Original user response (verbatim):** B
 ---
 
 ## E. Retrieval and Jev
 
 **Reconciled selection:** B (original)
 
-**Status:** Pending — unsafe freshness assumption. **Interpretation:** Asserting old captured data remains current is incompatible with manual capture and version integrity; recommend A
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Show URL and capture date, with no routine staleness warnings on static documents; do not assert the live website is unchanged, matching final user refinement.
 
 ### Question 25 — What retrieves initial candidates?
 
@@ -537,12 +585,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — simplest baseline; evaluate hybrid search as enhancement
 
-**[Answer]:** B / knowledge search / RAG? similar
+[Answer]: B
+
+**Original user response (verbatim):** B / knowledge search / RAG? similar
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Hybrid keyword/vector retrieval with metadata and version filters; simple full-text fallback
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 26 — Where should Jev participate in retrieval?
 
@@ -558,12 +608,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — targeted intelligent steps with measurable benefit
 
-**[Answer]:** A/B maybe?
+[Answer]: B
+
+**Original user response (verbatim):** A/B maybe?
 ---
 
 **Reconciled selection:** B (A included)
 
-**Status:** Reconciled. **Interpretation:** Use Jev for ingestion classification plus optional query routing/relevance/reranking
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 27 — What happens if Jev is unavailable or uncertain?
 
@@ -579,12 +631,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — keeps the library usable
 
-**[Answer]:** already answered. manual maybe?
+[Answer]: A
+
+**Original user response (verbatim):** already answered. manual maybe?
 ---
 
 **Reconciled selection:** A (proposed)
 
-**Status:** Pending — no clear answer. **Interpretation:** When Jev is offline, use deterministic classification/manual filing and text/filter-based retrieval
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Full-text and metadata-filtered fallback when Jev is unavailable; manual classification, matching clarification 5.
 
 ### Question 28 — What should retrieval return to the assistant?
 
@@ -600,12 +654,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — concise evidence for grounded answers
 
-**[Answer]:** A + B? like give a list first of potential with summaries, and then another MCP to fetch the actual content of the doc. maybe in text? or file? not sure
+[Answer]: X — Two MCP tools: ranked preview search, followed by selected passage/full-content retrieval
+
+**Original user response (verbatim):** A + B? like give a list first of potential with summaries, and then another MCP to fetch the actual content of the doc. maybe in text? or file? not sure
 ---
 
 **Reconciled selection:** X — two-step search/fetch
 
-**Status:** Reconciled. **Interpretation:** First MCP tool returns ranked metadata+summaries+conflict flags; separate MCP tool fetches text excerpts/full source; optional original resource/file
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Return compact ranked search previews, then fetch selected excerpts or full extracted content with a separate read-only MCP tool.
 
 ### Question 29 — How should retrieval treat conflicting material?
 
@@ -621,12 +677,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — critical improvement over naïve RAG
 
-**[Answer]:** already answered?  but maybe raise conflict and maybe B?
+[Answer]: B
+
+**Original user response (verbatim):** already answered?  but maybe raise conflict and maybe B?
 ---
 
 **Reconciled selection:** B
 
-**Status:** Reconciled. **Interpretation:** Expose relevant competing sources and conflicts, not just one selected passage
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 30 — Which evaluation tasks are required?
 
@@ -642,14 +700,16 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — enough rigor within course deadline
 
-**[Answer]:** A + B
+[Answer]: X — Manual end-to-end demo plus automated fixture tests
+
+**Original user response (verbatim):** A + B
 ---
 
 ## F. MCP and user experience
 
 **Reconciled selection:** A + B
 
-**Status:** Locked. **Interpretation:** Manual demo scenarios plus automated fixture tests; no large user study
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Both manual demonstrations and automated fixtures; no formal large user study.
 
 ### Question 31 — What must the first MCP client be?
 
@@ -665,12 +725,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A or B — choose one known-available local client and test it end to end
 
-**[Answer]:** for now, local MCP? maybe hosted later?
+[Answer]: B
+
+**Original user response (verbatim):** for now, local MCP? maybe hosted later?
 ---
 
 **Reconciled selection:** A or B (proposed B)
 
-**Status:** Pending — asks client, not server. **Interpretation:** Choose a specific local MCP host for demo: Claude Desktop or Claude Code/Codex CLI
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Codex CLI first as a local MCP client; remote/hosted options deferred, matching final user refinement.
 
 ### Question 32 — Is direct ChatGPT support mandatory for the final demo?
 
@@ -686,12 +748,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — avoid making a client entitlement the project critical path
 
-**[Answer]:** local MCP is probably fine and neough
+[Answer]: B
+
+**Original user response (verbatim):** local MCP is probably fine and neough
 ---
 
 **Reconciled selection:** B
 
-**Status:** Reconciled. **Interpretation:** Local MCP client sufficient; ChatGPT/hosted remote MCP later
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 33 — Which MCP capabilities should the server expose first?
 
@@ -707,12 +771,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — sufficient for grounded assistant Q&A
 
-**[Answer]:** read-only
+[Answer]: A
+
+**Original user response (verbatim):** read-only
 ---
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** Read-only MCP tools: list, search, fetch, inspect version/conflict
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 34 — Should Course Copilot provide an embedded chat?
 
@@ -728,14 +794,16 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — inspect library and sources without competing with ChatGPT/Claude
 
-**[Answer]:** A no chat
+[Answer]: A
+
+**Original user response (verbatim):** A no chat
 ---
 
 ## G. Implementation, privacy, and testing
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** No embedded conversational AI; lightweight browsing of library is allowed
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 35 — Which LLM does the product use for summaries and conflict candidates?
 
@@ -753,12 +821,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A or B — choose one tested model, not an unverified provider matrix
 
-**[Answer]:** B - cheap and easy
+[Answer]: B
+
+**Original user response (verbatim):** B - cheap and easy
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked, model pending smoke test. **Interpretation:** Local Ollama model for summaries/structured extraction; propose gemma3:4b as first candidate
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 36 — What is the application implementation stack?
 
@@ -774,12 +844,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — fewer languages and shared types
 
-**[Answer]:** whichever is easiest and best
+[Answer]: A
+
+**Original user response (verbatim):** whichever is easiest and best
 ---
 
 **Reconciled selection:** A (agent selection)
 
-**Status:** Reconciled. **Interpretation:** TypeScript end-to-end, Node local backend, SQLite and TypeScript MCP; lower integration overhead
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 37 — Where should data be stored and processed?
 
@@ -795,12 +867,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — restrictive by default; decide what explicit hosted calls are permitted
 
-**[Answer]:** cheapest and best
+[Answer]: A
+
+**Original user response (verbatim):** cheapest and best
 ---
 
 **Reconciled selection:** A (agent selection)
 
-**Status:** Pending — privacy vs hosted Jev. **Interpretation:** Local storage and local Ollama; remote Jev requires explicit narrow permission or must be disabled
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Local data and Ollama by default; only minimal explicitly consented metadata or excerpts may reach hosted Jev, matching clarification 7.
 
 ### Question 38 — How should authenticated LMS access work?
 
@@ -816,12 +890,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — no credential collection
 
-**[Answer]:** A / no API tokens
+[Answer]: A
+
+**Original user response (verbatim):** A / no API tokens
 ---
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** Read current LMS page in extension; never collect cookies/passwords/tokens
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 39 — Which level of collaboration/sharing is in the MVP?
 
@@ -837,12 +913,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* A — safe default and achievable MVP
 
-**[Answer]:** A
+[Answer]: A
+
+**Original user response (verbatim):** A
 ---
 
 **Reconciled selection:** A
 
-**Status:** Locked. **Interpretation:** No cross-user sharing or cloud collaboration
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 40 — What is the realistic demo dataset?
 
@@ -858,14 +936,16 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* C — test repeatability and realistic usage
 
-**[Answer]:** B, we can do our own courses (like team members)
+[Answer]: B
+
+**Original user response (verbatim):** B, we can do our own courses (like team members)
 ---
 
 ## H. Optional AI-DLC extensions
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Demo with authorized real courses/team materials; synthetic fixtures still permitted for automated tests
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 41 — Should the Security Baseline extension be enabled?
 
@@ -879,12 +959,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B for a local prototype, unless the team specifically wants stricter checks
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Do not enable optional Security Baseline; mandatory security precautions still apply
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 42 — Should the Resiliency Baseline extension be enabled?
 
@@ -898,12 +980,14 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — local course demo, not a high-availability service
 
-**[Answer]:** B
+[Answer]: B
+
+**Original user response (verbatim):** B
 ---
 
 **Reconciled selection:** B
 
-**Status:** Locked. **Interpretation:** Do not enable optional Resiliency Baseline; targeted reliability requirements still apply
+**Status:** Resolved working decision; formal group approval pending.
 
 ### Question 43 — Should the Property-Based Testing extension be enabled?
 
@@ -919,7 +1003,9 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 *Suggested starting point (not an answer):* B — useful for deterministic version invariants
 
-**[Answer]:** IDK, you think and pick
+[Answer]: B
+
+**Original user response (verbatim):** IDK, you think and pick
 ---
 
 ## Gate conditions
@@ -931,4 +1017,4 @@ User responses are recorded verbatim in `[Answer]:` fields, including mixed choi
 
 **Reconciled selection:** B (agent selection)
 
-**Status:** Reconciled. **Interpretation:** Partial property-based testing for pure transformations, versioning invariants and round trips
+**Status:** Resolved working decision; formal group approval pending. **Final interpretation:** Partial property-based tests for pure versioning/serialization logic, as accepted by the user.
