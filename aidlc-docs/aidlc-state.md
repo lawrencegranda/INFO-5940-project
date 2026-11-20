@@ -7,12 +7,12 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Inception documentation COMPLETE — STOP before Construction
+- **Current Stage**: Inception documents under corrective review — ON HOLD; no merge authorization
 - **Inception Completed At**: 2026-11-20T04:20:19Z
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/05-units-generation`
-- **Latest Stage Review**: PR #8 — approved/ready for maintainer integration: https://github.com/lawrencegranda/INFO-5940-project/pull/8
-- **Prior Stage Dependency**: User Stories #5, Workflow Planning #6 and Application Design #7 approved/ready; awaiting maintainer integration in order.
+- **Latest Stage Review**: Historical approvals retained; PR #8 is Draft and on hold: https://github.com/lawrencegranda/INFO-5940-project/pull/8
+- **Prior Stage Dependency**: Historical approvals in PRs #5–#8 remain in the audit; all four PRs are now Draft and unmerged. Earlier integration instructions are on hold.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
 ## Workspace State
@@ -42,7 +42,7 @@
 
 **Property-Based Testing scope:** Partial option B: pure transformations, serialization round trips, and versioning invariants.
 
-## Stage Progress
+## Historical Stage Progress (before the current review hold)
 
 ### INCEPTION PHASE
 
@@ -82,8 +82,10 @@
 
 ## Current Checkpoint and Handoff
 
-Inception documentation is complete and approved. STOP here before Construction under INFO5940-02. There is no active generation gate or application implementation; all runtime/model/LMS/Codex acceptance remains future unverified work.
+**ON HOLD:** The user requested corrective review and paused integration. PRs #5–#8 are Draft and unmerged. Do not mark them ready, request merging, or merge them under the current instruction. Historical approval events remain recorded; no revised gate approval is claimed.
 
-An upstream maintainer must integrate approved PRs #5→#6→#7→#8 into candidate/course-copilot in order. The current account has no upstream merge control. Preserve the single audit/state history and do not hand-merge those files. Whole-team candidate selection and final course submission are not claimed by this branch.
+The six displayed approval responses are now explicitly labeled English translations. The original Chinese user replies remain verbatim in the append-only audit. Translation preserves each A selection and its meaning; it adds no new decision or team engagement.
 
-After the November 24 checkpoint, team project selection and later authorization, resume at the selected Construction stages in the approved execution plan. This state does not automatically authorize that transition or waive its design/code review gates. The proposed prototype has not been implemented.
+Substantive English reassessment questions and review proposals are prepared locally on the existing inception/02-user-stories-review worktree. They have not been published or approved as replacement artifacts. Real team answers and technical-member participation are still required. The separately requested prototype remains isolated on prototype/local-course-copilot.
+
+This publication only translates historical response displays and makes the existing review hold explicit. It does not regenerate product scope, invent pushback, change the formal stop before Construction or claim course submission/whole-team selection.
