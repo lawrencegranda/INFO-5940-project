@@ -13,7 +13,7 @@
 5. [x] Implement responsive course library, import/review/detail/history/conflict UI and real settings/setup interactions.
 6. [x] Implement the six-tool read-only stdio MCP adapter and explicit-save Chrome extension. Protocol tests pass; actual authenticated LMS capture and Codex CLI connection remain unverified.
 7. [x] Integrate existing local Ollama generation without automatic model downloads; keep Jev disabled unless explicitly configured/consented later. Agent manually installed the official optional embedding model; the application never downloads models.
-8. [ ] Run meaningful identity/scope/property/API/MCP tests, build/type checks and browser QA; record observed evidence.
+8. [x] Run meaningful identity/scope/property/API/MCP tests, build/type checks and browser QA; record observed evidence. 49/49 tests, typecheck/build pass; actual local summary, hybrid retrieval, native OCR and browser evidence/version flows exercised. See the verification record for remaining integration/quality limits.
 9. [ ] Document quick start, actual capability limits and prototype handoff; publish only through the requested GitHub identity if available.
 
 **Acceptance honesty:** Runtime acceptance is established only by actual checks. Authorized real LMS sessions, protected media, unavailable speech/embedding tools and model quality are not called verified merely because an adapter or fixture exists. Model-free lexical/manual fallback does not replace required future semantic/format success.
