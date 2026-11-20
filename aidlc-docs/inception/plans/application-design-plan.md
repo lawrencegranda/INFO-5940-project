@@ -8,7 +8,7 @@
 
 ## 1. Question-category assessment and authorization
 
-The five required categories have been evaluated. No genuinely missing product decision remains. The approved execution plan authorizes this stage and Q36 delegates routine technical choices to the agent. Application Design Steps 6–9 apply to actual unresolved questions; none is invented solely to create another approval round. This plan documents engineering choices transparently and proceeds to artifacts. The required separate design-artifact approval at Step 13 remains pending until artifacts exist.
+The five required categories have been evaluated. No genuinely missing product decision remains. The approved execution plan authorizes this stage and Q36 delegates routine technical choices to the agent. Application Design Steps 6–9 apply to actual unresolved questions; none is invented solely to create another approval round. This plan documents engineering choices transparently and proceeds to artifacts. The required separate design-artifact approval at Step 13 was subsequently recorded on 2026-11-20T03:43:36Z.
 
 | Category | Evidence and design resolution | New user question |
 |---|---|---|
@@ -64,4 +64,4 @@ Full approved source/format breadth is mandatory. Originals survive AI/index fai
 
 Controlled loopback access, explicit Jev data disclosure/consent, untrusted material and external Codex/model processing are separate trust boundaries. No runtime performance, provider compatibility or successful source/client integration is claimed. No application code is generated; after approved Units Generation the course milestone stops before Construction.
 
-The consolidated artifact will contain the single generated-design review question with A approve/continue, B changes and C Other. Its answer remains pending until the actual artifacts are reviewed. That later gate is required by Application Design Step 13, not an extra product-direction questionnaire.
+The consolidated artifact contains the generated-design review question with A approve/continue, B changes and C Other. The user explicitly answered A on 2026-11-20T03:43:36Z; the Step 13 artifact gate is complete.
