@@ -1,7 +1,7 @@
 # Course Copilot — User Stories Assessment
 
 **Stage:** Inception / User Stories / Part 1: Planning
-**Status:** Assessment complete; story generation awaits approval of the accompanying plan.
+**Status:** Assessment complete. Explicit planning approval and generation progress are tracked in the accompanying story-generation plan.
 **Integration branch:** `candidate/course-copilot`
 **Stage branch:** `inception/02-user-stories`
 **Requirements baseline:** `485c52531f004b1e184fb595abe771cfbcd17003`
