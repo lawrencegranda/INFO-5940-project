@@ -6,21 +6,21 @@
 - **AI-DLC Version**: 1.0.1
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
-- **Current Phase**: INCEPTION
-- **Current Stage**: Inception documentation COMPLETE — STOP before Construction
+- **Current Phase**: PROTOTYPE IMPLEMENTATION (separately authorized after Inception)
+- **Current Stage**: Local prototype implemented; runtime verification and handoff
 - **Inception Completed At**: 2026-11-20T04:20:19Z
 - **Working Integration Branch**: `candidate/course-copilot`
-- **Active Stage Branch**: `inception/05-units-generation`
+- **Active Stage Branch**: `prototype/local-course-copilot`
 - **Latest Stage Review**: PR #8 — approved/ready for maintainer integration: https://github.com/lawrencegranda/INFO-5940-project/pull/8
 - **Prior Stage Dependency**: User Stories #5, Workflow Planning #6 and Application Design #7 approved/ready; awaiting maintainer integration in order.
-- **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
+- **Course Checkpoint**: Historical Inception checkpoint through Units Generation due 2026-11-24T23:59:00-05:00; its stop was honored at closure. The user's subsequent “我们现在就做吧” explicitly authorizes this separate prototype track. Formal full Construction approvals are not inferred or fabricated.
 
 ## Workspace State
 
-- **Existing Application Code**: No
-- **Programming Languages Present**: None in application source; TypeScript proposed for Construction
-- **Build System Present**: No application build system yet; Node.js/npm proposed
-- **Project Structure**: Greenfield documentation and AI-DLC rule files
+- **Existing Application Code**: Yes — local Course Copilot prototype under root `src/`, `scripts/`, `tests/`
+- **Programming Languages Present**: TypeScript/React, JavaScript, CSS, Swift native OCR helper
+- **Build System Present**: npm/esbuild, project-local Node 22, TypeScript, Vitest
+- **Project Structure**: Approved Inception documents plus separately authorized prototype; ignored local SQLite/originals/runtime files
 - **Reverse Engineering Needed**: No (Greenfield)
 - **Workspace Root**: Root of `lawrencegranda/INFO-5940-project`
 
@@ -63,7 +63,17 @@
 - [ ] **Code Generation** — EXECUTE later; deferred.
 - [ ] **Build and Test** — EXECUTE later; deferred.
 
-**Construction is NOT AUTHORIZED at the November 24 milestone.** Stage selection is a future plan, not completion or permission to start.
+These unchecked entries describe the formal lifecycle track retained from the Inception checkpoint. They do not negate the later, explicitly authorized prototype work below or imply that formal review gates were completed.
+
+### SEPARATE PROTOTYPE TRACK
+
+- [x] **Implementation authorization** — User explicitly requested “我们现在就做吧” after the checkpoint discussion; approved Inception history retained.
+- [x] **Working implementation** — SQLite/originals, import/extraction, course-scoped lexical/local-vector retrieval, saved deadline evidence, responsive UI, six read-only MCP tools and explicit-save extension.
+- [x] **Automated verification** — 49 tests in four files, TypeScript and production build passed. Tests use actual temporary SQLite/API/stdin-stdout protocol and appropriate output fixtures.
+- [x] **Runtime samples** — Local Ollama summary and native macOS image/scanned-PDF extraction exercised. Browser import, new version, historical original text and disabled historical processing verified.
+- [ ] **Handoff** — Publish complete prototype branch and quickstart through xiaolonglin1124-bit; verify published code matches the tested local files.
+
+The implementation is a prototype, not full acceptance of every U-01 story. Actual Codex CLI host connection, authenticated LMS/extension operation, automatic STT, broad extraction/model quality and performance remain unverified.
 
 ### OPERATIONS PHASE
 
@@ -76,14 +86,14 @@
 - **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
 - **Remaining Inception**: None; all generated gate artifacts approved. Upstream integration/submission and whole-team candidate selection are separate pending work.
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
-- **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
+- **Formal future stages**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test; prototype implementation/verification proceeds separately under the new user instruction.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
 - **Risk**: High; real LMS/extraction/model/MCP integrations unverified.
 
 ## Current Checkpoint and Handoff
 
-Inception documentation is complete and approved. STOP here before Construction under INFO5940-02. There is no active generation gate or application implementation; all runtime/model/LMS/Codex acceptance remains future unverified work.
+Inception documentation is complete and approved. The earlier INFO5940-02 stop was honored at Inception closure. The user subsequently requested a runnable prototype now; that separate implementation is present on `prototype/local-course-copilot` with the [plan](construction/plans/local-prototype-plan.md) and [verification record](construction/build-and-test/prototype-verification.md). No additional approval gate is pending for this authorized prototype.
 
 An upstream maintainer must integrate approved PRs #5→#6→#7→#8 into candidate/course-copilot in order. The current account has no upstream merge control. Preserve the single audit/state history and do not hand-merge those files. Whole-team candidate selection and final course submission are not claimed by this branch.
 
-After the November 24 checkpoint, team project selection and later authorization, resume at the selected Construction stages in the approved execution plan. This state does not automatically authorize that transition or waive its design/code review gates. The proposed prototype has not been implemented.
+Formal lifecycle continuation and whole-team selection remain distinct from this prototype. The implementation does not fabricate formal stage approvals, full product acceptance or completed upstream integration. Core library operation and optional local AI require no hosted paid provider.
