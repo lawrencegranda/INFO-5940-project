@@ -7,7 +7,7 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: User Stories — Part 1 planning prepared; awaiting explicit plan approval
+- **Current Stage**: User Stories — Part 2 generated; awaiting generated-artifact approval
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/02-user-stories`
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
@@ -46,7 +46,7 @@
 - [x] **Workspace Detection** — Greenfield repository verified; rule files active; reverse engineering skipped (2026-11-19T17:28:00Z).
 - [x] **Reverse Engineering** — SKIPPED (Greenfield).
 - [x] **Requirements Analysis** — Vision, technical environment, 43 verification questions, and 8 follow-up clarifications reconciled; decision register locked and requirements specification (`FR-01`–`FR-15`, `NFR-01`–`NFR-07`) approved on 2026-11-19T19:26:39Z.
-- [ ] **User Stories** — Part 1 assessment and story-generation plan prepared; explicit planning approval pending. No stories or personas generated yet.
+- [ ] **User Stories** — Part 1 planning explicitly approved; P-01 persona and 25 user stories generated and validated in Draft PR #5; generated-artifact approval pending.
 - [ ] **Workflow Planning** — Not started.
 - [ ] **Application Design** — Not started.
 - [ ] **Units Generation** — Not started.
@@ -60,4 +60,4 @@
 - [ ] **Operations** — Out of scope.
 
 ## Next Action
-Review `aidlc-docs/inception/plans/story-generation-plan.md` on `inception/02-user-stories` and answer its planning approval. After explicit approval is recorded, generate stories/personas through Part 2 and obtain their separate approval before Workflow Planning. The Course Copilot prototype remains downstream of the approved Inception and Construction gates.
+Review `aidlc-docs/inception/user-stories/stories.md` and `personas.md` in Draft PR #5. After explicit generated-artifact approval is recorded, mark User Stories complete and proceed to Workflow Planning through the next approved single-writer gate. The candidate integration branch remains `candidate/course-copilot`.
