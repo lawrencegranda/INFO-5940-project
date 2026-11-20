@@ -139,6 +139,6 @@ C) **Other.** Describe the requested outcome after the answer tag.
 
 [Answer]: A
 
-**Approval response (verbatim):** A：批准应用设计，进入 Units Generation
+**Historical approval response (English translation):** A: Approve the application design and proceed to Units Generation. The original raw response is preserved in the [audit](../../audit.md#application-design--explicit-generated-design-approval). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
 
 Approval recorded on 2026-11-20T03:43:36Z. Application Design is complete. Units Generation begins with its separate decomposition plan and explicit plan-approval gate; Construction remains stopped at the milestone.
