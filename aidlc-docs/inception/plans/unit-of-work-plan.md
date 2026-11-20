@@ -2,11 +2,11 @@
 
 **Stage:** Inception / Units Generation / Part 2: Generation
 
-**Status:** Plan explicitly approved on 2026-11-20T04:08:23Z; all three unit artifacts generated and validated. Separate generated-artifact approval remains pending.
+**Status:** Complete. Plan approved on 2026-11-20T04:08:23Z; all three generated artifacts separately approved on 2026-11-20T04:20:19Z. Inception documentation complete; STOP before Construction.
 
 **Baseline:** Requirements, 25 stories/P-01, Workflow Planning and all five Application Design artifacts are explicitly approved. Application Design approval was recorded on 2026-11-20T03:43:36Z.
 
-**Review:** [Draft PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8).
+**Review:** [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8).
 
 **Branch:** `inception/05-units-generation`, based on approved design head `3acbe935f98d35512d07a4cffbf0bb21db0ea914`. Integrate #5 → #6 → #7 → this stage into `candidate/course-copilot`; one driver, xiaolonglin1124-bit. Earlier gates are complete/ready and await maintainer integration.
 
@@ -85,19 +85,19 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 - [x] Generate inception/application-design/unit-of-work-dependency.md: one-unit dependency matrix, internal module/port relationships, external dependencies, parallelism and integration order.
 - [x] Generate inception/application-design/unit-of-work-story-map.md: all 25 stories assigned once to U-01 with primary/supporting modules, FR/NFR coverage and future acceptance evidence.
 - [x] Validate unit boundaries, dependencies, complete story/requirement mappings, all three artifacts, links/diagrams and full source/format/trust scope.
-- [ ] Obtain separate generated-unit artifact approval and record it before completing Inception.
-- [ ] STOP before Construction for the November 24 milestone; no application code generation.
+- [x] Obtain separate generated-unit artifact approval and record it before completing Inception.
+- [x] STOP before Construction for the November 24 milestone; no application code generation.
 
 ## 7. Extension compliance and milestone boundary
 
 | Rule | Current result |
 |---|---|
 | INFO5940-01 | Follow Units Parts 1–2; explicit plan approval, artifact generation/review and gates tracked in audit/state. |
-| INFO5940-02 | All three mandatory unit artifacts plus greenfield strategy planned; after artifact approval STOP before Construction. Generic stage text about continuing to Construction is overridden by the mandatory course checkpoint. |
+| INFO5940-02 | All three mandatory unit artifacts plus greenfield strategy are generated/approved; STOP before Construction. Generic stage text about continuing to Construction is overridden by the mandatory course checkpoint. |
 | INFO5940-03 | Prior answers/approvals complete; explicit Q1 approval covers all six proposed choices before generation. |
 | INFO5940-04 | One local demo bundle, concrete local Ollama candidate and progressive read-only Codex MCP; optional narrow Jev permission. |
 | INFO5940-05 | Planning documentation only; no application code, credentials or secrets. |
-| INFO5940-06 | Same driver and ordered prior-stage dependency; one active Draft gate, no parallel teammate workflow or manual audit/state merge. |
+| INFO5940-06 | Same driver and ordered prior-stage dependency; completed gate ready for maintainer integration, no parallel teammate workflow or manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Carry pure-transform/round-trip/version obligations into unit evidence; implementation and runtime results deferred. |
 
 ## 8. Decomposition-plan approval
@@ -114,4 +114,4 @@ C) **Other.** Describe an alternative proposal after the answer tag.
 
 **Approval response (verbatim):** A：批准开发单元计划并生成
 
-The answer unambiguously approves the complete six-category proposal. Generation is authorized; the separate generated-unit review and milestone stop before Construction remain in force.
+The answer unambiguously approves the complete six-category proposal. The approved generation is complete and its separate artifact approval is recorded in unit-of-work.md and the audit. The milestone stop before Construction remains in force.
