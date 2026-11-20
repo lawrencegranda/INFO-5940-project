@@ -21,7 +21,7 @@ Cornell University · **INFO 5940: Special Topics in Information Science (AI Cha
 
 ## Candidate proposal: Course Copilot
 
-**Status:** Candidate being evaluated alongside **Marketing Campaign Asset Copilot**. The `candidate/course-copilot` track stays separate from `main`. Requirements Analysis, User Stories, Workflow Planning and Application Design are approved ([PR #7](https://github.com/lawrencegranda/INFO-5940-project/pull/7)); The Units plan is approved; the [three generated U-01/nine-module artifacts in Draft PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8) await their separate final review before Inception is complete. Follow `aidlc-docs/aidlc-state.md` and the audit for the current gate. Integrate approved #5, then #6, then #7, then the current stage. No application code has been generated; the November 24 checkpoint stops after approved Units Generation.
+**Status:** Candidate being evaluated alongside **Marketing Campaign Asset Copilot**. The `candidate/course-copilot` track stays separate from `main`. Requirements Analysis, User Stories, Workflow Planning and Application Design are approved ([PR #7](https://github.com/lawrencegranda/INFO-5940-project/pull/7)); Inception documentation is complete and approved through [all three U-01/nine-module unit artifacts in PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8). Follow `aidlc-docs/aidlc-state.md` and the audit for the current gate. An upstream maintainer must integrate approved #5, then #6, then #7, then #8. This branch does not claim whole-team candidate selection or course submission. No application code has been generated; the November 24 checkpoint stops after approved Units Generation.
 
 ## 1. Problem & Rationale for Using LLMs
 
