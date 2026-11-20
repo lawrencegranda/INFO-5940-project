@@ -7,9 +7,10 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: User Stories complete — Workflow Planning handoff
+- **Current Stage**: Workflow Planning — execution plan prepared; approval pending
 - **Working Integration Branch**: `candidate/course-copilot`
-- **Active Stage Branch**: `inception/02-user-stories`
+- **Active Stage Branch**: `inception/03-workflow-planning`
+- **Prior Stage Dependency**: User Stories PR #5 approved and ready for review; awaiting upstream maintainer integration. Merge prior stage first.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
 ## Workspace State
@@ -47,17 +48,36 @@
 - [x] **Reverse Engineering** — SKIPPED (Greenfield).
 - [x] **Requirements Analysis** — Vision, technical environment, 43 verification questions, and 8 follow-up clarifications reconciled; decision register locked and requirements specification (`FR-01`–`FR-15`, `NFR-01`–`NFR-07`) approved on 2026-11-19T19:26:39Z.
 - [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
-- [ ] **Workflow Planning** — Not started.
-- [ ] **Application Design** — Not started.
-- [ ] **Units Generation** — Not started.
+- [ ] **Workflow Planning** — Execution plan prepared with stage selection, risks, required artifacts, evidence and explicit milestone stop; execution-plan approval pending.
+- [ ] **Application Design** — EXECUTE after execution-plan approval; not started.
+- [ ] **Units Generation** — EXECUTE after Application Design approval; not started.
 
 ### CONSTRUCTION PHASE
 
-- [ ] **Construction** — NOT AUTHORIZED at the November 24 milestone.
+- [ ] **Functional Design** — EXECUTE later per unit; deferred.
+- [ ] **NFR Requirements** — EXECUTE later per unit; deferred.
+- [ ] **NFR Design** — EXECUTE later per unit; deferred.
+- [ ] **Infrastructure Design** — EXECUTE later with concise laptop-local mapping; deferred.
+- [ ] **Code Generation** — EXECUTE later; deferred.
+- [ ] **Build and Test** — EXECUTE later; deferred.
+
+**Construction is NOT AUTHORIZED at the November 24 milestone.** Stage selection is a future plan, not completion or permission to start.
 
 ### OPERATIONS PHASE
 
 - [ ] **Operations** — Out of scope.
 
+## Execution Plan Summary
+
+- **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (prepared; explicit approval pending).
+- **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
+- **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories.
+- **Current/remaining Inception**: Workflow Planning review, Application Design, Units Generation.
+- **Skipped**: Reverse Engineering (Greenfield; no existing application).
+- **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
+- **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
+- **Risk**: High; real LMS/extraction/model/MCP integrations unverified.
+
 ## Next Action
-Publish the recorded User Stories approval in PR #5 and complete its candidate-branch integration before opening the next single-writer stage branch, `inception/03-workflow-planning`. Prepare the execution plan from the approved requirements and stories, then request its explicit review before Application Design. Construction remains stopped at the course checkpoint.
+
+Review the concrete execution plan Q1. After explicit approval is logged, complete Workflow Planning and start Application Design under its own plan and artifact-review gates. Keep the full approved source/format scope, local-first fallback and read-only Codex MCP. Integrate PR #5 before this dependent stage through the same single-writer workflow; the current GitHub identity has no upstream merge control. Stop after approved Units Generation for the November 24 Inception checkpoint. No application implementation or runtime capability is claimed.
