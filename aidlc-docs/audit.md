@@ -305,3 +305,14 @@ A：批准执行计划，进入 Application Design
 B：先修改执行计划
 ```
 **Context**: This is the concrete plan review required by Workflow Planning Steps 9–10. Q1 remains unanswered, Workflow Planning remains unchecked and Application Design has not started. User Stories approval does not approve an unseen execution plan. INFO5940-02 still stops this milestone before Construction.
+
+---
+
+## Workflow Planning — Explicit Execution-Plan Approval
+**Timestamp**: 2026-11-20T03:18:17Z
+**User Input**:
+```text
+A：批准执行计划，进入 Application Design
+```
+**AI Response**: Recorded the complete user-authored answer to the linked execution-plan Q1 in Draft PR #6. Filled answer A, completed the Workflow Planning checklist and tracker, and authorized the next selected Inception stage, Application Design. At preflight re-fetched remotes and listed open PRs: only the same driver's completed #5 and current #6; no competing teammate Inception gate. PR #6 conversation, reviews and inline feedback were empty. Final published execution-plan/state/audit blobs matched local files; original and prior-stage audit prefixes were preserved. Full candidate-to-stage git diff --check passed after normalizing Markdown trailing whitespace.
+**Context**: This approval is for the concrete published execution plan, not inferred from earlier story approval. Application Design remains subject to its own generated-artifact approval; Construction is not authorized. The requested GitHub account remains xiaolonglin1124-bit.
