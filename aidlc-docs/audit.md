@@ -206,3 +206,22 @@ Reviewed docs/vision.md, docs/technical-environment.md, aidlc-docs/inception/req
 **AI Response**: 已准备好 User Stories 计划，请审阅 `aidlc-docs/inception/plans/story-generation-plan.md` 第 8 节。回复 A 表示批准这份具体计划并生成用户故事和 persona；回复 B 并说明要修改的地方。仓库的 `.aidlc-rule-details/inception/user-stories.md` 第 13 步明确要求："Do not proceed until the user explicitly approves the story approach." 因此当前只准备计划，尚不把用户故事标为完成或进入应用开发。
 **Context**: Planning approval requested for a concrete artifact. The `[Answer]:` field is intentionally blank, and no dependent generation has executed.
 
+
+---
+
+## User Stories — Single-Writer Draft PR and Publication Verification
+**Timestamp**: 2026-11-20T02:33:54Z
+**User Input**: No new user input; publication under the existing request and account instruction.
+**AI Response**: Created the public project fork `xiaolonglin1124-bit/INFO-5940-project`, retained the candidate branch, and published `inception/02-user-stories` through the GitHub browser session authenticated as the requested account. Opened Draft PR #5: https://github.com/lawrencegranda/INFO-5940-project/pull/5 targeting `lawrencegranda:candidate/course-copilot`. Verified the author, Draft status, intended base/head, four changed documentation files, and no conversation feedback at review time. Compared the four published blob hashes with local files; all matched exactly. The previous audit bytes remain intact. Independent read-only review found no blocking planning issue. Local Markdown/reference checks and `git diff --check` passed.
+**Context**: Single-writer review location established. The PR is not merged; planning approval, story generation, later gates and the prototype implementation remain pending.
+
+## User Stories — Linked Planning Approval Presented
+**Timestamp**: 2026-11-20T02:33:54Z
+**User Input**: Awaiting response.
+**AI Response**:
+```text
+请审阅 [User Stories 计划](https://github.com/xiaolonglin1124-bit/INFO-5940-project/blob/inception/02-user-stories/aidlc-docs/inception/plans/story-generation-plan.md#8-planning-approval)。是否批准按这份计划生成用户故事和 persona？
+A：批准计划并继续生成
+B：先修改计划
+```
+**Context**: The existing plan contains Q1 and an unanswered `[Answer]:` field. This linked prompt requests approval of that concrete artifact, as required by User Stories Step 13. No approval is inferred from silence or from the earlier general prototype request.
