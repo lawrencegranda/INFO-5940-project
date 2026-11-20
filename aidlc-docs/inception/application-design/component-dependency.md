@@ -34,7 +34,7 @@ Rows consume the component in a column. An empty dependency is shown as a dash. 
 
 - **H:** controlled loopback HTTP request from the paired extension/UI.
 - **C:** internal command/orchestration call in the library runtime.
-- **R:** evidence/original/metadata read port.
+- **R:** scoped evidence/original/metadata read port or restricted permission-validation read port.
 - **W:** authorized processing/index write port, available only in the library runtime.
 - **RW:** separate read and write ports; the MCP composition receives the read subset only.
 - **Q:** query-only interface, including pure precedence evaluation; no persisted enrichment or rebuild.
@@ -50,13 +50,15 @@ Rows consume the component in a column. An empty dependency is shown as a dash. 
 | C-05 | - | - | - | - | - | - | - | - | - | - | - | - |
 | C-06 | - | - | - | - | R | - | - | - | - | - | - | - |
 | C-07 | - | - | - | - | - | - | - | - | - | - | - | - |
-| C-08 | - | - | - | - | - | - | - | - | - | - | - | - |
+| C-08 | - | - | - | - | R | - | - | - | - | - | - | - |
 | C-09 | - | - | - | - | R | - | L | J | - | - | - | - |
 | C-10 | - | - | - | - | R | - | L | - | - | - | - | - |
 | C-11 | - | - | - | - | RW | - | L | J | - | Q | - | - |
 | C-12 | - | - | - | - | R | - | - | - | - | - | Q | - |
 
 C-06, C-09 and C-10 return extraction/enrichment drafts to C-04 for controlled persistence; their C-05 dependency is a read port, not a direct evidence writer. C-11's library-runtime index writer is explicitly separate from its query port.
+
+C-08's C-05 edge is the restricted PermissionReadPort: validate a preexisting permission against an already scoped request. It cannot enumerate grants, reveal unrelated input, update use counters or create/expand consent. This is not an unscoped evidence-read tool.
 
 C-05 depends on SQLite/local files; C-06 on selected local extraction adapters; C-07 on local model/embedding runtimes; C-08 on the hosted Jev endpoint. These are external runtime dependencies, not extra product components or settled tool selections. C-01 may access the page and individually authorized embedded resources through the user's browser context. None of these edges permits forwarding session cookies, passwords or LMS tokens to the local library.
 
@@ -107,6 +109,7 @@ flowchart TD
     C09 -->|local full text| C07
     C10 -->|local full text| C07
     C09 -->|minimal matching permission| C08
+    C08 -->|scoped permission validation| C05
     C11 -->|local embeddings when available| C07
     C09 -->|derived drafts| C04
     C10 -->|derived drafts| C04
@@ -153,6 +156,7 @@ flowchart TD
     Q10 --> Q05
     Q11 -->|optional local inference| Q07
     Q11 -->|existing exact-scope permission only| Q08
+    Q08 -->|scoped permission validation| Q05
     Q05 -->|selected saved evidence| Q11
     Q11 -->|bounded preview or exact fetch| C12
     C12 -->|evidence with provenance| Host
