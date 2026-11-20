@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Course Copilot — Save to Library",
+  "version": "0.1.0",
+  "description": "Explicitly save an accessible course page and selected files to your paired local Course Copilot library.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1:4310/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "action": {
+    "default_title": "Save to Course Copilot",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; connect-src http://127.0.0.1:4310 https: http:"
+  }
+}

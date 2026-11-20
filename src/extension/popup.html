@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Save to Course Copilot</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header><div class="brand-mark" aria-hidden="true">c<span>·</span></div><div><strong>Course Copilot</strong><p>Your course. Your sources.</p></div><span id="connection" class="connection">Offline</span></header>
+  <main>
+    <details id="pairing">
+      <summary>Connect your local library</summary>
+      <p>Start Course Copilot, then copy its extension pairing code from Settings. The code stays on this browser.</p>
+      <label for="pair-code">Pairing code</label>
+      <div class="pair-row"><input id="pair-code" type="password" autocomplete="off" placeholder="Paste pairing code"><button id="connect" type="button">Connect</button></div>
+    </details>
+    <div class="eyebrow">SAVE THIS PAGE</div>
+    <div class="page-card"><span class="page-icon" aria-hidden="true">↗</span><div><strong id="page-name">Reading the current page…</strong><span id="page-origin">Only this page and files you choose.</span></div></div>
+    <label for="title">Title</label><input id="title" type="text" maxlength="240" placeholder="Document title">
+    <div class="field-row"><div><label for="course">Course</label><select id="course"><option value="">Connect to choose a course</option></select></div><div><label for="kind">Material type</label><select id="kind"><option value="notes">Notes / page</option><option value="lecture">Lecture</option><option value="assignment">Assignment</option><option value="syllabus">Syllabus</option><option value="announcement">Announcement</option><option value="paper">Paper</option></select></div></div>
+    <section id="asset-section" hidden><div class="section-label"><strong>Linked files & media</strong><span id="asset-count"></span></div><p class="hint">Choose files to save separately. Protected or unavailable files may need manual upload.</p><div id="assets"></div></section>
+    <button id="save" class="primary" type="button" disabled><span aria-hidden="true">↓</span> Save to library</button>
+    <div id="status" role="status" aria-live="polite">Nothing is saved until you choose Save.</div>
+    <ul id="results" aria-label="Capture results" hidden></ul>
+  </main>
+  <footer><span class="privacy-dot"></span> Local library · No automatic hosted processing <a href="http://127.0.0.1:4310" target="_blank" rel="noreferrer">Open library ↗</a></footer>
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
