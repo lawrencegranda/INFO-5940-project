@@ -316,3 +316,42 @@ A：批准执行计划，进入 Application Design
 ```
 **AI Response**: Recorded the complete user-authored answer to the linked execution-plan Q1 in Draft PR #6. Filled answer A, completed the Workflow Planning checklist and tracker, and authorized the next selected Inception stage, Application Design. At preflight re-fetched remotes and listed open PRs: only the same driver's completed #5 and current #6; no competing teammate Inception gate. PR #6 conversation, reviews and inline feedback were empty. Final published execution-plan/state/audit blobs matched local files; original and prior-stage audit prefixes were preserved. Full candidate-to-stage git diff --check passed after normalizing Markdown trailing whitespace.
 **Context**: This approval is for the concrete published execution plan, not inferred from earlier story approval. Application Design remains subject to its own generated-artifact approval; Construction is not authorized. The requested GitHub account remains xiaolonglin1124-bit.
+
+---
+
+## Application Design — Plan, Question Assessment and Stage Authorization
+**Timestamp**: 2026-11-20T03:29:56Z
+**User Input**: No new user input; continuing under the explicit execution-plan approval recorded above.
+**AI Response**: Entered Application Design on inception/04-application-design from approved planning head ae4ce29f207bf67bc1390a23e3efe06feb9a2dbc. Loaded the exact stage rules and prepared application-design-plan.md. Evaluated all five categories: component identification, methods, orchestration, dependencies and design patterns. Approved requirements, Q36's delegated engineering choice and the explicit execution-plan approval provide sufficient direction; no unresolved product question remains. Chose a local modular runtime, controlled loopback extension/UI commands, separate stdio read-only MCP composition, twelve logical components and four logical services. Proceeding to all mandatory artifacts without inventing a separate planning-approval answer; the required generated-design approval remains pending.
+**Context**: Application Design Steps 6–9 require answers to actual unresolved questions; none was created merely to force an extra gate. The user has not been represented as approving unseen detailed contracts. No application implementation or Construction.
+
+## Application Design — Single-Writer Draft Publication
+**Timestamp**: 2026-11-20T03:29:56Z
+**User Input**: No new user input; authorized documentation generation/publication.
+**AI Response**: Marked explicitly approved Workflow Planning PR #6 ready for review and updated its description to the final approved scope. Published the Application Design plan and opened Draft PR #7 (https://github.com/lawrencegranda/INFO-5940-project/pull/7) under xiaolonglin1124-bit, targeting candidate/course-copilot. This stage discloses #5 then #6 as ordered dependencies; both are complete/approved but await upstream maintainer integration. No competing teammate Inception PR is open. Refreshed #7 conversation, reviews and inline comments; no feedback was present. Bounded artifact-writing/review tasks share the same root workflow driver; audit/state remain root-owned and are not hand-merged.
+**Context**: #7 is the sole active Draft gate; earlier stage PRs remain open/ready. The plan is a concrete record of delegated engineering choices, not a new product scope or fabricated approval.
+
+---
+
+## Application Design — Complete Artifacts, Review and Corrections
+**Timestamp**: 2026-11-20T03:36:36Z
+**User Input**: No new user input; generation under the approved execution plan.
+**AI Response**: Generated all five required artifacts: components.md, component-methods.md, services.md, component-dependency.md and consolidated application-design.md. Defined twelve component responsibilities, shared identity/status/results and method contracts, four logical services, a full dependency matrix, two structurally checked Mermaid flows with numbered text alternatives, all 25 story mappings and all 15 FR/seven NFR responsibilities. Preserved the full source/format breadth and read-only local MCP, with no runtime success claims. Updated the README to point to the current gate.
+**Context**: These are documentation contracts, including descriptive TypeScript declarations, not application implementation. No type compiler was available and none is claimed; local model/provider/source/client behavior remains unverified.
+
+## Application Design — Independent Cross-Artifact Review
+**Timestamp**: 2026-11-20T03:36:36Z
+**User Input**: No new user input; quality review before the generated-artifact gate.
+**AI Response**: Independent read-only review and root reconciliation resolved contract gaps: derived full-text fetch requires an exact extraction revision; pending extraction returns course-independent stored identities until accepted membership; course index visibility follows accepted filing and lexical availability precedes optional AI; original viewing uses a scoped opaque resource handle with bounded byte/MIME reads; C-03 only edits review/metadata and queues derived work, C-04 commits enrichment drafts, C-11 owns index embedding production through the local gateway, and the hosted gateway receives only restricted permission validation. Reconciled dependency matrix and service wording. Preserved exact old references, separate unchanged-capture receipts, fact-scoped supersession and all fallback/trust boundaries. Document checks validate relative links, balanced fences, whitespace, twelve component groups, six MCP tool names, complete story/requirement maps, the sole pending review question and the full inherited audit prefix. Latest open-PR/feedback checks show only this driver's approved/ready #5/#6 and active Draft #7, with no teammate comments.
+**Context**: No remaining product-direction ambiguity or blocking design finding was identified. These checks validate documentation consistency, not executable security, provider compatibility or completed integration tests.
+
+## Application Design — Generated-Artifact Approval Prompt
+**Timestamp**: 2026-11-20T03:36:36Z
+**User Input**: Awaiting response.
+**AI Response**:
+```text
+请审阅 Draft PR #7 的五份应用设计文档（application-design.md 第 8 节）。是否批准这套设计并进入 Units Generation？
+A：批准应用设计，进入 Units Generation
+B：先修改应用设计
+```
+**Context**: Application Design Step 13 requires explicit artifact approval before continuing. The current Q1 answer remains blank and the Application Design tracker remains unchecked. No Units or Construction is started; the course checkpoint still stops after approved Units Generation.
