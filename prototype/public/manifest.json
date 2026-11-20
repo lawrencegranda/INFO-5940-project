@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Marketing Campaign Asset Copilot",
+  "short_name": "Asset Copilot",
+  "description": "Find and prepare images from a local library using Ollama.",
+  "version": "0.2.0",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "identity"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*"
+  ],
+  "background": {
+    "service_worker": "worker.js"
+  },
+  "action": {
+    "default_title": "Open Asset Copilot"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self'; img-src 'self' blob: data:; connect-src http://127.0.0.1:11435 https://slides.googleapis.com; base-uri 'none'; form-action 'none'"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA496zI5k9Gw0266TcVa/ywANmDVBuu1hPgrpy0sFn9qb8NhSo/RQlo1hF783OTWbRHjBB7AV/X5n7BdW8SYnpnZlhUwKV6NDP0IieAVMKPR2VLoBiZFqVveECRfu+2jYpeXO409v48kkdiZC6hXvH45B+hNv26uV+cU+zY8TXNjv7Sgr373WYxokqHrgw1ljKcBY30N1xdIuCJpw7Cspa/OlP/yzeCzVb6+6c4QaEbND0pH2UMrP5mKo5YRGQ2xoEJdIBPhc6t/9DxMTLg8IiEsLKZjNXjwS2Dutl8ObbU8UpF8/o7VXl04EVYwuUEiGt1ZJ7MsAFCCW83Il7VKP50QIDAQAB",
+  "optional_host_permissions": [
+    "https://slides.googleapis.com/*"
+  ],
+  "oauth2": {
+    "client_id": "106510914947-cldfipb6kegcf60u0tb44kalm6dd0slb.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/presentations.readonly"
+    ]
+  }
+}

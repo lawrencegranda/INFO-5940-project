@@ -1,0 +1,4 @@
+/.test-output/
+/assets/
+# The handoff includes the loadable Chrome build.
+!/dist/

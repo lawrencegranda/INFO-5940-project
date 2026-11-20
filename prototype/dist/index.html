@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Asset Copilot</title>
+    <script type="module" crossorigin src="./assets/index-CE6OB9C3.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-vwNBI-TR.css">
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 36 36" aria-hidden="true">
+          <rect x="3" y="5" width="26" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M7 23l6-7 4 4 4-6 5 8M30 13v13a5 5 0 0 1-5 5H13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="13" cy="12" r="1.5" fill="currentColor"/>
+        </svg>
+        <h1>Asset Copilot</h1>
+        <span class="connection" id="connection" role="status">Checking Ollama</span>
+      </div>
+      <div class="model-row">
+        <label for="model">Vision model</label>
+        <select id="model" disabled></select>
+        <button id="connect" class="quiet" type="button">Check</button>
+      </div>
+    </header>
+
+    <div class="library-bar">
+      <div class="library-label">
+        <strong id="folder-label">Local image library</strong>
+        <span id="library-count">0 images indexed</span>
+      </div>
+      <button id="choose" class="secondary" type="button">Choose folder</button>
+      <input id="folder" type="file" accept="image/jpeg,image/png,image/webp" webkitdirectory multiple hidden />
+    </div>
+    <nav class="tabs" aria-label="Workspace">
+      <button id="show-recommend" type="button" aria-pressed="true">Recommend</button>
+      <button id="show-library" type="button" aria-pressed="false">Library</button>
+    </nav>
+    <main>
+      <div id="status" class="notice" role="status" hidden></div>
+      <section id="recommend" aria-labelledby="slide-heading">
+        <h2 id="slide-heading">Campaign brief</h2>
+        <details class="slides-connect">
+          <summary>Read a Google Slides deck</summary>
+          <div class="form">
+            <label for="deck-url">Presentation link</label>
+            <input id="deck-url" type="url" placeholder="https://docs.google.com/presentation/d/…" />
+            <div class="actions">
+              <button id="detect-deck" class="secondary" type="button">Use active tab</button>
+              <button id="read-deck" class="secondary" type="button">Read deck</button>
+            </div>
+            <p id="slides-status" class="hint" role="status">Read-only. Slide content appears here before you use it in a brief.</p>
+            <div id="slide-source" class="form" hidden>
+              <h3 id="deck-title"></h3>
+              <label for="slide-page">Slide</label>
+              <select id="slide-page"></select>
+              <p id="slide-layout" class="hint"></p>
+              <ul id="slide-contents"></ul>
+              <button id="use-slide" class="secondary" type="button">Use this slide</button>
+            </div>
+          </div>
+        </details>
+        <div class="form">
+          <label for="scenario">Sample scenario</label>
+          <select id="scenario">
+            <option value="">Custom slide</option>
+          </select>
+          <label for="brief">Slide text or brief</label>
+          <textarea id="brief" rows="4" maxlength="1600" placeholder="Paste slide text or describe the image the slide needs."></textarea>
+          <button id="clear-slide" class="secondary" type="button" hidden>Clear Slides layout context</button>
+          <label for="placement">Output placement</label>
+          <select id="placement"><option value="">Auto from brief</option></select>
+          <div id="output-settings" class="settings-grid" hidden>
+            <label>Width (px)<input id="output-width" type="number" min="64" max="4096" step="1" /></label>
+            <label>Height (px)<input id="output-height" type="number" min="64" max="4096" step="1" /></label>
+          </div>
+          <button id="find" class="primary" type="button">Find images</button>
+          <p id="recommend-hint" class="hint">Choose a folder and index its images to get recommendations.</p>
+        </div>
+        <div id="campaign-plan" class="review-note" aria-live="polite" hidden></div>
+        <div id="constraints" class="review-note" hidden></div>
+        <div id="recommendations" aria-live="polite"></div>
+        <form id="feedback-form" class="feedback form" hidden>
+          <h3 id="feedback-heading">Refine recommendations</h3>
+          <p id="feedback-asset" class="hint"></p>
+          <label for="feedback">What should change?</label>
+          <textarea id="feedback" rows="2" required maxlength="600" placeholder="Too casual. Find something more professional with room for a headline."></textarea>
+          <div class="actions">
+            <button class="primary" id="apply-feedback" type="submit">Apply feedback</button>
+            <button class="secondary" id="cancel-feedback" type="button">Cancel</button>
+          </div>
+        </form>
+      </section>
+      <section id="library" aria-labelledby="library-heading" hidden>
+        <div class="section-heading">
+          <div><h2 id="library-heading">Image library</h2><p id="library-detail" class="hint"></p></div>
+          <button id="index" class="primary" type="button">Index images</button>
+          <button id="stop" class="secondary" type="button" hidden>Stop</button>
+        </div>
+        <div id="progress-area" hidden>
+          <progress id="index-progress" value="0" max="1" aria-label="Indexing progress"></progress>
+          <p id="index-label" class="hint"></p>
+        </div>
+        <ul id="gallery" class="gallery" aria-label="Local image gallery"></ul>
+      </section>
+      <section id="inspector" class="inspector" aria-labelledby="asset-name" hidden>
+        <div class="section-heading">
+          <h2 id="asset-name"></h2>
+          <button id="close-asset" class="secondary" type="button">Close</button>
+        </div>
+        <div id="asset-info"></div>
+        <div id="crop-panel">
+          <h3>Crop preview</h3>
+          <div id="ratios" class="ratios" aria-label="Crop aspect ratio"></div>
+          <div class="crop-stage">
+            <canvas id="crop" role="img" aria-label="Crop preview of the selected asset"></canvas>
+          </div>
+          <p id="crop-info" class="hint" role="status"></p>
+          <div class="settings-grid frame-settings">
+            <label for="adaptation">Adaptation</label>
+            <select id="adaptation"><option value="crop">Crop to fill</option><option value="pad">Pad to fit</option></select>
+            <label for="frame-x">Horizontal frame</label><input id="frame-x" type="range" min="0" max="100" value="50" />
+            <label for="frame-y">Vertical frame</label><input id="frame-y" type="range" min="0" max="100" value="50" />
+            <label for="frame-zoom">Crop zoom</label><input id="frame-zoom" type="range" min="100" max="300" value="100" />
+          </div>
+          <details id="subject-review">
+            <summary>Check subject preservation</summary>
+            <p class="hint">Drag a box around the subject on the source image. The preview reports how much of that box stays in frame.</p>
+            <canvas id="source-frame" aria-label="Source image with crop and marked subject" role="img"></canvas>
+          </details>
+          <div class="actions">
+            <button id="reset-frame" class="secondary" type="button">Center frame</button>
+            <button id="model-focus" class="secondary" type="button">Try model focus</button>
+            <button id="download-crop" class="primary" type="button">Download PNG</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
