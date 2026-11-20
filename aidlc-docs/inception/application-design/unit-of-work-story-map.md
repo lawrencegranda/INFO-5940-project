@@ -2,7 +2,7 @@
 
 **Stage:** Inception / Units Generation / Part 2: Generation
 
-**Status:** Generated from the plan approved on 2026-11-20T04:08:23Z; separate generated-unit review remains pending. Evidence below is a future acceptance obligation, not an implemented capability or passing test.
+**Status:** Generated from the approved plan and explicitly approved with the other unit artifacts on 2026-11-20T04:20:19Z. Evidence below is a future acceptance obligation, not an implemented capability or passing test.
 
 **Unit:** U-01 — Local Course Copilot. All 25 stories, 15 functional requirements and seven non-functional requirements belong to this one integrated local product.
 
@@ -137,4 +137,4 @@ Properties supplement actual integration evidence. They do not establish authent
 
 This story map allocates the complete approved scope. It introduces no application code/directories, additional persona, independent service, assigned person or runtime success claim.
 
-The single generated-unit review is in [unit-of-work.md](unit-of-work.md); this map adds no question or approval field. After separate generated-artifact approval, finish the November 24 Inception checkpoint and stop before Construction.
+The single generated-unit review is in [unit-of-work.md](unit-of-work.md); this map adds no question or approval field. Separate generated-artifact approval is recorded; Inception documentation is complete and the workflow stops before Construction for the November 24 checkpoint.
