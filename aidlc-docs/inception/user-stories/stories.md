@@ -414,7 +414,7 @@ C) **Other.** Describe the requested review outcome after the answer tag.
 
 [Answer]: A
 
-**Approval response (verbatim):** A：批准用户故事和 persona，进入 Workflow Planning
+**Historical approval response (English translation):** A: Approve the user stories and persona, and proceed to Workflow Planning. The original raw response is preserved in the [audit](../../audit.md#user-stories--explicit-generated-artifact-approval-and-stage-completion). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
 
 Approval was recorded on 2026-11-20T03:04:34Z. Later design gates and Construction authorization remain separate.
 
