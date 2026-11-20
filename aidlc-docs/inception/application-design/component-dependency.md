@@ -203,4 +203,3 @@ The intended application boundary is read-only library access, not an unverified
 These are future acceptance obligations, not executed tests. Component dependencies do not assign teammates or finalize units/packages. Application Design still requires generated-artifact approval; Units Generation follows only after that approval. The course milestone stops after approved Units Generation and before Construction.
 
 **Document validation:** Both Mermaid flowcharts passed pre-write simple statement/ID/label/edge-reference checks; they are not claims of rendered or runtime validation. Numbered text alternatives preserve the same boundaries if a renderer is unavailable.
-
