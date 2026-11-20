@@ -67,7 +67,7 @@ export function normalizeSourceUrl(input: string): string {
   // Hash routers identify distinct sources; ordinary section/auth fragments do not.
   if (/^#!?\//.test(u.hash)) {
     const route = u.hash.slice(1).split('#',1)[0], split = route.indexOf('?');
-    if (split >= 0) { const params = new URLSearchParams(route.slice(split + 1)); scrub(params); u.hash = route.slice(0, split) + (params.size ? '?' + params.toString() : ''); }
+    if (split >= 0) { const params = new URLSearchParams(route.slice(split + 1)); scrub(params); u.hash = route.slice(0, split) + (params.size ? '?' + params.toString() : ''); } else u.hash = route;
   } else u.hash = '';
   scrub(u.searchParams);
   u.searchParams.sort();
