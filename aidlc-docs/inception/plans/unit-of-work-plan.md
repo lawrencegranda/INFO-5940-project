@@ -112,6 +112,6 @@ C) **Other.** Describe an alternative proposal after the answer tag.
 
 [Answer]: A
 
-**Approval response (verbatim):** A：批准开发单元计划并生成
+**Historical approval response (English translation):** A: Approve the units plan and proceed with generation. The original raw response is preserved in the [audit](../../audit.md#units-generation--explicit-plan-approval-and-part-2-start). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
 
 The answer unambiguously approves the complete six-category proposal. The approved generation is complete and its separate artifact approval is recorded in unit-of-work.md and the audit. The milestone stop before Construction remains in force.
