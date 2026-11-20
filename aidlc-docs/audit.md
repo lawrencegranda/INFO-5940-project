@@ -280,3 +280,28 @@ A：批准用户故事和 persona，进入 Workflow Planning
 ```
 **AI Response**: Recorded the complete user-authored answer to the linked review of 25 stories and P-01 persona in PR #5. Filled the generated-artifact answer with A, marked the persona/stories approved and completed the final story-plan checkbox and User Stories tracker. Refetched both remotes and checked PR #5 feedback; no conversation, review or inline feedback was present. Preparing the single-writer handoff to Workflow Planning using the approved requirements and generated artifacts.
 **Context**: This explicit approval completes User Stories and authorizes entering Workflow Planning. It does not preapprove the unseen execution plan, later design artifacts or Construction. Account instruction remains xiaolonglin1124-bit; no application code or runtime tests are introduced.
+
+---
+
+## Workflow Planning — Context, Stage Selection and Independent Review
+**Timestamp**: 2026-11-20T03:12:46Z
+**User Input**: No new user input; entering Workflow Planning under the explicit generated-artifact approval above.
+**AI Response**: Loaded the Workflow Planning, adaptive-depth/content-validation, Application Design/Units and future Construction stage rules, plus the approved requirements and decision register. Prepared execution-plan.md with greenfield impact analysis, high integration risk, stage selection/depth, all required remaining Inception artifacts, dependency order, source/format/story evidence matrix and proposed milestone windows. Selected Application Design and Units Generation next; all six Construction stages are future plans only. Included an explicit stop after approved Units Generation. Structural diagram validation initially exposed a node-count checker that excluded rounded boundary nodes; corrected the checker before creating the document. Validated all 18 declared nodes/edge references and included a text alternative. Independent read-only review found no blocking scope/gate/privacy issue; clarified milestone success wording.
+**Context**: No application code, model call, runtime benchmark or live integration test. Reverse Engineering skipped for greenfield; production Operations remains placeholder. The twelve selected lifecycle stages are planning decisions, not twelve completed stages.
+
+## Workflow Planning — Correct-Account Publication and Single-Writer Dependency
+**Timestamp**: 2026-11-20T03:14:21Z
+**User Input**: No new user input; publishing the authorized concrete execution plan.
+**AI Response**: Published the recorded User Stories approval through xiaolonglin1124-bit, verified all five approval-artifact blobs and the original audit prefix, and marked PR #5 ready for review. The signed-in account has no upstream merge control. Created inception/03-workflow-planning from the approved prior head b185e9d421e8e44c165d78ebe9e152fbbed65b82, retaining the same single driver. Published the execution plan and stage tracker and opened Draft PR #6 (https://github.com/lawrencegranda/INFO-5940-project/pull/6), targeting candidate/course-copilot. Disclosed its dependency on #5 and ordered integration. The exact course rule blocks competing documentation edits by another teammate; no such competing stage is open, and the prior self-driven gate is explicitly approved and complete. Re-fetched remotes, listed open PRs and refreshed both PRs' conversation, review and inline-comment channels; no feedback was present. No audit/state histories are hand-merged.
+**Context**: #5 remains open and unmerged, #6 is the sole active Draft gate. Merge #5 first; a maintainer handles upstream integration. This workflow does not substitute a different GitHub identity or imply project selection for the whole team.
+
+## Workflow Planning — Execution-Plan Approval Prompt
+**Timestamp**: 2026-11-20T03:14:21Z
+**User Input**: Awaiting response.
+**AI Response**:
+```text
+请审阅执行计划（Draft PR #6 的 execution-plan.md 第 10 节）。是否批准这份计划并进入 Application Design？
+A：批准执行计划，进入 Application Design
+B：先修改执行计划
+```
+**Context**: This is the concrete plan review required by Workflow Planning Steps 9–10. Q1 remains unanswered, Workflow Planning remains unchecked and Application Design has not started. User Stories approval does not approve an unseen execution plan. INFO5940-02 still stops this milestone before Construction.
