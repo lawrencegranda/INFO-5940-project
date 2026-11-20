@@ -438,3 +438,41 @@ A：批准单元文档，完成 Inception
 **User Input**: No new user input; closure under the final approval above.
 **AI Response**: Independent final status review confirmed both Units Q1 answers are A, zero unchecked unit-plan steps, every Inception stage complete, every Construction stage deferred and the exact final approval preserved. Reconciled stale approval-status headers in the four Application Design companion documents and its plan using the already-recorded 2026-11-20T03:43:36Z approval; no contracts or scope changed. Replaced final-stage Draft link labels with PR labels for ready-for-integration handoff. The canonical state/README explicitly distinguish completed documentation from unimplemented prototype, pending ordered upstream integration and unclaimed team selection/submission.
 **Context**: These are status-only consistency updates through the same single-writer workflow, not new product decisions or fabricated approvals. The workflow stops before Construction; no further approval question is opened.
+
+---
+
+## Prototype — User Direction After Inception Checkpoint
+**Timestamp**: 2026-11-20T04:31:46Z
+**User Input**:
+```text
+为什么不开发prototype呢
+```
+**AI Response**: Explained that the prior work had followed the course checkpoint, acknowledged that document completion did not fulfill the originally requested runnable prototype, and clarified the difference between the classmate's AI-DLC handoff and the optional prototype timing.
+**Context**: Retained the completed Inception record; no earlier approval is rewritten.
+
+## Prototype — Explicit Implementation Authorization
+**Timestamp**: 2026-11-20T04:31:46Z
+**User Input**:
+```text
+我们现在就做吧
+```
+**AI Response**: Started a separate prototype/local-course-copilot branch from the approved Inception snapshot. Treating this newer explicit instruction as authorization to implement now, superseding the earlier checkpoint stop for the prototype rather than asking the user to repeat prior gates. Prepared a concrete implementation/test plan using the approved local architecture. Application code is at repository root. Chose local-only Sites preview workflow, TypeScript/React, SQLite, MCP stdio and explicit-save Chrome capture. Existing local Ollama has deepseek-r1:latest; reuse is subject to real checks, with no automatic model download or paid-provider call.
+**Context**: No claim that full formal Construction stages or all product acceptance have already passed. Keep source/format breadth visible and report partial capabilities honestly. All GitHub writes must still use xiaolonglin1124-bit.
+
+
+## Prototype — Handoff Clarification Retained
+**Timestamp**: 2026-11-20T05:13:33Z
+**User Input**:
+```text
+i just pushed my branch with course-copilot. some steps of AI-DLC are done, but other not yet. branch is “candidate/course-copilot“\
+\
+Safi/Xiaolong/Chloe, can you guys pick up the branch and continue with it? need to continue AIDLC + maybe an MVP/prototype (but this can wait if needed). just pull candidate/course-copilot and open your agent (claude code, codex, whatever you use). the agent will read the branch and know exactly where we left off. just ask your agent something like “continue ai-dlc, we're on candidate/course-copilot, next is user stories.” it'll figure it out from the audit log.就是我同学说的是什么意思呢
+```
+**AI Response**: Explained the quoted classmate handoff as continuation of Course Copilot AI-DLC from its saved branch/audit, with prototype timing optional in that message. The quoted message itself did not authorize new account access; the user's subsequent explicit implementation request did authorize this separate local prototype.
+**Context**: Late capture of the intervening clarification, retained without rewriting earlier Inception audit bytes.
+
+## Prototype — Implementation and Observed Verification
+**Timestamp**: 2026-11-20T05:13:33Z
+**User Input**: No new input; implementation continues under “我们现在就做吧”.
+**AI Response**: Built real SQLite/original storage, scoped source/version/extraction references, import/extraction, narrowly evidence-supported deadline updates, responsive React library, optional local Ollama generation/vector retrieval, six read-only MCP tools and explicit-save Chrome extension. The integrated suite passed 49 tests in four files; TypeScript and production builds passed. Added regressions for historical recapture head preservation, provenance mismatch rejection, exact old-version capture reports, course boundaries, malformed tokens, valid dates and signed SPA source URLs. Existing local deepseek-r1 generated a summary; manually installed the official optional nomic-embed-text model (274 MB; no course content sent), then observed real hybrid retrieval. Native Vision/PDFKit smoke extracted known generated PNG/scanned-PDF text, and an actual browser PNG upload showed that text. Browser flows saved changed content and fetched exact earlier text with historical processing disabled. No hosted Jev/OpenAI or paid-provider call was used.
+**Context**: Preserved the approved Inception artifacts and separately logged prototype authorization. Formal full Construction/product acceptance, actual Codex CLI host connection, installed-extension/authenticated LMS capture, automatic STT and broad quality/performance remain unverified. The existing CLI Git credential resolved to XiaolongLin, so no push was made with it; source publication uses the already-authenticated Chrome account xiaolonglin1124-bit. Local originals, runtime caches, models, node_modules and pairing values remain excluded from Git.
