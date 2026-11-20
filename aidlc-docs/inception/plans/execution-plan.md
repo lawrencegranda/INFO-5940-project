@@ -3,6 +3,8 @@
 **Stage:** Inception / Workflow Planning  
 **Status:** Prepared for explicit review; approval pending.  
 **Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`; 25 stories and P-01 approved on 2026-11-20T03:04:34Z.  
+**Review:** [Draft PR #6](https://github.com/lawrencegranda/INFO-5940-project/pull/6).
+
 **Branch:** `inception/03-workflow-planning`, based on approved User Stories head `b185e9d421e8e44c165d78ebe9e152fbbed65b82`.  
 **Integration:** `candidate/course-copilot` in the team repository. This stage depends on [PR #5](https://github.com/lawrencegranda/INFO-5940-project/pull/5), ready for maintainer integration. Merge #5 first, then this stage; do not merge a cumulative stage diff out of order.
 
@@ -186,7 +188,7 @@ Dates use **America/New_York**. Windows are proposals dependent on reviews/proje
 - [x] Prepare validated Mermaid structure and text alternative.
 - [x] Define sequence, complete artifacts, evidence, timeline and milestone stop.
 - [x] Independently review this concrete plan and resolve findings.
-- [ ] Publish/present plan and check stage-PR feedback before approval.
+- [x] Publish/present plan and check stage-PR feedback before approval.
 - [ ] Record explicit execution-plan approval, complete stage and start Application Design.
 
 ## 10. Execution-plan approval
@@ -215,4 +217,4 @@ This is the current review gate. User Stories approval authorizes preparing this
 | INFO5940-06 | Compliant with disclosed dependency | Same driver, prior gate approved/ready, sole active Draft gate, ordered integration, no competing teammate workflow or manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Implementation deferred; obligations retained | Pure-transform/round-trip/version tests planned; no executable test result invented. |
 
-Runtime feasibility remains unverified. Workflow Planning remains pending Q1; independent review is complete; publication and feedback checks precede the approval prompt.
+Runtime feasibility remains unverified. Workflow Planning remains pending Q1; independent review, publication in Draft PR #6 and available feedback checks are complete; Q1 is the only current pending gate.
