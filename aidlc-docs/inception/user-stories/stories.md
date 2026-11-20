@@ -2,7 +2,7 @@
 
 **Stage:** Inception / User Stories / Part 2: Generation
 
-**Status:** Generated from the explicitly approved story plan; awaiting generated-artifact review. These stories describe required behavior, not implemented or tested functionality.
+**Status:** Approved by the user on 2026-11-20T03:04:34Z. These stories describe required behavior, not implemented or tested functionality.
 
 **Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`. All 43 decisions and eight clarifications remain in force.
 
@@ -400,7 +400,7 @@ The important cross-story dependencies are capture/import before extraction; sav
 
 ## Review boundary
 
-This file and `personas.md` implement the approved story-generation plan as documentation. The user/team must review the generated artifacts separately before User Stories is marked complete or Workflow Planning starts. Application code, runtime capability claims and Construction remain outside this stage.
+This file and `personas.md` implement the approved story-generation plan as documentation. The user explicitly approved these generated artifacts separately from the planning gate; User Stories is complete and Workflow Planning may start. Application code, runtime capability claims and Construction remain outside this stage.
 
 ## Generated-artifact review
 
@@ -412,9 +412,11 @@ B) **Request changes before approval.** Identify the story, acceptance criterion
 
 C) **Other.** Describe the requested review outcome after the answer tag.
 
-[Answer]:
+[Answer]: A
 
-This unanswered field is the current review gate. It is not a missing product decision or permission to infer approval from the earlier planning answer.
+**Approval response (verbatim):** A：批准用户故事和 persona，进入 Workflow Planning
+
+Approval was recorded on 2026-11-20T03:04:34Z. Later design gates and Construction authorization remain separate.
 
 ## Extension compliance at generation review
 
@@ -422,7 +424,7 @@ This unanswered field is the current review gate. It is not a missing product de
 |---|---|---|
 | INFO5940-01 | Compliant | Generation follows the approved plan; approval, actions and review prompt are appended to the audit. |
 | INFO5940-02 | Compliant | Inception documentation only; no application code or Construction. |
-| INFO5940-03 | Compliant at the current boundary | The prior 43 answers, eight clarifications and plan approval are recorded; the generated-artifact answer is pending and no dependent stage proceeds. |
+| INFO5940-03 | Compliant at the current boundary | The prior 43 answers, eight clarifications and plan approval are recorded; both distinct User Stories approvals are explicitly recorded before advancing. |
 | INFO5940-04 | Compliant | The approved local-first Ollama, optional permitted Jev and read-only MCP scope is preserved. |
 | INFO5940-05 | Compliant | Documentation only; no credentials or source application code. |
 | INFO5940-06 | Compliant | Single-writer Draft PR #5 is the active review location; remote state and all available feedback channels were checked. |
