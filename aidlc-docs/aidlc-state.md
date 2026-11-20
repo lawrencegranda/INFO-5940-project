@@ -10,6 +10,7 @@
 - **Current Stage**: Workflow Planning — execution plan prepared; approval pending
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/03-workflow-planning`
+- **Active Stage Review**: Draft PR #6 — https://github.com/lawrencegranda/INFO-5940-project/pull/6
 - **Prior Stage Dependency**: User Stories PR #5 approved and ready for review; awaiting upstream maintainer integration. Merge prior stage first.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
@@ -48,7 +49,7 @@
 - [x] **Reverse Engineering** — SKIPPED (Greenfield).
 - [x] **Requirements Analysis** — Vision, technical environment, 43 verification questions, and 8 follow-up clarifications reconciled; decision register locked and requirements specification (`FR-01`–`FR-15`, `NFR-01`–`NFR-07`) approved on 2026-11-19T19:26:39Z.
 - [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
-- [ ] **Workflow Planning** — Execution plan prepared with stage selection, risks, required artifacts, evidence and explicit milestone stop; execution-plan approval pending.
+- [ ] **Workflow Planning** — Execution plan prepared with stage selection, risks, required artifacts, evidence and explicit milestone stop; execution-plan approval pending in Draft PR #6.
 - [ ] **Application Design** — EXECUTE after execution-plan approval; not started.
 - [ ] **Units Generation** — EXECUTE after Application Design approval; not started.
 
