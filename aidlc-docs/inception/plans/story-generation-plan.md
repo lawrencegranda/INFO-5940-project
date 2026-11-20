@@ -1,7 +1,7 @@
 # Course Copilot — User Stories Generation Plan
 
 **Stage:** Inception / User Stories / Part 1: Planning
-**Status:** Ready for planning review; NOT approved for story generation.
+**Status:** Planning approved on 2026-11-20T02:44:10Z; Part 2 generated artifacts prepared; awaiting their separate review.
 **Integration branch:** `candidate/course-copilot`
 **Stage branch:** `inception/02-user-stories`
 **Requirements baseline:** `485c52531f004b1e184fb595abe771cfbcd17003`
@@ -110,26 +110,26 @@ These are a planning illustration based on approved requirements, not generated 
 - [x] Propose persona, grouping, story format, coverage and validation methods.
 - [x] Present alternative grouping approaches and their trade-offs.
 - [x] Prepare the explicit planning approval below.
-- [ ] Incorporate any teammate PR feedback and requested changes.
-- [ ] Record the user's deliberate approval answer verbatim in `audit.md`.
-- [ ] Confirm that approval is unambiguous before starting Part 2.
+- [x] Check available teammate PR feedback: no conversation, review or inline comments at Part 2 preflight.
+- [x] Record the user's deliberate approval answer verbatim in `audit.md`.
+- [x] Confirm that approval is unambiguous before starting Part 2.
 
 ### Part 2 — Generation, after planning approval
 
-- [ ] Generate `aidlc-docs/inception/user-stories/personas.md` using the approved persona approach.
-- [ ] Generate `aidlc-docs/inception/user-stories/stories.md` using the approved grouping and format.
-- [ ] Map persona/context and requirement references to each story.
-- [ ] Check coverage of every FR and NFR, including privacy, failure and offline paths.
-- [ ] Check INVEST, clear Given/When/Then conditions and story dependencies.
-- [ ] Check source/format breadth, saved-evidence semantics and honest verification labels.
-- [ ] Validate Markdown, links, IDs, requirement references and completed plan checkboxes.
-- [ ] Read Draft PR feedback and reconcile it through the shared audit trail.
-- [ ] Present generated stories and persona for their separate generation approval.
+- [x] Generate `aidlc-docs/inception/user-stories/personas.md` using the approved persona approach.
+- [x] Generate `aidlc-docs/inception/user-stories/stories.md` using the approved grouping and format.
+- [x] Map persona/context and requirement references to each story.
+- [x] Check coverage of every FR and NFR, including privacy, failure and offline paths.
+- [x] Check INVEST, clear Given/When/Then conditions and story dependencies.
+- [x] Check source/format breadth, saved-evidence semantics and honest verification labels.
+- [x] Validate Markdown, links, IDs, requirement references and completed plan checkboxes.
+- [x] Read Draft PR feedback and reconcile it through the shared audit trail.
+- [x] Present generated stories and persona for their separate generation approval.
 - [ ] Record that approval before marking User Stories complete or entering Workflow Planning.
 
 ## 8. Planning approval
 
-There is **one planning gate**, not a new product questionnaire. All earlier product decisions remain approved. Answer this after reviewing the concrete plan above; the field is deliberately left blank until the user responds.
+There is **one planning gate**, not a new product questionnaire. All earlier product decisions remain approved. The answer below records the user's explicit approval of this concrete plan; the response is preserved verbatim in the audit.
 
 ### Q1 — Review this User Stories approach
 
@@ -139,20 +139,22 @@ B) **Request changes before generation.** Describe the changes after the answer 
 
 C) **Other.** Describe an alternative direction after the answer tag.
 
-[Answer]:
+[Answer]: A
+
+**Approval response (verbatim):** A：批准计划并继续生成
 
 Planning approval does not approve unseen generated stories, later design gates or Construction. The requested prototype remains a downstream deliverable following those gates.
 
-## 9. Extension compliance for this planning artifact
+## 9. Extension compliance for the approved plan and generated artifacts
 
 | Rule | Status | Evidence or applicability |
 |---|---|---|
-| INFO5940-01 | Compliant | Resume the existing workflow; append the request, actions and approval prompt to the audit; leave the generation gate pending. |
-| INFO5940-02 | Compliant | Planning only; no application code or Construction. |
-| INFO5940-03 | Compliant at current gate | Inherited answers are complete. The new approval is blank and no dependent generation proceeds. |
+| INFO5940-01 | Compliant | Resume the existing workflow; record explicit planning approval and generation actions in the append-only audit; leave generated-artifact approval pending. |
+| INFO5940-02 | Compliant | Inception documentation only; generated stories and persona require separate approval before the next stage. No application code or Construction. |
+| INFO5940-03 | Compliant at current gate | Inherited answers and the explicit planning approval are complete. Generated-artifact approval remains a separate gate. |
 | INFO5940-04 | Compliant | Retain the approved local-first LLM/MCP product direction. |
 | INFO5940-05 | Compliant | Documentation only; no credentials or application code. |
-| INFO5940-06 | In progress | Clean fetched baseline and no open PRs verified; the stage's Draft PR is the shared review location. |
+| INFO5940-06 | Compliant | Draft PR #5 is the only active Inception PR; remotes and all feedback channels were checked before Part 2. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | N/A to implementation at this stage | No code or test framework is generated; acceptance obligations are retained for later design and Construction. |
 
 Optional security and resiliency baseline extensions remain disabled according to the inherited decisions. Core approved privacy and error-reporting requirements remain in force.
