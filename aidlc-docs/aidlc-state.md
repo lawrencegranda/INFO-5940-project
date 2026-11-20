@@ -7,8 +7,9 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: User Stories
+- **Current Stage**: User Stories — Part 1 planning prepared; awaiting explicit plan approval
 - **Working Integration Branch**: `candidate/course-copilot`
+- **Active Stage Branch**: `inception/02-user-stories`
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
 ## Workspace State
@@ -45,7 +46,7 @@
 - [x] **Workspace Detection** — Greenfield repository verified; rule files active; reverse engineering skipped (2026-11-19T17:28:00Z).
 - [x] **Reverse Engineering** — SKIPPED (Greenfield).
 - [x] **Requirements Analysis** — Vision, technical environment, 43 verification questions, and 8 follow-up clarifications reconciled; decision register locked and requirements specification (`FR-01`–`FR-15`, `NFR-01`–`NFR-07`) approved on 2026-11-19T19:26:39Z.
-- [ ] **User Stories** — Next stage.
+- [ ] **User Stories** — Part 1 assessment and story-generation plan prepared; explicit planning approval pending. No stories or personas generated yet.
 - [ ] **Workflow Planning** — Not started.
 - [ ] **Application Design** — Not started.
 - [ ] **Units Generation** — Not started.
@@ -59,4 +60,4 @@
 - [ ] **Operations** — Out of scope.
 
 ## Next Action
-Proceed to **Inception Stage 4: User Stories** under branch `inception/02-user-stories`.
+Review `aidlc-docs/inception/plans/story-generation-plan.md` on `inception/02-user-stories` and answer its planning approval. After explicit approval is recorded, generate stories/personas through Part 2 and obtain their separate approval before Workflow Planning. The Course Copilot prototype remains downstream of the approved Inception and Construction gates.
