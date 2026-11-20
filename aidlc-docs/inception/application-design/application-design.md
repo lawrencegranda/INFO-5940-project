@@ -1,6 +1,6 @@
 # Course Copilot — Consolidated Application Design
 
-**Status:** Generated for explicit artifact review; Application Design approval is pending. These documents describe proposed interfaces and behavior, not implemented or verified capabilities.
+**Status:** Approved on 2026-11-20T03:43:36Z. These documents describe proposed interfaces and behavior, not implemented or verified capabilities.
 
 **Baseline:** Approved requirements at `485c52531f004b1e184fb595abe771cfbcd17003`; P-01/25 stories approved; execution plan explicitly approved on 2026-11-20T03:18:17Z. **Review:** [Draft PR #7](https://github.com/lawrencegranda/INFO-5940-project/pull/7), branch `inception/04-application-design`. Integrate approved #5, then #6, then this dependent stage into `candidate/course-copilot` under the same single writer, xiaolonglin1124-bit.
 
@@ -119,7 +119,7 @@ High-risk open implementation choices are concrete OCR/STT/embedding tools, mode
 |---|---|
 | INFO5940-01 | Resumed approved AI-DLC stage; concrete plan evaluates all five categories; generation, decisions and review logged in audit/state. No unseen plan approval is invented. |
 | INFO5940-02 | Application Design documentation only; Units follows after approval, then STOP before Construction for the course milestone. |
-| INFO5940-03 | All inherited product/gate answers complete; zero new unresolved product questions. The single generated-design review below is transparently pending and blocks Units. |
+| INFO5940-03 | All inherited product/gate answers complete; zero new unresolved product questions. The separate generated-design answer below is explicitly recorded before Units planning. |
 | INFO5940-04 | Local model candidate, local library and concrete progressive read-only Codex MCP; optional minimal-permission Jev. |
 | INFO5940-05 | Documentation/contracts only, no application implementation, keys or credentials. |
 | INFO5940-06 | Same driver; prior stages approved/ready, one active Draft stage PR with explicit #5→#6→#7 dependency. Check all feedback before approval; no manual audit/state merge. |
@@ -137,6 +137,8 @@ B) **Request changes before approval.** Identify the component, contract, flow, 
 
 C) **Other.** Describe the requested outcome after the answer tag.
 
-[Answer]:
+[Answer]: A
 
-Application Design remains pending this explicit generated-artifact approval. No Units Generation or Construction is started by presenting these artifacts.
+**Approval response (verbatim):** A：批准应用设计，进入 Units Generation
+
+Approval recorded on 2026-11-20T03:43:36Z. Application Design is complete. Units Generation begins with its separate decomposition plan and explicit plan-approval gate; Construction remains stopped at the milestone.
