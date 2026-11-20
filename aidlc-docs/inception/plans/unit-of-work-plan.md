@@ -2,7 +2,7 @@
 
 **Stage:** Inception / Units Generation / Part 2: Generation
 
-**Status:** Plan explicitly approved on 2026-11-20T04:08:23Z; generating the three unit artifacts. Separate generated-artifact approval remains pending.
+**Status:** Plan explicitly approved on 2026-11-20T04:08:23Z; all three unit artifacts generated and validated. Separate generated-artifact approval remains pending.
 
 **Baseline:** Requirements, 25 stories/P-01, Workflow Planning and all five Application Design artifacts are explicitly approved. Application Design approval was recorded on 2026-11-20T03:43:36Z.
 
@@ -53,7 +53,7 @@ Shared pure types/serialization/helpers may live in src/shared/. They cannot imp
 
 1. Define shared identifiers/results/DTOs and independent read/write/processing interfaces; establish immutable evidence and pending-item/capture-receipt semantics. M-04 and M-03 provide the foundation.
 2. Build an early native-text/PDF slice: M-01/M-02 capture/import → M-03/M-04 preserve original → M-05 extract → M-03/M-04 commit derived output → M-08 lexical query → M-09 Codex search/fetch, after later Construction authorization. Start actual three-LMS/OCR/media/math feasibility checks early, not after all UI work.
-3. Complete all required source/format adapters, manual recovery and per-stage status. Lexical publication requires accepted membership but precedes optional AI. M-01/M-02/M-05 can work in parallel once contracts are agreed.
+3. Complete all required source/format adapters, manual recovery and per-stage status. Lexical publication requires accepted membership and precedes optional post-filing summary/claim/vector enrichment. Permitted minimal classification may assist pre-filing suggestions; manual filing remains available without AI. M-01/M-02/M-05 can work in parallel once contracts are agreed.
 4. Add M-06/M-07 correctable filing, source-linked incremental course/topic/document summaries and fact-scoped updates/conflicts; M-08 required semantic retrieval/filter behavior; preserve local fallback and immutable references.
 5. Validate the complete laptop product across both conceptual search/fetch and deadline-change/history/conflict scenarios, all source/format paths, permission failures and actual Codex use. Unit acceptance is an integrated outcome, not a sum of mock-module test passes.
 
@@ -82,9 +82,9 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 ### Part 2 — Only after Q1 approval
 
 - [x] Generate inception/application-design/unit-of-work.md: U-01 definition/responsibilities, internal modules, implementation sequence, acceptance and greenfield root code organization strategy.
-- [ ] Generate inception/application-design/unit-of-work-dependency.md: one-unit dependency matrix, internal module/port relationships, external dependencies, parallelism and integration order.
-- [ ] Generate inception/application-design/unit-of-work-story-map.md: all 25 stories assigned once to U-01 with primary/supporting modules, FR/NFR coverage and future acceptance evidence.
-- [ ] Validate unit boundaries, dependencies, complete story/requirement mappings, all three artifacts, links/diagrams and full source/format/trust scope.
+- [x] Generate inception/application-design/unit-of-work-dependency.md: one-unit dependency matrix, internal module/port relationships, external dependencies, parallelism and integration order.
+- [x] Generate inception/application-design/unit-of-work-story-map.md: all 25 stories assigned once to U-01 with primary/supporting modules, FR/NFR coverage and future acceptance evidence.
+- [x] Validate unit boundaries, dependencies, complete story/requirement mappings, all three artifacts, links/diagrams and full source/format/trust scope.
 - [ ] Obtain separate generated-unit artifact approval and record it before completing Inception.
 - [ ] STOP before Construction for the November 24 milestone; no application code generation.
 
@@ -92,7 +92,7 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 
 | Rule | Current result |
 |---|---|
-| INFO5940-01 | Follow Units Part 1; concrete proposal and explicit plan/generation gates tracked in audit/state. |
+| INFO5940-01 | Follow Units Parts 1–2; explicit plan approval, artifact generation/review and gates tracked in audit/state. |
 | INFO5940-02 | All three mandatory unit artifacts plus greenfield strategy planned; after artifact approval STOP before Construction. Generic stage text about continuing to Construction is overridden by the mandatory course checkpoint. |
 | INFO5940-03 | Prior answers/approvals complete; explicit Q1 approval covers all six proposed choices before generation. |
 | INFO5940-04 | One local demo bundle, concrete local Ollama candidate and progressive read-only Codex MCP; optional narrow Jev permission. |
