@@ -1,0 +1,113 @@
+# Course Copilot — User Persona
+
+**Stage:** Inception / User Stories / Part 2: Generation
+
+**Status:** Draft for the separate User Stories generation review; no stage-completion approval is asserted.
+
+**Persona:** P-01 — A student managing several courses
+
+**Requirements baseline:** `485c52531f004b1e184fb595abe771cfbcd17003`
+
+## Evidence and scope
+
+This is a requirements-derived scenario persona. It translates approved product decisions into a consistent human context for the user stories. It is not a report of interviews, observed usage or usability research. No demographic attributes, measured adoption rates or validated model-performance claims are invented.
+
+The MVP has one primary human user. Capture/organization and retrieval/verification are two contexts of that same student, not separate personas. Codex and other external assistants are integration clients. Instructors, graders, administrators and teammates are not additional product-user roles in this MVP.
+
+## P-01 — A student managing several courses
+
+| Attribute | Description |
+|---|---|
+| Role | An individual student maintaining a private library for multiple courses. |
+| Material environment | Course pages and announcements in Canvas, Gradescope and EdStem, plus ordinary webpages, research papers, PDFs and other local files the student is authorized to use. |
+| Working environment | A Chrome browser for explicit capture, a local course library for organization and inspection, and an external AI assistant for conversation. Codex CLI is the first required MCP client. |
+| Responsibility and control | Choose what to save, authorize optional embedded resources, confirm or correct uncertain classification, inspect source evidence and decide whether specific minimal excerpts may be sent to hosted Jev. |
+| Main need | Retrieve relevant, attributable course evidence while preserving original sources, saved history and uncertainty about changed instructions. |
+
+### Goals
+
+- Collect accessible course material and related research without repeatedly copying an entire course into a chat.
+- Keep courses, folders/topics and tags understandable, with corrections available when suggested metadata is wrong.
+- Find a relevant concept, requirement or source passage within the intended course.
+- Check which saved instruction applies when an announcement changes an earlier deadline, exam detail or assignment rule.
+- Inspect the original evidence and prior saved versions when an answer needs verification.
+- Keep source URLs, capture times and known publication/effective dates available without treating every older document as stale.
+- Retain control over private material and use saved content when hosted Jev is unavailable or disabled.
+- Understand incomplete extraction and recover through a permitted alternative such as manual upload.
+
+### Pain points represented by the requirements
+
+- Relevant material is dispersed across authenticated sites, files and announcements.
+- Whole-course context uploads can overwhelm an assistant; a flat result list can mix courses or hide the passage that matters.
+- An old syllabus and a newer announcement can express different instructions about the same assignment.
+- Missing source links or saved-version information make an answer hard to verify.
+- An incorrect course/folder suggestion can make a saved document difficult to find.
+- A scanned page, inaccessible embedded file or media extraction failure can leave an unseen gap in the searchable library.
+- A required hosted model call would make access depend on permission, connectivity or paid usage.
+
+These pain points are product premises inherited from the approved vision and requirements, not claims that every student experiences them or that user research has confirmed their frequency.
+
+## Two contexts of P-01
+
+### Capture and organize
+
+**Trigger:** The student is viewing material worth retaining, receives a changed instruction, or has a local file to add.
+
+**Desired flow:** Explicitly save the current accessible page or import a file; review discovered embedded resources; see the extraction result; confirm or correct course/folder and metadata; retain the source and original content; make the available evidence searchable.
+
+**Control needs:** Capture only material the student selected and can access. Keep credentials and session tokens out of the saved material. Make uncertain suggestions correctable and partial/failed/unsupported extraction visible. Correcting metadata must not rewrite an original snapshot or erase history.
+
+**Successful outcome:** The material is findable in the intended course with its source, capture information and honest extraction status. A changed recapture preserves a new observed version; an unchanged recapture does not create a duplicate version.
+
+### Retrieve and verify
+
+**Trigger:** The student has a conceptual course question or needs to check a requirement, deadline, exam detail or conflicting instruction.
+
+**Desired flow:** Ask the external assistant; search the relevant course through read-only local MCP; inspect compact candidate previews; fetch selected evidence; inspect original sources, relevant relationships or history when needed.
+
+**Control needs:** Keep course scope explicit and evidence attributable. Favor the latest applicable saved evidence only when source relationships and precedence support it. Preserve both sides of an unresolved conflict. A later capture time alone does not establish authority, and a manually saved library cannot reveal an update that was never captured.
+
+**Successful outcome:** The assistant has the relevant saved passages and their source/version information without loading the entire course. The student can verify the evidence, see meaningful uncertainty and continue local keyword/metadata retrieval if hosted Jev is unavailable.
+
+## Mapping to the approved journey groups
+
+The companion stories use P-01 with the context names above. This map records the persona's needs; the stories and their coverage map carry the detailed acceptance criteria.
+
+| Approved journey group | P-01 context | Need represented | Requirement anchors |
+|---|---|---|---|
+| Collect accessible material | Capture and organize | Save selected pages/files, authorize embedded resources and recognize extraction gaps. | FR-02, FR-03, FR-04, FR-05; NFR-02, NFR-04 |
+| Organize and correct | Capture and organize | Keep courses separate, correct filing and use source-linked incremental summaries. | FR-01, FR-06, FR-07; NFR-01, NFR-03 |
+| Preserve and inspect sources | Both contexts | Retain immutable originals, distinguish recaptures and inspect typed links and history. | FR-04, FR-08, FR-09, FR-15; NFR-03 |
+| Understand changed instructions | Retrieve and verify | Follow evidence-supported supersession and inspect unresolved competing claims. | FR-08, FR-10, FR-11, FR-15; NFR-03 |
+| Retrieve evidence progressively | Retrieve and verify | Search scoped evidence previews and then fetch cited content through Codex. | FR-12, FR-13, FR-14; NFR-01, NFR-03 |
+| Stay in control during failures | Both contexts | Preserve local access, manual filing and retrieval while controlling hosted transmission. | FR-06, FR-12, FR-14; NFR-01, NFR-02, NFR-04, NFR-05, NFR-07 |
+
+NFR-06 applies across the journeys: story acceptance must distinguish repeatable controlled fixtures, actual source integrations, manual review and runtime smoke tests. A planned test or a fixture result is not evidence that a live integration has been verified. NFR-07 remains an obligation to measure practical local-model feasibility rather than a performance promise.
+
+## Assumptions and validation limits
+
+| Item | Basis and limit |
+|---|---|
+| The student can review uncertain classifications and inspect evidence. | A scenario assumption supporting the approved correction and verification flows; it has not been validated in a usability study. |
+| A specific page, file or embedded resource is accessible and permitted to capture. | Must be checked for that item. The persona does not imply unrestricted access to every LMS resource or protected embed. |
+| A local model can run acceptably on the student's laptop. | An engineering hypothesis requiring later smoke tests. The preliminary Ollama model choice is not measured performance evidence. |
+| Available source evidence establishes authority or supersession. | Must be checked for each substantive claim. Unknown precedence requires visible competing evidence and uncertainty. |
+| The student allows hosted Jev processing. | Never assumed. Authorization applies only to the disclosed minimal content and operation; local availability and fallback remain required. |
+
+No new product-direction decision is introduced by these limits. The existing 43 decisions and eight clarifications remain the approved baseline.
+
+## Boundaries that stories must preserve
+
+- One private student library with multiple courses; no cross-user sharing, shared cloud accounts or additional administrative workflows.
+- Explicit saving and permitted local imports; no automatic LMS synchronization, unattended login or credential collection.
+- Original snapshots and observed versions remain separate from editable metadata and generated summaries.
+- Historical versions can be inspected; historical point-in-time query search is outside the approved MVP.
+- The external assistant handles conversation; Course Copilot provides a local read-only knowledge layer with progressive search and fetch.
+- No generic stale warning based only on age, no silently resolved substantive contradiction, and no claim about unseen LMS changes.
+
+## Source traceability
+
+- [Approved story-generation plan](../plans/story-generation-plan.md), especially the persona, journey grouping and evidence safeguards.
+- [Approved requirements](../requirements/requirements.md): primary-user scope, FR-01 through FR-15, NFR-01 through NFR-07 and the critical user journeys.
+- [Decision register](../requirements/decision-register.md): Q01-Q03, Q05-Q24 and Q27-Q40, including the closed clarifications on saved evidence, metadata correction, local MCP and hosted processing.
+- [Product vision](../../../docs/vision.md): problem, primary user, capture/retrieval journey and MVP boundaries.
