@@ -1,6 +1,6 @@
 # Course Copilot — Application Design Plan
 
-**Status:** Authorized stage in progress under the explicitly approved execution plan; no separate planning approval is fabricated.
+**Status:** All five artifacts generated and validated under the approved execution plan; separate generated-design approval pending. No separate planning approval is fabricated.
 
 **Inputs:** Approved requirements/decision register, P-01 and US-01–US-25, execution-plan Q1 approval on 2026-11-20T03:18:17Z, application-design.md stage rules and course extension.
 
@@ -47,15 +47,15 @@ S-01 Capture/Ingest, S-02 Processing/Index, S-03 Metadata/Review and S-04 Eviden
 - [x] Fetch/status and inspect open PRs/feedback; no competing teammate stage.
 - [x] Evaluate all five question categories; preserve resolved decisions and explain routine choices.
 - [x] Document component/service direction and required contract boundaries.
-- [ ] Generate `application-design/components.md` with definitions, responsibilities and interfaces.
-- [ ] Generate `application-design/component-methods.md` with signatures, types, purposes and failure results; detailed business algorithms deferred.
-- [ ] Generate `application-design/services.md` with orchestration and failure/consistency boundaries.
-- [ ] Generate `application-design/component-dependency.md` with dependency matrix, communication and validated data flow/text alternative.
-- [ ] Generate consolidated `application-design/application-design.md`.
-- [ ] Validate all 25 stories, all FR/NFRs, source/format breadth, source identity/membership separation, exact-version citations and claim-scoped precedence.
-- [ ] Check read/write, permission/hosted/external-host boundaries; preserve offline/manual fallback and honest unverified labels.
-- [ ] Independently review, resolve findings, validate Markdown/links/diagram and publish one Draft stage PR.
-- [ ] Check all PR feedback and present the concrete design artifacts for explicit approval.
+- [x] Generate `application-design/components.md` with definitions, responsibilities and interfaces.
+- [x] Generate `application-design/component-methods.md` with signatures, types, purposes and failure results; detailed business algorithms deferred.
+- [x] Generate `application-design/services.md` with orchestration and failure/consistency boundaries.
+- [x] Generate `application-design/component-dependency.md` with dependency matrix, communication and validated data flow/text alternative.
+- [x] Generate consolidated `application-design/application-design.md`.
+- [x] Validate all 25 stories, all FR/NFRs, source/format breadth, source identity/membership separation, exact-version citations and claim-scoped precedence.
+- [x] Check read/write, permission/hosted/external-host boundaries; preserve offline/manual fallback and honest unverified labels.
+- [x] Independently review, resolve findings, validate Markdown/links/diagram and publish one Draft stage PR.
+- [x] Check all PR feedback and present the concrete design artifacts for explicit approval.
 - [ ] Record that approval before marking Application Design complete or entering Units Generation.
 
 ## 4. Guardrails and artifact review
