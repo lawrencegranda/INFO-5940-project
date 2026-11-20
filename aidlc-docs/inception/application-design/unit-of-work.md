@@ -122,6 +122,6 @@ C) **Other.** Describe the requested outcome after the answer tag.
 
 [Answer]: A
 
-**Approval response (verbatim):** A：批准单元文档，完成 Inception
+**Historical approval response (English translation):** A: Approve the unit documents and complete Inception. The original raw response is preserved in the [audit](../../audit.md#units-generation--explicit-artifact-approval-and-inception-completion). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
 
 Approval recorded on 2026-11-20T04:20:19Z. Units Generation and Inception documentation are complete. STOP before Construction under INFO5940-02; no application implementation is authorized by this approval. Ordered upstream PR integration remains pending.
