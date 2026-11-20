@@ -141,7 +141,7 @@ C) **Other.** Describe an alternative direction after the answer tag.
 
 [Answer]: A
 
-**Approval response (verbatim):** A：批准计划并继续生成
+**Historical approval response (English translation):** A: Approve the plan and continue generation. The original raw response is preserved in the [audit](../../audit.md#user-stories--explicit-planning-approval-and-part-2-start). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
 
 Planning approval does not approve unseen generated stories, later design gates or Construction. The requested prototype remains a downstream deliverable following those gates.
 
