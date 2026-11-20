@@ -1,6 +1,6 @@
 # Course Copilot — Component Dependencies and Data Flow
 
-**Stage:** Inception / Application Design.  
+**Stage:** Inception / Application Design.
 **Status:** Proposed design awaiting the separate generated-artifact review. No runtime integration, isolation, model compatibility or test success is asserted.
 
 **Baseline:** [Application Design plan](../plans/application-design-plan.md), [approved requirements](../requirements/requirements.md), [approved stories](../user-stories/stories.md) and [execution plan](../plans/execution-plan.md). Component IDs and the four logical services below follow the stage plan; this is not the later unit decomposition.
