@@ -366,3 +366,22 @@ A：批准应用设计，进入 Units Generation
 ```
 **AI Response**: Recorded the complete answer to the linked five-artifact review in Draft PR #7. Filled the consolidated design answer with A, completed the final design-plan checkbox and marked Application Design complete before starting Units planning. Final independent review confirmed scoped original-resource reading, restricted permission validation, index-side local embedding production and pending-item filing contracts; no blocking inconsistency remained. All nine stage-file blobs matched published local versions, inherited audit prefixes were preserved, full candidate-to-head git diff --check passed and the stage checkout was clean. PR #7 is correctly authored by xiaolonglin1124-bit, targets candidate/course-copilot and has no conflicts; feedback was empty at preflight.
 **Context**: This is explicit approval of the actual generated design, not merely approval of the execution plan. Units Generation Part 1 requires its own concrete plan approval before generation. The course milestone still stops before Construction; no prototype implementation is claimed.
+
+---
+
+## Units Generation — Part 1 Concrete Decomposition Proposal
+**Timestamp**: 2026-11-20T03:51:27Z
+**User Input**: No new user input; preparing Units Part 1 under the explicit Application Design approval.
+**AI Response**: Loaded the exact Units definition and planning/generation rules, the approved design and the code-generation Critical Rules. Prepared unit-of-work-plan.md with one U-01 local product unit, nine internal modules, full story/FR/NFR ownership, internal dependency/integration order, proposed technical responsibility areas and root src/tests/config greenfield organization. Evaluated all six required question categories with targeted questions and proposed answers consolidated under Q1. Named module owners remain explicitly unassigned for later teammate claiming. Independent read-only review found no blocking issue and clarified capture → original preservation → extraction → derived commit → retrieval ordering. No unit artifacts were generated before plan approval.
+**Context**: Browser/UI/library/MCP are distinct runtime entry points in the approved modular application, not fabricated independently hosted services. Greenfield multi-unit deployment questioning is N/A with explicit rationale; greenfield code organization itself remains mandatory. Full source/format breadth and later integrated acceptance remain required.
+
+## Units Generation — Draft Publication and Plan Approval Prompt
+**Timestamp**: 2026-11-20T03:51:27Z
+**User Input**: Awaiting response.
+**AI Response**: Created inception/05-units-generation from approved design head 3acbe935f98d35512d07a4cffbf0bb21db0ea914, published the concrete plan through xiaolonglin1124-bit and opened Draft PR #8 (https://github.com/lawrencegranda/INFO-5940-project/pull/8) against candidate/course-copilot. Ordered dependencies #5→#6→#7 are disclosed; all prior stages are explicitly approved/ready. Latest open-PR and feedback checks show the same driver only, one active Draft gate and no conversation/review/inline feedback.
+```text
+请审阅 Draft PR #8 的开发单元计划（unit-of-work-plan.md 第 8 节）。是否批准一个完整产品单元、九个内部模块的方案，并生成三份单元文档？
+A：批准开发单元计划并生成
+B：先修改开发单元计划
+```
+**Context**: Units Generation Step 9 explicitly says not to proceed until the user confirms. Q1 remains blank; the three unit artifacts, later artifact approval and Construction are not inferred from Application Design approval. After generated-unit approval this milestone must stop before Construction under INFO5940-02.
