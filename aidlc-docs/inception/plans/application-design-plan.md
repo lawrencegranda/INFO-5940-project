@@ -1,6 +1,6 @@
 # Course Copilot — Application Design Plan
 
-**Status:** All five artifacts generated and validated under the approved execution plan; separate generated-design approval pending. No separate planning approval is fabricated.
+**Status:** Complete; all five artifacts generated/validated and explicitly approved on 2026-11-20T03:43:36Z. No separate planning approval is fabricated.
 
 **Inputs:** Approved requirements/decision register, P-01 and US-01–US-25, execution-plan Q1 approval on 2026-11-20T03:18:17Z, application-design.md stage rules and course extension.
 
@@ -56,7 +56,7 @@ S-01 Capture/Ingest, S-02 Processing/Index, S-03 Metadata/Review and S-04 Eviden
 - [x] Check read/write, permission/hosted/external-host boundaries; preserve offline/manual fallback and honest unverified labels.
 - [x] Independently review, resolve findings, validate Markdown/links/diagram and publish one Draft stage PR.
 - [x] Check all PR feedback and present the concrete design artifacts for explicit approval.
-- [ ] Record that approval before marking Application Design complete or entering Units Generation.
+- [x] Record that approval before marking Application Design complete or entering Units Generation.
 
 ## 4. Guardrails and artifact review
 
