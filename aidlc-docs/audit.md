@@ -385,3 +385,39 @@ A：批准开发单元计划并生成
 B：先修改开发单元计划
 ```
 **Context**: Units Generation Step 9 explicitly says not to proceed until the user confirms. Q1 remains blank; the three unit artifacts, later artifact approval and Construction are not inferred from Application Design approval. After generated-unit approval this milestone must stop before Construction under INFO5940-02.
+
+---
+
+## Units Generation — Explicit Plan Approval and Part 2 Start
+**Timestamp**: 2026-11-20T04:08:23Z
+**User Input**:
+```text
+A：批准开发单元计划并生成
+```
+**AI Response**: Recorded the complete user-authored answer to the concrete unit-of-work-plan Q1 in Draft PR #8. The answer unambiguously approves all six proposed decisions: one U-01, nine internal modules, full story/requirement scope, internal dependencies, root src/tests/config organization and named ownership left for later claiming. Completed Part 1 and began generation of the three specified unit artifacts. Re-fetched both remotes, verified a clean stage branch, listed open PRs and checked #8 feedback: only the same driver's completed/ready #5/#6/#7 and active Draft #8 are open; conversation/reviews/inline feedback are empty.
+**Context**: This is explicit planning approval, not inferred from Application Design approval. Generated-unit artifact approval remains separate. No application code or Construction is authorized; INFO5940-02 still stops this milestone before Construction.
+
+---
+
+## Units Generation — Three Artifacts and Complete Coverage
+**Timestamp**: 2026-11-20T04:15:32Z
+**User Input**: No new user input; generation under the explicit unit-plan approval above.
+**AI Response**: Generated unit-of-work.md, unit-of-work-dependency.md and unit-of-work-story-map.md exactly within the approved U-01/nine-module approach. Included unit definition/responsibilities, root src/tests/config greenfield strategy, one-unit and nine-module capability matrices, a structurally validated 13-node dataflow with text alternative, internal/external dependency and integration order, all 25 single-unit/single-primary story assignments, all 15 FR/seven NFR verification responsibilities and explicit source/format success evidence. Named owners remain unassigned for later claiming. Runtime acceptance is specified, not run.
+**Context**: All three mandatory artifacts are documentation; no application code, source directories, installed models, provider calls or runtime tests are generated. The unit map does not select this candidate for the whole team or assign teammates.
+
+## Units Generation — Independent Review and Validation
+**Timestamp**: 2026-11-20T04:15:32Z
+**User Input**: No new user input; review before the generated-unit gate.
+**AI Response**: Independent cross-review found no blocking issue across the unit, dependencies and story map. Reconciled the distinction between consent-bound pre-filing classification and post-filing lexical availability before optional summary/claim/vector enrichment; manual filing remains available. Clarified offline acceptance as local import and saved-library use rather than impossible live-site access. Preserved original-first processing, current membership checks, immutable version/extraction/passage references, claim-scoped precedence, the read-only MCP composition, explicit Jev limits and external Codex/model boundary. Automated document checks confirm valid relative links/fences/newlines, all 25 unique one-unit/one-primary mappings, all 22 requirement rows, valid module IDs, declared diagram references, the full prior audit prefix and one pending generated-artifact question. Refreshed PR #8 conversation/review/inline feedback; no teammate feedback was present.
+**Context**: Documentation checks are not evidence that the future implementation or any model/source/client integration works. The approved Vitest/manual E2E and partial property-testing obligations remain future work.
+
+## Units Generation — Generated-Artifact Review Prompt
+**Timestamp**: 2026-11-20T04:15:32Z
+**User Input**: Awaiting response.
+**AI Response**:
+```text
+三份单元文档已生成，请审阅 Draft PR #8 的 unit-of-work.md 及依赖/故事映射。是否批准这些产物，完成 Inception 文档阶段并停在 Construction 之前？
+A：批准单元文档，完成 Inception
+B：先修改单元文档
+```
+**Context**: This is the separate generated-artifact approval required by Units Generation Step 17. Unit-plan approval does not substitute for it. Units/Inception remain incomplete until the explicit answer is recorded. INFO5940-02 overrides the generic continue-to-Construction message; after approval STOP before Construction.
