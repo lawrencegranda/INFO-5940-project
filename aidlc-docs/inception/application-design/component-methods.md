@@ -2,7 +2,7 @@
 
 **Stage:** Inception / Application Design
 
-**Status:** Proposed descriptive contracts for separate design review. TypeScript notation below defines interfaces and data expectations only; it is not application code, a selected transport implementation or evidence of tested provider compatibility.
+**Status:** Descriptive contracts approved with Application Design on 2026-11-20T03:43:36Z. TypeScript notation below defines interfaces and data expectations only; it is not application code, a selected transport implementation or evidence of tested provider compatibility.
 
 **Inputs:** [Component definitions](components.md), [design plan](../plans/application-design-plan.md), [approved requirements](../requirements/requirements.md) and [approved stories](../user-stories/stories.md).
 
