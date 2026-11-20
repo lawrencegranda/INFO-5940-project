@@ -7,11 +7,11 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Application Design complete — Units Generation planning handoff
+- **Current Stage**: Units Generation — Part 1 plan prepared; approval pending
 - **Working Integration Branch**: `candidate/course-copilot`
-- **Active Stage Branch**: `inception/04-application-design`
-- **Active Stage Review**: Draft PR #7 — https://github.com/lawrencegranda/INFO-5940-project/pull/7
-- **Prior Stage Dependency**: User Stories PR #5 and Workflow Planning PR #6 approved/ready for review, awaiting upstream maintainer integration. Merge in order.
+- **Active Stage Branch**: `inception/05-units-generation`
+- **Active Stage Review**: Draft PR #8 — https://github.com/lawrencegranda/INFO-5940-project/pull/8
+- **Prior Stage Dependency**: User Stories #5, Workflow Planning #6 and Application Design #7 approved/ready; awaiting maintainer integration in order.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
 ## Workspace State
@@ -51,7 +51,7 @@
 - [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
 - [x] **Workflow Planning** — Execution plan explicitly approved on 2026-11-20T03:18:17Z in PR #6; Application Design selected next; future Construction remains deferred.
 - [x] **Application Design** — Five mandatory artifacts, twelve components and four logical services explicitly approved on 2026-11-20T03:43:36Z in PR #7.
-- [ ] **Units Generation** — EXECUTE after Application Design approval; not started.
+- [ ] **Units Generation** — Part 1 plan proposes one U-01 with nine internal modules and full story/NFR ownership; explicit plan approval pending. The three unit artifacts are not generated yet.
 
 ### CONSTRUCTION PHASE
 
@@ -81,4 +81,4 @@
 
 ## Next Action
 
-Publish the explicit Application Design approval in PR #7 and mark that completed gate ready for ordered integration. Enter Units Generation on inception/05-units-generation, prepare its decomposition plan and obtain explicit plan approval before creating the three unit artifacts. Integrate #5 then #6 then #7 then the next stage under the same single writer. After separate generated-unit approval, stop at Inception for the November 24 milestone; do not enter Construction.
+Review unit-of-work-plan.md Q1. After explicit plan approval, generate all three unit artifacts using that approved approach; obtain separate generated-artifact approval before marking Units/Inception complete. Keep named teammate ownership unassigned until claiming, preserve the full approved scope and ordered integration (#5→#6→#7→current stage). STOP before Construction for the November 24 course milestone; no application code is generated.
