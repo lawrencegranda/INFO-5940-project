@@ -21,7 +21,7 @@ Cornell University · **INFO 5940: Special Topics in Information Science (AI Cha
 
 ## Candidate proposal: Course Copilot
 
-**Status:** Candidate being evaluated alongside **Marketing Campaign Asset Copilot**. The `candidate/course-copilot` branch keeps this candidate separate from `main`; Requirements Analysis is complete and approved (`aidlc-docs/aidlc-state.md`), with User Stories next.
+**Status: ON HOLD — corrective team review.** Course Copilot remains a candidate alongside Marketing Campaign Asset Copilot. Historical Inception approvals are retained, but PRs #5–#8 are Draft and must not be merged under the current instruction. Displayed historical approval replies are translated into English with their original meaning and original audit records preserved. This language update is not a new gate approval. Substantive reassessment work remains local pending actual English team answers; the separate prototype remains on its own branch. No course submission or whole-team candidate selection is claimed.
 
 ## 1. Problem & Rationale for Using LLMs
 
