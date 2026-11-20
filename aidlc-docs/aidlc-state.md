@@ -7,7 +7,7 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Application Design — five artifacts generated; approval pending
+- **Current Stage**: Application Design complete — Units Generation planning handoff
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/04-application-design`
 - **Active Stage Review**: Draft PR #7 — https://github.com/lawrencegranda/INFO-5940-project/pull/7
@@ -50,7 +50,7 @@
 - [x] **Requirements Analysis** — Vision, technical environment, 43 verification questions, and 8 follow-up clarifications reconciled; decision register locked and requirements specification (`FR-01`–`FR-15`, `NFR-01`–`NFR-07`) approved on 2026-11-19T19:26:39Z.
 - [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
 - [x] **Workflow Planning** — Execution plan explicitly approved on 2026-11-20T03:18:17Z in PR #6; Application Design selected next; future Construction remains deferred.
-- [ ] **Application Design** — All five mandatory artifacts generated/validated in Draft PR #7: 12 components, typed contracts, four logical services, dependencies/data flows and consolidation; explicit generated-design approval pending.
+- [x] **Application Design** — Five mandatory artifacts, twelve components and four logical services explicitly approved on 2026-11-20T03:43:36Z in PR #7.
 - [ ] **Units Generation** — EXECUTE after Application Design approval; not started.
 
 ### CONSTRUCTION PHASE
@@ -72,8 +72,8 @@
 
 - **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (explicitly approved).
 - **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
-- **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning.
-- **Remaining Inception**: Application Design, Units Generation.
+- **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design.
+- **Remaining Inception**: Units Generation (plan and generated-artifact approvals).
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
 - **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
@@ -81,4 +81,4 @@
 
 ## Next Action
 
-Review all five design artifacts through application-design.md Q1 in Draft PR #7. After explicit generated-design approval is recorded, mark Application Design complete and start the Units Generation plan with its separate planning/generation gates. Integrate #5 then #6 then #7 through the same single-writer workflow. Stop after approved Units Generation for the November 24 Inception milestone. Runtime source/model/MCP behavior remains unverified; no application implementation or Construction is authorized by this review.
+Publish the explicit Application Design approval in PR #7 and mark that completed gate ready for ordered integration. Enter Units Generation on inception/05-units-generation, prepare its decomposition plan and obtain explicit plan approval before creating the three unit artifacts. Integrate #5 then #6 then #7 then the next stage under the same single writer. After separate generated-unit approval, stop at Inception for the November 24 milestone; do not enter Construction.
