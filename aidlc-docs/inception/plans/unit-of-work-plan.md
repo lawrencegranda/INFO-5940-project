@@ -6,6 +6,8 @@
 
 **Baseline:** Requirements, 25 stories/P-01, Workflow Planning and all five Application Design artifacts are explicitly approved. Application Design approval was recorded on 2026-11-20T03:43:36Z.
 
+**Review:** [Draft PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8).
+
 **Branch:** `inception/05-units-generation`, based on approved design head `3acbe935f98d35512d07a4cffbf0bb21db0ea914`. Integrate #5 → #6 → #7 → this stage into `candidate/course-copilot`; one driver, xiaolonglin1124-bit. Earlier gates are complete/ready and await maintainer integration.
 
 ## 1. Inputs and decomposition rule
@@ -74,7 +76,7 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 - [x] Propose unit boundary, internal modules, integration order, ownership status and full-scope safeguards.
 - [x] Evaluate all six required question categories with targeted review and explicit applicability rationale.
 - [x] Independently review this plan and resolve findings.
-- [ ] Publish the plan and inspect the stage PR feedback.
+- [x] Publish the plan and inspect the stage PR feedback.
 - [ ] Collect and analyze explicit Q1 approval, resolving any requested ambiguity before generation.
 
 ### Part 2 — Only after Q1 approval
