@@ -421,3 +421,20 @@ A：批准单元文档，完成 Inception
 B：先修改单元文档
 ```
 **Context**: This is the separate generated-artifact approval required by Units Generation Step 17. Unit-plan approval does not substitute for it. Units/Inception remain incomplete until the explicit answer is recorded. INFO5940-02 overrides the generic continue-to-Construction message; after approval STOP before Construction.
+
+---
+
+## Units Generation — Explicit Artifact Approval and Inception Completion
+**Timestamp**: 2026-11-20T04:20:19Z
+**User Input**:
+```text
+A：批准单元文档，完成 Inception
+```
+**AI Response**: Recorded the complete user-authored answer to the separate generated-unit artifact review in PR #8. Filled Q1 with A, marked all three unit artifacts approved, completed the remaining unit-plan checkboxes and marked Units Generation/Inception documentation complete. Re-fetched both remotes and checked a clean local stage plus all PR feedback channels; no teammate feedback or competing driver was present. All seven final unit-stage files had exactly matched their published Git blobs, original/approved-design audit prefixes were preserved and the full candidate-to-head git diff --check passed. The approved final decomposition is one U-01 with nine internal modules, covering all 25 stories, 15 FRs and seven NFRs.
+**Context**: This is actual generated-artifact approval, not inferred from plan approval. The user's reviewed choice explicitly completes Inception and stops before Construction. No application implementation, runtime/model/LMS/Codex verification, course submission or whole-team candidate selection is claimed. Approved PRs #5→#6→#7→#8 still require ordered upstream maintainer integration; the requested account remains xiaolonglin1124-bit and has no upstream merge control.
+
+## Inception Closure — Status Consistency and Handoff Check
+**Timestamp**: 2026-11-20T04:20:19Z
+**User Input**: No new user input; closure under the final approval above.
+**AI Response**: Independent final status review confirmed both Units Q1 answers are A, zero unchecked unit-plan steps, every Inception stage complete, every Construction stage deferred and the exact final approval preserved. Reconciled stale approval-status headers in the four Application Design companion documents and its plan using the already-recorded 2026-11-20T03:43:36Z approval; no contracts or scope changed. Replaced final-stage Draft link labels with PR labels for ready-for-integration handoff. The canonical state/README explicitly distinguish completed documentation from unimplemented prototype, pending ordered upstream integration and unclaimed team selection/submission.
+**Context**: These are status-only consistency updates through the same single-writer workflow, not new product decisions or fabricated approvals. The workflow stops before Construction; no further approval question is opened.
