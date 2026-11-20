@@ -355,3 +355,14 @@ A：批准应用设计，进入 Units Generation
 B：先修改应用设计
 ```
 **Context**: Application Design Step 13 requires explicit artifact approval before continuing. The current Q1 answer remains blank and the Application Design tracker remains unchecked. No Units or Construction is started; the course checkpoint still stops after approved Units Generation.
+
+---
+
+## Application Design — Explicit Generated-Design Approval
+**Timestamp**: 2026-11-20T03:43:36Z
+**User Input**:
+```text
+A：批准应用设计，进入 Units Generation
+```
+**AI Response**: Recorded the complete answer to the linked five-artifact review in Draft PR #7. Filled the consolidated design answer with A, completed the final design-plan checkbox and marked Application Design complete before starting Units planning. Final independent review confirmed scoped original-resource reading, restricted permission validation, index-side local embedding production and pending-item filing contracts; no blocking inconsistency remained. All nine stage-file blobs matched published local versions, inherited audit prefixes were preserved, full candidate-to-head git diff --check passed and the stage checkout was clean. PR #7 is correctly authored by xiaolonglin1124-bit, targets candidate/course-copilot and has no conflicts; feedback was empty at preflight.
+**Context**: This is explicit approval of the actual generated design, not merely approval of the execution plan. Units Generation Part 1 requires its own concrete plan approval before generation. The course milestone still stops before Construction; no prototype implementation is claimed.
