@@ -1,7 +1,7 @@
 # Course Copilot — Execution Plan
 
 **Stage:** Inception / Workflow Planning
-**Status:** Prepared for explicit review; approval pending.
+**Status:** Approved on 2026-11-20T03:18:17Z.
 **Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`; 25 stories and P-01 approved on 2026-11-20T03:04:34Z.
 **Review:** [Draft PR #6](https://github.com/lawrencegranda/INFO-5940-project/pull/6).
 
@@ -43,7 +43,7 @@ All approved sources/formats remain required: Canvas, Gradescope, EdStem, ordina
 
 ## 3. Stage selection and adaptive detail
 
-There are **14 stage slots**: seven Inception, six Construction, one Operations. **12 are selected for execution**, including three completed stages and this pending Workflow Planning stage. Reverse Engineering is skipped; Operations is a placeholder. Future Construction stages repeat as applicable to the units established later; selection is not current authorization.
+There are **14 stage slots**: seven Inception, six Construction, one Operations. **12 are selected for execution**, including the four completed stages through Workflow Planning. Reverse Engineering is skipped; Operations is a placeholder. Future Construction stages repeat as applicable to the units established later; selection is not current authorization.
 
 | Stage | Decision/status | Rationale and detail |
 |---|---|---|
@@ -51,7 +51,7 @@ There are **14 stage slots**: seven Inception, six Construction, one Operations.
 | Reverse Engineering | SKIP | No existing application to analyze. |
 | Requirements Analysis | COMPLETED | Approved 15 FRs, seven NFRs and reconciled decisions. |
 | User Stories | COMPLETED | Separately approved plan, 25 stories and P-01 persona. |
-| Workflow Planning | EXECUTE; approval pending | This execution plan, sequence, evidence and gates. |
+| Workflow Planning | COMPLETED | This execution plan, sequence, evidence and gates. |
 | Application Design | EXECUTE next after approval | Substantial component/interface/orchestration and trust/data-boundary detail; no detailed algorithms yet. |
 | Units Generation | EXECUTE after design approval | Substantial unit boundaries/dependencies, code organization and complete story ownership. |
 | Functional Design | EXECUTE later; DEFERRED | Per-unit identity/version/claim/precedence, extraction states and retrieval logic. |
@@ -76,7 +76,7 @@ flowchart TD
         RE["Reverse Engineering: SKIP"]
         RA["Requirements Analysis: COMPLETED"]
         US["User Stories: COMPLETED"]
-        WP["Workflow Planning: EXECUTE - approval pending"]
+        WP["Workflow Planning: COMPLETED"]
         AD["Application Design: EXECUTE after approval"]
         UG["Units Generation: EXECUTE after design approval"]
     end
@@ -189,7 +189,7 @@ Dates use **America/New_York**. Windows are proposals dependent on reviews/proje
 - [x] Define sequence, complete artifacts, evidence, timeline and milestone stop.
 - [x] Independently review this concrete plan and resolve findings.
 - [x] Publish/present plan and check stage-PR feedback before approval.
-- [ ] Record explicit execution-plan approval, complete stage and start Application Design.
+- [x] Record explicit execution-plan approval, complete stage and start Application Design.
 
 ## 10. Execution-plan approval
 
@@ -201,9 +201,11 @@ B) **Request changes before continuing.** Specify the stages, sequence, safeguar
 
 C) **Other.** Describe the requested outcome after the answer tag.
 
-[Answer]:
+[Answer]: A
 
-This is the current review gate. User Stories approval authorizes preparing this plan, not approving unseen contents. Application Design and Construction do not proceed before their applicable approvals.
+**Approval response (verbatim):** A：批准执行计划，进入 Application Design
+
+This explicit approval completes Workflow Planning and authorizes Application Design. Later artifact/units approvals and Construction authorization remain separate.
 
 ## 11. Extension compliance
 
@@ -211,10 +213,10 @@ This is the current review gate. User Stories approval authorizes preparing this
 |---|---|---|
 | INFO5940-01 | Compliant | Follow Workflow Planning; record prior approval/current work in append-only audit/state. |
 | INFO5940-02 | Compliant | All remaining Inception artifacts listed; explicit stop; Construction only planned. |
-| INFO5940-03 | Compliant at review boundary | All prior answers complete; one transparent pending approval blocks dependent work. |
+| INFO5940-03 | Compliant at review boundary | All prior answers complete; execution-plan approval is explicitly recorded before Application Design. |
 | INFO5940-04 | Compliant | Local demo; named Ollama candidate; progressive read-only Codex MCP; Jev opt-in/fallback. |
 | INFO5940-05 | Compliant | Documentation only; no application code or credentials. |
 | INFO5940-06 | Compliant with disclosed dependency | Same driver, prior gate approved/ready, sole active Draft gate, ordered integration, no competing teammate workflow or manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Implementation deferred; obligations retained | Pure-transform/round-trip/version tests planned; no executable test result invented. |
 
-Runtime feasibility remains unverified. Workflow Planning remains pending Q1; independent review, publication in Draft PR #6 and available feedback checks are complete; Q1 is the only current pending gate.
+Runtime feasibility remains unverified. Workflow Planning is complete. Independent review, publication in PR #6, available feedback checks and explicit Q1 approval are recorded.
