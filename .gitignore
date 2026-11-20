@@ -16,3 +16,14 @@ venv/
 node_modules/
 dist/
 build/
+
+# Local prototype runtime and generated assets
+node_modules/
+dist/
+.course-copilot/
+.runtime/
+.env
+.env.*
+!.env.example
+coverage/
+*.tsbuildinfo

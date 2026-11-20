@@ -1,0 +1,45 @@
+{
+  "name": "course-copilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first, source-linked course library and read-only MCP prototype",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "node --import tsx scripts/dev.ts",
+    "build": "node --import tsx scripts/build.ts",
+    "start": "node --import tsx src/library/api/server.ts",
+    "mcp": "node dist/mcp/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.2",
+    "express": "^4.21.2",
+    "linkedom": "^0.18.12",
+    "multer": "^2.0.2",
+    "pdfjs-dist": "4.8.69",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^22.19.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/supertest": "^6.0.3",
+    "esbuild": "^0.28.2",
+    "fast-check": "^3.23.2",
+    "supertest": "^7.1.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.7.2",
+    "vitest": "^5.1.1",
+    "node": "^22.21.1",
+    "vite": "^8.3.8"
+  }
+}
