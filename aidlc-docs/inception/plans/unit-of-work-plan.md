@@ -1,8 +1,8 @@
 # Course Copilot — Unit of Work Plan
 
-**Stage:** Inception / Units Generation / Part 1: Planning
+**Stage:** Inception / Units Generation / Part 2: Generation
 
-**Status:** Concrete decomposition proposal prepared; explicit plan approval pending. Do not generate unit artifacts before Q1 is answered.
+**Status:** Plan explicitly approved on 2026-11-20T04:08:23Z; generating the three unit artifacts. Separate generated-artifact approval remains pending.
 
 **Baseline:** Requirements, 25 stories/P-01, Workflow Planning and all five Application Design artifacts are explicitly approved. Application Design approval was recorded on 2026-11-20T03:43:36Z.
 
@@ -77,11 +77,11 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 - [x] Evaluate all six required question categories with targeted review and explicit applicability rationale.
 - [x] Independently review this plan and resolve findings.
 - [x] Publish the plan and inspect the stage PR feedback.
-- [ ] Collect and analyze explicit Q1 approval, resolving any requested ambiguity before generation.
+- [x] Collect and analyze explicit Q1 approval, resolving any requested ambiguity before generation.
 
 ### Part 2 — Only after Q1 approval
 
-- [ ] Generate inception/application-design/unit-of-work.md: U-01 definition/responsibilities, internal modules, implementation sequence, acceptance and greenfield root code organization strategy.
+- [x] Generate inception/application-design/unit-of-work.md: U-01 definition/responsibilities, internal modules, implementation sequence, acceptance and greenfield root code organization strategy.
 - [ ] Generate inception/application-design/unit-of-work-dependency.md: one-unit dependency matrix, internal module/port relationships, external dependencies, parallelism and integration order.
 - [ ] Generate inception/application-design/unit-of-work-story-map.md: all 25 stories assigned once to U-01 with primary/supporting modules, FR/NFR coverage and future acceptance evidence.
 - [ ] Validate unit boundaries, dependencies, complete story/requirement mappings, all three artifacts, links/diagrams and full source/format/trust scope.
@@ -94,7 +94,7 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 |---|---|
 | INFO5940-01 | Follow Units Part 1; concrete proposal and explicit plan/generation gates tracked in audit/state. |
 | INFO5940-02 | All three mandatory unit artifacts plus greenfield strategy planned; after artifact approval STOP before Construction. Generic stage text about continuing to Construction is overridden by the mandatory course checkpoint. |
-| INFO5940-03 | Prior answers/approvals complete; one deliberate pending Q1 reviews all six proposed choices and blocks generation. |
+| INFO5940-03 | Prior answers/approvals complete; explicit Q1 approval covers all six proposed choices before generation. |
 | INFO5940-04 | One local demo bundle, concrete local Ollama candidate and progressive read-only Codex MCP; optional narrow Jev permission. |
 | INFO5940-05 | Planning documentation only; no application code, credentials or secrets. |
 | INFO5940-06 | Same driver and ordered prior-stage dependency; one active Draft gate, no parallel teammate workflow or manual audit/state merge. |
@@ -110,6 +110,8 @@ B) **Request changes before generation.** Specify the unit/module boundary, resp
 
 C) **Other.** Describe an alternative proposal after the answer tag.
 
-[Answer]:
+[Answer]: A
 
-This is the explicit Units planning gate required by Step 9. Application Design approval authorizes preparing this plan; it does not approve this unseen decomposition or its later generated artifacts. No unit artifacts, application code or Construction are generated before the applicable approvals.
+**Approval response (verbatim):** A：批准开发单元计划并生成
+
+The answer unambiguously approves the complete six-category proposal. Generation is authorized; the separate generated-unit review and milestone stop before Construction remain in force.
