@@ -21,7 +21,7 @@ Cornell University · **INFO 5940: Special Topics in Information Science (AI Cha
 
 ## Candidate proposal: Course Copilot
 
-**Status:** Candidate being evaluated alongside **Marketing Campaign Asset Copilot**. The `candidate/course-copilot` track stays separate from `main`. Requirements Analysis, User Stories, Workflow Planning and Application Design are approved ([PR #7](https://github.com/lawrencegranda/INFO-5940-project/pull/7)); Inception documentation is complete and approved through [all three U-01/nine-module unit artifacts in PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8). Follow `aidlc-docs/aidlc-state.md` and the audit for the current gate. An upstream maintainer must integrate approved #5, then #6, then #7, then #8. This branch does not claim whole-team candidate selection or course submission. No application code has been generated; the November 24 checkpoint stops after approved Units Generation.
+**Status: ON HOLD — corrective team review.** Course Copilot remains a candidate alongside Marketing Campaign Asset Copilot. Historical Inception approvals are retained, but PRs #5–#8 are Draft and must not be merged under the current instruction. Displayed historical approval replies are translated into English with their original meaning and original audit records preserved. This language update is not a new gate approval. Substantive reassessment work remains local pending actual English team answers; the separate prototype remains on its own branch. No course submission or whole-team candidate selection is claimed.
 
 ## 1. Problem & Rationale for Using LLMs
 
