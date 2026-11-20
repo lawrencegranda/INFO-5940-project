@@ -2,7 +2,7 @@
 
 **Stage:** Inception / User Stories / Part 2: Generation
 
-**Status:** Draft for the separate User Stories generation review; no stage-completion approval is asserted.
+**Status:** Approved with the 25 user stories on 2026-11-20T03:04:34Z; requirements-derived persona, with no claim of completed user research.
 
 **Persona:** P-01 — A student managing several courses
 
