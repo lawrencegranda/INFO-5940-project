@@ -203,7 +203,7 @@ C) **Other.** Describe the requested outcome after the answer tag.
 
 [Answer]: A
 
-**Approval response (verbatim):** A：批准执行计划，进入 Application Design
+**Historical approval response (English translation):** A: Approve the execution plan and proceed to Application Design. The original raw response is preserved in the [audit](../../audit.md#workflow-planning--explicit-execution-plan-approval). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
 
 This explicit approval completes Workflow Planning and authorizes Application Design. Later artifact/units approvals and Construction authorization remain separate.
 
