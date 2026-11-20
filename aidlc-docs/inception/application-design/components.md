@@ -2,7 +2,7 @@
 
 **Stage:** Inception / Application Design
 
-**Status:** Proposed application-design artifact for separate design review. These are logical contracts, not implemented components or verified runtime capabilities.
+**Status:** Approved with the complete Application Design artifact set on 2026-11-20T03:43:36Z. These are logical contracts, not implemented components or verified runtime capabilities.
 
 **Scope:** Twelve logical components in a local-first, single-user application. Final implementation packages and Units of Work are determined later; the component map does not introduce hosted microservices.
 
