@@ -7,10 +7,11 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Units Generation — three artifacts generated; final artifact approval pending
+- **Current Stage**: Inception documentation COMPLETE — STOP before Construction
+- **Inception Completed At**: 2026-11-20T04:20:19Z
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/05-units-generation`
-- **Active Stage Review**: Draft PR #8 — https://github.com/lawrencegranda/INFO-5940-project/pull/8
+- **Latest Stage Review**: PR #8 — approved/ready for maintainer integration: https://github.com/lawrencegranda/INFO-5940-project/pull/8
 - **Prior Stage Dependency**: User Stories #5, Workflow Planning #6 and Application Design #7 approved/ready; awaiting maintainer integration in order.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
@@ -51,7 +52,7 @@
 - [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
 - [x] **Workflow Planning** — Execution plan explicitly approved on 2026-11-20T03:18:17Z in PR #6; Application Design selected next; future Construction remains deferred.
 - [x] **Application Design** — Five mandatory artifacts, twelve components and four logical services explicitly approved on 2026-11-20T03:43:36Z in PR #7.
-- [ ] **Units Generation** — Part 1 plan explicitly approved on 2026-11-20T04:08:23Z; all three unit artifacts generated/validated for U-01/nine modules, 25 stories and all FR/NFRs. Final generated-artifact approval pending in PR #8.
+- [x] **Units Generation** — Plan and all three generated artifacts separately approved; final approval 2026-11-20T04:20:19Z in PR #8. U-01/nine modules cover all 25 stories, 15 FRs and seven NFRs.
 
 ### CONSTRUCTION PHASE
 
@@ -72,13 +73,17 @@
 
 - **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (explicitly approved).
 - **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
-- **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design.
-- **Remaining Inception**: Units Generation (plan and generated-artifact approvals).
+- **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
+- **Remaining Inception**: None; all generated gate artifacts approved. Upstream integration/submission and whole-team candidate selection are separate pending work.
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
 - **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
 - **Risk**: High; real LMS/extraction/model/MCP integrations unverified.
 
-## Next Action
+## Current Checkpoint and Handoff
 
-Review unit-of-work.md Q1 and the linked dependency/story-map documents in Draft PR #8. After separate explicit generated-artifact approval is logged, complete Units/Inception documentation and STOP before Construction. Keep named ownership unassigned and ordered integration (#5→#6→#7→#8); the current account cannot merge upstream. No runtime/model/LMS/Codex tests or working prototype are claimed by these documents.
+Inception documentation is complete and approved. STOP here before Construction under INFO5940-02. There is no active generation gate or application implementation; all runtime/model/LMS/Codex acceptance remains future unverified work.
+
+An upstream maintainer must integrate approved PRs #5→#6→#7→#8 into candidate/course-copilot in order. The current account has no upstream merge control. Preserve the single audit/state history and do not hand-merge those files. Whole-team candidate selection and final course submission are not claimed by this branch.
+
+After the November 24 checkpoint, team project selection and later authorization, resume at the selected Construction stages in the approved execution plan. This state does not automatically authorize that transition or waive its design/code review gates. The proposed prototype has not been implemented.
