@@ -7,11 +7,11 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Workflow Planning complete — Application Design handoff
+- **Current Stage**: Application Design — five artifacts generated; approval pending
 - **Working Integration Branch**: `candidate/course-copilot`
-- **Active Stage Branch**: `inception/03-workflow-planning`
-- **Active Stage Review**: Draft PR #6 — https://github.com/lawrencegranda/INFO-5940-project/pull/6
-- **Prior Stage Dependency**: User Stories PR #5 approved and ready for review; awaiting upstream maintainer integration. Merge prior stage first.
+- **Active Stage Branch**: `inception/04-application-design`
+- **Active Stage Review**: Draft PR #7 — https://github.com/lawrencegranda/INFO-5940-project/pull/7
+- **Prior Stage Dependency**: User Stories PR #5 and Workflow Planning PR #6 approved/ready for review, awaiting upstream maintainer integration. Merge in order.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
 ## Workspace State
@@ -50,7 +50,7 @@
 - [x] **Requirements Analysis** — Vision, technical environment, 43 verification questions, and 8 follow-up clarifications reconciled; decision register locked and requirements specification (`FR-01`–`FR-15`, `NFR-01`–`NFR-07`) approved on 2026-11-19T19:26:39Z.
 - [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
 - [x] **Workflow Planning** — Execution plan explicitly approved on 2026-11-20T03:18:17Z in PR #6; Application Design selected next; future Construction remains deferred.
-- [ ] **Application Design** — EXECUTE after execution-plan approval; not started.
+- [ ] **Application Design** — All five mandatory artifacts generated/validated in Draft PR #7: 12 components, typed contracts, four logical services, dependencies/data flows and consolidation; explicit generated-design approval pending.
 - [ ] **Units Generation** — EXECUTE after Application Design approval; not started.
 
 ### CONSTRUCTION PHASE
@@ -81,4 +81,4 @@
 
 ## Next Action
 
-Publish the execution-plan approval in PR #6, mark that completed gate ready for integration and enter Application Design on inception/04-application-design. Prepare its concrete plan, evaluate all five question categories against resolved decisions, then generate the full design artifact set under the approved execution plan and delegated engineering choices. Obtain explicit design-artifact approval before Units Generation. Preserve ordered integration (#5 before #6 before the next stage), the same single writer and the stop after approved Units Generation.
+Review all five design artifacts through application-design.md Q1 in Draft PR #7. After explicit generated-design approval is recorded, mark Application Design complete and start the Units Generation plan with its separate planning/generation gates. Integrate #5 then #6 then #7 through the same single-writer workflow. Stop after approved Units Generation for the November 24 Inception milestone. Runtime source/model/MCP behavior remains unverified; no application implementation or Construction is authorized by this review.
