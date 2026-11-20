@@ -7,7 +7,7 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Units Generation — Part 1 plan prepared; approval pending
+- **Current Stage**: Units Generation — three artifacts generated; final artifact approval pending
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/05-units-generation`
 - **Active Stage Review**: Draft PR #8 — https://github.com/lawrencegranda/INFO-5940-project/pull/8
@@ -51,7 +51,7 @@
 - [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
 - [x] **Workflow Planning** — Execution plan explicitly approved on 2026-11-20T03:18:17Z in PR #6; Application Design selected next; future Construction remains deferred.
 - [x] **Application Design** — Five mandatory artifacts, twelve components and four logical services explicitly approved on 2026-11-20T03:43:36Z in PR #7.
-- [ ] **Units Generation** — Part 1 plan proposes one U-01 with nine internal modules and full story/NFR ownership; explicit plan approval pending. The three unit artifacts are not generated yet.
+- [ ] **Units Generation** — Part 1 plan explicitly approved on 2026-11-20T04:08:23Z; all three unit artifacts generated/validated for U-01/nine modules, 25 stories and all FR/NFRs. Final generated-artifact approval pending in PR #8.
 
 ### CONSTRUCTION PHASE
 
@@ -81,4 +81,4 @@
 
 ## Next Action
 
-Review unit-of-work-plan.md Q1. After explicit plan approval, generate all three unit artifacts using that approved approach; obtain separate generated-artifact approval before marking Units/Inception complete. Keep named teammate ownership unassigned until claiming, preserve the full approved scope and ordered integration (#5→#6→#7→current stage). STOP before Construction for the November 24 course milestone; no application code is generated.
+Review unit-of-work.md Q1 and the linked dependency/story-map documents in Draft PR #8. After separate explicit generated-artifact approval is logged, complete Units/Inception documentation and STOP before Construction. Keep named ownership unassigned and ordered integration (#5→#6→#7→#8); the current account cannot merge upstream. No runtime/model/LMS/Codex tests or working prototype are claimed by these documents.
