@@ -2,9 +2,9 @@
 
 **Stage:** Inception / Units Generation / Part 2
 
-**Status:** Generated under the explicitly approved decomposition plan; separate generated-artifact approval pending. This is planning documentation, not an implemented or tested application.
+**Status:** Explicitly approved on 2026-11-20T04:20:19Z; Units Generation and Inception documentation are complete. This is planning documentation, not an implemented or tested application.
 
-**Plan approval:** 2026-11-20T04:08:23Z; raw response recorded in the audit. **Review:** [Draft PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8). Same single workflow driver: xiaolonglin1124-bit. Integrate approved #5→#6→#7 before this dependent stage into candidate/course-copilot.
+**Plan approval:** 2026-11-20T04:08:23Z; raw response recorded in the audit. **Review:** [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8). Same single workflow driver: xiaolonglin1124-bit. Integrate approved #5→#6→#7 before this dependent stage into candidate/course-copilot.
 
 ## 1. Unit definition
 
@@ -104,10 +104,10 @@ Concrete local extraction/embedding tools, model feasibility, source adapter det
 |---|---|
 | INFO5940-01 | Followed the explicitly approved unit plan; generated three required artifacts and kept audit/state under one driver. |
 | INFO5940-02 | All mandatory unit files and greenfield organization are included. After separate artifact approval, STOP at Inception before Construction. |
-| INFO5940-03 | Plan Q1 explicitly answered A; the generated-artifact Q1 below is the only current unanswered gate and blocks stage completion. |
+| INFO5940-03 | Both unit-plan and generated-artifact Q1 approvals are explicitly recorded; no completed-gate answer is pending. |
 | INFO5940-04 | One local bundle, named preliminary local model and concrete progressive read-only Codex integration; Jev narrow permission/fallback retained. |
 | INFO5940-05 | Documentation only; no application code or secrets. |
-| INFO5940-06 | Active Draft #8, same driver, approved/ready ordered prior gates and checked feedback; no manual audit/state merge. |
+| INFO5940-06 | Stage PR #8 approved for ordered integration after #5/#6/#7; same driver and checked feedback, with no manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Pure-transform/round-trip/version property obligations assigned to future unit tests; executable framework/results deferred. |
 
 ## 9. Generated-unit artifact approval
@@ -120,6 +120,8 @@ B) **Request changes before approval.** Specify the unit/module boundary, depend
 
 C) **Other.** Describe the requested outcome after the answer tag.
 
-[Answer]:
+[Answer]: A
 
-Units Generation remains pending this separate explicit artifact approval. The approved plan authorized generation, not automatic acceptance of these artifacts. The mandatory course stop overrides generic stage text that would otherwise continue into Construction.
+**Approval response (verbatim):** A：批准单元文档，完成 Inception
+
+Approval recorded on 2026-11-20T04:20:19Z. Units Generation and Inception documentation are complete. STOP before Construction under INFO5940-02; no application implementation is authorized by this approval. Ordered upstream PR integration remains pending.
