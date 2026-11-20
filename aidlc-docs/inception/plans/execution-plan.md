@@ -1,11 +1,11 @@
 # Course Copilot — Execution Plan
 
-**Stage:** Inception / Workflow Planning  
-**Status:** Prepared for explicit review; approval pending.  
-**Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`; 25 stories and P-01 approved on 2026-11-20T03:04:34Z.  
+**Stage:** Inception / Workflow Planning
+**Status:** Prepared for explicit review; approval pending.
+**Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`; 25 stories and P-01 approved on 2026-11-20T03:04:34Z.
 **Review:** [Draft PR #6](https://github.com/lawrencegranda/INFO-5940-project/pull/6).
 
-**Branch:** `inception/03-workflow-planning`, based on approved User Stories head `b185e9d421e8e44c165d78ebe9e152fbbed65b82`.  
+**Branch:** `inception/03-workflow-planning`, based on approved User Stories head `b185e9d421e8e44c165d78ebe9e152fbbed65b82`.
 **Integration:** `candidate/course-copilot` in the team repository. This stage depends on [PR #5](https://github.com/lawrencegranda/INFO-5940-project/pull/5), ready for maintainer integration. Merge #5 first, then this stage; do not merge a cumulative stage diff out of order.
 
 ## 1. Inputs and preserved scope
