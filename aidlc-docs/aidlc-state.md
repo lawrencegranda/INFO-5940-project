@@ -7,7 +7,7 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: PROTOTYPE IMPLEMENTATION (separately authorized after Inception)
-- **Current Stage**: Local prototype implemented; runtime verification and handoff
+- **Current Stage**: Local prototype implemented, verified and published for trial
 - **Inception Completed At**: 2026-11-20T04:20:19Z
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `prototype/local-course-copilot`
@@ -71,7 +71,7 @@ These unchecked entries describe the formal lifecycle track retained from the In
 - [x] **Working implementation** — SQLite/originals, import/extraction, course-scoped lexical/local-vector retrieval, saved deadline evidence, responsive UI, six read-only MCP tools and explicit-save extension.
 - [x] **Automated verification** — 49 tests in four files, TypeScript and production build passed. Tests use actual temporary SQLite/API/stdin-stdout protocol and appropriate output fixtures.
 - [x] **Runtime samples** — Local Ollama summary and native macOS image/scanned-PDF extraction exercised. Browser import, new version, historical original text and disabled historical processing verified.
-- [ ] **Handoff** — Publish complete prototype branch and quickstart through xiaolonglin1124-bit; verify published code matches the tested local files.
+- [x] **Handoff** — Complete prototype and quickstart published through xiaolonglin1124-bit to `prototype/local-course-copilot`. Fetched Git blobs matched all 36 staged implementation/document files before final handoff status. Local app is available at http://127.0.0.1:4310 while its development server runs.
 
 The implementation is a prototype, not full acceptance of every U-01 story. Actual Codex CLI host connection, authenticated LMS/extension operation, automatic STT, broad extraction/model quality and performance remain unverified.
 
