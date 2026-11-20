@@ -1,6 +1,6 @@
 # Course Copilot — Logical Services and Orchestration
 
-**Status:** Proposed Application Design artifacts for separate review; not application code or verified runtime behavior.
+**Status:** Application Design artifacts approved on 2026-11-20T03:43:36Z; not application code or verified runtime behavior.
 
 Inputs: [design plan](../plans/application-design-plan.md), [components](components.md), [component methods](component-methods.md) and [approved stories](../user-stories/stories.md). Component IDs C-01–C-12 and logical services S-01–S-04 follow the plan. A logical service is orchestration inside the local runtime, not a separately deployed microservice or an approved Unit of Work.
 
