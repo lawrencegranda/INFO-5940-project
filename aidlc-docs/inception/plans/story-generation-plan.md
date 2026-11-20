@@ -1,7 +1,7 @@
 # Course Copilot — User Stories Generation Plan
 
 **Stage:** Inception / User Stories / Part 1: Planning
-**Status:** Planning approved on 2026-11-20T02:44:10Z; Part 2 generated artifacts prepared; awaiting their separate review.
+**Status:** Complete. Planning approved on 2026-11-20T02:44:10Z; generated stories and persona approved separately on 2026-11-20T03:04:34Z.
 **Integration branch:** `candidate/course-copilot`
 **Stage branch:** `inception/02-user-stories`
 **Requirements baseline:** `485c52531f004b1e184fb595abe771cfbcd17003`
@@ -125,7 +125,7 @@ These are a planning illustration based on approved requirements, not generated 
 - [x] Validate Markdown, links, IDs, requirement references and completed plan checkboxes.
 - [x] Read Draft PR feedback and reconcile it through the shared audit trail.
 - [x] Present generated stories and persona for their separate generation approval.
-- [ ] Record that approval before marking User Stories complete or entering Workflow Planning.
+- [x] Record that approval before marking User Stories complete or entering Workflow Planning.
 
 ## 8. Planning approval
 
@@ -149,9 +149,9 @@ Planning approval does not approve unseen generated stories, later design gates 
 
 | Rule | Status | Evidence or applicability |
 |---|---|---|
-| INFO5940-01 | Compliant | Resume the existing workflow; record explicit planning approval and generation actions in the append-only audit; leave generated-artifact approval pending. |
+| INFO5940-01 | Compliant | Resume the existing workflow; record explicit planning approval and generation actions in the append-only audit; record both explicit User Stories approvals before advancing. |
 | INFO5940-02 | Compliant | Inception documentation only; generated stories and persona require separate approval before the next stage. No application code or Construction. |
-| INFO5940-03 | Compliant at current gate | Inherited answers and the explicit planning approval are complete. Generated-artifact approval remains a separate gate. |
+| INFO5940-03 | Compliant at current gate | Inherited answers and the explicit planning approval are complete. The separate generated-artifact approval is recorded in stories.md and the audit. |
 | INFO5940-04 | Compliant | Retain the approved local-first LLM/MCP product direction. |
 | INFO5940-05 | Compliant | Documentation only; no credentials or application code. |
 | INFO5940-06 | Compliant | Draft PR #5 is the only active Inception PR; remotes and all feedback channels were checked before Part 2. |
