@@ -18,7 +18,7 @@ C) Add the "Ask" box only as an optional prototype experiment; FR-14 stays uncha
 
 D) Other (please describe after [Answer]: tag below)
 
-[Answer]: 
+[Answer]: A
 
 ## Question 2
 If an "Ask" box is added, how should answers work?
@@ -31,7 +31,7 @@ C) Agent style: the AI decides which tools to call (search, fetch passages, chec
 
 D) Other (please describe after [Answer]: tag below)
 
-[Answer]: 
+[Answer]: C
 
 ## Question 3
 What does "simpler setup" mean for the prototype?
@@ -44,7 +44,7 @@ C) Ship without local AI by default and use a hosted provider with the student's
 
 D) Other (please describe after [Answer]: tag below)
 
-[Answer]: 
+[Answer]: A
 
 ## Question 4
 What should "less AI-generated UI" mean?
@@ -57,7 +57,7 @@ C) Redesign around the main student tasks (My courses → Materials → Ask → 
 
 D) Other (please describe after [Answer]: tag below)
 
-[Answer]: 
+[Answer]: C
 
 ## Question 5
 When should the ChatGPT app plugin happen?
@@ -70,7 +70,7 @@ C) Build it now in the prototype
 
 D) Other (please describe after [Answer]: tag below)
 
-[Answer]: 
+[Answer]: C
 
 ## Question 6
 Who must approve this change before it is applied to the shared requirements?
@@ -81,4 +81,4 @@ B) The whole team must approve in the group before requirements are changed
 
 C) Other (please describe after [Answer]: tag below)
 
-[Answer]: 
+[Answer]: B

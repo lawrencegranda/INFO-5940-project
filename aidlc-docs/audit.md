@@ -492,3 +492,12 @@ Safi/Xiaolong/Chloe, can you guys pick up the branch and continue with it? need 
 ```
 **AI Response**: Detected that goal 2 conflicts with approved requirement FR-14 ("No built-in chatbot"). Per workflow-changes rules, did not modify approved artifacts or code. Created `aidlc-docs/inception/requirements/prototype-change-questions.md` with six clarification questions and stopped for answers.
 **Context**: Gate — awaiting user answers. No code changed; no push.
+
+## Prototype Change Request — Answers Received
+**Timestamp**: 2026-11-22T19:04:00Z
+**User Input**:
+```text
+a1, c2, a3, 4c, 5c, 6b
+```
+**AI Response**: Recorded answers in `prototype-change-questions.md`: Q1=A (change FR-14: add a built-in Ask box as a core feature, keep MCP), Q2=C (agent-style answers that choose tools and always cite sources), Q3=A (one-command setup), Q4=C (redesign around student tasks: Courses, Materials, Ask, Deadlines), Q5=C (build the ChatGPT app integration now), Q6=B (whole team must approve in the group before requirements change). Ambiguity analysis: (1) Q6=B means FR-14 and the approved requirements cannot be edited until the team approves, so no requirement or code changes are made yet. (2) Q5=C conflicts with approved local-only constraints: a ChatGPT app connects to a remotely reachable HTTPS MCP server, while the approved design is laptop-local with stdio MCP; the team must decide how to expose it (for example a temporary tunnel during demos) or defer. (3) Q1=A and Q5=C add scope four days before the Inception milestone (2026-11-24) and before Construction is authorized. Prepared a change proposal for team approval.
+**Context**: Gate — awaiting team approval in the group chat (per Q6=B). No requirements or code changed; no push.
