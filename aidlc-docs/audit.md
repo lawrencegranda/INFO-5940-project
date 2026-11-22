@@ -483,3 +483,12 @@ Safi/Xiaolong/Chloe, can you guys pick up the branch and continue with it? need 
 **User Input**: No new input; completion under the explicit prototype request.
 **AI Response**: Published the complete working prototype and English quickstart to https://github.com/xiaolonglin1124-bit/INFO-5940-project/tree/prototype/local-course-copilot through the requested account's authenticated browser. Fetched the branch and compared all 36 staged implementation/document files with its Git tree: no differences. The original approved Inception audit prefix remains byte-identical. Final automated verification passed 49/49 tests, TypeScript, build and diff whitespace checks. A final real local request produced a complete factual deadline summary and refreshed local vectors. Retained the running local preview for the user's trial.
 **Context**: No push was made with the separately configured XiaolongLin credential, no upstream merge/submission was performed, and no real LMS/Codex-host/STT acceptance is claimed. This completes the separately authorized runnable prototype handoff; the approved formal lifecycle and team-selection history remain intact.
+
+## Prototype Change Request — Safi's Goals (Requirements Change Intake)
+**Timestamp**: 2026-11-22T18:40:00Z
+**User Input**:
+```text
+(Safiullah Safdariyan, on branch safi/prototype-improvements from prototype/local-course-copilot) Continue the prototype following AI-DLC, per teammate Lawrence's suggestion ("tell claude to follow AI-DLC with these goals"). Goals: simpler setup; an "Ask" box where the AI answers from saved materials with sources; UI that looks less AI-generated; later a ChatGPT app plugin.
+```
+**AI Response**: Detected that goal 2 conflicts with approved requirement FR-14 ("No built-in chatbot"). Per workflow-changes rules, did not modify approved artifacts or code. Created `aidlc-docs/inception/requirements/prototype-change-questions.md` with six clarification questions and stopped for answers.
+**Context**: Gate — awaiting user answers. No code changed; no push.
