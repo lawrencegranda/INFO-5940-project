@@ -97,3 +97,9 @@ Inception documentation is complete and approved. The earlier INFO5940-02 stop w
 An upstream maintainer must integrate approved PRs #5→#6→#7→#8 into candidate/course-copilot in order. The current account has no upstream merge control. Preserve the single audit/state history and do not hand-merge those files. Whole-team candidate selection and final course submission are not claimed by this branch.
 
 Formal lifecycle continuation and whole-team selection remain distinct from this prototype. The implementation does not fabricate formal stage approvals, full product acceptance or completed upstream integration. Core library operation and optional local AI require no hosted paid provider.
+
+### PROTOTYPE IMPROVEMENTS (Safi, branch `safi/prototype-improvements`)
+
+- [x] **Change questions answered** — 1A, 2C, 3A, 4C, 5C, 6B (2026-11-22).
+- [x] **Implementation on branch** — one-command setup, Ask agent with sources, Materials/Ask/Deadlines UI, MCP over HTTP for a ChatGPT demo; 53/53 tests pass.
+- [ ] **Team approval** — FR-14 change and ChatGPT demo exception (answer 6B), then merge.

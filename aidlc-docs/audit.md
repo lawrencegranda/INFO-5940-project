@@ -501,3 +501,12 @@ a1, c2, a3, 4c, 5c, 6b
 ```
 **AI Response**: Recorded answers in `prototype-change-questions.md`: Q1=A (change FR-14: add a built-in Ask box as a core feature, keep MCP), Q2=C (agent-style answers that choose tools and always cite sources), Q3=A (one-command setup), Q4=C (redesign around student tasks: Courses, Materials, Ask, Deadlines), Q5=C (build the ChatGPT app integration now), Q6=B (whole team must approve in the group before requirements change). Ambiguity analysis: (1) Q6=B means FR-14 and the approved requirements cannot be edited until the team approves, so no requirement or code changes are made yet. (2) Q5=C conflicts with approved local-only constraints: a ChatGPT app connects to a remotely reachable HTTPS MCP server, while the approved design is laptop-local with stdio MCP; the team must decide how to expose it (for example a temporary tunnel during demos) or defer. (3) Q1=A and Q5=C add scope four days before the Inception milestone (2026-11-24) and before Construction is authorized. Prepared a change proposal for team approval.
 **Context**: Gate — awaiting team approval in the group chat (per Q6=B). No requirements or code changed; no push.
+
+## Prototype Change Request — User Instruction to Proceed
+**Timestamp**: 2026-11-22T19:05:00Z
+**User Input**:
+```text
+just do it
+```
+**AI Response**: Treated as Safi's approval to implement his answers on his own branch `safi/prototype-improvements` before team approval, overriding the earlier wait for answer 6B for this branch only. Kept answer 6B for the shared requirements: FR-14 and the local-only rule are not edited, and the branch is not merged or pushed until the team approves. Implemented one-command setup, an agent-style Ask feature with sources, a Materials/Ask/Deadlines redesign and a read-only MCP-over-HTTP entry for a ChatGPT demo. Recorded the code summary in `aidlc-docs/construction/prototype-improvements/code-summary.md`.
+**Context**: Prototype track (not formal Construction approval). Typecheck, build and 53/53 tests pass. Awaiting team review.

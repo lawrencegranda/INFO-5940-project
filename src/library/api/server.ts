@@ -10,6 +10,7 @@ import { WritableLibrary, safeMessage } from '../evidence/write.js';
 import { LibraryError } from '../evidence/read.js';
 import { loadDemoLibrary } from '../evidence/demo.js';
 import { getCapabilities } from '../gateways/local.js';
+import { askCourse } from '../agent/ask.js';
 
 const sourceTypes=z.enum(['canvas','gradescope','edstem','web','file','notes']);
 const kinds=z.enum(['syllabus','announcement','lecture','assignment','paper','notes']);
@@ -72,6 +73,7 @@ export async function createApp(options:{dataDir?:string;seed?:boolean;port?:num
   app.patch('/api/documents/:id',(req,res,next)=>{try{const data=z.object({courseId:z.string().min(1),title:z.string().trim().min(1).max(240).optional(),folder:z.string().max(120).optional(),tags:z.array(z.string().max(40)).max(15).optional(),kind:kinds.optional()}).parse(req.body);res.json(library.editMetadata(data.courseId,req.params.id,data));}catch(e){next(e);}});
   app.post('/api/documents/:id/process',asyncRoute(async(req,res)=>res.json(await library.processLocally(requireString(req.body.courseId,'Course'),req.params.id))));
   app.post('/api/documents/:id/capture-report',(req,res,next)=>{try{const data=z.object({courseId:z.string().min(1),limitations:z.array(z.string().max(500)).max(40),versionId:z.string().max(100).optional()}).parse(req.body);res.json(library.addCaptureLimitations(data.courseId,req.params.id,data.limitations,data.versionId));}catch(e){next(e);}});
+  app.post('/api/ask',asyncRoute(async(req,res)=>{const data=z.object({courseId:z.string().min(1).max(100),question:z.string().trim().min(2,'Type a question first.').max(500)}).parse(req.body);res.json(await askCourse(library.reader,data.courseId,data.question));}));
   app.post('/api/demo/load',asyncRoute(async(_req,res)=>res.json(await loadDemoLibrary(library))));
   const ui=resolve(projectRoot(),'dist/ui');
   app.use(express.static(ui,{index:'index.html',etag:false,setHeaders:(res,path)=>{if(path.endsWith('.html'))res.setHeader('Cache-Control','no-store');}}));

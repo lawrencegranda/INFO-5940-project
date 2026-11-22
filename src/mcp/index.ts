@@ -216,6 +216,6 @@ export async function runMcp(): Promise<void> {
   catch { await close(); process.stderr.write('Course Copilot: stdio connection failed.\n'); process.exitCode = 1; }
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+if (process.argv[1] && /index\.(ts|js)$/.test(process.argv[1]) && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   await runMcp();
 }

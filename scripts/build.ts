@@ -9,6 +9,7 @@ export async function buildPrototype(watch = false) {
   const options = { entryPoints: [resolve(root, 'src/ui/app.tsx')], bundle: true, format: 'esm' as const, target: 'es2020', outfile: resolve(root, 'dist/ui/app.js'), sourcemap: true, jsx: 'automatic' as const, minify: !watch };
   if (watch) { const ctx = await context(options); await ctx.watch(); } else await build(options);
   await build({ entryPoints: [resolve(root, 'src/mcp/index.ts')], bundle: true, platform: 'node', format: 'esm', packages: 'external', target: 'node20', outfile: resolve(root, 'dist/mcp/index.js') });
+  await build({ entryPoints: [resolve(root, 'src/mcp/http.ts')], bundle: true, platform: 'node', format: 'esm', packages: 'external', target: 'node20', outfile: resolve(root, 'dist/mcp/http.js') });
   await cp(resolve(root, 'src/extension'), resolve(root, 'dist/extension'), { recursive: true });
 }
 if (process.argv[1] && /build\.(ts|js)$/.test(process.argv[1])) {

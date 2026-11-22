@@ -14,7 +14,9 @@
     "mcp": "node dist/mcp/index.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "setup": "npm install && npm run build && npm start",
+    "mcp:chatgpt": "node dist/mcp/http.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.2",

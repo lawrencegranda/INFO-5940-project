@@ -79,3 +79,11 @@ export async function embedLocally(texts: string[]): Promise<number[][]> {
   }
   return all;
 }
+/** One local chat turn for the Ask agent. Loopback Ollama only; no hosted fallback. */
+export async function chatLocally(messages: Array<{ role: string; content: string }>): Promise<{ text: string; model: string }> {
+  const { model } = configuration();
+  const output = await request('/api/chat', { model, stream: false, think: false, messages,
+    options: { temperature: 0.1, num_predict: 512, num_ctx: 8192 } }, 90_000) as { message?: { content?: unknown }; model?: unknown };
+  const text = typeof output.message?.content === 'string' ? output.message.content : '';
+  return { text, model: typeof output.model === 'string' ? output.model : model };
+}

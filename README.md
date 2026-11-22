@@ -4,6 +4,24 @@ A local course library that preserves saved sources, makes course materials sear
 
 This branch contains a runnable prototype following the approved Course Copilot Inception artifacts. Course Copilot remains a candidate alongside Marketing Campaign Asset Copilot; this prototype does not imply whole-team selection or completion of the full December MVP. Follow [AI-DLC state](aidlc-docs/aidlc-state.md), the [audit](aidlc-docs/audit.md), and the [prototype plan](aidlc-docs/construction/plans/local-prototype-plan.md) for workflow status.
 
+## Quick start (one command)
+
+```sh
+npm run setup
+```
+
+This installs everything, builds the app and starts it. Open [http://127.0.0.1:4310](http://127.0.0.1:4310). Next time, `npm start` is enough.
+
+The app has three sections for each course: **Materials** (your saved files), **Ask** (type a question; an agent searches your materials, checks deadline changes and answers with sources) and **Deadlines** (every due date found in your files, with announced changes and conflicts). Ask works without an AI model by quoting your saved files; with a local Ollama model it writes a short answer and still shows its sources.
+
+## Use it from ChatGPT (demo only)
+
+```sh
+npm run mcp:chatgpt
+```
+
+This starts the same six read-only tools over HTTP on `127.0.0.1:4311` and prints a private URL. ChatGPT can only reach a public HTTPS address, so for a demo expose that port with a temporary tunnel and add `https://<your-tunnel>/mcp/<secret>` as a connector in ChatGPT developer mode. Anyone with the full URL can read your saved library, and ChatGPT sends retrieved passages to OpenAI. Stop the tunnel after the demo. The connection to a real ChatGPT account has not been verified yet.
+
 ## Run locally
 
 Use Node.js 20 or newer with npm to install dependencies. `npm ci` also installs the project's Node 22 runtime; npm scripts use that local executable, which supplies `node:sqlite`. A system Node 20 executable alone cannot run the library.
