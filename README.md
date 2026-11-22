@@ -119,7 +119,7 @@ Cornell University · **INFO 5940: Special Topics in Information Science (AI Cha
 | Lawrence Granda Zarzuela | `lg626` | [lawrencegranda](https://github.com/lawrencegranda) | Claude Code, Codex, Cursor, Antigravity |
 | Jiaxin (Iris) Li | `jl2726` | [irisli0926](https://github.com/irisli0926) | Claude Code, Codex |
 | Xiaolong Lin | `xl2333` | [xiaolonglin1124-bit](https://github.com/xiaolonglin1124-bit) | Claude Code, Codex |
-| Safiullah Safdariyan | `ss3322` | [safi902](https://github.com/safi902) | TBD |
+| Safiullah Safdariyan | `ss3322` | [safi902](https://github.com/safi902) | Claude Code, Codex |
 | Chloe Wang | `sw2322` | [chloeshixuanwang-bit](https://github.com/chloeshixuanwang-bit) | Claude Code, Codex |
 
 Keep the two candidate tracks separate until the team selects a project. Inception approvals are recorded in upstream PRs [#5](https://github.com/lawrencegranda/INFO-5940-project/pull/5), [#6](https://github.com/lawrencegranda/INFO-5940-project/pull/6), [#7](https://github.com/lawrencegranda/INFO-5940-project/pull/7), and [#8](https://github.com/lawrencegranda/INFO-5940-project/pull/8); this branch does not claim those PRs were merged. Future changes should load the repository's `AGENTS.md` or corresponding agent rules and preserve the shared AI-DLC audit and state.
