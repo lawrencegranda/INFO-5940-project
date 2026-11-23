@@ -1,8 +1,8 @@
 # Course Copilot — Logical Services and Orchestration
 
-**Status:** Application Design artifacts approved on 2026-11-20T03:43:36Z; not application code or verified runtime behavior.
+**Current review (2026-11-23):** Step 2 corrective draft incorporating the reported team decision to include local Ask and local MCP. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
 
-Inputs: [design plan](../plans/application-design-plan.md), [components](components.md), [component methods](component-methods.md) and [approved stories](../user-stories/stories.md). Component IDs C-01–C-12 and logical services S-01–S-04 follow the plan. A logical service is orchestration inside the local runtime, not a separately deployed microservice or an approved Unit of Work.
+Inputs: [design plan](../plans/application-design-plan.md), [components](components.md), [component methods](component-methods.md) and [stories](../user-stories/stories.md). Component IDs C-01–C-13 and logical services S-01–S-05 follow the plan. A logical service is orchestration inside the local runtime, not a separately deployed microservice or an approved Unit of Work.
 
 ## 1. Service boundaries
 
@@ -12,6 +12,7 @@ Inputs: [design plan](../plans/application-design-plan.md), [components](compone
 | S-02 | Processing and Index | C-04 coordinates C-06/C-07/C-09/C-10/C-11 and C-05. Native/OCR/transcription, correctable filing, incremental summaries, evidence-linked claims/relations and lexical/vector indexes. Optional C-08 only under matching consent. | Writes derived artifacts/status; cannot replace originals. |
 | S-03 | Metadata and Review | C-02 → C-03 → C-05 metadata writes; C-04 schedules C-09/C-10/C-11 recomputation through S-02. Course/topic/title/tag/authority correction, uncertain filing and proposed-relation review, explicit per-operation hosted permission. | Editable metadata/review decisions; changes schedule scoped derived recomputation. No source-history rewriting. |
 | S-04 | Evidence Query | C-02/C-03 query path or C-12 stdio → C-11 query-only + C-05 read-only ports; optional local C-07 query embedding. List courses, compact search, exact fetch, history and conflicts. | None: no ingestion, correction, regeneration or persistent AI side effects. |
+| S-05 | Local Course Ask | C-02 → controlled C-03 → C-13; local-only S-04/C-11 and C-05 read ports retrieve exact evidence; C-07 generates a grounded answer. | None on saved library; UI session continuity is separate transient state. |
 
 One Node library process hosts mutation orchestration, controlled loopback API and local UI delivery. Bounded extraction workers/subprocesses and Ollama are local dependencies, with exact process/resource choices reserved for later infrastructure and performance design. The separate MCP process composes only query/read capabilities; shared source files do not confer runtime write capability.
 
@@ -24,7 +25,7 @@ One Node library process hosts mutation orchestration, controlled loopback API a
 - RunState is separate from an item's final outcome. Runs progress through queued/running/succeeded/completed_with_issues/failed/cancelled. Item outcomes are complete/partial/failed/unsupported; pending processing does not pretend to be complete. Track capture and each extraction stage separately and derive an honest aggregate without hiding an unavailable embedded asset.
 - Originals and native text are committed before optional expensive AI work. Durable step records, stable IDs and bounded retries support recovery without duplicate source versions or duplicate index records. Re-running derived work cannot create a new original version when content is unchanged.
 - Source normalization/hash identity is deterministic. Semantic suggestions may propose related/duplicate-suggestion links for review; they do not merge source identity, originals or course memberships.
-- PublishedAt, EffectiveAt and CapturedAt are distinct. Unknown dates are explicit. A later capture is not greater authority; an explicit applicable announcement can supersede a deadline claim without superseding unrelated syllabus content.
+- PublishedAt, EffectiveAt and CapturedAt are distinct. Unknown dates are explicit. A later capture is not greater authority; an explicit applicable announcement by a source-provenance-confirmed instructor can supersede a matching deadline claim without superseding unrelated syllabus content. A student reply/personal note or unverified publisher never gains that authority from platform, recency, confidence or a free-form note; retain substantive discrepancies for review.
 
 ## 3. S-01 — Capture and ingest sequence
 
@@ -69,11 +70,23 @@ One Node library process hosts mutation orchestration, controlled loopback API a
 5. fetch_document/fetch_passages accepts selected exact EvidenceRefs and returns supported saved content, citations, original-resource references where supported and honest status. Full-content fetch is available where supported but bounded/paginated explicitly; do not silently truncate while claiming full content. An old reference fetches that saved evidence, never automatically redirects to latest.
 6. get_document_history lists observed preserved versions/captures and relations; get_conflicts returns competing supported claims with their scope and resolution state. These are read-only inspection tools, not approval/mutation endpoints.
 7. Optional Jev query routing/rerank must satisfy an existing exact-scope permission policy; without it, use local retrieval. MCP cannot promptlessly approve hosted processing or expand the selected payload. Untrusted retrieved instructions cannot invoke write/hosted capabilities.
-8. Codex receives the selected passages. The student's external host/model can process them under that host's configuration; local MCP only describes local transport/storage, not a guarantee that external AI processing is local. The library does not add a built-in assistant or silently send the entire course to a hosted provider.
+8. Codex receives the selected passages. The student's external host/model can process them under that host's configuration; local MCP only describes local transport/storage, not a guarantee that external AI processing is local. The separate built-in Ask path uses local generation through S-05; this does not change Codex host configuration or silently send the entire course to any hosted provider.
 
 **Acceptance:** US-12, US-15, US-18–US-22, US-24–US-25. Future validation must include actual Codex CLI search then fetch plus read-only behavior and cross-course denial cases, not just tool registration.
 
-## 7. Failure and consistency matrix
+## 7. S-05 — Local course Ask sequence
+
+1. C-02 submits an explicit question with courseId, requestId and bounded limits to C-03. The controlled API validates local client/context and course membership before C-13 receives the request. Ordinary Ask use does not require the student to run Codex CLI.
+2. C-13 uses a local-only C-11 query composition to obtain compact candidates, then fetches only bounded exact source passages through C-11/C-05. Read saved claim precedence/conflict views relevant to those passages; disclose semantic fallback and partial extraction. No C-08 hosted adapter or writable capability is injected.
+3. If saved evidence cannot support an answer, return insufficient_evidence with honest available evidence/limitations. Do not invent a course fact from the model's general knowledge. Missing saved material does not imply that the LMS has no answer.
+4. Pass scoped passages and precedence/conflicts as untrusted data to C-07 local generation. The model receives no browser, ingestion, metadata, consent or writer tools. It cannot establish publisher role or accept an update relation by assertion.
+5. Validate the answer shape, limits and each segment's supporting references against the exact fetched passage set; recheck current membership before returning. Reject invalid/foreign/missing citations. Preserve source/version/extraction/location details and unresolved competing claims. Valid references alone do not prove semantic accuracy; later acceptance tests inspect answer support.
+6. Return grounded_answer, or retrieval_only with no generated answer when local generation is unavailable. No automatic remote ChatGPT/Jev fallback is introduced. Other validation/runtime failures return a safe typed error while saved materials remain accessible.
+7. C-02 records the result/error only in the originating course/request UI state. Switching tabs and returning preserves draft, result and pending status within the running app. A late answer cannot appear under another course or overwrite a newer question. This does not write course evidence, create persistent chat history or promise reload recovery.
+
+**Acceptance:** US-26 / FR-16 together with US-17–US-22, US-24–US-25. Future checks cover a supported answer with exact citations, no-evidence and conflicting-authority cases, invalid references, model outage, read-only state comparison and course/navigation/in-flight isolation. No such application checks are claimed as executed in Inception.
+
+## 8. Failure and consistency matrix
 
 | Failure | Preserve/report | Recovery and availability |
 |---|---|---|
@@ -82,6 +95,8 @@ One Node library process hosts mutation orchestration, controlled loopback API a
 | OCR/transcription failure | Original and any reliable partial output, stage status/reason. | Scoped retry/manual supplement; original viewer and existing text search remain. |
 | Ollama/Jev unavailable/invalid | Original, extraction, manual classification and lexical index; no unsupported summary/claim marked accepted. | Local/manual fallback; retry only bounded authorized work. |
 | Embedding/vector index unavailable | Available lexical/metadata results and explicit semantic unavailable status. | Index rebuilding is a library write job, not an MCP query side effect. |
+| Ask local generation unavailable | Retrieved exact evidence and disclosed retrieval_only/model limitation; no generated answer. | Keep Materials/search usable; retry local Ask explicitly after setup. |
+| Ask evidence insufficient or model citations invalid | Disclosed insufficiency or safe invalid_model_output; never a fabricated answer. | Inspect saved sources, add missing permitted material or revise question. |
 | Unresolved or incomparable authority | Both claims and source evidence, uncertainty and scope. | Review/evidence acquisition; no arbitrary capture-time tie-break. |
 | Database/schema incompatible in MCP | Clear not-ready/error response; no auto-migration. | Start authorized library setup/migration separately. |
 | Out-of-course/missing exact reference | Scoped not-found/denied response with no foreign evidence content. | Correct scope or select an existing reference; no latest-version substitution. |

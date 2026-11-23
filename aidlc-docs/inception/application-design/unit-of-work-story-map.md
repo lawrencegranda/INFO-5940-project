@@ -1,33 +1,37 @@
 # Course Copilot — Unit of Work Story Map
 
+> **Current corrective draft - November 23, 2026:** The reported team decision includes local Ask and local read-only MCP. The driver authorized this coordinated revision. Historical approvals below cover the earlier baseline only; the revised artifacts still require team review and approval. STOP before Construction.
+
 **Stage:** Inception / Units Generation / Part 2: Generation
 
-**Status:** Generated from the approved plan and explicitly approved with the other unit artifacts on 2026-11-20T04:20:19Z. Evidence below is a future acceptance obligation, not an implemented capability or passing test.
+**Status:** Corrective story map generated for current team review. The earlier baseline was approved on 2026-11-20T04:20:19Z; that historical approval does not cover the new Ask mapping. Evidence below is a future acceptance obligation, not an implemented capability or passing test.
 
-**Unit:** U-01 — Local Course Copilot. All 25 stories, 15 functional requirements and seven non-functional requirements belong to this one integrated local product.
+**Unit:** U-01 — Local Course Copilot. All 26 stories, 16 functional requirements and seven non-functional requirements belong to this one integrated local product.
 
-**Inputs:** [Approved unit plan](../plans/unit-of-work-plan.md), [approved stories](../user-stories/stories.md), [requirements](../requirements/requirements.md), [approved design](application-design.md) and [component contracts](component-methods.md).
+**Inputs:** [Unit plan](../plans/unit-of-work-plan.md), [stories](../user-stories/stories.md), [requirements](../requirements/requirements.md), [design](application-design.md) and [component contracts](component-methods.md).
 
 ## 1. Responsibility conventions
 
 - Each story has exactly one unit and one primary module. Supporting modules are dependencies/integration participants, not additional units or duplicate primary assignments.
 - A primary module gathers its story evidence. U-01 owns integrated acceptance; isolated module/fixture success cannot close a story requiring actual source or host integration.
-- Named module and integrated-acceptance owners remain **Unassigned** for later team claiming. The single AI-DLC driver maintains audit/state and is not implicitly assigned all engineering work.
+- Named module leads below are **Proposed; acceptance pending**. Integrated-acceptance ownership still requires confirmation. The single AI-DLC driver maintains audit/state and is not implicitly assigned all engineering work.
 - Shared root types/tests/configuration support the nine modules without creating another module, Unit of Work or independently hosted service.
 
-## 2. Approved modules inside U-01
+## 2. Current draft modules inside U-01
 
-| Module | Component responsibility | Named owner |
+| Module | Component responsibility | Proposed lead; acceptance pending |
 |---|---|---|
-| M-01 Capture | C-01; deliberate Chrome page/selected embedded-resource capture. | Unassigned |
-| M-02 Library UI | C-02; browse/import/review and original/history/conflict viewing. | Unassigned |
-| M-03 API and Workflow | C-03/C-04; controlled local commands, durable original-first ingestion, status and recovery. | Unassigned |
-| M-04 Evidence | C-05; local persistence, independent membership/identity, immutable evidence and separated ports. | Unassigned |
-| M-05 Extraction | C-06; native text, OCR, original math/diagram fidelity and accessible media transcription. | Unassigned |
-| M-06 Model Gateways | C-07/C-08; local generation/embedding and separate permission-checked minimal Jev decisions. | Unassigned |
-| M-07 Knowledge | C-09/C-10; filing/summary/fact/relation drafts and pure claim-scoped precedence/conflicts. | Unassigned |
-| M-08 Index and Query | C-11; incremental lexical/vector writer and separately composed scoped read-only retrieval. | Unassigned |
-| M-09 MCP | C-12; six local stdio read tools and optional scoped original-resource handler. | Unassigned |
+| M-01 Capture | C-01; deliberate Chrome page/selected embedded-resource capture. | Safi; pending |
+| M-02 Library UI | C-02; browse/import/review, original/history/conflict viewing and per-course Ask state. | Iris; pending |
+| M-03 API and Workflow | C-03/C-04/C-13; controlled ingestion/recovery and separately composed read-only local Ask. | Lawrence; pending |
+| M-04 Evidence | C-05; local persistence, independent membership/identity, immutable evidence and separated ports. | Lawrence; pending |
+| M-05 Extraction | C-06; native text, OCR, original math/diagram fidelity and accessible media transcription. | Chloe; pending |
+| M-06 Model Gateways | C-07/C-08; local generation/embedding and separate permission-checked minimal Jev decisions. | Xiaolong; pending |
+| M-07 Knowledge | C-09/C-10; filing/summary/fact/relation drafts and pure claim-scoped precedence/conflicts. | Chloe; pending |
+| M-08 Index and Query | C-11; incremental lexical/vector writer and separately composed scoped read-only retrieval. | Xiaolong; pending |
+| M-09 MCP | C-12; six local stdio read tools and optional scoped original-resource handler. | Safi; pending |
+
+These names come from Lawrence's [review proposal](https://github.com/lawrencegranda/INFO-5940-project/pull/8#discussion_r4660293171), not recorded personal commitments. Added Ask work does not establish accepted capacity.
 
 ## 3. Story allocation and future acceptance evidence
 
@@ -51,8 +55,8 @@ The evidence column summarizes rather than replaces each story's complete Given/
 | US-14 Inspect relationships | U-01 | M-07 | M-02, M-03, M-04, M-08 | Separate syllabus/announcement and proposed duplicate link; exact endpoints/basis without source or original merging. |
 | US-15 Browse history/applicable evidence | U-01 | M-08 | M-02, M-04, M-07, M-09 | Saved-version browsing, applicable-evidence default and old unchanged-document control; no inferred live freshness. |
 | US-16 Inspect substantive claims | U-01 | M-07 | M-02, M-04, M-05, M-06 | Deadline/exam-location/assignment-policy evidence; ambiguous subject/date and different-assignment non-conflict controls. |
-| US-17 Follow authoritative updates | U-01 | M-07 | M-04, M-08, M-09 | Explicit 11/20-to-11/22 update, later old-syllabus recapture and uncertain-authority controls; claim-scoped precedence with both sources. |
-| US-18 Inspect unresolved conflicts | U-01 | M-07 | M-02, M-04, M-08, M-09 | Same-assignment competing claims without precedence; retain both sources; different-assignment and age-only controls. |
+| US-17 Follow authoritative updates | U-01 | M-07 | M-04, M-08, M-09 | Supported instructor 11/20-to-11/22 update, later old-syllabus recapture, student note claiming 11/24 and unknown-publisher controls; platform/type/recency alone cannot establish authority. |
+| US-18 Inspect unresolved conflicts | U-01 | M-07 | M-02, M-04, M-08, M-09 | Same-assignment competing claims without precedence; retain roles, uncertainty and both sources. A later student note/reply cannot supersede instructor evidence. Include different-assignment and age-only controls. |
 | US-19 Search by words/meaning | U-01 | M-08 | M-04, M-06, M-07, M-09 | Labeled exact/paraphrase lexical and actual semantic paths; course/filter isolation and disclosed Jev-disabled fallback. |
 | US-20 Inspect compact previews | U-01 | M-08 | M-04, M-07, M-09 | Bounded sourced previews, summary labels, conflict flags and no-match control; no implicit whole-course/full-document response. |
 | US-21 Fetch exact selected evidence | U-01 | M-08 | M-04, M-05, M-09 | Reference round trip, pinned version/extraction/passage, bounded full-content pagination, partial response and direct scope denial. |
@@ -60,6 +64,7 @@ The evidence column summarizes rather than replaces each story's complete Given/
 | US-23 Recover processing gaps | U-01 | M-03 | M-01, M-02, M-04, M-05, M-06, M-08 | Independent complete/partial/failed/unsupported items, separate run/step progress and actual manual recovery without original loss. |
 | US-24 Control hosted/untrusted processing | U-01 | M-06 | M-01, M-02, M-03, M-04, M-07, M-08, M-09 | Denied/allowed/revoked exact-scope payload inspection and adversarial source data; no implicit full-file/secret upload or MCP consent grant. |
 | US-25 Operate without AI/network | U-01 | M-03 | M-02, M-04, M-06, M-07, M-08, M-09 | AI/network-disabled local import/manual-file and saved-library browse/search after restart; actual Ollama hardware/model/version/latency record, including failures. |
+| US-26 Ask about the selected course locally | U-01 | M-03 | M-02, M-04, M-06, M-08 | Grounded answer with validated exact saved citations; insufficient/conflicting evidence; invalid/unavailable local model gives disclosed retrieval-only/error; per-course draft/result/error retention and in-flight course-switch isolation; no library mutations or remote ChatGPT integration. |
 
 ## 4. Functional coverage and verification responsibility
 
@@ -82,18 +87,19 @@ All rows belong to U-01. Verification lead means an internal technical responsib
 | FR-13 Progressive access | US-20, US-21, US-22 | M-08, with M-09 | Bounded preview, exact cited fetch/pagination and actual client integration. |
 | FR-14 Read-only Codex | US-22 | M-09 | Actual local stdio flow without commands, ingestion, migrations or query-time writes/regeneration. |
 | FR-15 Applicable saved evidence | US-15, US-17, US-19 | M-08, with M-04/M-07 | Retain history/unrelated facts; no unseen-update claim or historical as-of feature. |
+| FR-16 Local course Ask | US-26 | M-03, with M-02/M-04/M-06/M-08 | Bound selected-course retrieval/local generation, validated exact citations, insufficient/conflicting evidence, per-course navigation continuity and honest model-failure behavior without library-write capabilities. |
 
 ## 5. Non-functional coverage and verification responsibility
 
 | Requirement | Mapped stories | Verification lead and supports | Required future verification |
 |---|---|---|---|
-| NFR-01 Local-first | US-08, US-22, US-25 | M-03; M-02/M-04/M-09 | Local persistence/restart and core use without cloud hosting/account, LMS key or paid-model dependency. |
-| NFR-02 Controlled boundaries | US-01, US-03, US-06, US-09, US-22, US-24 | M-03; M-01/M-04/M-06/M-08/M-09 | Pairing/origin/input control, credential exclusion, scoped reads, minimal consent and untrusted-data handling. |
-| NFR-03 Traceable evidence | US-01, US-02, US-04–US-07, US-10–US-22 | M-04; M-05/M-07/M-08/M-09 | Exact source/version/extraction/passage/location round trips and date meaning; no invented freshness/authority. |
-| NFR-04 Honest completeness | US-01–US-07, US-16, US-21, US-23 | M-03; M-01/M-02/M-04/M-05/M-07/M-08 | Independent item outcomes and run/step state; disclose partial children/fetches and uncertainty with recovery. |
+| NFR-01 Local-first | US-08, US-22, US-25, US-26 | M-03; M-02/M-04/M-09 | Local persistence/restart and core use without cloud hosting/account, LMS key or paid-model dependency. |
+| NFR-02 Controlled boundaries | US-01, US-03, US-06, US-09, US-22, US-24, US-26 | M-03; M-01/M-04/M-06/M-08/M-09 | Pairing/origin/input control, credential exclusion, scoped reads, minimal consent and untrusted-data handling. |
+| NFR-03 Traceable evidence | US-01, US-02, US-04–US-07, US-10–US-22, US-26 | M-04; M-05/M-07/M-08/M-09 | Exact source/version/extraction/passage/location round trips and date meaning; no invented freshness/authority. |
+| NFR-04 Honest completeness | US-01–US-07, US-16, US-21, US-23, US-26 | M-03; M-01/M-02/M-04/M-05/M-07/M-08 | Independent item outcomes and run/step state; disclose partial children/fetches and uncertainty with recovery. |
 | NFR-05 Jev fallback | US-09, US-19, US-25 | M-08; M-03/M-04/M-06/M-07 | Deny/disable/fail Jev; retain manual filing and local keyword/metadata access with visible mode. |
-| NFR-06 Repeatable acceptance | All US-01–US-25 | M-03 integration; M-04/M-07/M-08/M-09 | Repeatable fixtures, actual source/Codex evidence and partial property obligations below; no mock-only closure. |
-| NFR-07 Practical cost/latency | US-11, US-25 | M-06; M-03/M-07/M-08 | Actual local model/hardware/version and observed behavior/latency; incremental work and core availability survive AI failure. |
+| NFR-06 Repeatable acceptance | All US-01–US-26 | M-03 integration; M-04/M-07/M-08/M-09 | Repeatable fixtures, actual source/Codex evidence and partial property obligations below; no mock-only closure. |
+| NFR-07 Practical cost/latency | US-11, US-25, US-26 | M-06; M-03/M-07/M-08 | Actual local model/hardware/version and observed behavior/latency; incremental work and core availability survive AI failure. |
 
 ## 6. Source and format evidence retained
 
@@ -115,10 +121,11 @@ This register makes the approved breadth explicit. Each row remains required wit
 
 ## 7. U-01 integrated acceptance
 
-- **Conceptual evidence:** Deliberate capture/import, accepted course filing, honest extraction, source-linked indexing and compact search/exact fetch through actual Codex. Direct out-of-course IDs fail even when an index is stale.
+- **Conceptual evidence:** Deliberate capture/import, accepted course filing, honest extraction, source-linked indexing and compact search/exact fetch through actual Codex and grounded local Ask with validated citations. Direct out-of-course IDs fail even when an index is stale.
 - **Changed instructions:** Preserve syllabus and explicit later announcement, favor the supported changed deadline and retain unrelated syllabus facts. Recapturing old material cannot reverse established precedence; absent a grounded winner, show both claims.
 - **Integrity and recovery:** Pending originals stay private to the authorized run until membership is accepted. After accepted filing, lexical publication follows available extraction before optional summary/claim/vector enrichment; permitted pre-filing classification can still suggest a destination with manual fallback. Retry/re-extraction retain originals, exact older references and capture receipts; stale edits do not overwrite silently.
 - **Trust and fallback:** Exercise denied/revoked/mismatched hosted permission, source instructions as untrusted data, AI/network outage, restart and actual read-only stdio. Disclose external Codex/model processing independently of Jev grants.
+- **Ask continuity and honesty:** Retain each course's draft/result/error when navigating away and back; in-flight results stay attached to their originating course. No evidence gives insufficient-evidence status; conflicting evidence is surfaced. Invalid or unavailable local generation never appears as a verified answer or triggers remote processing.
 - **Evidence closure:** M-03 coordinates technical integration records, M-09 supplies actual host evidence and primary modules supply results/limitations. Complete unit acceptance needs their combined record; named integration owner remains Unassigned.
 
 The source/format register and every approved story criterion remain part of this combined acceptance. The early native-text slice is integration order only, not scope reduction.
@@ -135,6 +142,6 @@ Properties supplement actual integration evidence. They do not establish authent
 
 ## 9. Review boundary
 
-This story map allocates the complete approved scope. It introduces no application code/directories, additional persona, independent service, assigned person or runtime success claim.
+This story map allocates the complete current draft scope. It introduces no application code/directories, independent deployed service, accepted personal assignment or runtime success claim. The new Ask story is a documented scope revision, not evidence of implementation.
 
-The single generated-unit review is in [unit-of-work.md](unit-of-work.md); this map adds no question or approval field. Separate generated-artifact approval is recorded; Inception documentation is complete and the workflow stops before Construction for the November 24 checkpoint.
+The single generated-unit review is in [unit-of-work.md](unit-of-work.md); this map adds no question or approval field. Historical generated-artifact approval is recorded; the revised map and companion unit documents still require current team review and approval. The workflow stops before Construction for the November 24 checkpoint.

@@ -2,11 +2,11 @@
 
 **Stage:** Inception / Application Design
 
-**Status:** Approved with the complete Application Design artifact set on 2026-11-20T03:43:36Z. These are logical contracts, not implemented components or verified runtime capabilities.
+**Current review (2026-11-23):** Step 2 corrective draft incorporating the reported team decision to include local Ask and local MCP. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
 
-**Scope:** Twelve logical components in a local-first, single-user application. Final implementation packages and Units of Work are determined later; the component map does not introduce hosted microservices.
+**Scope:** Thirteen logical components in a local-first, single-user application. Final implementation packages and Units of Work are determined later; the component map does not introduce hosted microservices.
 
-**Inputs:** [Application-design plan](../plans/application-design-plan.md), [approved requirements](../requirements/requirements.md), [approved stories](../user-stories/stories.md) and [approved persona](../user-stories/personas.md).
+**Inputs:** [Application-design plan](../plans/application-design-plan.md), [requirements](../requirements/requirements.md), [stories](../user-stories/stories.md) and [persona](../user-stories/personas.md).
 
 ## 1. Runtime and trust boundaries
 
@@ -49,7 +49,7 @@ A current course membership permits access within that course; knowing a source,
 | ID | Component | Main responsibility | Persistence authority |
 |---|---|---|---|
 | C-01 | Capture Extension | Select and capture user-opened pages/authorized resources. | No direct store access; submits through C-03. |
-| C-02 | Local Library UI | Browse, import, review filing and inspect evidence/history/conflicts. | No direct store access; submits through C-03. |
+| C-02 | Local Library UI | Browse, import, review filing, inspect evidence/history/conflicts and use course-scoped Ask. | No direct store access; submits through C-03. |
 | C-03 | Local Library API | Validate paired local requests, commands and scoped UI queries. | Authorized command/service entry point only. |
 | C-04 | Ingestion Coordinator | Preserve originals and manage durable bounded processing/recovery. | Write/runtime bindings of C-05 and write-side processing components. |
 | C-05 | Evidence Store | Persist originals, identities, memberships, derivations, relationships and processing state. | Explicit query-read, processing-read and mutation ports. |
@@ -60,6 +60,7 @@ A current course membership permits access within that course; knowing a source,
 | C-10 | Claims and Relations | Evidence-linked facts, proposed links and claim-scoped precedence/conflict views. | Enrichment drafts use write services; query views are pure/read-only. |
 | C-11 | Index and Retrieval | Incremental FTS5/vector indexing and scoped progressive evidence retrieval. | Separate writer and query bindings; query cannot acquire writer access. |
 | C-12 | Read-only MCP Adapter | Expose bounded course search/fetch/history/conflicts to the configured external client. | Read-only store/query bindings only. |
+| C-13 | Course Ask Orchestrator | Retrieve course evidence and validate a local model answer with exact citations. | Read-only local query/model capabilities; no library writes. |
 
 ## 5. Component responsibilities and interfaces
 
@@ -77,15 +78,15 @@ A current course membership permits access within that course; knowing a source,
 
 ### C-02 — Local Library UI
 
-**Purpose:** Give P-01 control of the private library without adding another chatbot.
+**Purpose:** Give P-01 control of the private library and a course-scoped Ask entry without requiring a CLI for ordinary questions.
 
-**Responsibilities:** Browse courses/folders/topics; select local imports; review uncertain filing; correct editable metadata/membership; inspect originals, extraction gaps, exact passages, versions, substantive claims, relationships and unresolved conflicts. Disclose hosted requests before an explicit consent decision. Distinguish dates, generated summaries and source evidence.
+**Responsibilities:** Browse courses/folders/topics; select local imports; review uncertain filing; correct editable metadata/membership; inspect originals, extraction gaps, exact passages, versions, substantive claims, relationships and unresolved conflicts. Disclose hosted requests before an explicit consent decision. Distinguish dates, generated summaries and source evidence. Keep Ask question drafts, result, errors and pending-request identity keyed by course while navigating Materials, Ask and Deadlines within the running UI; never apply a response to a different course. This UI session state does not mutate saved library evidence or promise cross-reload history.
 
-**Interfaces:** C-03 command/query operations and their typed results. The UI may display the scope of data that would leave the laptop but cannot infer permission from a saved document or model suggestion.
+**Interfaces:** C-03 command/query operations, including course-scoped Ask, and their typed results. The UI may display the scope of data that would leave the laptop but cannot infer permission from a saved document or model suggestion.
 
 **Failure boundary:** Retain visible original availability and step errors. Do not present queued work as complete or an old capture date as proof of stale external information. Recovery controls invoke authorized commands rather than editing stored files directly.
 
-**Traceability:** US-02, US-08–US-18, US-20–US-25; FR-01, FR-04, FR-06–FR-15; NFR-01–NFR-05.
+**Traceability:** US-02, US-08–US-18, US-20–US-26; FR-01, FR-04, FR-06–FR-16; NFR-01–NFR-05.
 
 ### C-03 — Local Library API
 
@@ -93,11 +94,11 @@ A current course membership permits access within that course; knowing a source,
 
 **Responsibilities:** Restrict binding to loopback; validate local client pairing/capability, expected origins, request sizes/schema and requested scope; dispatch capture/import/review/consent commands through the logical services. Loopback reachability alone is not authorization. Accept only explicitly selected resource bytes/identities, not arbitrary source-provided executable actions.
 
-**Interfaces:** Command operations reach S-01 Capture/Ingest or S-03 Metadata/Review and C-04/C-05 as appropriate. UI queries reach S-04 Evidence Query/C-11 with a mandatory course scope except course listing. Return durable run identifiers and safe status responses.
+**Interfaces:** Command operations reach S-01 Capture/Ingest or S-03 Metadata/Review and C-04/C-05 as appropriate. UI evidence queries reach S-04 Evidence Query/C-11 with a mandatory course scope except course listing. Ask dispatches to S-05/C-13 after the same entry and course checks; the request does not convey command capabilities to the Ask orchestrator. Return durable run identifiers and safe status responses.
 
 **Failure boundary:** Reject unpaired/invalid-origin/invalid-input/scope-mismatched requests before mutation or disclosure. No endpoint accepts consent inferred from source text. Client secrets and token values are neither documented nor persisted in the repository. C-12 does not obtain command capabilities through this API.
 
-**Traceability:** All user-facing stories; especially US-01, US-03, US-10, US-21–US-25; NFR-02–NFR-05.
+**Traceability:** All user-facing stories; especially US-01, US-03, US-10, US-21–US-26; NFR-02–NFR-05.
 
 ### C-04 — Ingestion Coordinator
 
@@ -121,7 +122,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Failure boundary:** Missing/corrupt original bytes, mismatched source/version/passage references, library-not-initialized/incompatible-schema state and persistence errors are explicit. Read-only access must not create directories, databases, migrations or caches. A course move cannot make stale search projections authorize an old-scope fetch.
 
-**Traceability:** US-01–US-25; especially US-08, US-10, US-12–US-15, US-21; FR-01, FR-04, FR-08, FR-09, FR-13, FR-15; NFR-01–NFR-06.
+**Traceability:** US-01–US-26; especially US-08, US-10, US-12–US-15, US-21; FR-01, FR-04, FR-08, FR-09, FR-13, FR-15; NFR-01–NFR-06.
 
 ### C-06 — Extraction Pipeline
 
@@ -139,13 +140,13 @@ A current course membership permits access within that course; knowing a source,
 
 **Purpose:** Isolate local generation and embeddings behind explicit capability/result contracts.
 
-**Responsibilities:** Submit bounded untrusted-data envelopes to local Ollama for summary/structured extraction and to a separately verified local embedding capability. Validate response shape and referenced evidence; preserve uncertainty and provenance. The first generative candidate is gemma3:4b, pending actual compatibility/quality/latency checks; this is not an assertion that the same model supports embeddings.
+**Responsibilities:** Submit bounded untrusted-data envelopes to local Ollama for summaries, structured extraction and grounded Ask answers, and to a separately verified local embedding capability. Validate response shape and referenced evidence; preserve uncertainty and provenance. The first generative candidate is gemma3:4b, pending actual compatibility/quality/latency checks; this is not an assertion that the same model supports embeddings.
 
-**Interfaces:** C-09/C-10 supply exact evidence inputs for generation. C-11 may request transient local query embeddings. Outputs are validated drafts or unavailable/invalid/timeout/unsupported results; they cannot directly commit facts or overwrite evidence.
+**Interfaces:** C-09/C-10 supply exact evidence inputs for generation; C-13 supplies bounded course passages and saved precedence/conflicts for Ask. C-11 may request transient local query embeddings. Outputs are validated drafts or unavailable/invalid/timeout/unsupported results; they cannot directly commit facts or overwrite evidence.
 
 **Failure boundary:** Original storage, manual filing and lexical retrieval do not require success from this gateway. Query-time calls must not persist an index, summary or embedding cache in the evidence store. No automatic hosted fallback is implied.
 
-**Traceability:** US-11, US-16, US-19, US-25; FR-07, FR-10, FR-12; NFR-01, NFR-03, NFR-05, NFR-07.
+**Traceability:** US-11, US-16, US-19, US-25, US-26; FR-07, FR-10, FR-12, FR-16; NFR-01, NFR-03, NFR-05, NFR-07.
 
 ### C-08 — Hosted Jev Gateway
 
@@ -193,7 +194,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Failure boundary:** Missing vectors/AI fall back to a disclosed lexical mode; keyword success is not proof that semantic retrieval works. Stale/incomplete projections are labeled and can be rebuilt only through the authorized write runtime. An exact old reference stays exact, even if a new extraction/version exists. Unknown or out-of-course IDs return not_found_in_scope.
 
-**Traceability:** US-04, US-08, US-11, US-15, US-19–US-22, US-25; FR-01, FR-07, FR-11–FR-15; NFR-03, NFR-05–NFR-07.
+**Traceability:** US-04, US-08, US-11, US-15, US-19–US-22, US-25, US-26; FR-01, FR-07, FR-11–FR-16; NFR-03, NFR-05–NFR-07.
 
 ### C-12 — Read-only MCP Adapter
 
@@ -206,6 +207,18 @@ A current course membership permits access within that course; knowing a source,
 **Failure boundary:** No save/import/update/delete/consent/retry/reindex tools or writable dependencies. It must not create a library when one is absent, regenerate summaries during fetch or mutate consent/use counters through a query. Optional hosted query processing uses only a preexisting exact-scope permission; denial leaves local retrieval available. Actual Codex CLI integration remains a future verification task.
 
 **Traceability:** US-19–US-25; FR-12–FR-15; NFR-01–NFR-05.
+
+### C-13 — Course Ask Orchestrator
+
+**Purpose:** Answer a student's question about saved materials in the selected course through local generation, with inspectable evidence and uncertainty.
+
+**Responsibilities:** Validate bounded question/scope, search the local-only C-11 query binding, fetch bounded exact passages, inspect saved precedence/conflicts and ask C-07 for a grounded answer. Treat retrieved text as data. Validate each answer segment's supporting passage references against the fetched set and recheck membership before returning results. Do not accept a model's source IDs, authority inference or tool instructions as permission or evidence.
+
+**Interfaces:** C-03 exposes a controlled Ask entry for C-02. C-13 receives only C-11 query operations, scoped C-05 evidence reads and C-07 local answer generation. It does not receive ingestion, metadata, consent, processing or index writers. This path disables optional hosted query adapters; it neither calls C-08 nor adds an MCP tool. C-12 remains independently usable with its six existing tools.
+
+**Failure boundary:** Empty or inadequate supporting evidence returns insufficient_evidence. Local-model unavailability returns explicitly labeled retrieval_only material and a model-unavailable limitation, with no invented generated answer or automatic hosted fallback. Invalid references/schema return invalid_model_output. An answer may explain an established instructor update while showing a conflicting student note; unknown or student authorship cannot establish instructor authority by age, confidence or platform name. The app cannot promise complete contradiction detection or that every generated statement is correct.
+
+**Traceability:** US-26 with US-17–US-22, US-24–US-25; FR-16 with FR-10–FR-15; NFR-01–NFR-04, NFR-06–NFR-07.
 
 ## 6. Source and format coverage retained
 
@@ -223,5 +236,5 @@ No adapter, runtime result, permission path or source integration is claimed as 
 ## 7. Related artifacts
 
 - [Component methods and shared contracts](component-methods.md).
-- The companion services, dependency and consolidated design documents use the same C-01–C-12 IDs and S-01–S-04 logical services.
+- The companion services, dependency and consolidated design documents use the same C-01–C-13 IDs and S-01–S-05 logical services.
 - The [design plan](../plans/application-design-plan.md) records the separate generated-design approval gate; these component definitions do not mark that gate complete.

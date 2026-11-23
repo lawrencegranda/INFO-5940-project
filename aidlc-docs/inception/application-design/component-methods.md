@@ -2,9 +2,9 @@
 
 **Stage:** Inception / Application Design
 
-**Status:** Descriptive contracts approved with Application Design on 2026-11-20T03:43:36Z. TypeScript notation below defines interfaces and data expectations only; it is not application code, a selected transport implementation or evidence of tested provider compatibility.
+**Current review (2026-11-23):** Step 2 corrective draft incorporating the reported team decision to include local Ask and local MCP. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
 
-**Inputs:** [Component definitions](components.md), [design plan](../plans/application-design-plan.md), [approved requirements](../requirements/requirements.md) and [approved stories](../user-stories/stories.md).
+**Inputs:** [Component definitions](components.md), [design plan](../plans/application-design-plan.md), [requirements](../requirements/requirements.md) and [stories](../user-stories/stories.md).
 
 Detailed business algorithms, schema migrations, source normalization rules, confidence thresholds, worker limits, OCR/STT packages and index scoring remain for later Functional/NFR Design. Method names identify responsibilities; concrete module packaging remains for Units Generation.
 
@@ -99,9 +99,16 @@ type EvidenceLocation =
   | { kind: "page"; page: number; region?: readonly number[] }
   | { kind: "media"; startSeconds: number; endSeconds: number }
   | { kind: "original"; label: string };
+interface PublisherEvidence {
+  role: "instructor" | "student" | "unknown";
+  identity?: string;
+  verification: "source_provenance_confirmed" | "unverified";
+  basis: readonly EvidenceRef[];
+}
 interface SourceCitation {
   ref: EvidenceRef;
   origin: SourceOrigin;
+  publisher?: PublisherEvidence;
   capturedAt: IsoDateTime;
   publishedAt?: IsoDateTime;
   effectiveAt?: IsoDateTime;
@@ -428,6 +435,7 @@ interface LocalLibraryUI {
   inspectOriginal(request: OriginalReadRequest): Promise<Result<OriginalResourceChunk>>;
   inspectHistory(request: HistoryRequest): Promise<Result<Page<HistoryEntry>>>;
   inspectConflicts(request: ConflictRequest): Promise<Result<Page<PrecedenceView>>>;
+  askCourse(request: AskRequest): Promise<Result<AskResult>>;
   reviewHostedPermission(
     disclosure: JevPermissionScope,
     decision: "allow" | "deny"
@@ -441,6 +449,7 @@ These are UI actions backed by C-03, not direct database access. Source selectio
 
 ```typescript
 interface LocalLibraryAPI {
+  askCourse(ctx: LocalCommandContext, request: AskRequest): Promise<Result<AskResult>>;
   createCourse(ctx: LocalCommandContext, title: string): Promise<Result<CourseView>>;
   createFolder(
     ctx: LocalCommandContext, scope: CourseScope, title: string
@@ -558,6 +567,7 @@ The input resolves only an authorized selected original through ProcessingEviden
 ```typescript
 interface LocalAIGateway {
   capabilities(): Promise<Result<Readonly<Record<"generation" | "embeddings", "available" | "unavailable" | "unsupported">>>>;
+  answerGrounded(request: GroundedAnswerInput): Promise<Result<GroundedAnswerDraft>>;
   summarize(
     scope: CourseScope, passages: readonly FetchedPassage[]
   ): Promise<Result<SummaryDraft>>;
@@ -622,7 +632,7 @@ interface ClaimsAndRelations {
 
 draftFacts and proposeRelations are processing-side draft operations; C-04 validates/persists their output. viewPrecedence is a separate pure query-side binding that reads established evidence and cannot invoke enrichment, store an assessment or accept an LLM assertion as authority.
 
-Only sufficiently matching course/subject/claim contexts are compared. Supporting source/authority/date/supersession evidence must be present for established precedence; capture time or age alone cannot establish it. A known explicit authoritative deadline change may apply even when a separate effective-date field is unknown. Otherwise the view retains competing facts and uncertainty. Exact precedence algorithms and manual-review rules are specified later.
+Only sufficiently matching course/subject/claim contexts are compared. Supporting source/authority/date/supersession evidence must be present for established precedence; capture time or age alone cannot establish it. A known explicit authoritative deadline change may apply even when a separate effective-date field is unknown. Publisher role is established from saved source provenance, with its basis inspectable in PublisherEvidence; a platform label, free-form authority note or model confidence alone is insufficient. Missing/unverified publisher evidence is treated as unknown. A student reply or personal note never supersedes an instructor claim, even if later or explicitly claiming to replace it; a substantive discrepancy remains visible as unresolved competing evidence unless an applicable verified instructor update establishes precedence. Otherwise the view retains competing facts and uncertainty. Exact precedence algorithms and manual-review rules are specified later.
 
 ## 14. C-11 — Index and Retrieval ports
 
@@ -678,7 +688,63 @@ OriginalResourceRef is an opaque handle for an exact course/document/version, ne
 
 The adapter is constructed without EvidenceWritePort, ProcessingEvidencePort, IngestionCoordinator, IndexWritePort, migration or consent-grant capabilities. Starting it against an absent/incompatible library reports library_unavailable/schema_incompatible and does not create or repair persistence. No saved evidence, permission record, index, summary or use counter changes during a query. Safe operational diagnostics must not dump course content or secrets.
 
-## 16. Failure handling and validation obligations
+## 16. C-13 — Course Ask contracts
+
+These contracts describe a focused, local course question-and-answer capability, not a general agent with browser or mutation tools. Limits are validated by the runtime; concrete thresholds and cancellation implementation belong to later design.
+
+```typescript
+interface AskRequest extends CourseScope {
+  requestId: string;
+  question: string;
+  limits: { maxPassages: number; maxEvidenceCharacters: number; maxAnswerCharacters: number };
+}
+interface GroundedAnswerInput extends CourseScope {
+  question: string;
+  passages: readonly FetchedPassage[];
+  precedence: readonly PrecedenceView[];
+  maxAnswerCharacters: number;
+}
+interface GroundedAnswerSegment {
+  text: string;
+  supportingRefs: readonly PassageRef[];
+}
+interface GroundedAnswerDraft {
+  segments: readonly GroundedAnswerSegment[];
+  limitations: readonly string[];
+}
+interface AskResultBase extends CourseScope {
+  requestId: string;
+  question: string;
+  evidence: readonly FetchedPassage[];
+  conflicts: readonly PrecedenceView[];
+  retrievalMode: SearchPage["retrievalMode"];
+  limitations: readonly string[];
+}
+type AskResult = AskResultBase & (
+  | { status: "grounded_answer"; answer: GroundedAnswerDraft }
+  | { status: "insufficient_evidence"; answer?: never }
+  | { status: "retrieval_only"; reason: "local_model_unavailable"; answer?: never }
+);
+interface CourseAskOrchestrator {
+  ask(request: AskRequest): Promise<Result<AskResult>>;
+}
+interface AskSessionState extends CourseScope {
+  draftQuestion: string;
+  activeRequestId?: string;
+  result?: AskResult;
+  error?: Failure;
+}
+```
+
+C-03 verifies its actual local client/request context before dispatching to C-13. C-13 uses a local-only EvidenceQueryPort binding: no Jev permission lookup/transmission path is injected. It fetches bounded exact passages, never an automatic full-course upload. Source text is untrusted model input. Empty or inadequate evidence produces insufficient_evidence; an unavailable model produces retrieval_only with actual retrieved passages, not a simulated answer. A runtime failure other than model unavailability returns Result's safe failure branch.
+
+Every grounded answer segment must have at least one validated supporting reference from the fetched set, within the same course and the exact source/document/version/extraction/passage identities. Unknown references, empty grounding, inconsistent scope and invalid shape fail as invalid_model_output; no unvalidated segment is displayed. Reference validation proves reference membership, not semantic entailment: answer quality and faithful support still require later acceptance fixtures. Established updates and unresolved conflicts are taken from saved evidence/precedence views, not invented by the answer model. Insufficient or contradictory evidence is stated plainly rather than silently selecting a date.
+
+C-02 keeps AskSessionState in the app session keyed by courseId while switching tabs. On completion, requestId and courseId must match the originating session before its result/error is stored; it must not overwrite another course or a newer request. Revisiting the originating course restores its draft/result/error and honest pending state. Navigation need not cancel the request, but a cancelled request cannot later replace a completed one. This is transient UI state, not a new persistent conversation, shared-user content or library write. Reload/restart history is not promised by this contract.
+
+C-13 is not composed into C-12. Ask does not add a seventh MCP tool or grant the local model write, browser, network, capture, permission or index-regeneration authority. Current source membership must be revalidated before returning evidence; removal/move during an in-flight request yields a safe scoped failure.
+
+## 17. Failure handling and validation obligations
 
 | Condition | Required contract behavior |
 |---|---|
@@ -692,8 +758,10 @@ The adapter is constructed without EvidenceWritePort, ProcessingEvidencePort, In
 | Jev/network/shape failure | hosted_unavailable/invalid_model_output; no unvalidated IDs or invented source facts. |
 | Missing/stale index in query process | index_unavailable or visible not-ready/fallback state; no automatic index writer. |
 | Incompatible/missing local store in MCP | schema_incompatible/library_unavailable; no query-time initialization or migration. |
+| Ask model unavailable or evidence inadequate | Explicit retrieval_only or insufficient_evidence; no invented answer or hosted fallback. |
+| Ask returns an unknown/foreign/ungrounded citation | invalid_model_output or scoped failure; never display the invalid answer. |
 | Selected child failure after parent success | Independent child report and run issues remain visible; parent completeness cannot hide it. |
 
-Later verification must exercise exact-reference serialization/round trips, version/passages immutability, unchanged/changed recaptures, cross-course search and direct-fetch/history/conflict denial, semantic versus lexical mode, denied/allowed/revoked hosted payload inspection and actual Codex CLI search-then-fetch. These are future acceptance obligations, not reported test results.
+Later verification must additionally exercise Ask grounding, empty evidence, unresolved conflicts, invalid citations, local-model outage, no query-time library writes and two-course/navigation/in-flight isolation. Later verification must exercise exact-reference serialization/round trips, version/passages immutability, unchanged/changed recaptures, cross-course search and direct-fetch/history/conflict denial, semantic versus lexical mode, denied/allowed/revoked hosted payload inspection and actual Codex CLI search-then-fetch. These are future acceptance obligations, not reported test results.
 
 All original/source formats in [components](components.md) and US-01–US-07 remain in scope. Concrete OCR/transcription/embedding adapters, tested provider schemas, API transport routes, physical database design and business algorithms are deferred to their authorized later stages.
