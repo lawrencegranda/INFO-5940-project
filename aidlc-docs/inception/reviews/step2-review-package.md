@@ -27,7 +27,7 @@ Every row is an actual published request or report, not an invented team discuss
 | RC-09-01 | [Lawrence, technical examples](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087745145) | Pair the actual deadline function and test; show capture response IDs/status. | Prepare illustrative Markdown examples, not application implementation or pipeline validation. |
 | RC-09-02 | [Iris, README report](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087802622) | Local-only deployment, remote ChatGPT later, benchmark early Construction; wait for Jev/model/meeting decisions. | Record her reported local changes. No README PR has been opened; final README remains her task after integration. |
 | RC-09-03 | [Lawrence, all comment channels](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087569806) | Read conversation and inline reviews. | Completed intake through connector equivalents; empty summaries/threads do not create additional feedback. |
-| RC-09-04 | [Iris, submission timeline](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7086257369) | Sequence Xiaolong's pass, team approval, ready, maintainer merges, README and submission. | The timeline remains a proposal. The November 23 10:00 AM Zoom meeting took place with all five members; see section 12. Decisions/minutes and recurring cadence remain to be added from their actual source. |
+| RC-09-04 | [Iris, submission timeline](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7086257369) | Sequence Xiaolong's pass, team approval, ready, maintainer merges, README and submission. | The timeline remains a proposal. The November 23 10:00 AM Zoom meeting took place with all five members; see section 12. Iris will add the discussion minutes/decisions. Meetings are scheduled as needed, based on project needs and team availability. |
 
 ## 2. Concrete P-01 revision — generated artifact review pending
 
@@ -96,7 +96,7 @@ Final model/embedding/OCR choices, numerical budgets, unaccepted owner proposals
 | Topic | Still needed; baseline while pending |
 | --- | --- |
 | Technical review disposition | Safi's actual PR #7 review is received. Resolve its illustrative authority/chain/API limitations and review the resulting concrete technical input; receipt of comments is not acceptance of an implementation. |
-| Team selection and meeting | The meeting took place on November 23, 2026, at 10:00 AM EST on Zoom with all five members. Iris will provide the minutes; recurring cadence remains pending. Product scope includes Ask + local MCP. Revised artifact approval remains pending. |
+| Team selection and meeting | The meeting took place on November 23, 2026, at 10:00 AM EST on Zoom with all five members. Iris will provide the minutes. Meetings are scheduled as needed, based on project needs and team availability. Product scope includes Ask + local MCP. Revised artifact approval remains pending. |
 | Ask and remote ChatGPT | Local course Ask + local MCP is included by the driver-reported team decision. Remote ChatGPT/hosted MCP remains excluded; no tunnels or seventh MCP tool are added. |
 | Models | Final selection or explicit agreement to retain an unbenchmarked baseline pending comparison; exact model tags/embedding choice and measured budgets remain unverified. |
 | Jev | The technical input defines the typed-decision API and links provider-owned examples. The team has not separately adopted deferral; current opt-in/fallback obligations remain. |
@@ -146,7 +146,7 @@ The selected product scope includes local Ask and read-only local MCP. The [deci
 
 The resulting draft contains 16 FRs, seven NFRs, 26 stories, 13 components and five logical services within U-01/nine modules. Existing IDs and the six MCP tools are retained; FR-16/US-26/C-13/S-05 add focused local Ask. It uses bounded saved evidence, validated exact citations, visible uncertainty, per-course navigation continuity and local read-only retrieval/generation. No remote ChatGPT path, autonomous actions or app implementation is added.
 
-The team should review the [concrete artifact prompt](step2-approval.md). Iris's actual discussion minutes/decisions, recurring cadence and final artifact approval remain actual next inputs; the current work does not claim Step 2 closed or authorize Ready/merge/Construction. Iris's final README remains Step 4 after Lawrence integrates the approved documents.
+The team should review the [concrete artifact prompt](step2-approval.md). Iris's discussion minutes/decisions and revised artifact approval remain pending; the current work does not claim Step 2 closed or authorize Ready/merge/Construction. Iris's final README remains Step 4 after Lawrence integrates the approved documents.
 
 ## 11. Validation of the coordinated draft
 
@@ -162,6 +162,6 @@ Two independent AI consistency reviews found one mismatch in unavailable-model v
 | Format | Zoom. |
 | Attendees | Lawrence Granda Zarzuela; Jiaxin (Iris) Li; Xiaolong Lin; Safiullah Safdariyan; Chloe Wang. |
 | Meeting minutes | Iris is preparing the minutes and detailed discussion decisions. |
-| Recurring cadence | To be confirmed. |
+| Meeting schedule | Meetings are scheduled as needed, based on project needs and team availability. |
 
 The product scope remains **Ask + local MCP**. Review of the revised artifacts is still pending in [the approval prompt](step2-approval.md).

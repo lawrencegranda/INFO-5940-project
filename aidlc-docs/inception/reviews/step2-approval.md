@@ -26,6 +26,6 @@ C) Other. State the specific decision and rationale to record.
 
 ## Separate submission evidence
 
-The full-team project discussion took place on November 23, 2026, at 10:00 AM EST on Zoom, with all five members. The [meeting record](step2-review-package.md#12-meeting-details) lists the meeting details. Iris will supply the discussion minutes and actual decisions; the recurring cadence remains to be confirmed. Review of the revised artifacts in this prompt remains pending. Final model/embedding selection, unadopted Jev/media proposals and proposed module leads remain accurately described future choices; do not invent answers to close this gate.
+The full-team project discussion took place on November 23, 2026, at 10:00 AM EST on Zoom, with all five members. The [meeting record](step2-review-package.md#12-meeting-details) lists the meeting details. Iris will supply the discussion minutes and decisions. Meetings are scheduled as needed, based on project needs and team availability. Review of the revised artifacts in this prompt remains pending. Final model/embedding selection, unadopted Jev/media proposals and proposed module leads remain accurately described future choices; do not invent answers to close this gate.
 
 After actual approval, record the corrected Inception status and follow Issue #9's Ready/ordered-merge sequence. This prompt does not itself mark PRs Ready, merge documents, submit the assignment or authorize application code.
