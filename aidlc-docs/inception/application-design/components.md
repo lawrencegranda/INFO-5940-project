@@ -2,7 +2,9 @@
 
 **Stage:** Inception / Application Design
 
-**Current review (2026-11-23):** Step 2 corrective draft incorporating the reported team decision to include local Ask and local MCP. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+**Current review (2026-11-23):** Step 2 corrective draft with local Ask and local MCP in the MVP and retained Jev/media capabilities scheduled for later work. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+
+**Delivery phases:** The current MVP includes native HTML/text/PDF capture and import, local organization and retrieval, source/version/authority handling, grounded Ask and read-only local MCP. Jev, scan/image OCR, advanced equation/diagram recognition, and audio/video extraction/transcription remain planned **post-MVP** features. Original preservation/viewing and honest extraction status remain in the MVP. C-08 and all hosted-permission/provider paths are retained design contracts but are not composed into the MVP. See the [MVP and later-work scope](../requirements/mvp-scope.md).
 
 **Scope:** Thirteen logical components in a local-first, single-user application. Final implementation packages and Units of Work are determined later; the component map does not introduce hosted microservices.
 
@@ -14,7 +16,7 @@ The Chrome extension and library UI are clients of a controlled loopback library
 
 The local stdio MCP adapter is a separate process with only read-only persistence and query bindings. Opening that adapter must not initialize a writable store, migrate a schema, create processing jobs, rebuild indexes or regenerate summaries. A missing or incompatible library produces an explicit diagnostic and requires the authorized library runtime to prepare it.
 
-Local Ollama and hosted Jev are different processing destinations. Ollama handles proposed local generative and embedding capabilities through explicit adapters; compatibility and performance remain unverified. Jev performs only permitted, minimized classification/routing/reranking. A local library/MCP server does not establish that Codex's configured model is local: the selected external assistant may process retrieved content using its configured provider. Client setup must disclose that boundary before use; a Jev permission is not a blanket permission for other destinations.
+Local Ollama is the MVP generation/embedding boundary; compatibility and performance remain unverified. The retained post-MVP Jev gateway is a separate hosted destination for permitted, minimized classification/routing/reranking and is not instantiated in the MVP. A local library/MCP server does not establish that Codex's configured model is local: the selected external assistant may process retrieved content using its configured provider. Client setup must disclose that boundary before use; a Jev permission is not a blanket permission for other destinations.
 
 ## 2. Shared identity and evidence concepts
 
@@ -53,9 +55,9 @@ A current course membership permits access within that course; knowing a source,
 | C-03 | Local Library API | Validate paired local requests, commands and scoped UI queries. | Authorized command/service entry point only. |
 | C-04 | Ingestion Coordinator | Preserve originals and manage durable bounded processing/recovery. | Write/runtime bindings of C-05 and write-side processing components. |
 | C-05 | Evidence Store | Persist originals, identities, memberships, derivations, relationships and processing state. | Explicit query-read, processing-read and mutation ports. |
-| C-06 | Extraction Pipeline | Native text, OCR, original visual fidelity and permitted media transcription. | Produces extraction drafts; coordinator persists them. |
+| C-06 | Extraction Pipeline | MVP native text and original preservation; post-MVP OCR, advanced visual recognition and media transcription. | Produces extraction drafts; coordinator persists them. |
 | C-07 | Local AI Gateway | Local Ollama generation and a separately verified local embedding abstraction. | No evidence-store writes. |
-| C-08 | Hosted Jev Gateway | Scoped/minimized classification, routing or reranking after matching permission. | No evidence-store writes or consent grants. |
+| C-08 | Hosted Jev Gateway — post-MVP | Retained scoped/minimized classification, routing and reranking contracts after matching permission; not composed into the MVP. | No evidence-store writes or consent grants. |
 | C-09 | Organization and Summary | Correctable filing suggestions and source-linked incremental summaries. | Produces suggestions/derived drafts for authorized persistence. |
 | C-10 | Claims and Relations | Evidence-linked facts, proposed links and claim-scoped precedence/conflict views. | Enrichment drafts use write services; query views are pure/read-only. |
 | C-11 | Index and Retrieval | Incremental FTS5/vector indexing and scoped progressive evidence retrieval. | Separate writer and query bindings; query cannot acquire writer access. |
@@ -80,7 +82,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Purpose:** Give P-01 control of the private library and a course-scoped Ask entry without requiring a CLI for ordinary questions.
 
-**Responsibilities:** Browse courses/folders/topics; select local imports; review uncertain filing; correct editable metadata/membership; inspect originals, extraction gaps, exact passages, versions, substantive claims, relationships and unresolved conflicts. Disclose hosted requests before an explicit consent decision. Distinguish dates, generated summaries and source evidence. Keep Ask question drafts, result, errors and pending-request identity keyed by course while navigating Materials, Ask and Deadlines within the running UI; never apply a response to a different course. This UI session state does not mutate saved library evidence or promise cross-reload history.
+**Responsibilities:** Browse courses/folders/topics; select local imports; review uncertain local filing; correct editable metadata/membership; inspect originals, extraction gaps, exact passages, versions, substantive claims, relationships and unresolved conflicts. Hosted-request disclosure/consent controls are retained for the post-MVP Jev path. Distinguish dates, generated summaries and source evidence. Keep Ask question drafts, result, errors and pending-request identity keyed by course while navigating Materials, Ask and Deadlines within the running UI; never apply a response to a different course. This UI session state does not mutate saved library evidence or promise cross-reload history.
 
 **Interfaces:** C-03 command/query operations, including course-scoped Ask, and their typed results. The UI may display the scope of data that would leave the laptop but cannot infer permission from a saved document or model suggestion.
 
@@ -92,7 +94,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Purpose:** Provide the controlled command boundary for the UI and locally paired extension, plus scoped UI queries.
 
-**Responsibilities:** Restrict binding to loopback; validate local client pairing/capability, expected origins, request sizes/schema and requested scope; dispatch capture/import/review/consent commands through the logical services. Loopback reachability alone is not authorization. Accept only explicitly selected resource bytes/identities, not arbitrary source-provided executable actions.
+**Responsibilities:** Restrict binding to loopback; validate local client pairing/capability, expected origins, request sizes/schema and requested scope; dispatch MVP capture/import/review commands through the logical services. Hosted-consent commands are post-MVP contracts. Loopback reachability alone is not authorization. Accept only explicitly selected resource bytes/identities, not arbitrary source-provided executable actions.
 
 **Interfaces:** Command operations reach S-01 Capture/Ingest or S-03 Metadata/Review and C-04/C-05 as appropriate. UI evidence queries reach S-04 Evidence Query/C-11 with a mandatory course scope except course listing. Ask dispatches to S-05/C-13 after the same entry and course checks; the request does not convey command capabilities to the Ask orchestrator. Return durable run identifiers and safe status responses.
 
@@ -106,7 +108,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Responsibilities:** Register selected items, preserve their originals before derived processing, maintain run/item/step state, invoke bounded extraction and optional enrichment, and persist the resulting immutable extraction revisions and affected index updates. Publish available native text to lexical indexing before optional AI/embedding work so those failures cannot block basic retrieval. Selected embedded resources retain independent records. Schedule authorized retries/recovery without replacing a successfully saved original.
 
-**Interfaces:** Authorized capture/import/retry commands; C-05 processing/write ports; C-06 extraction; C-09/C-10 enrichment; C-11 write binding. Use C-07/C-08 only through their designated consumers and permission checks. IngestionItemRef permits processing a selected pre-filing item without exposing it through course queries.
+**Interfaces:** Authorized capture/import/retry commands; C-05 processing/write ports; C-06 extraction; C-09/C-10 enrichment; C-11 write binding. Use C-07 only through designated consumers in the MVP. C-08 and its permission checks are retained for post-MVP composition. IngestionItemRef permits processing a selected pre-filing item without exposing it through course queries.
 
 **Failure boundary:** A failed model/index step leaves preserved originals and known available text accessible. Run progress and per-resource quality are distinct. Durable receipts identify which operation can be retried. Cancellation, interruption and partial child completion remain visible; no successful-run label fabricates resource completeness.
 
@@ -116,7 +118,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Purpose:** Own the persistent truth and enforce immutable evidence plus scoped access.
 
-**Responsibilities:** Store source/document identity, byte-preserving original versions, capture receipts, distinct date provenance, course memberships/metadata, immutable extraction revisions/passages, source-linked summary revisions, facts/relations, consent decisions and processing state. SQLite/local files are explicit storage boundaries; later Functional Design specifies transaction, file-commit and recovery mechanics.
+**Responsibilities:** Store source/document identity, byte-preserving original versions, capture receipts, distinct date provenance, course memberships/metadata, immutable extraction revisions/passages, source-linked summary revisions, facts/relations and processing state. Consent records/ports are retained for the post-MVP hosted path. SQLite/local files are explicit storage boundaries; later Functional Design specifies transaction, file-commit and recovery mechanics.
 
 **Interfaces:** EvidenceReadPort checks current course membership for every read and never writes. ProcessingEvidencePort permits the authorized ingestion runtime to read an exact original selected for a run, including a pre-filing item; it is not available to MCP. EvidenceWritePort accepts controlled mutations from the command/processing services and never overwrites an immutable original/version/passage. Index data has separately restricted write/read bindings.
 
@@ -128,11 +130,11 @@ A current course membership permits access within that course; knowing a source,
 
 **Purpose:** Derive searchable content while keeping the selected original and its limitations inspectable.
 
-**Responsibilities:** Select a supported native-text, OCR or transcription adapter; preserve original equations/diagrams; report uncertain notation and unextracted regions; retain page/region/segment location. Discoveries inside an imported document become resource candidates requiring selection before new resource fetches.
+**Responsibilities:** In the MVP, select native HTML/text/PDF extraction and preserve originals, including original equations/diagrams. Retain page/text locations and report unextracted regions honestly. OCR, advanced equation/diagram recognition and media extraction/transcription adapters remain post-MVP work, with their region/segment provenance contracts retained. Discoveries inside an imported document become resource candidates requiring selection before new resource fetches.
 
 **Interfaces:** An exact immutable original or authorized IngestionItemRef plus requested extraction kinds enters; extraction drafts with passages, source locations, omissions, adapter provenance and per-resource outcomes return to C-04. Adapter capabilities are explicit rather than inferred from upload success.
 
-**Failure boundary:** Native-text failure, unreadable OCR, unsupported codecs, inaccessible media and unavailable local processing produce partial/failed/unsupported results. Generated prose is not substituted for source pixels or verified transcription. Any re-extraction creates a new output revision; previous cited passages remain addressable.
+**Failure boundary:** MVP native-text failure or a deferred extraction capability produces honest partial/failed/unsupported status. Post-MVP unreadable OCR, unsupported codecs or inaccessible media follows the same status rules. Generated prose is not substituted for source pixels or verified transcription. Any re-extraction creates a new output revision; previous cited passages remain addressable.
 
 **Traceability:** US-02–US-07, US-23; FR-03–FR-05; NFR-03, NFR-04.
 
@@ -150,6 +152,8 @@ A current course membership permits access within that course; knowing a source,
 
 ### C-08 — Hosted Jev Gateway
 
+**Delivery:** Post-MVP retained feature; no gateway, permission UI or provider dependency is composed into the current MVP.
+
 **Purpose:** Make optional structured decisions within a specific disclosed data permission.
 
 **Responsibilities:** Enforce the recipient, purpose, selected course/item/evidence scope, allowed fields/excerpts and permission validity before any external classification, routing or reranking request. The payload contains only the disclosed minimal content; complete originals and credentials are excluded.
@@ -166,7 +170,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Responsibilities:** Suggest a course/folder only within known allowed destinations; distinguish confident/review-required/unavailable states; accept the student's manual filing through the authorized review service. Generate document/topic/course summary drafts with exact supporting references and an affected-input set. Summaries are derived artifacts, not replacements for original passages.
 
-**Interfaces:** Ingestion/review context and approved course/folder metadata; C-07 local generation or C-08 permitted classification; read-only evidence inputs; filing/summary drafts returned to S-02/S-03 for authorized persistence. Automatic filing can occur only after a configured acceptance condition is later validated, and remains correctable.
+**Interfaces:** Ingestion/review context and approved course/folder metadata; C-07 local generation in the MVP, with C-08 permitted classification retained for post-MVP; read-only evidence inputs; filing/summary drafts returned to S-02/S-03 for authorized persistence. Automatic filing can occur only after a configured acceptance condition is later validated, and remains correctable.
 
 **Failure boundary:** Wrong/uncertain provider IDs are rejected; unavailable suggestions lead to manual filing. A failed summary leaves existing evidence and usable local search intact. Changed inputs mark the affected summary projection pending/rebuild-needed without query-time generation.
 
@@ -190,7 +194,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Responsibilities:** Write-side operations incrementally publish lexical/vector projections for changed extraction outputs and membership changes. Query-side operations provide bounded lexical/semantic candidates, explicit topic/source/date/version filters, applicable saved-evidence views, exact document/passage fetch, history and conflicts. Recheck current membership after candidate retrieval and before returning any exact evidence.
 
-**Interfaces:** IndexWritePort accepts committed extraction/projection changes only from the S-02 coordinator. S-03 metadata/review commands schedule affected index work through C-04; they do not call the writer directly. EvidenceQueryPort accepts course-scoped requests and only receives C-05 read bindings, C-10 pure views and permitted read-side C-07/C-08 adapters. Query methods cannot acquire writer/jobs/ingestion capabilities.
+**Interfaces:** IndexWritePort accepts committed extraction/projection changes only from the S-02 coordinator. S-03 metadata/review commands schedule affected index work through C-04; they do not call the writer directly. EvidenceQueryPort accepts course-scoped requests and only receives C-05 read bindings, C-10 pure views and the local read-side C-07 adapter. The C-08 read-side adapter is post-MVP and absent from the MVP composition. Query methods cannot acquire writer/jobs/ingestion capabilities.
 
 **Failure boundary:** Missing vectors/AI fall back to a disclosed lexical mode; keyword success is not proof that semantic retrieval works. Stale/incomplete projections are labeled and can be rebuilt only through the authorized write runtime. An exact old reference stays exact, even if a new extraction/version exists. Unknown or out-of-course IDs return not_found_in_scope.
 
@@ -204,7 +208,7 @@ A current course membership permits access within that course; knowing a source,
 
 **Interfaces:** Separate local stdio process composed exclusively from C-05 EvidenceReadPort, C-11 EvidenceQueryPort and pure helpers. Only list_courses is unscoped; search_course, fetch_document, fetch_passages, get_document_history and get_conflicts require courseId. Source/version/passage consistency and course membership are enforced behind every query, not only in search.
 
-**Failure boundary:** No save/import/update/delete/consent/retry/reindex tools or writable dependencies. It must not create a library when one is absent, regenerate summaries during fetch or mutate consent/use counters through a query. Optional hosted query processing uses only a preexisting exact-scope permission; denial leaves local retrieval available. Actual Codex CLI integration remains a future verification task.
+**Failure boundary:** No save/import/update/delete/consent/retry/reindex tools or writable dependencies. It must not create a library when one is absent, regenerate summaries during fetch or mutate consent/use counters through a query. The MVP has no hosted query processing. The retained post-MVP path may use only a preexisting exact-scope permission; denial leaves local retrieval available. Actual Codex CLI integration remains a future verification task.
 
 **Traceability:** US-19–US-25; FR-12–FR-15; NFR-01–NFR-05.
 
@@ -222,14 +226,14 @@ A current course membership permits access within that course; knowing a source,
 
 ## 6. Source and format coverage retained
 
-| Source/format | Ownership and required result |
+| Source/format | Delivery phase and responsibility |
 |---|---|
 | Canvas, Gradescope, EdStem and ordinary webpages | C-01/C-03/C-04 preserve explicitly selected accessible pages; each actual authenticated source requires its own integration evidence. |
 | External papers, PDFs and local files | C-01/C-02 submit permitted originals; C-06 selects native extraction or explicit fallback. Local-only sources do not receive invented web URLs. |
-| Linked/embedded documents and media | C-01/C-06 discover; the student selects; C-04 tracks each authorized item independently. |
-| Scans and images | C-06 OCR output stays linked to original pixels/page regions, with uncertain/missing text disclosed. |
-| Equations and diagrams | C-05 preserves originals; C-06 indexes only reliable notation/text and retains visual references. |
-| Accessible audio/video | C-06 transcription preserves original media and available segment/time references; protected/inaccessible media stays visibly limited. |
+| Linked/embedded documents and media | MVP: selected native PDF/document capture and independent status. Audio/video acquisition and derived processing remain post-MVP; discovery alone never implies successful capture/transcription. |
+| Scans and images | Post-MVP: C-06 OCR with original-pixel/page-region provenance. MVP may preserve/view an authorized original and explicitly mark text extraction unsupported. |
+| Equations and diagrams | MVP: C-05 original preservation/viewing and any existing native text. Post-MVP: advanced recognition with reliable notation/region provenance. |
+| Accessible audio/video | Post-MVP: permitted acquisition/transcription and segment/time provenance. MVP clearly reports unavailable extraction; a failure/status-only case is not a passing future transcription test. |
 
 No adapter, runtime result, permission path or source integration is claimed as already implemented or passing. Detailed extraction/provider algorithms and measured resource limits belong to later Functional/NFR Design and Construction.
 

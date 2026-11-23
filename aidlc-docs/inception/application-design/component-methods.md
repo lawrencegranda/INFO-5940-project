@@ -2,11 +2,17 @@
 
 **Stage:** Inception / Application Design
 
-**Current review (2026-11-23):** Step 2 corrective draft incorporating the reported team decision to include local Ask and local MCP. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+**Current review (2026-11-23):** Step 2 corrective draft with local Ask and local MCP in the MVP and retained Jev/media capabilities scheduled for later work. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+
+**Delivery phases:** The current MVP includes native HTML/text/PDF capture and import, local organization and retrieval, source/version/authority handling, grounded Ask and read-only local MCP. Jev, scan/image OCR, advanced equation/diagram recognition, and audio/video extraction/transcription remain planned **post-MVP** features. Original preservation/viewing and honest extraction status remain in the MVP. C-08 and all hosted-permission/provider paths are retained design contracts but are not composed into the MVP. See the [MVP and later-work scope](../requirements/mvp-scope.md).
 
 **Inputs:** [Component definitions](components.md), [design plan](../plans/application-design-plan.md), [requirements](../requirements/requirements.md) and [stories](../user-stories/stories.md).
 
 Detailed business algorithms, schema migrations, source normalization rules, confidence thresholds, worker limits, OCR/STT packages and index scoring remain for later Functional/NFR Design. Method names identify responsibilities; concrete module packaging remains for Units Generation.
+
+## Delivery status of retained contracts
+
+The method catalogue covers the full planned product. MVP composition uses local capture/import, native text/PDF extraction, original viewing, local organization/AI, scoped retrieval, Ask and the six read-only MCP tools. JevPermission/AuthorizedJevRequest/HostedJevGateway, PermissionReadPort, savePermission, reviewHostedPermission, setJevPermission and hostedRequest parameters are post-MVP contracts only; the MVP neither exposes those commands nor injects those capabilities. OCR/transcription request variants, media locations and advanced visual-recognition outputs are retained for later work. Requesting a deferred adapter in the MVP returns an explicit unsupported capability status rather than a fabricated result.
 
 ## 1. Shared identity, scope and result types
 
@@ -477,7 +483,7 @@ interface LocalLibraryAPI {
 
 C-03 validates the actual transport before constructing LocalCommandContext, including local pairing/capability and expected origin. Pairing setup is a deliberate local-user operation, not an open wildcard-origin endpoint; exact credential storage/rotation is reserved for later security design. Input records cannot command arbitrary filesystem paths, URLs or source-provided executable actions.
 
-applyReview accepts only a validated filing/relationship variant and checks exact endpoints/current review revision. Pending filing uses IngestionItemRef plus the explicit target course/folder and review revision; the authorized run owner can confirm membership without inventing a prior course-scoped EvidenceRef. Authority-note edits use MetadataEdit. C-03 writes editable/review/consent data through C-05 and schedules derived work through C-04. It never calls C-09/C-10 enrichment or C-11 writers directly. UI query operations, including bounded original-resource reading, delegate to EvidenceQueryPort after the same local entry checks; MCP has no command access.
+applyReview accepts only a validated filing/relationship variant and checks exact endpoints/current review revision. Pending filing uses IngestionItemRef plus the explicit target course/folder and review revision; the authorized run owner can confirm membership without inventing a prior course-scoped EvidenceRef. Authority-note edits use MetadataEdit. C-03 writes MVP editable/review data through C-05 and schedules derived work through C-04. Consent writes remain a post-MVP contract. It never calls C-09/C-10 enrichment or C-11 writers directly. UI query operations, including bounded original-resource reading, delegate to EvidenceQueryPort after the same local entry checks; MCP has no command access.
 
 ## 7. C-04 — Ingestion Coordinator methods
 
@@ -541,7 +547,7 @@ interface EvidenceWritePort {
 }
 ```
 
-These are distinct capabilities; EvidenceReadPort and ProcessingEvidencePort do not inherit or resolve a write port. The stdio process receives only EvidenceReadPort plus query-side bindings. Optional C-08 decisions use PermissionReadPort internally to validate an already scoped request; this is not a public unscoped grant-lookup tool. The permission reader does not enumerate grants, expose credentials, update counters or confer authority merely because it returns a record.
+These are distinct capabilities; EvidenceReadPort and ProcessingEvidencePort do not inherit or resolve a write port. The stdio process receives only EvidenceReadPort plus query-side bindings. Post-MVP C-08 decisions use PermissionReadPort internally to validate an already scoped request; this is not a public unscoped grant-lookup tool. The permission reader does not enumerate grants, expose credentials, update counters or confer authority merely because it returns a record.
 
 The processing port additionally requires runtime-established ownership of the authorized run/item; it cannot be reached by an EvidenceRef, URL or arbitrary file path supplied through MCP. It is never injected into C-12.
 
@@ -560,7 +566,7 @@ interface ExtractionPipeline {
 }
 ```
 
-The input resolves only an authorized selected original through ProcessingEvidencePort. New embedded candidates require review before acquisition. Native HTML/PDF text, readable scans/images, original math/diagrams and accessible audio/video remain required format paths; capability discovery does not claim that an adapter has passed actual-source tests. Outputs include original-relative text/page/region/media locations and disclosed uncertainty. Unsupported/unreadable processing returns the per-resource outcome and reliable partial content where available; it does not substitute a model interpretation for original pixels or verified transcript.
+The input resolves only an authorized selected original through ProcessingEvidencePort. New embedded candidates require review before acquisition. Native HTML/text/PDF extraction and original math/diagram preservation/viewing are MVP paths. Scan/image OCR, advanced mathematical/diagram recognition and accessible audio/video acquisition/transcription remain required planned post-MVP paths; their successful operation is not a current MVP acceptance condition. Capability discovery does not claim that an adapter has passed actual-source tests. Outputs include original-relative text/page/region/media locations and disclosed uncertainty. Unsupported/unreadable processing returns the per-resource outcome and reliable partial content where available; it does not substitute a model interpretation for original pixels or verified transcript.
 
 ## 10. C-07 — Local AI Gateway methods
 
@@ -580,7 +586,7 @@ interface LocalAIGateway {
 
 Each request labels source material as untrusted data and validates schema, supporting references, output count and intended scope. No output directly commits facts or grants authority. Local generation and embedding capabilities are measured separately; gemma3:4b is only the initial generative candidate. An unavailable/invalid/timeout result preserves original access and manual/lexical fallback, with no implicit hosted fallback. Query embeddings are transient: this adapter cannot persist query-time caches or acquire index-writer access.
 
-## 11. C-08 — Hosted Jev Gateway methods
+## 11. C-08 — Hosted Jev Gateway methods (post-MVP)
 
 ```typescript
 interface HostedJevGateway {
@@ -590,7 +596,7 @@ interface HostedJevGateway {
 }
 ```
 
-Every method loads and validates the matching active permission before transmission, then checks purpose, destination, current selected-input access, minimized fields/excerpts, payload binding and expiry/revocation. Invalid output IDs/options or unexpected result shapes return invalid_model_output; they are never accepted as new course memberships, commands or source authority. No gateway method creates or expands consent. Missing permission, disallowed data or revoked/expired scope returns hosted_denied, and optional-provider unavailability returns hosted_unavailable. A new authorization must come from C-02/C-03, never from MCP.
+When the post-MVP gateway is implemented, every method loads and validates the matching active permission before transmission, then checks purpose, destination, current selected-input access, minimized fields/excerpts, payload binding and expiry/revocation. Invalid output IDs/options or unexpected result shapes return invalid_model_output; they are never accepted as new course memberships, commands or source authority. No gateway method creates or expands consent. Missing permission, disallowed data or revoked/expired scope returns hosted_denied, and optional-provider unavailability returns hosted_unavailable. A new authorization must come from C-02/C-03, never from MCP.
 
 ## 12. C-09 — Organization and Summary methods
 
@@ -599,7 +605,7 @@ interface OrganizationAndSummary {
   suggestFiling(
     itemRef: IngestionItemRef,
     allowedDestinations: readonly { courseId: CourseId; folderId?: FolderId }[],
-    hostedRequest?: AuthorizedJevRequest
+    hostedRequest?: AuthorizedJevRequest // Post-MVP; omitted from MVP composition.
   ): Promise<Result<FilingSuggestion>>;
   buildSummary(
     scope: CourseScope,
@@ -661,9 +667,9 @@ interface EvidenceQueryPort {
 }
 ```
 
-Only S-02's authorized coordinator receives IndexWritePort. S-03 metadata edits enqueue affected work through C-04. Extraction may finish privately for an unfiled item, but course-index publishing first requires an accepted current membership. After that check, lexical publishing follows committed available extraction without waiting for optional summary, embeddings or Jev success; manual filing remains available when those optional capabilities fail. publishSemantic requests local index-purpose embeddings through C-07 inside the writer binding; C-04 does not acquire a direct provider capability. Repeated publishing addresses the same immutable references; identity/duplicate-handling details are later Functional Design.
+Only S-02's authorized coordinator receives IndexWritePort. S-03 metadata edits enqueue affected work through C-04. Extraction may finish privately for an unfiled item, but course-index publishing first requires an accepted current membership. After that check, lexical publishing follows committed available extraction without waiting for optional summary or embeddings; Jev is not composed into the MVP. Manual filing remains available when those optional capabilities fail. publishSemantic requests local index-purpose embeddings through C-07 inside the writer binding; C-04 does not acquire a direct provider capability. Repeated publishing addresses the same immutable references; identity/duplicate-handling details are later Functional Design.
 
-EvidenceQueryPort composes only read-side dependencies, applies every required filter and checks current membership before returning candidates or exact evidence. It may use transient local query embeddings or existing-scope Jev decisions; it cannot persist embeddings, initialize/migrate stores, create jobs, regenerate summaries or rebuild indexes. Missing/stale projections remain visible and require write-side repair. A keyword fallback success does not satisfy the separate semantic-retrieval acceptance obligation.
+EvidenceQueryPort composes only read-side dependencies, applies every required filter and checks current membership before returning candidates or exact evidence. In the MVP it may use transient local query embeddings; existing-scope Jev decisions are retained for post-MVP composition only. In either phase it cannot persist embeddings, initialize/migrate stores, create jobs, regenerate summaries or rebuild indexes. Missing/stale projections remain visible and require write-side repair. A keyword fallback success does not satisfy the separate semantic-retrieval acceptance obligation.
 
 getConflicts uses the pure C-10 view with current scoped claims/established evidence. It does not mark a proposal accepted. Returning an applicable claim does not suppress unrelated facts in an earlier syllabus. Failed exact lookup never redirects to latest.
 
@@ -754,14 +760,14 @@ C-13 is not composed into C-12. Ask does not add a seventh MCP tool or grant the
 | Missing original or extraction revision | original_unavailable/processing_not_ready or the resource's explicit limitation; previously issued IDs do not change meaning. |
 | Stale metadata edit | metadata_conflict with safe reload guidance; immutable original remains unchanged. |
 | Local generation or embedding unavailable | local_model_unavailable or unsupported; preserve original/lexical/manual operations. |
-| Jev denied/revoked/expired/mismatched | hosted_denied before transmission; local/manual alternative remains available. |
-| Jev/network/shape failure | hosted_unavailable/invalid_model_output; no unvalidated IDs or invented source facts. |
+| Post-MVP Jev denied/revoked/expired/mismatched | hosted_denied before transmission; local/manual alternative remains available. |
+| Post-MVP Jev/network/shape failure | hosted_unavailable/invalid_model_output; no unvalidated IDs or invented source facts. |
 | Missing/stale index in query process | index_unavailable or visible not-ready/fallback state; no automatic index writer. |
 | Incompatible/missing local store in MCP | schema_incompatible/library_unavailable; no query-time initialization or migration. |
 | Ask model unavailable or evidence inadequate | Explicit retrieval_only or insufficient_evidence; no invented answer or hosted fallback. |
 | Ask returns an unknown/foreign/ungrounded citation | invalid_model_output or scoped failure; never display the invalid answer. |
 | Selected child failure after parent success | Independent child report and run issues remain visible; parent completeness cannot hide it. |
 
-Later verification must additionally exercise Ask grounding, empty evidence, unresolved conflicts, invalid citations, local-model outage, no query-time library writes and two-course/navigation/in-flight isolation. Later verification must exercise exact-reference serialization/round trips, version/passages immutability, unchanged/changed recaptures, cross-course search and direct-fetch/history/conflict denial, semantic versus lexical mode, denied/allowed/revoked hosted payload inspection and actual Codex CLI search-then-fetch. These are future acceptance obligations, not reported test results.
+MVP verification must exercise Ask grounding, empty evidence, unresolved conflicts, invalid citations, local-model outage, no query-time library writes and two-course/navigation/in-flight isolation. Later verification must exercise exact-reference serialization/round trips, version/passages immutability, unchanged/changed recaptures, cross-course search and direct-fetch/history/conflict denial, semantic versus lexical mode and actual Codex CLI search-then-fetch. Post-MVP verification additionally covers denied/allowed/revoked hosted payload inspection, OCR/recognition and media acquisition/transcription. These are future acceptance obligations, not reported test results.
 
-All original/source formats in [components](components.md) and US-01–US-07 remain in scope. Concrete OCR/transcription/embedding adapters, tested provider schemas, API transport routes, physical database design and business algorithms are deferred to their authorized later stages.
+All planned original/source formats in [components](components.md) and US-01–US-07 remain in the product catalogue with explicit delivery phases. Native extraction and original viewing are MVP work; US-05/US-06 and advanced-recognition portions of US-07 are post-MVP. Concrete deferred OCR/transcription/provider adapters will be designed and validated in that later iteration; local embedding, API transport, physical database and business-rule detail remain later authorized MVP design work.
