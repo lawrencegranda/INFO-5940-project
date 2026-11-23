@@ -27,7 +27,8 @@ Every row is an actual published request or report, not an invented team discuss
 | RC-09-01 | [Lawrence, technical examples](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087745145) | Pair the actual deadline function and test; show capture response IDs/status. | Prepare illustrative Markdown examples, not application implementation or pipeline validation. |
 | RC-09-02 | [Iris, README report](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087802622) | Local-only deployment, remote ChatGPT later, benchmark early Construction; wait for Jev/model/meeting decisions. | Record her reported local changes. No README PR has been opened; final README remains her task after integration. |
 | RC-09-03 | [Lawrence, all comment channels](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087569806) | Read conversation and inline reviews. | Completed intake through connector equivalents; empty summaries/threads do not create additional feedback. |
-| RC-09-04 | [Iris, submission timeline](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7086257369) | Sequence Xiaolong's pass, team approval, ready, maintainer merges, README and submission. | The timeline remains a proposal. The November 23 10:00 AM Zoom meeting took place with all five members; see section 12. Iris will add the discussion minutes/decisions. Meetings are scheduled as needed, based on project needs and team availability. |
+| RC-09-04 | [Iris, submission timeline](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7086257369) | Sequence Xiaolong's pass, team approval, ready, maintainer merges, README and submission. | The timeline remains a proposal. The November 23 10:00–10:10 AM EST Zoom meeting took place with all five members; see section 12. [Iris's minutes](meeting-minutes-2026-11-23.md) are incorporated. Meetings are scheduled as needed, based on project needs and team availability. |
+| RC-MIN-01 | [Iris, meeting minutes](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115423294) | Record 10:00–10:10 AM Zoom/full-team discussion, Ask/local-MCP direction and separate allocation/model-plan/artifact confirmations. | [Minutes incorporated](meeting-minutes-2026-11-23.md); remaining confirmations are bundled in [the concrete review gate](step2-approval.md). The minutes do not approve implementation or merging. |
 
 ## 2. Concrete P-01 revision — generated artifact review pending
 
@@ -91,14 +92,14 @@ Xiaolong's [published Issue #9 reply](https://github.com/lawrencegranda/INFO-594
 
 ## 7. Pending decisions and actual missing evidence
 
-Final model/embedding choices, numerical budgets, proposed owner acceptance and detailed later adapters remain planning topics. Jev and advanced media features have an explicit retained post-MVP allocation; the [scope table](../requirements/mvp-scope.md) distinguishes current acceptance from later work.
+Iris's minutes are incorporated. The final review must confirm the explicit feature allocation and local evaluation plan, without claiming a final runtime model or benchmark. Numerical budgets, proposed owner acceptance and detailed later adapters remain planning topics. Jev and advanced media features have an explicit draft post-MVP allocation; the [scope table](../requirements/mvp-scope.md) distinguishes current acceptance from later work.
 
 | Topic | Still needed; baseline while pending |
 | --- | --- |
 | Technical review disposition | Safi's actual PR #7 review is received. Resolve its illustrative authority/chain/API limitations and review the resulting concrete technical input; receipt of comments is not acceptance of an implementation. |
-| Team selection and meeting | The meeting took place on November 23, 2026, at 10:00 AM EST on Zoom with all five members. Iris will provide the minutes. Meetings are scheduled as needed, based on project needs and team availability. Product scope includes Ask + local MCP. Revised artifact approval remains pending. |
+| Team selection and meeting | The meeting took place on November 23, 2026, 10:00–10:10 AM EST on Zoom with all five members. [Iris's minutes](meeting-minutes-2026-11-23.md) are incorporated; precise allocation/evaluation-plan and artifact approval remain pending. Meetings are scheduled as needed, based on project needs and team availability. Product scope includes Ask + local MCP. Revised artifact approval remains pending. |
 | Ask and remote ChatGPT | Local course Ask + local MCP is included in the current MVP. Remote ChatGPT/hosted MCP is retained for later integration; the six current MCP tools are unchanged. |
-| Models | Choose/validate current local generation and embeddings during authorized Construction; the baseline remains unbenchmarked. Jev/provider/media adapter choices are later work. |
+| Models | Confirm the documented local generation/embedding evaluation approach through the current artifact gate; actual measurements and final selection occur during authorized Construction. No final model/benchmark is claimed. |
 | Jev | Retained for later classification/routing/reranking and hosted-permission design; not connected or required in the current MVP. |
 | CLI audience | Revised persona distinguishes ordinary local UI/Ask users from the required Codex CLI technical pilot. Validate actual usability/integration later; do not claim research or universal CLI suitability. |
 | Formats/platform | Current MVP native HTML/text/PDF extraction and original fidelity; scan/image OCR, advanced math/diagram recognition and audio/video processing retained post-MVP. No extra OS commitment is made. |
@@ -146,7 +147,7 @@ The selected product scope includes local Ask and read-only local MCP. The [deci
 
 The retained catalog contains 16 FRs, seven NFRs, 26 stories, 13 components and five logical services within U-01/nine modules; delivery-phase labels distinguish current MVP work from retained later capabilities. Existing IDs and the six MCP tools are retained; FR-16/US-26/C-13/S-05 add focused local Ask. It uses bounded saved evidence, validated exact citations, visible uncertainty, per-course navigation continuity and local read-only retrieval/generation. No remote ChatGPT path, autonomous actions or app implementation is added.
 
-The team should review the [concrete artifact prompt](step2-approval.md). Iris's discussion minutes/decisions and revised artifact approval remain pending; the current work does not claim Step 2 closed or authorize Ready/merge/Construction. Iris's final README remains Step 4 after Lawrence integrates the approved documents.
+The team should review the [concrete artifact prompt](step2-approval.md). The minutes are incorporated; itemized allocation/evaluation-plan confirmation and revised artifact approval remain pending; the current work does not claim Step 2 closed or authorize Ready/merge/Construction. Iris's final README remains Step 4 after Lawrence integrates the approved documents.
 
 ## 11. Validation of the coordinated draft
 
@@ -158,10 +159,10 @@ Two independent AI consistency reviews found one mismatch in unavailable-model v
 
 | Field | Details |
 | --- | --- |
-| Date and start | November 23, 2026, 10:00 AM EST (America/New_York). |
+| Date and time | November 23, 2026, 10:00–10:10 AM EST (America/New_York). |
 | Format | Zoom. |
 | Attendees | Lawrence Granda Zarzuela; Jiaxin (Iris) Li; Xiaolong Lin; Safiullah Safdariyan; Chloe Wang. |
-| Meeting minutes | Iris is preparing the minutes and detailed discussion decisions. |
+| Meeting minutes | [Incorporated minutes](meeting-minutes-2026-11-23.md), published by Iris in [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115423294). |
 | Meeting schedule | Meetings are scheduled as needed, based on project needs and team availability. |
 
 The product scope remains **Ask + local MCP**. Review of the revised artifacts is still pending in [the approval prompt](step2-approval.md).
@@ -171,3 +172,11 @@ The product scope remains **Ask + local MCP**. Review of the revised artifacts i
 The current MVP includes local course Ask, local read-only MCP and their supporting native-text/PDF evidence library. Jev classification/routing/reranking, hosted-permission setup, scan/image OCR, advanced math/diagram recognition, audio/video processing and remote assistant integration remain planned later capabilities. They are deferred, not removed or rejected, and carry no committed later delivery date.
 
 The [canonical allocation](../requirements/mvp-scope.md) preserves all IDs and future contracts. US-05/US-06 are post-MVP; US-07 retains current original-viewing/native-text obligations while recognition is later. Local filing/retrieval remains current in US-09/US-19, with Jev-assisted portions later. C-08 is not composed into the MVP. Current acceptance does not require successful deferred adapters/provider calls; it still requires honest unsupported status, exact sources, native-text retrieval, grounded Ask and real local MCP integration. Revised artifact approval remains pending.
+
+## 14. Meeting minutes incorporated and handoff status
+
+The [November 23 minutes](meeting-minutes-2026-11-23.md) are incorporated from Iris's published PR #8 record. They confirm the ten-minute Zoom meeting, full-team attendance, local Ask/local read-only MCP direction, and retention of broader product ideas.
+
+The minutes explicitly reserve confirmation of the detailed feature allocation, local model/embedding evaluation plan and revised artifacts. The current D-46 allocation and existing evaluation approach are the concrete proposals in [the final review prompt](step2-approval.md); they are not represented as detailed votes approved at 10:00 AM. That one review gate can confirm the package and its stated Open questions together. It does not require a benchmark or final runtime model now.
+
+PRs #5–#7 remain Draft and PR #8 is non-Draft; all are unmerged at this checkpoint. After actual approval is recorded, complete corrected Inception status and the Ready handoff for Lawrence's ordered merge sequence. No merge or Construction is authorized by the minutes alone.
