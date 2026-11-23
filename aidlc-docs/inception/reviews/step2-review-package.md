@@ -1,6 +1,6 @@
 # Step 2 — Review Inputs and Concrete Change Proposals
 
-**Status:** Coordinated corrective draft incorporating the reported Ask + local MCP decision; revised team artifact approval remains pending.
+**Status:** Corrected Inception complete through Units Generation following [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z. The documented MVP/deferrals and existing local evaluation approach are accepted as revised artifacts. STOP before Construction.
 **Date:** November 23, 2026, America/New_York.
 **Baseline:** PR #8, `a4b52f82f32c9524c76f1538d974e5413f21f733`.
 **Plan:** [Step 2 preparation](../plans/step2-request-changes-plan.md).
@@ -11,7 +11,7 @@ Every row is an actual published request or report, not an invented team discuss
 
 | ID | Actual source | Request | Disposition and affected artifacts |
 | --- | --- | --- | --- |
-| RC-05-01 | [Chloe, PR #5](https://github.com/lawrencegranda/INFO-5940-project/pull/5#issuecomment-7088616303) | Make P-01 concrete with a synthetic name, program, courses, tools and week. | Adopted in the revised P-01/persona and US-17/18 example. No user research is claimed; current artifact approval remains pending. |
+| RC-05-01 | [Chloe, PR #5](https://github.com/lawrencegranda/INFO-5940-project/pull/5#issuecomment-7088616303) | Make P-01 concrete with a synthetic name, program, courses, tools and week. | Adopted in the revised P-01/persona and US-17/18 example. No user research is claimed; artifact approval is recorded in section 15. |
 | RC-05-02 | Same Chloe review | Clarify Codex CLI suitability or a non-terminal persona. | Revised primary journey uses the local UI/Ask without a terminal; FR-14/US-22 still require a Codex CLI technical pilot. This is a planned audience distinction, not evidence of usability research. |
 | RC-05-03 | Same Chloe review | Student posts/notes must not supersede instructor instructions. | Adopted in FR-10, US-17/18 and the PublisherEvidence design contract. Role/applicability needs saved provenance; no claim of implemented verification. |
 | RC-05-04 | Same review and [README follow-up](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7088783536) | Propose US-06/07 as stretch and macOS-only must-have OCR; align README if accepted. | Retained OCR/advanced recognition and audio/video features as post-MVP work under the delivery allocation. Native text/PDF extraction and original fidelity remain MVP; no macOS-only platform choice is inferred. |
@@ -20,7 +20,7 @@ Every row is an actual published request or report, not an invented team discuss
 | RC-06-03 | [Iris, stage depth](https://github.com/lawrencegranda/INFO-5940-project/pull/6#discussion_r4660610526) | Keep U-01/all four future design stages, make local NFR/infra concise, add provisional development windows. | Adopted as a draft planning amendment with provisional windows; no unit split, calendar commitment or stage approval inferred. |
 | RC-07-01 | [Safi, versions/tools](https://github.com/lawrencegranda/INFO-5940-project/pull/7#discussion_r4669544807) | Name prototype-supported versions, add validation/extraction/testing libraries and use the agreed six MCP tools. | Technical input received. Added Zod, pdf.js, linkedom and supertest to the draft baseline; six tools/course scope already reconciled. Proposed versions are not compatibility results or final team adoption. |
 | RC-07-02 | [Safi, endpoint/tests](https://github.com/lawrencegranda/INFO-5940-project/pull/7#discussion_r4669553328) | Use port 4310, add save response and replace the stub/array-only test with a deadline function and two tests. | Port corrected. Both supplied tests independently pass in an isolated fixture. Preserve authority/course/chain limits and distinguish his proposed API from the implemented singular route/`content`/import-result contract; detailed disposition is in section 9. |
-| RC-07-03 | [Safi, model/local scope/wording](https://github.com/lawrencegranda/INFO-5940-project/pull/7#discussion_r4669558415) | Keep Gemma as a candidate while comparing Qwen/DeepSeek; defer Jev/ChatGPT; remove candidate wording after merges. | Gemma remains an initial candidate pending comparison. Jev and remote ChatGPT/hosted MCP are retained for later delivery; local Ask + local MCP remain current MVP. Detailed artifact review remains pending. |
+| RC-07-03 | [Safi, model/local scope/wording](https://github.com/lawrencegranda/INFO-5940-project/pull/7#discussion_r4669558415) | Keep Gemma as a candidate while comparing Qwen/DeepSeek; defer Jev/ChatGPT; remove candidate wording after merges. | Gemma remains an initial candidate pending comparison. Jev and remote ChatGPT/hosted MCP are retained for later delivery; local Ask + local MCP remain current MVP. The revised-artifact approval is recorded in section 15. |
 | RC-08-01 | [Lawrence, module leads](https://github.com/lawrencegranda/INFO-5940-project/pull/8#discussion_r4660293171) | Propose named leads for nine modules. | Proposed leads in section 5; no named owner acceptance is recorded. U-01/nine modules are retained, with FR-16/US-26 added to the revised mapping. |
 | RC-08-02 | [Lawrence, Jev/filing](https://github.com/lawrencegranda/INFO-5940-project/pull/8#discussion_r4660349245) | Define Jev, propose deferral, use local filing and confirm LMS-course mapping on first save. | Jev is defined and retained for later integration, with local/manual filing in the current MVP. Remembered LMS-course mapping remains an Open question; it is not silently adopted. |
 | RC-08-03 | [Lawrence, Open questions](https://github.com/lawrencegranda/INFO-5940-project/pull/8#discussion_r4660427686) | Starter folders/syllabus suggestions, first save, captions/transcription, resource queue and failed capture recovery. | Add the five topics to vision with explicit pending status; no proposed answer becomes accepted behavior. |
@@ -30,7 +30,7 @@ Every row is an actual published request or report, not an invented team discuss
 | RC-09-04 | [Iris, submission timeline](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7086257369) | Sequence Xiaolong's pass, team approval, ready, maintainer merges, README and submission. | The timeline remains a proposal. The November 23 10:00–10:10 AM EST Zoom meeting took place with all five members; see section 12. [Iris's minutes](meeting-minutes-2026-11-23.md) are incorporated. Meetings are scheduled as needed, based on project needs and team availability. |
 | RC-MIN-01 | [Iris, meeting minutes](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115423294) | Record 10:00–10:10 AM Zoom/full-team discussion, Ask/local-MCP direction and separate allocation/model-plan/artifact confirmations. | [Minutes incorporated](meeting-minutes-2026-11-23.md); remaining confirmations are bundled in [the concrete review gate](step2-approval.md). The minutes do not approve implementation or merging. |
 
-## 2. Concrete P-01 revision — generated artifact review pending
+## 2. Concrete P-01 revision
 
 **Revision:** P-01 now includes an illustrative profile, the two principal contexts and revised requirement mapping, with the local Ask journey distinguished from the technical Codex pilot.
 
@@ -44,7 +44,7 @@ The instructor message can establish the supported November 20-to-November 22 up
 
 **CLI audience:** The reported Ask decision supports a normal local UI journey without terminal use; FR-14/US-22 retain actual Codex CLI integration for the technical pilot. No assumption that all students can configure a terminal or remote ChatGPT integration is added.
 
-## 3. Authority acceptance revision — generated artifact review pending
+## 3. Authority acceptance revision
 
 **Shared convention:** For US-17/18, authority needs supporting saved evidence about the publisher/role and applicability to the same course instruction. A platform name, an "Announcement" material label, later capture time or model-generated role alone does not establish instructor authority. A student-authored reply, personal note or unsupported retelling is not itself an instructor update. Unknown precedence remains explicit.
 
@@ -92,20 +92,20 @@ Xiaolong's [published Issue #9 reply](https://github.com/lawrencegranda/INFO-594
 
 ## 7. Pending decisions and actual missing evidence
 
-Iris's minutes are incorporated. The final review must confirm the explicit feature allocation and local evaluation plan, without claiming a final runtime model or benchmark. Numerical budgets, proposed owner acceptance and detailed later adapters remain planning topics. Jev and advanced media features have an explicit draft post-MVP allocation; the [scope table](../requirements/mvp-scope.md) distinguishes current acceptance from later work.
+Iris's minutes are incorporated. Lawrence’s revised-artifact approval covers the explicit feature allocation and existing evaluation approach, without selecting a final runtime model or claiming a benchmark. Numerical budgets, proposed owner acceptance and detailed later adapters remain planning topics. Jev and advanced media features have an explicit approved post-MVP allocation; the [scope table](../requirements/mvp-scope.md) distinguishes current acceptance from later work.
 
 | Topic | Still needed; baseline while pending |
 | --- | --- |
 | Technical review disposition | Safi's actual PR #7 review is received. Resolve its illustrative authority/chain/API limitations and review the resulting concrete technical input; receipt of comments is not acceptance of an implementation. |
-| Team selection and meeting | The meeting took place on November 23, 2026, 10:00–10:10 AM EST on Zoom with all five members. [Iris's minutes](meeting-minutes-2026-11-23.md) are incorporated; precise allocation/evaluation-plan and artifact approval remain pending. Meetings are scheduled as needed, based on project needs and team availability. Product scope includes Ask + local MCP. Revised artifact approval remains pending. |
+| Team selection and meeting | The meeting took place on November 23, 2026, 10:00–10:10 AM EST on Zoom with all five members. [Iris's minutes](meeting-minutes-2026-11-23.md) are incorporated; the later artifact approval is recorded in section 15. Meetings are scheduled as needed, based on project needs and team availability. Product scope includes Ask + local MCP. The revised-artifact approval is recorded in section 15. |
 | Ask and remote ChatGPT | Local course Ask + local MCP is included in the current MVP. Remote ChatGPT/hosted MCP is retained for later integration; the six current MCP tools are unchanged. |
-| Models | Confirm the documented local generation/embedding evaluation approach through the current artifact gate; actual measurements and final selection occur during authorized Construction. No final model/benchmark is claimed. |
+| Models | The documented local generation/embedding evaluation approach is covered by the artifact approval; actual measurements and final selection occur during authorized Construction. No final model/benchmark is claimed. |
 | Jev | Retained for later classification/routing/reranking and hosted-permission design; not connected or required in the current MVP. |
 | CLI audience | Revised persona distinguishes ordinary local UI/Ask users from the required Codex CLI technical pilot. Validate actual usability/integration later; do not claim research or universal CLI suitability. |
 | Formats/platform | Current MVP native HTML/text/PDF extraction and original fidelity; scan/image OCR, advanced math/diagram recognition and audio/video processing retained post-MVP. No extra OS commitment is made. |
 | Ownership | Actual acceptance or amendments from the proposed leads. |
 | Filing/Open questions | Actual choices on remembered LMS course mapping, confirmation behavior, editable defaults and processing/recovery proposals. |
-| Revised gate acceptance | The driver authorized the current coordinated approach. Concrete generated-artifact review and actual team approval are pending; historical approvals do not satisfy this review. |
+| Revised gate acceptance | [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) explicitly accepts the revised artifacts, MVP and documented deferrals. This is the actual November 23 response, separate from historical approvals; other reviewers are not recorded as approving. |
 
 ## 8. Historical web-commit reconciliation
 
@@ -143,11 +143,11 @@ The example also has no course field, so same-course authorization would have to
 
 ## 10. Ask + local MCP scope amendment and review package
 
-The selected product scope includes local Ask and read-only local MCP. The [decision register](../requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) records the amendment to the earlier no-chat boundary. Approval of the revised artifact package remains pending.
+The selected product scope includes local Ask and read-only local MCP. The [decision register](../requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) records the amendment to the earlier no-chat boundary. The revised-artifact approval is recorded in section 15.
 
 The retained catalog contains 16 FRs, seven NFRs, 26 stories, 13 components and five logical services within U-01/nine modules; delivery-phase labels distinguish current MVP work from retained later capabilities. Existing IDs and the six MCP tools are retained; FR-16/US-26/C-13/S-05 add focused local Ask. It uses bounded saved evidence, validated exact citations, visible uncertainty, per-course navigation continuity and local read-only retrieval/generation. No remote ChatGPT path, autonomous actions or app implementation is added.
 
-The team should review the [concrete artifact prompt](step2-approval.md). The minutes are incorporated; itemized allocation/evaluation-plan confirmation and revised artifact approval remain pending; the current work does not claim Step 2 closed or authorize Ready/merge/Construction. Iris's final README remains Step 4 after Lawrence integrates the approved documents.
+The [concrete artifact record](step2-approval.md) now contains Lawrence’s actual approval. The minutes are incorporated and corrected Inception is complete through Units Generation. Proceed to the Ready/ordered-merge handoff; Construction remains stopped. Iris's final README remains Step 4 after Lawrence integrates the approved documents.
 
 ## 11. Validation of the coordinated draft
 
@@ -165,18 +165,26 @@ Two independent AI consistency reviews found one mismatch in unavailable-model v
 | Meeting minutes | [Incorporated minutes](meeting-minutes-2026-11-23.md), published by Iris in [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115423294). |
 | Meeting schedule | Meetings are scheduled as needed, based on project needs and team availability. |
 
-The product scope remains **Ask + local MCP**. Review of the revised artifacts is still pending in [the approval prompt](step2-approval.md).
+The product scope remains **Ask + local MCP**. The separate revised-artifact approval is recorded in [the approval record](step2-approval.md).
 
 ## 13. Delivery allocation — current MVP and retained later work
 
 The current MVP includes local course Ask, local read-only MCP and their supporting native-text/PDF evidence library. Jev classification/routing/reranking, hosted-permission setup, scan/image OCR, advanced math/diagram recognition, audio/video processing and remote assistant integration remain planned later capabilities. They are deferred, not removed or rejected, and carry no committed later delivery date.
 
-The [canonical allocation](../requirements/mvp-scope.md) preserves all IDs and future contracts. US-05/US-06 are post-MVP; US-07 retains current original-viewing/native-text obligations while recognition is later. Local filing/retrieval remains current in US-09/US-19, with Jev-assisted portions later. C-08 is not composed into the MVP. Current acceptance does not require successful deferred adapters/provider calls; it still requires honest unsupported status, exact sources, native-text retrieval, grounded Ask and real local MCP integration. Revised artifact approval remains pending.
+The [canonical allocation](../requirements/mvp-scope.md) preserves all IDs and future contracts. US-05/US-06 are post-MVP; US-07 retains current original-viewing/native-text obligations while recognition is later. Local filing/retrieval remains current in US-09/US-19, with Jev-assisted portions later. C-08 is not composed into the MVP. Current acceptance does not require successful deferred adapters/provider calls; it still requires honest unsupported status, exact sources, native-text retrieval, grounded Ask and real local MCP integration. The revised-artifact approval is recorded in section 15.
 
-## 14. Meeting minutes incorporated and handoff status
+## 14. Meeting-minutes incorporation checkpoint (before approval was recorded)
 
 The [November 23 minutes](meeting-minutes-2026-11-23.md) are incorporated from Iris's published PR #8 record. They confirm the ten-minute Zoom meeting, full-team attendance, local Ask/local read-only MCP direction, and retention of broader product ideas.
 
 The minutes explicitly reserve confirmation of the detailed feature allocation, local model/embedding evaluation plan and revised artifacts. The current D-46 allocation and existing evaluation approach are the concrete proposals in [the final review prompt](step2-approval.md); they are not represented as detailed votes approved at 10:00 AM. That one review gate can confirm the package and its stated Open questions together. It does not require a benchmark or final runtime model now.
 
-PRs #5–#7 remain Draft and PR #8 is non-Draft; all are unmerged at this checkpoint. After actual approval is recorded, complete corrected Inception status and the Ready handoff for Lawrence's ordered merge sequence. No merge or Construction is authorized by the minutes alone.
+At the minutes-incorporation checkpoint, PRs #5–#7 were Draft and #8 was non-Draft, all unmerged. This checkpoint is superseded by the actual approval in section 15. The minutes alone did not authorize merging or Construction.
+
+## 15. Actual revised-artifact approval and Step 2 handoff
+
+[Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) (`lawrencegranda`, 2026-11-23T22:37:29Z) explicitly approves the revised Inception artifacts through Units Generation, including the local Ask/read-only local MCP MVP and documented deferrals, and requires STOP before Construction. The exact response is preserved in [the approval record](step2-approval.md) and audit. Only Lawrence is recorded as the approving reviewer.
+
+The existing local model/embedding evaluation approach was part of the previously published artifacts and is covered by that approval. No final model, benchmark, proposed module-lead acceptance or implementation is claimed. The subsequent minutes/gate packaging does not change the substantive product scope and is not represented as a particular later commit he reviewed.
+
+Corrected Inception is complete through Units Generation. Xiaolong completes the existing PR Ready handoff; Lawrence then merges #5, #6, #7 and #8 using merge commits, followed by the integration branch into main. Iris’s README and final verification/submission remain later Issue #9 tasks.
