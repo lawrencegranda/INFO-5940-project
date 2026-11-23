@@ -187,4 +187,8 @@ At the minutes-incorporation checkpoint, PRs #5–#7 were Draft and #8 was non-D
 
 The existing local model/embedding evaluation approach was part of the previously published artifacts and is covered by that approval. No final model, benchmark, proposed module-lead acceptance or implementation is claimed. The subsequent minutes/gate packaging does not change the substantive product scope and is not represented as a particular later commit he reviewed.
 
-Corrected Inception is complete through Units Generation. Xiaolong completes the existing PR Ready handoff; Lawrence then merges #5, #6, #7 and #8 using merge commits, followed by the integration branch into main. Iris’s README and final verification/submission remain later Issue #9 tasks.
+Corrected Inception is complete through Units Generation. Xiaolong has completed the existing PR Ready handoff; Lawrence then merges #5, #6, #7 and #8 using merge commits, followed by the integration branch into main. Iris’s README and final verification/submission remain later Issue #9 tasks.
+
+## 16. Verified Ready handoff
+
+At 2026-11-23T22:56:30Z, GitHub metadata confirms PRs #5–#8 are non-Draft, unmerged and mergeable. Xiaolong changed #5–#7 from Draft to Ready under xiaolonglin1124-bit; #8 was already non-Draft. All four descriptions now cite the actual approval and ordered merge sequence. The 26-file approval/status publication at `2b8a9eef52e8a9e1c23a6fa6c6f7a615bbd42994` exactly matches the checked local files. Step 2 is complete. Lawrence’s Step 3 ordered merge-commit integration remains pending; STOP before Construction.
