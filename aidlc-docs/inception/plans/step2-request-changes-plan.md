@@ -40,7 +40,8 @@ The earlier [bounded amendment question](step2-story-amendment-questions.md) is 
 
 - [ ] Team reviews the [concrete generated artifacts](../reviews/step2-approval.md), requests changes or explicitly approves them. Log actual responses; no pre-filled team approval.
 - [x] Record the meeting details: November 23, 2026, 10:00 AM EST, Zoom, all five members. See the [meeting record](../reviews/step2-review-package.md#12-meeting-details).
-- [ ] Link Iris's actual discussion minutes/decisions and record the confirmed recurring cadence. Revised-artifact review remains a separate pending gate.
+- [x] Record the collaboration schedule: meetings are scheduled flexibly based on project needs and team availability.
+- [ ] Link Iris's discussion minutes/decisions. Revised-artifact review remains a separate pending gate.
 - [ ] After actual artifact approval, update current state to corrected Inception complete through Units Generation and STOP before Construction.
 - [ ] Follow Issue #9's approved Ready sequence, Lawrence's ordered merges, Iris's final README and final submission checks. No application/prototype code is merged in this pass.
 
