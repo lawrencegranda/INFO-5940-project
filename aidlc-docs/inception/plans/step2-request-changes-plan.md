@@ -1,6 +1,6 @@
 # Step 2 — Corrective Inception Review
 
-**Status:** Coordinated revisions authorized and in progress; generated-artifact team approval remains pending.
+**Status:** Coordinated revisions generated, validated and published for review; generated-artifact team approval remains pending.
 **Driver:** Xiaolong, existing inception/05-units-generation branch and PR #8.
 **Baseline:** a4b52f82f32c9524c76f1538d974e5413f21f733.
 **Instruction:** [Issue #9 Step 2](https://github.com/lawrencegranda/INFO-5940-project/issues/9). This continues the existing single-writer workflow; no new branch/PR or prototype merge.
@@ -34,7 +34,7 @@ The earlier [bounded question](step2-story-amendment-questions.md) was withdrawn
 - [x] Reconcile C-13/S-05, unchanged six MCP tools, read-only local boundaries and U-01/nine-module coverage.
 - [x] Check current scope/counts/English additions, local links/fences, paired example parsing/types/tests and unchanged historical audit prefix.
 - [x] Obtain independent consistency review, fix findings and append actual results to the audit.
-- [ ] Publish the validated documents to the existing PR #8 branch using the verified xiaolonglin1124-bit browser session, then compare remote blobs/head. Do not use the different command-line/connector account for writes.
+- [x] Publish the validated documents to the existing PR #8 branch using the verified xiaolonglin1124-bit browser session, then compare remote blobs/head. Do not use the different command-line/connector account for writes.
 
 ## Review and submission work still pending
 
