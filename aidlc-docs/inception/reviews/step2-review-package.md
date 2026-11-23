@@ -27,7 +27,7 @@ Every row is an actual published request or report, not an invented team discuss
 | RC-09-01 | [Lawrence, technical examples](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087745145) | Pair the actual deadline function and test; show capture response IDs/status. | Prepare illustrative Markdown examples, not application implementation or pipeline validation. |
 | RC-09-02 | [Iris, README report](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087802622) | Local-only deployment, remote ChatGPT later, benchmark early Construction; wait for Jev/model/meeting decisions. | Record her reported local changes. No README PR has been opened; final README remains her task after integration. |
 | RC-09-03 | [Lawrence, all comment channels](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7087569806) | Read conversation and inline reviews. | Completed intake through connector equivalents; empty summaries/threads do not create additional feedback. |
-| RC-09-04 | [Iris, submission timeline](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7086257369) | Sequence Xiaolong's pass, team approval, ready, maintainer merges, README and submission. | The timeline remains a proposal. Xiaolong has now separately confirmed the actual November 23 10:00 AM Zoom meeting with all five members; see section 12. Decisions/minutes and recurring cadence remain to be added from their actual source. |
+| RC-09-04 | [Iris, submission timeline](https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7086257369) | Sequence Xiaolong's pass, team approval, ready, maintainer merges, README and submission. | The timeline remains a proposal. The November 23 10:00 AM Zoom meeting took place with all five members; see section 12. Decisions/minutes and recurring cadence remain to be added from their actual source. |
 
 ## 2. Concrete P-01 revision — generated artifact review pending
 
@@ -96,7 +96,7 @@ Final model/embedding/OCR choices, numerical budgets, unaccepted owner proposals
 | Topic | Still needed; baseline while pending |
 | --- | --- |
 | Technical review disposition | Safi's actual PR #7 review is received. Resolve its illustrative authority/chain/API limitations and review the resulting concrete technical input; receipt of comments is not acceptance of an implementation. |
-| Team selection and meeting | Xiaolong confirmed November 23, 2026, 10:00 AM EST, Zoom, all five members. Iris will provide discussion minutes/decisions; recurring cadence remains pending. The Ask/local MCP product decision is separately supported by the supplied Lawrence group-chat message; no revised artifact approval is inferred. |
+| Team selection and meeting | The meeting took place on November 23, 2026, at 10:00 AM EST on Zoom with all five members. Iris will provide the minutes; recurring cadence remains pending. Product scope includes Ask + local MCP. Revised artifact approval remains pending. |
 | Ask and remote ChatGPT | Local course Ask + local MCP is included by the driver-reported team decision. Remote ChatGPT/hosted MCP remains excluded; no tunnels or seventh MCP tool are added. |
 | Models | Final selection or explicit agreement to retain an unbenchmarked baseline pending comparison; exact model tags/embedding choice and measured budgets remain unverified. |
 | Jev | The technical input defines the typed-decision API and links provider-owned examples. The team has not separately adopted deferral; current opt-in/fallback obligations remain. |
@@ -142,7 +142,7 @@ The example also has no course field, so same-course authorization would have to
 
 ## 10. Ask + local MCP scope amendment and review package
 
-Xiaolong reported "our team has settled on doing Ask and local MCP" and then authorized the described coordinated Step 2 pass with "ok go on". The [decision register](../requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) records this source without inventing votes, attendees or artifact approval. The earlier premature bounded question was withdrawn, not answered A.
+The selected product scope includes local Ask and read-only local MCP. The [decision register](../requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) records the amendment to the earlier no-chat boundary. Approval of the revised artifact package remains pending.
 
 The resulting draft contains 16 FRs, seven NFRs, 26 stories, 13 components and five logical services within U-01/nine modules. Existing IDs and the six MCP tools are retained; FR-16/US-26/C-13/S-05 add focused local Ask. It uses bounded saved evidence, validated exact citations, visible uncertainty, per-course navigation continuity and local read-only retrieval/generation. No remote ChatGPT path, autonomous actions or app implementation is added.
 
@@ -154,16 +154,14 @@ All 25 changed/new Markdown files passed link-target, fence, newline, nonblank-a
 
 Two independent AI consistency reviews found one mismatch in unavailable-model versus invalid-output behavior. It was corrected: unavailable means retrieval-only evidence; invalid output means a safe error, with normal local browsing/search still available. AI review does not count as teammate approval. The original 45,685-byte audit prefix is unchanged and all additions remain English. No application, rule or Construction files changed.
 
-## 12. Confirmed meeting metadata and decision evidence
+## 12. Meeting details
 
-| Field | Confirmed information | Source/status |
-| --- | --- | --- |
-| Date and start | November 23, 2026, 10:00 AM EST (America/New_York; 15:00 UTC). | Xiaolong explicitly confirmed the meeting actually took place. This is not inferred from the planned calendar. |
-| Format | Zoom. | Xiaolong's follow-up confirmation. |
-| Attendees | Lawrence Granda Zarzuela; Jiaxin (Iris) Li; Xiaolong Lin; Safiullah Safdariyan; Chloe Wang. | Xiaolong confirmed all group members attended; names match the existing team roster. |
-| Discussion minutes/decisions | Iris will write them; their text/link is not yet supplied. | Do not invent agenda details, votes, duration or decisions beyond the separately confirmed product direction. |
-| Recurring cadence | Not yet confirmed. | Separate collaboration-plan input, not established by a single meeting. |
+| Field | Details |
+| --- | --- |
+| Date and start | November 23, 2026, 10:00 AM EST (America/New_York). |
+| Format | Zoom. |
+| Attendees | Lawrence Granda Zarzuela; Jiaxin (Iris) Li; Xiaolong Lin; Safiullah Safdariyan; Chloe Wang. |
+| Meeting minutes | Iris is preparing the minutes and detailed discussion decisions. |
+| Recurring cadence | To be confirmed. |
 
-**Separate product-direction confirmation:** Xiaolong supplied a group-chat screenshot showing Lawrence's "i agree" and "let's do Ask, and local MCP" at the displayed time of 1:18 PM. It supports the already-recorded Ask + local MCP direction. The message is a later chat confirmation, not a verbatim record of a 10:00 AM vote or evidence that everyone approved the subsequent document revision. No reaction is attributed to an unidentified person, and no private screenshot/contact data is uploaded to the repository.
-
-**Current gate:** Revised-artifact review remains pending in [the approval prompt](step2-approval.md). Iris's forthcoming minutes can supply the actual discussion details; only actual review responses concerning the revised package can complete its approval gate. No Ready transition, merge or Construction is claimed by recording this metadata.
+The product scope remains **Ask + local MCP**. Review of the revised artifacts is still pending in [the approval prompt](step2-approval.md).
