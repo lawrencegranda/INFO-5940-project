@@ -556,3 +556,18 @@ ok go on
 **Timestamp**: 2026-11-23T19:59:05Z
 **Decision**: Meetings are scheduled as needed, based on project needs and team availability.
 **Status**: Collaboration schedule recorded in the README, state, corrective checklist and review records. Iris's meeting minutes and revised artifact approval remain pending.
+
+
+## Inception Scope Allocation — Current MVP and Retained Later Features
+**Timestamp**: 2026-11-23T20:24:24Z
+**Decision D-46**: The current MVP centers on local course Ask and read-only local MCP with native HTML/text/PDF capture/import, local/manual organization, exact evidence/provenance, versions, supported authority/conflict handling and local hybrid retrieval. Jev classification/routing/reranking and its hosted-permission workflow, scan/image OCR, advanced math/diagram recognition, audio/video acquisition/transcription and remote assistant integration are retained for later iterations. These features are deferred, not removed or rejected; no later delivery date is committed.
+**Artifact Update**: Added inception/requirements/mvp-scope.md as the delivery-allocation reference and reconciled requirements, story phases, technical inputs, high-level design, dependencies, execution planning, unit mappings and review records. Existing FR-01–FR-16, NFR-01–NFR-07, US-01–US-26, C-01–C-13, S-01–S-05 and U-01/nine modules remain in the design catalog. US-05/US-06 are post-MVP; US-07 retains MVP original-viewing/native-text obligations and later recognition. Jev portions of US-09/US-19/US-24 and C-08 are later-work paths, not MVP dependencies.
+**Acceptance Boundary**: Current MVP acceptance does not require successful deferred provider/adapters. It still requires native source integration, exact citations, honest unsupported/partial status, original fidelity, local Ask/MCP course isolation and safe fallback. Retaining an original or a planned contract does not establish OCR/transcription/provider implementation. Local AI/embedding quality and actual Codex/source tests remain later authorized Construction work.
+**Review Status**: Revised artifact approval remains pending; existing historical approvals do not approve this allocation. The November 24 checkpoint stops before Construction. No application code, new branch/PR, Ready transition, merge or submission is included.
+
+
+## Inception Delivery Allocation — Documentation Validation
+**Timestamp**: 2026-11-23T20:26:19Z
+**Validation**: All 25 changed/new documents passed English-addition, relative-link, fence, final-newline, nonblank-answer and whitespace checks. The retained catalog and unit maps contain 26 unique story IDs, 16 FRs and seven NFRs with explicit delivery phases. Strict TypeScript checking passed for the 18 extracted design-contract blocks. Dependency-matrix dimensions, phase labels and declared diagram edges were checked; no diagram rendering or application acceptance is claimed. The earlier audit prefix remains unchanged, and no application/rule files were modified.
+**Consistency Review**: Two independent read-only reviews found no material phase mismatch, missing feature or accidental core deferral. One privacy wording issue was corrected: local library storage/application processing does not imply that an external Codex model processes passages locally. All Jev/advanced-media features remain planned post-MVP, not removed; native evidence, local Ask/MCP and citation/authority/fallback obligations remain current MVP work.
+**Gate**: Revised artifact review is pending. Iris's minutes and actual team review responses remain to be incorporated; no Ready transition, merge or Construction is recorded.
