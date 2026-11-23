@@ -39,7 +39,8 @@ The earlier [bounded question](step2-story-amendment-questions.md) was withdrawn
 ## Review and submission work still pending
 
 - [ ] Team reviews the [concrete generated artifacts](../reviews/step2-approval.md), requests changes or explicitly approves them. Log actual responses; no pre-filled team approval.
-- [ ] Record the actual dedicated problem-discussion meeting's date, format and attendees, plus confirmed cadence. Async PR review does not by itself prove the rubric's meeting occurred.
+- [x] Record the actual meeting metadata confirmed by Xiaolong: November 23, 2026, 10:00 AM EST, Zoom, all five members. See the [meeting record](../reviews/step2-review-package.md#12-confirmed-meeting-metadata-and-decision-evidence).
+- [ ] Link Iris's actual discussion minutes/decisions and record the confirmed recurring cadence. Do not infer revised-artifact approval from the earlier meeting or the later Ask/local MCP scope confirmation.
 - [ ] After actual artifact approval, update current state to corrected Inception complete through Units Generation and STOP before Construction.
 - [ ] Follow Issue #9's approved Ready sequence, Lawrence's ordered merges, Iris's final README and final submission checks. No application/prototype code is merged in this pass.
 
