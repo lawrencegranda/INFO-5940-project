@@ -1,6 +1,6 @@
 # Course Copilot — Logical Services and Orchestration
 
-**Current review (2026-11-23):** Step 2 corrective draft with local Ask and local MCP in the MVP and retained Jev/media capabilities scheduled for later work. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+**Current approval (2026-11-23):** [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) was recorded at 2026-11-23T22:37:29Z for the revised Inception artifacts through Units Generation, including Ask/local MCP and the documented deferrals. The November 20 approvals remain historical baseline records. STOP before Construction; no implementation or runtime acceptance is claimed.
 
 **Delivery phases:** The current MVP includes native HTML/text/PDF capture and import, local organization and retrieval, source/version/authority handling, grounded Ask and read-only local MCP. Jev, scan/image OCR, advanced equation/diagram recognition, and audio/video extraction/transcription remain planned **post-MVP** features. Original preservation/viewing and honest extraction status remain in the MVP. C-08 and all hosted-permission/provider paths are retained design contracts but are not composed into the MVP. See the [MVP and later-work scope](../requirements/mvp-scope.md).
 
@@ -103,4 +103,4 @@ One Node library process hosts mutation orchestration, controlled loopback API a
 | Database/schema incompatible in MCP | Clear not-ready/error response; no auto-migration. | Start authorized library setup/migration separately. |
 | Out-of-course/missing exact reference | Scoped not-found/denied response with no foreign evidence content. | Correct scope or select an existing reference; no latest-version substitution. |
 
-These phase-specific design proposals await artifact review. Native ingestion/local AI/embedding, Ask and MCP algorithms, benchmarks and implementation are later authorized MVP Construction work. OCR/STT/advanced recognition and Jev implementation are retained post-MVP work, with no committed delivery date. The Inception checkpoint still stops before Construction.
+These phase-specific planning artifacts are covered by [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386). Native ingestion/local AI/embedding, Ask and MCP algorithms, benchmarks and implementation are later authorized MVP Construction work. OCR/STT/advanced recognition and Jev implementation are retained post-MVP work, with no committed delivery date. The Inception checkpoint still stops before Construction.

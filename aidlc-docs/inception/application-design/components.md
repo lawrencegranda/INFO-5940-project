@@ -2,7 +2,7 @@
 
 **Stage:** Inception / Application Design
 
-**Current review (2026-11-23):** Step 2 corrective draft with local Ask and local MCP in the MVP and retained Jev/media capabilities scheduled for later work. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+**Current approval (2026-11-23):** [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) was recorded at 2026-11-23T22:37:29Z for the revised Inception artifacts through Units Generation, including Ask/local MCP and the documented deferrals. The November 20 approvals remain historical baseline records. STOP before Construction; no implementation or runtime acceptance is claimed.
 
 **Delivery phases:** The current MVP includes native HTML/text/PDF capture and import, local organization and retrieval, source/version/authority handling, grounded Ask and read-only local MCP. Jev, scan/image OCR, advanced equation/diagram recognition, and audio/video extraction/transcription remain planned **post-MVP** features. Original preservation/viewing and honest extraction status remain in the MVP. C-08 and all hosted-permission/provider paths are retained design contracts but are not composed into the MVP. See the [MVP and later-work scope](../requirements/mvp-scope.md).
 
@@ -241,4 +241,4 @@ No adapter, runtime result, permission path or source integration is claimed as 
 
 - [Component methods and shared contracts](component-methods.md).
 - The companion services, dependency and consolidated design documents use the same C-01–C-13 IDs and S-01–S-05 logical services.
-- The [design plan](../plans/application-design-plan.md) records the separate generated-design approval gate; these component definitions do not mark that gate complete.
+- The [design plan](../plans/application-design-plan.md) records the separately attributed maintainer approval of the revised artifact set; approval of these planning definitions does not establish runtime acceptance.

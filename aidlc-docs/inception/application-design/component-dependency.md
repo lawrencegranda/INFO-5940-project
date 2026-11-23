@@ -1,7 +1,7 @@
 # Course Copilot — Component Dependencies and Data Flow
 
 **Stage:** Inception / Application Design.
-**Current review (2026-11-23):** Step 2 corrective draft with local Ask and local MCP in the MVP and retained Jev/media capabilities scheduled for later work. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+**Current approval (2026-11-23):** [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) was recorded at 2026-11-23T22:37:29Z for the revised Inception artifacts through Units Generation, including Ask/local MCP and the documented deferrals. The November 20 approvals remain historical baseline records. STOP before Construction; no implementation or runtime acceptance is claimed.
 
 **Delivery phases:** The current MVP includes native HTML/text/PDF capture and import, local organization and retrieval, source/version/authority handling, grounded Ask and read-only local MCP. Jev, scan/image OCR, advanced equation/diagram recognition, and audio/video extraction/transcription remain planned **post-MVP** features. Original preservation/viewing and honest extraction status remain in the MVP. C-08 and all hosted-permission/provider paths are retained design contracts but are not composed into the MVP. See the [MVP and later-work scope](../requirements/mvp-scope.md).
 
@@ -221,6 +221,6 @@ The intended application boundary is read-only library access, not an unverified
 - Post-MVP: exercise successful scan/image OCR, advanced recognition and authorized audio/video acquisition/transcription; inspect denied/allowed/revoked/mismatched Jev requests with permission-cleared payloads. MVP unsupported statuses do not satisfy those retained future acceptance obligations.
 - Demonstrate an actual Codex CLI stdio search-then-fetch; a fixture host or tool listing alone is insufficient. Measure local model/extraction/embedding feasibility rather than assume it.
 
-These are future acceptance obligations, not executed tests. Component dependencies do not assign teammates or finalize units/packages. Application Design still requires generated-artifact approval; Units Generation follows only after that approval. The course milestone stops after approved Units Generation and before Construction.
+These are future acceptance obligations, not executed tests. Component dependencies do not assign teammates or change units/packages. [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) covers the revised Inception artifacts through Units Generation. The course milestone stops before Construction; ordered integration remains separate.
 
 **Document validation:** Both Mermaid flowcharts passed pre-write simple statement/ID/label/edge-reference checks; they are not claims of rendered or runtime validation. Numbered text alternatives preserve the same boundaries if a renderer is unavailable.

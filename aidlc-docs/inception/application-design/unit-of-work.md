@@ -1,10 +1,10 @@
 # Course Copilot — Unit of Work
 
-> **Current corrective draft - November 23, 2026:** The current MVP includes local Ask and read-only local MCP with their local evidence-library foundations. Jev and advanced media processing remain planned for post-MVP work. Historical approvals cover the earlier baseline; current revised artifact approval is pending. STOP before Construction.
+> **Approved corrective Inception artifacts - November 23, 2026:** [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z covers the revised artifacts through Units Generation, including Ask/local MCP and documented Jev/media deferrals. Historical approvals remain recorded separately. STOP before Construction.
 
 **Stage:** Inception / Units Generation / Part 2
 
-**Status:** Revised unit artifacts generated for corrective review; current approval pending. The earlier baseline was approved on 2026-11-20T04:20:19Z. This is planning documentation, not an implemented or tested application.
+**Status:** Revised unit artifacts approved by Lawrence at 2026-11-23T22:37:29Z as part of Inception through Units Generation. The earlier baseline approval on 2026-11-20T04:20:19Z remains historical. This is planning documentation, not an implemented or tested application.
 
 **Plan approval:** 2026-11-20T04:08:23Z; raw response recorded in the audit. **Review:** [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8). Same single workflow driver: xiaolonglin1124-bit. Integrate approved #5→#6→#7 before this dependent stage into candidate/course-copilot.
 
@@ -110,11 +110,11 @@ Concrete local extraction/embedding tools, model feasibility, source adapter det
 | Rule | Current result |
 |---|---|
 | INFO5940-01 | Followed the explicitly approved unit plan; generated three required artifacts and kept audit/state under one driver. |
-| INFO5940-02 | All mandatory unit files and greenfield organization are included. Current revised artifact approval is pending; STOP before Construction. |
-| INFO5940-03 | Historical Q1 approvals remain recorded. They do not approve the November 23 revision; current team artifact approval remains pending. |
+| INFO5940-02 | All mandatory unit files and greenfield organization are included in the approved corrective artifact set; STOP before Construction. |
+| INFO5940-03 | Historical Q1 approvals remain recorded. Lawrence's separate November 23 maintainer approval covers the current revised artifacts; no response is attributed to other teammates. |
 | INFO5940-04 | One local bundle, named preliminary local model and concrete progressive read-only Codex integration; Jev retained for later permission-bound integration, without a current-MVP provider dependency. |
 | INFO5940-05 | Documentation only; no application code or secrets. |
-| INFO5940-06 | Existing PR #8 carries the corrective pass under the same driver. No Ready/merge authorization is claimed before actual revised approval; ordered integration remains pending. |
+| INFO5940-06 | Existing PR #8 carries the approved corrective artifacts under the same driver. Ready transitions and ordered integration follow Issue #9; no merge is claimed by this document. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Pure-transform/round-trip/version property obligations assigned to future unit tests; executable framework/results deferred. |
 
 ## 9. Historical generated-unit artifact approval
@@ -129,6 +129,6 @@ C) **Other.** Describe the requested outcome after the answer tag.
 
 [Answer]: A
 
-**Historical approval response (English translation):** A: Approve the unit documents and complete Inception. The original raw response is preserved in the [audit](../../audit.md#units-generation--explicit-artifact-approval-and-inception-completion). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
+**Historical approval response (English translation):** A: Approve the unit documents and complete Inception. The original raw response is preserved in the [audit](../../audit.md#units-generation--explicit-artifact-approval-and-inception-completion). This translation records the historical choice; it is not a new approval. The [current checkpoint](../../aidlc-state.md#current-checkpoint-and-handoff) records the separately approved corrective artifacts and pending ordered integration.
 
-Historical approval recorded on 2026-11-20T04:20:19Z. It completed the earlier unit baseline only. The coordinated November 23 Ask/source-authority revision requires new artifact review and actual team approval before the hold can be released. STOP before Construction under INFO5940-02; no application implementation is authorized by this document.
+Historical approval recorded on 2026-11-20T04:20:19Z completed the earlier unit baseline only. The revised November 23 artifact set has separate maintainer approval in [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386). Ordered integration remains separate. STOP before Construction under INFO5940-02; no application implementation is authorized by this document.

@@ -1,10 +1,10 @@
 # Course Copilot — Consolidated Application Design
 
-**Current review (2026-11-23):** Step 2 corrective draft with local Ask and local MCP in the MVP and retained Jev/media capabilities scheduled for later work. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+**Current approval (2026-11-23):** [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) was recorded at 2026-11-23T22:37:29Z for the revised Inception artifacts through Units Generation, including Ask/local MCP and the documented deferrals. The November 20 approvals remain historical baseline records. STOP before Construction; no implementation or runtime acceptance is claimed.
 
 **Delivery phases:** The current MVP includes native HTML/text/PDF capture and import, local organization and retrieval, source/version/authority handling, grounded Ask and read-only local MCP. Jev, scan/image OCR, advanced equation/diagram recognition, and audio/video extraction/transcription remain planned **post-MVP** features. Original preservation/viewing and honest extraction status remain in the MVP. C-08 and all hosted-permission/provider paths are retained design contracts but are not composed into the MVP. See the [MVP and later-work scope](../requirements/mvp-scope.md).
 
-**Baseline and current review:** The original requirements at `485c52531f004b1e184fb595abe771cfbcd17003`, 25 stories and Nov 20 design approval are historical inputs. The current corrective draft covers 26 stories, 16 functional requirements and seven non-functional requirements, including FR-16/US-26 local Ask. Revisions are assembled on existing `inception/05-units-generation` / [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8) by the same single writer, xiaolonglin1124-bit. Stage PRs #5–#8 remain subject to team review and the documented merge sequence.
+**Baseline and current approval:** The original requirements at `485c52531f004b1e184fb595abe771cfbcd17003`, 25 stories and Nov 20 design approval are historical inputs. The approved corrective artifact set covers 26 stories, 16 functional requirements and seven non-functional requirements, including FR-16/US-26 local Ask. Revisions are assembled on existing `inception/05-units-generation` / [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8) by the same single writer, xiaolonglin1124-bit. Maintainer approval of the revised artifacts is recorded above; stage PRs #5–#8 remain subject to the documented ordered integration sequence.
 
 ## 1. Design outcome and document set
 
@@ -124,11 +124,11 @@ Open MVP engineering choices include local embeddings/model feasibility, native 
 | Rule | Current result |
 |---|---|
 | INFO5940-01 | Resumed approved AI-DLC stage; concrete plan evaluates all five categories; generation, decisions and review logged in audit/state. No unseen plan approval is invented. |
-| INFO5940-02 | Application Design documentation only; Units follows after approval, then STOP before Construction for the course milestone. |
-| INFO5940-03 | Historical answers are retained as history. The reported Ask + local MCP decision authorizes this corrective draft; revised artifact/team approval remains pending and is not filled with a historical A answer. Local model selection remains future MVP validation; Jev/media delivery is explicitly post-MVP and retained in the roadmap. |
+| INFO5940-02 | Revised Inception artifacts through Units Generation have maintainer approval; STOP before Construction for the course milestone. |
+| INFO5940-03 | Historical answers remain historical. Lawrence's November 23 maintainer approval covers the revised artifacts through Units Generation and is recorded separately from the historical A answers. Local model selection remains future MVP validation; Jev/media delivery remains post-MVP. |
 | INFO5940-04 | Local Ask, local model candidate, local library and concrete progressive read-only Codex MCP; minimal-permission Jev remains a separate retained post-MVP path, not a current runtime dependency. |
 | INFO5940-05 | Documentation/contracts only, no application implementation, keys or credentials. |
-| INFO5940-06 | Same driver, existing PR #8 branch, and #5→#6→#7→#8 dependency. Conversation and inline feedback are incorporated for review; Ready/merge status awaits actual revised-artifact approval. |
+| INFO5940-06 | Same driver, existing PR #8 branch, and #5→#6→#7→#8 dependency. Maintainer artifact approval is recorded; Ready transitions and ordered integration follow Issue #9. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Partial properties retained for pure transformations, round trips and immutable version invariants; framework implementation deferred. |
 
 Security and Resiliency Baseline extensions remain disabled; approved core safety/error requirements remain applicable. Units are not generated or assigned by this component map. No new owner acceptance or full-team meeting is implied by this draft.
@@ -145,10 +145,10 @@ C) **Other.** Describe the requested outcome after the answer tag.
 
 [Answer]: A
 
-**Historical approval response (English translation):** A: Approve the application design and proceed to Units Generation. The original raw response is preserved in the [audit](../../audit.md#application-design--explicit-generated-design-approval). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
+**Historical approval response (English translation):** A: Approve the application design and proceed to Units Generation. The original raw response is preserved in the [audit](../../audit.md#application-design--explicit-generated-design-approval). This translation records the historical choice; it is not a new approval. The [current checkpoint](../../aidlc-state.md#current-checkpoint-and-handoff) records the separately approved corrective artifacts and pending ordered integration.
 
-Historical approval recorded on 2026-11-20T03:43:36Z completed the original design stage. It does not approve the Nov 23 corrective draft. The current review package must receive actual revised-artifact approval before current correction completion/Ready status; Construction remains stopped at the milestone.
+Historical approval recorded on 2026-11-20T03:43:36Z completed the original design stage. The November 23 revisions have separate maintainer approval in [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386). Ordered integration remains to be completed; STOP before Construction.
 
 ## 9. Corrective-design review scope
 
-Review the local Ask path, exact-citation/authority rules, failure modes, course/request continuity and explicit MVP/post-MVP allocations alongside requirements, stories and the unit map. The team may request changes or approve the concrete revisions after review; no team answer is preselected here. This draft records neither a meeting attendance list nor a vote that was not supplied. The current approval gate is tracked in the [Step 2 review package](../reviews/step2-review-package.md).
+Lawrence's maintainer approval covers the local Ask path, exact-citation/authority rules, failure modes, course/request continuity and documented MVP/post-MVP allocations together with the revised requirements, stories and unit artifacts. This records the named maintainer's response, not an approval attributed to every teammate. The [Step 2 review package](../reviews/step2-review-package.md) tracks the approval and integration handoff. Open implementation questions, model selection and proposed lead acceptance remain separate future work.

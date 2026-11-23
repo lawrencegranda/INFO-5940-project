@@ -1,10 +1,10 @@
 # Course Copilot — Unit of Work Story Map
 
-> **Current corrective draft - November 23, 2026:** The current MVP includes local Ask and read-only local MCP with their local evidence-library foundations. Jev and advanced media processing remain planned for post-MVP work. Historical approvals cover the earlier baseline; current revised artifact approval is pending. STOP before Construction.
+> **Approved corrective Inception artifacts - November 23, 2026:** [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z covers the revised artifacts through Units Generation, including Ask/local MCP and documented Jev/media deferrals. Historical approvals remain recorded separately. STOP before Construction.
 
 **Stage:** Inception / Units Generation / Part 2: Generation
 
-**Status:** Corrective story map generated for current team review. The earlier baseline was approved on 2026-11-20T04:20:19Z; that historical approval does not cover the new Ask mapping. Evidence below is a future acceptance obligation, not an implemented capability or passing test.
+**Status:** Corrective story map approved by Lawrence at 2026-11-23T22:37:29Z as part of Inception through Units Generation. The earlier approval on 2026-11-20T04:20:19Z remains historical. Evidence below is a future runtime acceptance obligation, not an implemented capability or passing test.
 
 **Unit:** U-01 — Local Course Copilot. The retained planning catalog contains 26 stories, 16 functional requirements and seven NFRs in one integrated local product. The phase columns below distinguish current-MVP obligations from post-MVP work; retained features are not cancelled.
 
@@ -146,4 +146,4 @@ Properties supplement actual integration evidence. They do not establish authent
 
 This story map allocates the complete retained catalog with explicit delivery phases. It introduces no application code/directories, independent deployed service, accepted personal assignment or runtime success claim. The new Ask story is a documented scope revision, not evidence of implementation.
 
-The single generated-unit review is in [unit-of-work.md](unit-of-work.md); this map adds no question or approval field. Historical generated-artifact approval is recorded; the revised map and companion unit documents still require current team review and approval. The workflow stops before Construction for the November 24 checkpoint.
+The historical generated-unit review remains in [unit-of-work.md](unit-of-work.md). [Lawrence's maintainer approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) separately approves the revised map and companion Inception artifacts through Units Generation. This records the named maintainer's response without attributing approval to every teammate. The workflow stops before Construction for the November 24 checkpoint; ordered integration remains separate.
