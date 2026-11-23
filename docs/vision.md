@@ -2,9 +2,9 @@
 
 **Course:** Cornell INFO 5940, Fall 2026, Group 17  
 **AI-DLC:** v1.0.1, Inception  
-**Review status:** November 23 corrective draft on existing PR #8. Baseline input approval was recorded on 2026-11-19T19:26:39Z; revised artifact approval remains pending. The current work concerns Course Copilot.
+**Review status:** November 23 revised Inception artifacts approved by [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z on existing PR #8. Baseline input approval on 2026-11-19T19:26:39Z remains historical. Inception is complete through Units Generation; STOP before Construction.
 
-**Current scope:** The MVP centers on local Ask and read-only local MCP with their supporting native-text/PDF evidence library. Jev and advanced media features are retained for later iterations. The [delivery allocation](../aidlc-docs/inception/requirements/mvp-scope.md) identifies current commitments and deferred work; revised artifact approval remains pending.
+**Current scope:** The MVP centers on local Ask and read-only local MCP with their supporting native-text/PDF evidence library. Jev and advanced media features are retained for later iterations. The [delivery allocation](../aidlc-docs/inception/requirements/mvp-scope.md) identifies the approved current commitments and retained deferred work.
 
 ## Problem
 
