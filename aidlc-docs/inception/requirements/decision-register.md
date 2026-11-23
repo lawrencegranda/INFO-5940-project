@@ -1,10 +1,10 @@
 # Course Copilot — Decision register (AI-DLC v1.0.1)
 
-**State:** All 43 requirement-question decisions resolved, eight clarifications explicitly accepted, and three further refinements integrated. **Requirements Analysis approved on 2026-11-19T19:26:39Z**, with full approval preserved in `aidlc-docs/audit.md`. This document is part of the `candidate/course-copilot` Inception track.
+**State:** The original 43 decisions, eight accepted clarifications and baseline approval on 2026-11-19T19:26:39Z are historical records below. The November 23 Ask/local-MCP amendment is separately recorded at the end; revised artifacts await team review on PR #8. Historical answer cells are not rewritten.
 
 ## Product intent and non-negotiable distinctions
 
-- This is a **private, multi-course second-brain / wiki-like knowledge provider**, not a second chatbot.
+- This is a **private, multi-course knowledge library** with focused local course Ask and read-only local MCP. Grounded source/version-aware retrieval remains its purpose; autonomous general-purpose actions are excluded.
 - Its differentiator is **structured, source-linked, version-aware retrieval**, rather than uploading entire course corpora or using only flat RAG.
 - **Original document/snapshot, source URL, captured time, publication/effective time when known, and immutable observed versions** are separate from generated descriptions and indexes.
 - **Full-content capture and selective text extraction:** capture every accessible component of the selected page/file, including embedded documents or media when fetchable with permission; derive indexed text via native extraction, OCR or transcription when needed. Maintain explicit per-item extraction status. Inaccessible media are not represented as fully extracted.
@@ -12,9 +12,11 @@
 - **Latest applicable** is determined by source relationships and precedence, not just the newest crawl/capture timestamp. Manual ingestion cannot guarantee that an unsaved update is known.
 - Retrieval is **progressive**: ranked compact candidates, then explicit source fetch, to control context size.
 - **No silent contradiction resolution** where the evidence does not establish authority. Suppressing or erasing old content is not allowed.
-- **Read-only local MCP** initially; external chat happens in the student's own assistant. No cloud deployment or sharing required.
+- **Read-only local MCP** remains the external integration, alongside local course Ask. External-host model processing is a separate privacy boundary. No cloud deployment or sharing is required.
 
-## Answer-by-answer traceability
+## Historical answer-by-answer traceability
+
+The original Q34 no-chat answer below is superseded only by the explicit November 23 amendment. The remaining baseline choices stand unless separately changed.
 
 | Q | User answer (verbatim) | Reconciled selection | Status and decision |
 |---:|---|---|---|
@@ -88,5 +90,18 @@ The committed breadth (three authenticated LMS sites + arbitrary internet source
 
 - User-selected optional extensions: **Security No (Q41), Resiliency No (Q42), Property-Based Testing Partial (Q43)**.
 - Mandatory course rubric extension remains enforced.
-- All 43 original questions and eight clarifications are resolved. **Requirements Analysis was explicitly approved at 2026-11-19T19:26:39Z (2:26:39 PM EST)** and is marked complete in `aidlc-docs/aidlc-state.md`, with the verbatim approval recorded in `aidlc-docs/audit.md`. User Stories is the next stage.
-- Course Copilot Requirements Analysis artifacts are tracked on `candidate/course-copilot` (separate from `main` while candidate proposals are evaluated).
+- All 43 original questions and eight clarifications were resolved at baseline approval on 2026-11-19T19:26:39Z. Subsequent historical stage approvals remain in the audit; current revisions require their own artifact review.
+- This corrective pass uses existing `inception/05-units-generation` / PR #8 and the established `candidate/course-copilot` integration branch. No new branch or PR is required.
+
+## November 23 scope amendment — Ask and local MCP
+
+**Source:** Xiaolong's current instruction: "our team has settled on doing Ask and local MCP tell us what we need to do next according to the Issue", followed by "ok go on" after the coordinated Step 2 approach was explained. This records a team decision reported by the driver, not independently witnessed votes or a held meeting. No attendees, meeting time or unanimous artifact approval are inferred.
+
+| ID | Current disposition | Effect |
+| --- | --- | --- |
+| D-44 | Include focused local course Ask and retain local read-only MCP. | Supersedes historical Q34 for this bounded feature; revise FR-14 and add FR-16/US-26, C-13/S-05. UI Ask needs no terminal; the Codex integration remains a required technical path. |
+| D-45 | Generate coordinated corrective artifacts for review on the existing branch. | The driver's "ok go on" authorizes the stated document-revision approach and publication for review. It does not approve unseen artifacts, a Ready transition, merge or Construction. |
+
+Ask answers from bounded saved course evidence through local retrieval and generation, validates exact citations, exposes uncertainty/conflicts and preserves per-course progress during app navigation. General autonomous actions, remote ChatGPT integration and hosted MCP remain excluded. Local MCP does not guarantee that an external host's model runs locally.
+
+The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. Jev deferral, reduced media/OCR scope, remembered course mapping and proposed module-lead acceptance are not implied by D-44/D-45. Preserve their existing obligations or explicit Open questions until an actual decision changes them. The revised artifact set, genuine problem-meeting evidence and final README remain separate review/submission work.
