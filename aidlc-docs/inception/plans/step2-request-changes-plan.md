@@ -7,13 +7,13 @@
 
 ## Corrective approach
 
-The MVP includes **Ask and local MCP**. The corrective draft reconciles that scope decision and the published review feedback across requirements, stories, planning, design and units. The revised package is published for team review; artifact approval, Ready transitions, merging and Construction remain pending.
+The MVP includes **Ask and local MCP**, supported by the native-text/PDF evidence library. Jev and advanced media features remain planned post-MVP work under the [delivery allocation](../requirements/mvp-scope.md). The corrective draft reconciles that scope decision and the published review feedback across requirements, stories, planning, design and units. The revised package is published for team review; artifact approval, Ready transitions, merging and Construction remain pending.
 
 1. Preserve original FR-01–15 and US-01–25 IDs; add FR-16/US-26 for focused local course Ask and supersede the historical Q34 no-chat exclusion explicitly.
 2. Retain local read-only Codex MCP and its six tools. Add C-13/S-05 within U-01's existing nine modules; no seventh tool, remote ChatGPT integration or autonomous action.
 3. Adopt the concrete synthetic Maya profile, distinguish UI students from the Codex technical pilot, and clarify supported instructor authority versus student/unknown sources.
 4. Reconcile requirements, stories, workflow, technical inputs, high-level design, units, vision and current README summary. Retain historical gate answers and distinguish the current draft from earlier approved artifacts.
-5. Apply the actual review inputs, explain the four historical web commits and validate meaningful technical examples. Keep models, Jev/media reductions, unaccepted leads and Open questions accurately attributed or unresolved under the retained baseline.
+5. Apply the actual review inputs, explain the four historical web commits and validate meaningful technical examples. Preserve the feature catalog, label Jev/advanced media paths as post-MVP, and keep final local model choices, proposed leads and Open questions explicit.
 6. Publish concrete revised documents on the existing PR #8 branch for actual team review. Stop before Ready/merge/Construction; Lawrence and Iris retain their later integration/README roles in Issue #9.
 
 The earlier [bounded amendment question](step2-story-amendment-questions.md) is withdrawn with no option selected. The current corrective approach supersedes the earlier no-chat/25-story proposal; the generated-artifact review remains pending.
@@ -32,7 +32,7 @@ The earlier [bounded amendment question](step2-story-amendment-questions.md) is 
 
 - [x] Generate and reconcile the synthetic persona, authority criteria and FR-16/US-26 across all affected artifacts.
 - [x] Reconcile C-13/S-05, unchanged six MCP tools, read-only local boundaries and U-01/nine-module coverage.
-- [x] Check current scope/counts/English additions, local links/fences, paired example parsing/types/tests and unchanged historical audit prefix.
+- [x] Revalidate delivery phases, current scope/counts/English additions, local links/fences, contract/example checks and unchanged historical audit prefix after the retained-feature allocation.
 - [x] Obtain independent consistency review, fix findings and append actual results to the audit.
 - [x] Publish the validated documents to the existing PR #8 branch and verify that published files match the validated draft.
 

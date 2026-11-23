@@ -1,6 +1,6 @@
 # Course Copilot — Execution Plan
 
-> **Current corrective draft - November 23, 2026:** The reported team decision includes local Ask and local read-only MCP, and the driver authorized the coordinated revision. Historical approvals below do not approve this amended plan or clear the integration hold. Current team artifact approval remains pending. Final model selection, Jev/media proposals, budgets and owner acceptance remain explicit open items; the preserved baseline applies meanwhile. STOP before Construction.
+> **Current corrective draft - November 23, 2026:** The current MVP includes local Ask and read-only local MCP with their local evidence-library foundations. Jev and advanced media processing remain planned for post-MVP work. Historical approvals cover the earlier baseline; current revised artifact approval is pending. STOP before Construction.
 
 **Stage:** Inception / Workflow Planning
 **Status:** Historical approval recorded on 2026-11-20T03:18:17Z; current corrective revision pending team artifact approval.
@@ -10,13 +10,15 @@
 **Historical stage branch:** `inception/03-workflow-planning`, based on approved User Stories head `b185e9d421e8e44c165d78ebe9e152fbbed65b82`.
 **Current corrective branch:** `inception/05-units-generation` / PR #8. **Integration target:** `candidate/course-copilot` in the team repository, through the ordered #5 -> #6 -> #7 -> #8 chain after actual revised approval. Do not merge a cumulative stage diff out of order.
 
+**Delivery phases:** The [MVP scope and deferred-feature catalog](../requirements/mvp-scope.md) distinguishes current acceptance from retained post-MVP work. All 26 story IDs, 16 FRs, seven NFRs, 13 component IDs, five services and U-01/nine modules remain in the planning catalog. A retained future contract is not a current-MVP dependency or acceptance blocker.
+
 ## 1. Inputs and preserved scope
 
 Inputs: [requirements](../requirements/requirements.md), [decision register](../requirements/decision-register.md), [stories](../user-stories/stories.md), [persona](../user-stories/personas.md), [state](../../aidlc-state.md) and [audit](../../audit.md). The 43 requirement answers and eight clarifications remain historical context, with the new reported Ask/local-MCP decision superseding the earlier built-in-chat exclusion. Current draft coverage is 16 functional requirements, seven NFRs and 26 stories; no unrelated product questionnaire is introduced.
 
-Retain a private multi-course library: Chrome MV3 capture, TypeScript/Node local runtime, SQLite/FTS5 plus local originals, source-linked extraction/summaries, hybrid keyword/vector retrieval and progressive read-only local MCP first demonstrated with Codex CLI. Add course-scoped local Ask with validated saved-evidence citations, explicit insufficient/conflicting evidence and honest model-unavailable behavior. The primary Ask user uses the local UI; CLI setup remains a technical integration/pilot task rather than an assumed skill of every student. Ollama `gemma3:4b` is the first generative-model candidate, subject to laptop measurement. Jev receives only specifically disclosed minimal content after explicit opt-in. Manual filing and local keyword/metadata search remain available without Jev or AI.
+Retain a private multi-course library: Chrome MV3 capture, TypeScript/Node local runtime, SQLite/FTS5 plus local originals, source-linked extraction/summaries, hybrid keyword/vector retrieval and progressive read-only local MCP first demonstrated with Codex CLI. Add course-scoped local Ask with validated saved-evidence citations, explicit insufficient/conflicting evidence and honest model-unavailable behavior. The primary Ask user uses the local UI; CLI setup remains a technical integration/pilot task rather than an assumed skill of every student. Ollama `gemma3:4b` is the first generative-model candidate, subject to laptop measurement. Jev classification/routing/reranking and hosted consent remain planned post-MVP features, not MVP dependencies. Local/model-assisted or manual filing and keyword/metadata search remain available without hosted services.
 
-All approved sources/formats remain required: Canvas, Gradescope, EdStem, ordinary web/papers/PDFs/local imports; native text, scan/image OCR, preserved math/diagrams with reliable derived text, and accessible authorized audio/video transcription. Inaccessible content must have explicit partial/failed/unsupported status and manual recovery. A failure-status test does not replace a successful accessible-format demonstration.
+The current MVP covers native HTML/text and machine-readable PDFs from Canvas, Gradescope, EdStem, ordinary web/papers and local imports, plus selected embedded PDFs, original viewing and honest limitations/manual recovery. OCR, advanced math/diagram recognition and audio/video acquisition/transcription remain planned post-MVP features. Their criteria remain in the catalog without blocking current-MVP acceptance. Required native-text success cannot be replaced with a failure-status case.
 
 ## 2. Detailed scope and impact analysis
 
@@ -32,15 +34,15 @@ All approved sources/formats remain required: Canvas, Gradescope, EdStem, ordina
 | Infrastructure | Laptop-local processes, SQLite/files, tool/model installations and start/stop instructions. No cloud hosting, hosted MCP, multi-user accounts or cloud IaC. |
 | Operations | Visible processing/error state and repeatable local setup/demo instructions. Production operations remains a placeholder. |
 
-**Risk: HIGH; testing complexity: high; rollback complexity: moderate.** Authenticated SPAs, multimodal extraction and authority/version correctness create integration uncertainty. This is a new student demo, not a production-critical migration. Branch changes are reversible; future schema/index changes require original-preserving migration, backup/recovery and rebuild checks.
+**Risk: HIGH; testing complexity: high; rollback complexity: moderate.** Authenticated SPAs, local-model behavior and authority/version correctness create current-MVP integration uncertainty. Deferred multimodal extraction remains a later roadmap risk. This is a new local student demo; future schema/index changes still require original-preserving migration and recovery checks.
 
 | Risk | Required later response and evidence — none run yet |
 |---|---|
 | LMS and embeds | User-triggered authorized capture without credentials/cookies/tokens; actual save on each LMS, ordinary web/PDF/local import and accessible embedded asset; restricted-resource case and manual recovery. |
-| OCR/media/math | Native extraction where available, local OCR/transcription adapters, preserved originals/locations and per-item status; successful text/scan/image/math/audio/video examples plus fidelity and failure inspection. Exact tools await later technology decisions. |
+| Native formats and deferred media | Verify native HTML/text/PDF extraction, original viewing and honest unsupported status for MVP. OCR, advanced visual recognition and audio/video adapters retain later post-MVP feasibility/acceptance; exact tools remain open. |
 | Local AI, Ask and embeddings | Benchmark gemma3:4b and select a local embedding path; record machine/input, latency, memory and output quality. Prove lexical and paraphrase retrieval. No model compatibility or speed claim until measured. Validate Ask citations against the exact retrieved evidence set; no evidence or model failure cannot produce a verified answer. |
 | Source/authority errors | Deterministic source/hash identity, immutable versions and evidence-based claim-scoped precedence. Test explicit deadline change, later old-syllabus recapture, unaffected syllabus facts and unresolved competing evidence. A changed deadline cannot supersede every syllabus fact. Unknown/student-authored publishers never gain instructor authority from platform labels, recency or model confidence; keep competing evidence visible. |
-| Privacy/trust | Controlled loopback ingestion, read-only MCP, untrusted source instructions and minimal Jev opt-in. Test denied opt-in, unauthorized calls and read-only tools. External Codex/model processing is a separate trust boundary: local MCP does not guarantee that a host keeps received passages local. |
+| Privacy/trust | MVP controlled loopback ingestion, read-only MCP and untrusted source handling; test unauthorized calls and read-only boundaries. Jev opt-in/provider permission is retained post-MVP. External Codex/model processing remains a separate disclosure boundary. |
 | Scope/schedule | Agree contracts before parallel work; run an early integrated slice and high-risk probes after Construction authorization. If breadth is infeasible, request an explicit scope decision; do not silently drop sources/formats. |
 
 ## 3. Stage selection and adaptive detail
@@ -142,10 +144,10 @@ Integrate #5 first, then later stage PRs in order into `candidate/course-copilot
 This proposed capability sequence informs later unit decomposition; it is **not generated units, fixed packages or team assignments**. Brownfield package-change sequencing is N/A.
 
 1. Establish shared source/version/status/citation contracts and local persistence. Verify deterministic recapture and original preservation before dependent indexing or AI claims.
-2. Deliver a text/PDF vertical slice: explicit capture/import → preserved source → local keyword search → progressive read-only MCP and a grounded local Ask answer using the same scoped read/query capabilities. Begin three-LMS, OCR/media/math feasibility checks early in this window after Construction authorization.
-3. Complete all source/format adapters with honest per-item status and manual recovery. Add correctable filing and source-linked incremental course/topic/document summaries; AI availability cannot block originals or lexical search.
+2. Deliver the current-MVP native-text/PDF vertical slice: explicit capture/import → original preservation → local keyword search → progressive read-only MCP and grounded local Ask. Begin current native-format and three-LMS checks early after Construction authorization. Deferred media/provider probes belong to later work.
+3. Complete current-MVP native source/format adapters, original viewing, status and manual recovery. Add local/manual filing and source-linked incremental summaries. Local AI unavailability cannot block originals or lexical search.
 4. Add claim-scoped updates/supersession/conflicts and required hybrid retrieval with all metadata/version filters. Similarity may suggest relations but cannot establish identity or authority.
-5. Complete library/history/conflict views, local Ask citation/error/continuity behavior and actual Codex CLI integration; run both principal demos and the full source/format/failure matrix. Jev remains behind disclosed opt-in.
+5. Complete library/history/conflict views, local Ask citation/error/continuity behavior and actual Codex CLI integration. Run both principal demos and the current-MVP native source/failure matrix. Retained post-MVP OCR/advanced media/Jev integrations have separate later acceptance.
 
 After approved contracts/unit boundaries, adapters and browsing UI may proceed in parallel with isolated fixtures. Persistence/version semantics precede dependent claims and retrieval. Feature branches own application files per approved unit; one workflow driver serializes audit/state. Check contracts at integration; keep derived indexes rebuildable and originals preserved. No Construction work is executed by this plan.
 
@@ -156,13 +158,13 @@ All rows below are **specified, not run**. The current story draft is the detail
 | Coverage | Stories | Required future evidence |
 |---|---|---|
 | Sources, embeds and consent/recovery | US-01–US-03, US-23–US-24 | Fixtures plus actual authorized saves on each LMS; ordinary web/PDF/local and embedded resource flows; record exact surface and limitations. |
-| Native/OCR/math/media | US-04–US-07, US-23 | Successful accessible examples for every required format, original/location fidelity and all status/manual recovery cases. |
+| Native formats and retained media roadmap | US-04, US-23 and MVP portion of US-07 | MVP native HTML/text/PDF success, original/location fidelity and honest status/recovery. US-05/06 and advanced-recognition portions of US-07 retain separate post-MVP acceptance. |
 | Multi-course and organization | US-08–US-11 | Course isolation, uncertain suggestion review, metadata correction preserving originals, incremental course/topic/document summaries. |
 | Provenance, versions, typed links, history | US-12–US-15 | Same-source/same-hash idempotence, changed-hash preserved version, similarity-only suggestions, exact citation/history round trips. |
 | Updates and unresolved conflicts | US-16–US-18 | Nov 20 syllabus → explicit Nov 22 announcement; later old-syllabus recapture cannot win; unaffected facts and unresolved competing evidence remain visible. No age-only alarm. |
 | Hybrid/progressive retrieval and Codex | US-19–US-22 | Lexical/paraphrase queries with every filter; compact search then exact fetch; actual Codex CLI connection/use and read-only tool behavior. |
 | Local Ask | US-26 | Actual local-model answer on saved course evidence; exact citations, empty/conflicting evidence, rejected unsupported citations, model-unavailable retrieval-only disclosure, per-course navigation state and in-flight course isolation; no library writes or remote ChatGPT fallback. |
-| Privacy, outage and laptop feasibility | US-23–US-25 | Denied/disabled/unavailable Jev; AI/network-disabled manual filing/local search; untrusted input, loopback controls, extraction recovery; measured local resource/latency/cost log. |
+| Privacy, outage and laptop feasibility | US-23–US-25 | MVP AI/network-disabled manual filing/local search; untrusted input, loopback controls, native-extraction recovery and measured local resources/latency. Jev provider/permission behavior is verified post-MVP. |
 
 Use approved Vitest fixtures/manual E2E and partial property tests for pure transformations, round trips and version invariants. Carry FR-01–FR-16 and NFR-01–NFR-07 into unit/test mappings. A fixture/screenshot does not prove a live LMS integration; a tool listing alone does not prove a successful Codex search/fetch. Keep private course content and credentials out of published evidence.
 
@@ -180,7 +182,7 @@ Dates use **America/New_York**. Windows are proposals dependent on reviews/proje
 
 **Inception milestone success:** Approved execution plan, complete approved design/unit artifacts, deliberate gate answers, coherent audit/state, no application code or secrets in documentation.
 
-**Later product success:** Team-laptop demonstration of scoped conceptual search/fetch in Codex, local Ask grounded in cited saved evidence, and evidence-grounded deadline changes/conflicts/history, with required source/format paths and local fallback verified. No live freshness, perfect contradiction detection or untested model-speed promise is added.
+**Later product success:** A team-laptop demo of conceptual search/fetch in Codex, grounded local Ask and evidence-linked deadline changes/conflicts/history, with current-MVP native source/format and fallback evidence. Retained OCR/advanced media/Jev features have separate post-MVP acceptance; no live-freshness, perfect-conflict-detection or model-speed promise is added.
 
 ## 9. Historical Workflow Planning checklist
 
@@ -217,7 +219,7 @@ This historical approval completed the earlier Workflow Planning baseline. It do
 | INFO5940-01 | Compliant | Follow Workflow Planning; record prior approval/current work in append-only audit/state. |
 | INFO5940-02 | Compliant | All remaining Inception artifacts listed; explicit stop; Construction only planned. |
 | INFO5940-03 | Current approval pending | Historical answers remain intact; revised artifacts require actual review/approval before the hold is released. |
-| INFO5940-04 | Compliant | Local demo; named Ollama candidate; progressive read-only Codex MCP; Jev opt-in/fallback. |
+| INFO5940-04 | Compliant | Local demo; named Ollama candidate; progressive read-only Codex MCP; Jev permission/fallback design retained post-MVP. |
 | INFO5940-05 | Compliant | Documentation only; no application code or credentials. |
 | INFO5940-06 | Existing branch and ordered dependency retained | Same driver on existing PR #8; current revised approval is pending before Ready/integration. No competing teammate workflow or manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Implementation deferred; obligations retained | Pure-transform/round-trip/version tests planned; no executable test result invented. |
@@ -247,13 +249,13 @@ If results are inadequate, compare a smaller model or queue background processin
 
 ### 12.2 Extraction and live-capture checkpoints
 
-Propose a first per-format feasibility checkpoint around **December 2**. For native PDF text, scanned pages, images, math/diagrams and accessible audio/video, record an actual attempt on an authorized example: tool/version, machine, input, original location, extracted output, fidelity check, processing status and failure/recovery behavior. A `failed` or `unsupported` result is evidence of a limitation, not successful FR-05 acceptance.
+Propose a first current-MVP extraction checkpoint around **December 2**. For native HTML/text, machine-readable PDFs and an authorized embedded PDF, record actual attempts with tool/version, machine, input, original location, extracted output, fidelity and recovery behavior. Also check original visual viewing and honest unsupported-media status. OCR, advanced math/diagram recognition and audio/video acquisition/transcription retain separate post-MVP feasibility/acceptance; no date is committed for those adapters.
 
 Before that checkpoint, inspect how each required LMS exposes pages, iframes, cross-origin PDFs and media. An inspection is not an extension capture. Set a separate dated live-save checkpoint once the vertical-slice plan is reviewed; that date remains an explicit open planning item, with successful authorized saves required for Canvas, Gradescope and EdStem.
 
-Tesseract is Iris's proposed OCR candidate. Existing captions first, followed by a local `whisper.cpp`/`small.en` path when appropriate, comes from Lawrence's recording proposal. These are unverified candidates, not newly approved tools. Record resource contention with Ollama and evaluate Lawrence's one-heavy-background-job proposal. Keep source text, timestamps and partial-result limitations visible.
+For retained post-MVP work, Tesseract is a proposed OCR candidate and existing captions followed by local `whisper.cpp`/`small.en` is a proposed recording path. These are unverified future candidates, not December 2 native-core dependencies. Their later evaluation should record resource contention, source/time references and partial-result limitations.
 
-If a required format has no working path at the checkpoint, bring the recorded results to the team and request a change against FR-05 before reducing scope. Preserve successful captures and manual recovery while that decision is pending; recordings are not excluded by this draft.
+If a current-MVP native format has no working path at the checkpoint, review the recorded results and recovery plan before accepting it. Preserve successful captures and originals. Deferred recordings/OCR/advanced recognition remain planned features and do not block MVP completion; later implementation must satisfy their retained criteria.
 
 ### 12.3 Provisional dates and stage depth
 
@@ -263,17 +265,17 @@ Retain Functional Design, NFR Requirements, NFR Design and Infrastructure Design
 | --- | --- | --- |
 | Early Construction, before NFR Requirements selects the stack | Manual model/embedding probe and initial LMS-surface inspection. | Separate Construction authorization and available laptop/examples; no results claimed. |
 | Around December 1 | Review and approve all four U-01 design stages. | Model-probe input and actual team reviews; provisional target only. |
-| Around December 2 | Review the Code Generation plan with the text/PDF-to-MCP slice first; record first per-format feasibility attempts. | Design approvals and probe evidence; not automatic permission to code. |
+| Around December 2 | Review the Code Generation plan with the text/PDF-to-MCP slice first; record native HTML/text/PDF feasibility attempts. | Design approvals and probe evidence; not automatic permission to code. |
 | After the vertical slice, date still to be agreed | Actual extension saves on all three required LMS sites and authorized embedded-resource cases. | A separate dated checkpoint must be agreed in the reviewed implementation plan. |
 | December 3–11 | Build and integrate the reviewed scope, resolving contract and evidence gaps. | Approved Code Generation plan and actual capacity. |
 | December 12–16 | Build and Test, demo video and recorded presentation. | Integrated product and required real-source/client evidence. |
 
-These are Iris's proposed target windows, not accepted team commitments. The November 24 Inception-only boundary remains unchanged. Local Ask and local MCP are included by the reported team decision; remote ChatGPT/hosted MCP integration and tunnels remain excluded. Jev deferral, final model selection, media-scope proposals and owner acceptance remain open; retain the existing optional Jev and required-format baseline meanwhile. If Jev changes, reconcile FR-06, FR-12, NFR-02, NFR-05, US-09, US-19, US-24, US-25, C-08 and the affected service, dependency, story-map and plan references together; do not only edit this amendment.
+These are proposed target windows, not accepted team commitments. The November 24 Inception-only boundary remains unchanged. Local Ask and local MCP with their local evidence-library foundations define the current MVP. Jev, hosted consent, OCR, advanced math/diagram recognition, audio/video acquisition/transcription and remote ChatGPT/hosted MCP remain planned post-MVP features. No delivery date is committed for deferred work. Final local model/embedding choices, budgets and owner acceptance remain open planning items.
 
 ### 12.4 Amendment preparation checklist
 
 - [x] Read all three PR #6 inline comments and the review summary.
 - [x] Prepare the model-probe, extraction-checkpoint and provisional schedule proposals without asserting runtime results.
 - [x] Preserve historical approvals and the current hold while applying the authorized Ask/source-authority revision across requirements, stories, design and units.
-- [ ] Agree concrete latency budgets, a live-LMS checkpoint date and team capacity during later planning; retain model/Jev/media choices as explicit open questions under the preserved baseline. These future implementation details do not by themselves prevent review of the current Inception draft.
+- [ ] Agree concrete latency budgets, a live-LMS checkpoint date and team capacity during later planning. Retain model/embedding choices as open technical items and Jev/advanced media as explicitly phased post-MVP work; no future result is assumed.
 - [ ] Complete cross-artifact validation and record actual review/approval of the coordinated draft before releasing the hold or marking PRs Ready.

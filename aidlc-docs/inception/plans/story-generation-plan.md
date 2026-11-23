@@ -9,11 +9,11 @@
 
 ## 1. Purpose and fixed inputs
 
-Translate the Course Copilot requirements and explicit current amendments into student-centered stories and acceptance criteria. The original 43 decisions and eight clarifications remain the historical baseline. The reported Ask + local MCP decision supersedes the earlier built-in-chat exclusion for focused local course Ask; unrelated scope is preserved. This pass specifies documentation revisions, not implementation or claims that acceptance tests have run.
+Translate the Course Copilot requirements and explicit current amendments into student-centered stories and acceptance criteria. The original 43 decisions and eight clarifications remain the historical baseline. The Ask + local MCP amendment supersedes the earlier built-in-chat exclusion for focused local course Ask. The phased-delivery amendment retains Jev and advanced OCR/math/media features as post-MVP work; current acceptance follows the [MVP scope and retained roadmap](../requirements/mvp-scope.md). This pass specifies documentation revisions, not implementation or claims that acceptance tests have run.
 
 The primary user is one student managing multiple courses. The product is a private local course library with focused local Ask and read-only local MCP for a technically supported Codex pilot. It retains original sources, saved versions and substantive conflicting evidence. General-purpose agent actions, automatic LMS synchronization, shared cloud accounts and remote ChatGPT MCP integration remain out of scope. Local transport does not guarantee that an independently configured external Codex host processes all evidence locally.
 
-The existing technical direction stays local-first: TypeScript/Node, SQLite and local files, preliminary local Ollama, and hosted Jev only with explicit disclosure and opt-in. Runtime benchmarks and implementation choices will be verified in their appropriate later stages.
+The MVP technical direction stays local-first: TypeScript/Node, SQLite and local files, and preliminary local Ollama. Hosted Jev remains a post-MVP integration with explicit disclosure/opt-in requirements when implemented. Runtime benchmarks and implementation choices will be verified in their appropriate later stages.
 
 ## 2. Story organization options
 
@@ -47,18 +47,18 @@ External MCP clients, instructors, graders and administrators are not additional
 | Preserve and inspect sources | Keep immutable originals, recognize unchanged/changed recaptures and inspect typed links and prior versions. | FR-04, FR-08, FR-09, FR-15 |
 | Understand changed instructions | Follow grounded supersession and view unresolved substantive conflicts with both sources. | FR-08, FR-10, FR-11, FR-15 |
 | Retrieve evidence progressively | Search a course with compact previews, then fetch cited passages through Codex's local read-only MCP connection. | FR-12, FR-13, FR-14 |
-| Stay in control during failures | Use saved material locally, control hosted transmission and keep manual filing/local retrieval available. | FR-06, FR-12, FR-14 and cross-cutting NFRs |
+| Stay in control during failures | MVP: keep saved material/manual filing/local retrieval available. Post-MVP: control hosted Jev transmission. | FR-06, FR-12, FR-14 and cross-cutting NFRs |
 | Ask and verify within the course | Ask a focused question locally, inspect exact supporting evidence and retain per-course progress during app navigation. | FR-16 with FR-01, FR-11, FR-12, FR-13 evidence dependencies |
 
-Every story identifies its persona and FR/NFR references. Keep US-01–US-25 stable and add US-26 for the newly scoped local Ask outcome. Every FR-01 through FR-16 and NFR-01 through NFR-07 must appear in the coverage map, even when implemented through a shared acceptance condition rather than a separate story.
+Every story identifies its persona and FR/NFR references. Keep US-01–US-25 stable and add US-26 for the newly scoped local Ask outcome. Every FR-01 through FR-16 and NFR-01 through NFR-07 remains in the catalog coverage map, with MVP/post-MVP portions identified. Retaining a deferred story does not make its later acceptance criteria a current MVP obligation.
 
 | Shared quality | Acceptance obligation carried into generation |
 |---|---|
 | NFR-01 | The student can use the saved local library without required cloud hosting or an LMS API key. |
-| NFR-02 | Saving excludes credentials; hosted Jev transmission is disclosed, minimal and explicitly authorized. |
+| NFR-02 | MVP saving excludes credentials and hosted requests; later Jev transmission requires disclosure, minimization and explicit authorization. |
 | NFR-03 | Retrieved evidence identifies its original URL, saved document/version and capture time. |
 | NFR-04 | Incomplete, failed and unsupported extraction stays visible to the student. |
-| NFR-05 | Manual filing and local keyword/metadata retrieval continue when Jev is unavailable. |
+| NFR-05 | MVP manual filing/local retrieval continue when local AI is unavailable; the later Jev extension retains this fallback. |
 | NFR-06 | Critical behavior has repeatable evidence expectations, including the inherited partial property-testing scope. |
 | NFR-07 | Later runtime checks measure local-model feasibility; core library/search availability does not require paid model calls. |
 
@@ -66,7 +66,7 @@ Every story identifies its persona and FR/NFR references. Keep US-01–US-25 sta
 
 Each story will contain:
 
-- A stable story ID, title, journey group and persona/context.
+- A stable story ID, title, journey group, persona/context and delivery phase for deferred or mixed-scope stories.
 - An "As a student, I want ..., so that ..." statement with an observable benefit.
 - References to the approved functional/non-functional requirements.
 - Given/When/Then acceptance criteria covering the successful outcome and relevant edge/failure conditions.
@@ -92,7 +92,7 @@ These are a planning illustration based on approved requirements, not generated 
 ## 6. Scope and evidence safeguards
 
 - Preserve all three required LMS capture sources: Canvas, Gradescope and EdStem, plus ordinary webpages, papers/PDFs and local imports.
-- Preserve the required native text, scanned/image OCR, math/diagram fidelity and accessible audio/video transcription coverage. Do not quietly reduce the approved MVP to HTML-only or Canvas-only.
+- Require native HTML/text/PDF extraction, original preservation/viewing and honest limits in the MVP. Retain scan/image OCR, advanced math/diagram recognition and audio/video extraction/transcription in the post-MVP roadmap with their existing IDs and future acceptance criteria. These features are deferred, not deleted.
 - Include explicit `complete`, `partial`, `failed` and `unsupported` outcomes and manual upload recovery where appropriate.
 - Separate source identity/content hashes from model-suggested similarity. Similarity cannot silently merge original sources.
 - Separate original snapshots from editable course/folder/title/tag/authority metadata.
@@ -100,7 +100,7 @@ These are a planning illustration based on approved requirements, not generated 
 - Ground authority, effective dates and supersession in explicit evidence and rules; model assertions alone cannot establish precedence.
 - Preserve read-only MCP and progressive search-then-fetch behavior, including actual Codex CLI verification in later implementation acceptance.
 - Add focused local Ask with course-scoped source-linked answers, honest insufficient/conflicting evidence, retrieval-only fallback if the local answer model is unavailable, and per-course draft/result/error continuity during same-session tab navigation. Keep in-flight results bound to their original course/question. No reload-persistence or cross-device promise is introduced.
-- Keep hosted Jev disabled until the user authorizes the specific minimal content transmission; core saved-content availability and local retrieval must not depend on paid calls.
+- Defer hosted Jev classification/routing/reranking and its consent UI until post-MVP work; retain minimal-content permission and local-fallback obligations for that future extension. The current MVP has no Jev transmission or provider dependency.
 - Carry forward the partial property-based testing scope for pure transformations, round trips and version invariants. User Stories records these acceptance obligations; framework configuration and code belong to later stages.
 - Mark all future integrations and runtime model performance as unverified until measured. Never describe planned fixtures as existing product functionality.
 
@@ -172,7 +172,7 @@ Optional security and resiliency baseline extensions remain disabled according t
 
 The November 23 scope amendment includes local Ask and local MCP. The corrective approach generates and reconciles the amended artifacts on the existing branch for team review. Final model selection and approval of the revised artifacts remain pending.
 
-The earlier bounded story-amendment prompt was withdrawn after Xiaolong clarified that he was asking about prerequisites; no option was selected. That prompt's lack of approval must not be replaced with a fabricated answer. The current scope instruction is separate and supersedes its no-Ask proposal.
+The earlier bounded story-amendment question is withdrawn with no option selected. Current local Ask and phased-delivery amendments supersede that earlier proposal; revised artifact approval remains a separate pending gate.
 
 ### Approach used for the corrective draft
 
@@ -180,17 +180,17 @@ The earlier bounded story-amendment prompt was withdrawn after Xiaolong clarifie
 - Add US-26 for FR-16/local Ask and a seventh journey group; preserve reusable retrieval/conflict stories rather than duplicate their outcomes.
 - Make P-01 concrete using the synthetic Maya example and distinguish the ordinary UI user from the Codex technical pilot.
 - Clarify publisher-role evidence, matching course/assignment and source-preserving conflict outcomes in US-17/18, including later notes and unknown roles.
-- Preserve all original source/format requirements because media/OCR reductions remain proposals. Preserve optional permission-checked Jev obligations because Ask + local MCP does not itself decide Jev deferral.
+- Retain the full feature catalog while assigning delivery phases: US-05/US-06 and hosted Jev work are post-MVP; US-07 preserves original viewing/native text in the MVP and defers advanced recognition. Local/manual organization, native-text retrieval and unsupported-status honesty remain MVP obligations.
 - Keep unresolved implementation choices, such as exact model and measured resource budgets, as explicit later validation topics rather than invented answers.
 
 ### Corrective checklist
 
-- [x] Reconcile the reported Ask + local MCP direction with the earlier story approach; identify the narrow superseded exclusion.
+- [x] Reconcile Ask + local MCP and phased delivery with the earlier story approach; preserve historical decisions separately from current scope.
 - [x] Incorporate the synthetic Maya profile and supported instructor/student/unknown-role evidence distinctions.
-- [x] Retain US-01–US-25 and add US-26 with focused local Ask and per-course navigation/in-flight conditions.
+- [x] Retain US-01–US-26; make Jev/advanced media deferrals explicit while keeping focused local Ask and per-course navigation/in-flight conditions in the MVP.
 - [x] Update persona/context mapping and coverage to 26 stories, 16 functional requirements and seven non-functional requirements.
 - [x] Keep historical approvals separate from the current corrective artifact review.
-- [x] Complete cross-artifact consistency validation with requirements, application design and unit maps in the shared Step 2 pass.
+- [x] Complete cross-artifact consistency validation for the phased-delivery amendment with requirements, application design and unit maps.
 - [ ] Present the concrete revised artifact package for actual team review.
 - [ ] Record the actual revised artifact response before clearing the corrective hold or marking the pass complete.
 
