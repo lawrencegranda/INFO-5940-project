@@ -6,7 +6,7 @@
 
 **Persona:** P-01 — Maya, a student managing several courses
 
-**Requirements baseline:** `485c52531f004b1e184fb595abe771cfbcd17003`, amended by the team's Ask + local MCP direction reported by Xiaolong on November 23. The revised story set has 26 stories and covers FR-01–FR-16 and NFR-01–NFR-07. The earlier exclusion of built-in chat is superseded for focused local course Ask only.
+**Requirements baseline:** `485c52531f004b1e184fb595abe771cfbcd17003`, amended by the November 23 Ask + local MCP and phased-delivery decisions. The revised story set has 26 stories and covers FR-01–FR-16 and NFR-01–NFR-07. The earlier exclusion of built-in chat is superseded for focused local course Ask. Hosted Jev and advanced OCR/math/media processing remain planned post-MVP features, as defined in the [MVP scope and retained roadmap](../requirements/mvp-scope.md).
 
 ## Evidence and scope
 
@@ -21,7 +21,7 @@ The MVP has one primary human user. Capture/organization and retrieval/verificat
 | Role | A synthetic first-year MPS Information Science student maintaining a private library for INFO 5940, HCI 5300 and ML 4100. These illustrative course labels are not claims about actual enrollment. |
 | Material environment | Course pages and announcements in Canvas, Gradescope and EdStem, plus ordinary webpages, research papers, PDFs and other local files the student is authorized to use. |
 | Working environment | A Chrome browser for explicit capture and a local course library for organization, focused Ask and evidence inspection. The main student flow does not require a terminal. Local Codex CLI MCP is a separate technical-pilot integration path, not a presumed skill of every student. |
-| Responsibility and control | Choose what to save, authorize optional embedded resources, confirm or correct uncertain classification, inspect source evidence and decide whether specific minimal excerpts may be sent to hosted Jev. |
+| Responsibility and control | Choose native-text pages/PDFs to save or import, authorize selected resources, confirm or correct local filing, and inspect originals and source evidence. Hosted Jev permissions belong to the retained post-MVP extension. |
 | Main need | Retrieve relevant, attributable course evidence while preserving original sources, saved history and uncertainty about changed instructions. |
 
 ### Illustrative week and question
@@ -42,7 +42,7 @@ Ask presents the supported instructor update to November 22 with its exact saved
 - Check which saved instruction applies when an announcement changes an earlier deadline, exam detail or assignment rule.
 - Inspect the original evidence and prior saved versions when an answer needs verification.
 - Keep source URLs, capture times and known publication/effective dates available without treating every older document as stale.
-- Retain control over private material and use saved content when hosted Jev is unavailable or disabled.
+- Retain control over private material and use saved content when the local model or network is unavailable; the MVP makes no hosted Jev requests.
 - Understand incomplete extraction and recover through a permitted alternative such as manual upload.
 
 ### Pain points represented by the requirements
@@ -52,7 +52,7 @@ Ask presents the supported instructor update to November 22 with its exact saved
 - An old syllabus and a newer announcement can express different instructions about the same assignment.
 - Missing source links or saved-version information make an answer hard to verify.
 - An incorrect course/folder suggestion can make a saved document difficult to find.
-- A scanned page, inaccessible embedded file or media extraction failure can leave an unseen gap in the searchable library.
+- A scanned page or media-only source can leave a gap in the MVP's searchable native text; originals and unsupported/deferred-processing limitations must remain visible. OCR and transcription address these gaps in later iterations.
 - A required hosted model call would make access depend on permission, connectivity or paid usage.
 
 These pain points are product premises inherited from the approved vision and requirements, not claims that every student experiences them or that user research has confirmed their frequency.
@@ -63,7 +63,7 @@ These pain points are product premises inherited from the approved vision and re
 
 **Trigger:** The student is viewing material worth retaining, receives a changed instruction, or has a local file to add.
 
-**Desired flow:** Explicitly save the current accessible page or import a file; review discovered embedded resources; see the extraction result; confirm or correct course/folder and metadata; retain the source and original content; make the available evidence searchable.
+**Desired flow:** Explicitly save an accessible native-text page or import a native-text PDF/file; review selected native/PDF embedded resources and their status; confirm or correct local course/folder metadata; retain the source and original content; make the available text evidence searchable. Scans/media may retain originals with visible limitations; advanced extraction is post-MVP.
 
 **Control needs:** Capture only material the student selected and can access. Keep credentials and session tokens out of the saved material. Make uncertain suggestions correctable and partial/failed/unsupported extraction visible. Correcting metadata must not rewrite an original snapshot or erase history.
 
@@ -77,7 +77,7 @@ These pain points are product premises inherited from the approved vision and re
 
 **Control needs:** Keep course scope explicit and evidence attributable. Favor the latest applicable saved evidence only when source relationships and precedence support it. Preserve both sides of an unresolved conflict. A later capture time alone does not establish authority, and a manually saved library cannot reveal an update that was never captured.
 
-**Successful outcome:** Maya receives a course-scoped answer supported by the selected saved passages and exact source/version information, without loading the entire library. She can verify evidence, see meaningful uncertainty, and resume her per-course question/result after tab navigation. If the local answer model is unavailable, the library discloses retrieval-only mode and provides available evidence without pretending to generate an answer. Local keyword/metadata retrieval also remains available if hosted Jev is unavailable.
+**Successful outcome:** Maya receives a course-scoped answer supported by the selected saved passages and exact source/version information, without loading the entire library. She can verify evidence, see meaningful uncertainty, and resume her per-course question/result after tab navigation. If the local answer model is unavailable, the library discloses retrieval-only mode and provides available evidence without pretending to generate an answer. Local keyword/metadata retrieval remains available if local AI is unavailable. Hosted Jev integration is not required by the MVP.
 
 ## Mapping to the current journey groups
 
@@ -85,13 +85,13 @@ The companion stories use P-01 with the context names above. This map records th
 
 | Journey group | P-01 context | Need represented | Requirement anchors |
 |---|---|---|---|
-| Collect accessible material | Capture and organize | Save selected pages/files, authorize embedded resources and recognize extraction gaps. | FR-02, FR-03, FR-04, FR-05; NFR-02, NFR-04 |
+| Collect accessible material | Capture and organize | MVP: save native-text pages/PDFs, select native/PDF resources and recognize gaps. Post-MVP: OCR and media extraction/transcription. | FR-02, FR-03, FR-04, FR-05; NFR-02, NFR-04 |
 | Organize and correct | Capture and organize | Keep courses separate, correct filing and use source-linked incremental summaries. | FR-01, FR-06, FR-07; NFR-01, NFR-03 |
 | Preserve and inspect sources | Both contexts | Retain immutable originals, distinguish recaptures and inspect typed links and history. | FR-04, FR-08, FR-09, FR-15; NFR-03 |
 | Understand changed instructions | Retrieve and verify | Follow evidence-supported supersession and inspect unresolved competing claims. | FR-08, FR-10, FR-11, FR-15; NFR-03 |
 | Retrieve evidence progressively | Retrieve and verify | Search scoped evidence previews and then fetch cited content through Codex. | FR-12, FR-13, FR-14; NFR-01, NFR-03 |
 | Ask a focused course question | Retrieve and verify | Use local Ask without CLI setup, verify answer citations and retain per-course progress during navigation. | FR-16; NFR-01, NFR-02, NFR-03, NFR-04, NFR-07 |
-| Stay in control during failures | Both contexts | Preserve local access, manual filing and retrieval while controlling hosted transmission. | FR-06, FR-12, FR-14; NFR-01, NFR-02, NFR-04, NFR-05, NFR-07 |
+| Stay in control during failures | Both contexts | MVP: preserve local access/manual filing with local AI unavailable. Post-MVP: control hosted Jev transmission. | FR-06, FR-12, FR-14; NFR-01, NFR-02, NFR-04, NFR-05, NFR-07 |
 
 NFR-06 applies across the journeys: story acceptance must distinguish repeatable controlled fixtures, actual source integrations, manual review and runtime smoke tests. A planned test or a fixture result is not evidence that a live integration has been verified. NFR-07 remains an obligation to measure practical local-model feasibility rather than a performance promise.
 
@@ -104,9 +104,9 @@ NFR-06 applies across the journeys: story acceptance must distinguish repeatable
 | A specific page, file or embedded resource is accessible and permitted to capture. | Must be checked for that item. The persona does not imply unrestricted access to every LMS resource or protected embed. |
 | A local model can run acceptably on the student's laptop. | An engineering hypothesis requiring later smoke tests. The preliminary Ollama model choice is not measured performance evidence. |
 | Available source evidence establishes authority or supersession. | Must be checked for each substantive claim. Unknown precedence requires visible competing evidence and uncertainty. |
-| The student allows hosted Jev processing. | Never assumed. Authorization applies only to the disclosed minimal content and operation; local availability and fallback remain required. |
+| The student allows hosted Jev processing. | Post-MVP only and never assumed. The retained extension requires scoped disclosure/permission and local fallback; the MVP sends no Jev request. |
 
-The existing 43 decisions and eight clarifications remain the historical baseline except where the newly reported Ask + local MCP direction explicitly supersedes the earlier no-chat exclusion. Model selection, media deferral and Jev deferral are not inferred from that decision.
+The original 43 decisions and eight clarifications remain historical records. The current phased scope includes local Ask + local MCP and their native-text evidence foundation in the MVP; Jev, scan/image OCR, advanced math/diagram recognition and audio/video extraction/transcription remain planned for later iterations. Exact model selection and runtime feasibility remain validation work. No deferred feature is deleted from the roadmap.
 
 ## Boundaries that stories must preserve
 
@@ -114,6 +114,7 @@ The existing 43 decisions and eight clarifications remain the historical baselin
 - Explicit saving and permitted local imports; no automatic LMS synchronization, unattended login or credential collection.
 - Original snapshots and observed versions remain separate from editable metadata and generated summaries.
 - Historical versions can be inspected; historical point-in-time query search is outside the approved MVP.
+- Hosted Jev and advanced OCR/math/media processing are post-MVP; original preservation/viewing and honest unsupported/partial status remain MVP obligations.
 - Focused local Ask and read-only local MCP share the same scoped evidence layer. Ask cannot capture, modify evidence or change permissions through a question. General-purpose agent actions and remote ChatGPT MCP integration remain outside this scope.
 - No generic stale warning based only on age, no silently resolved substantive contradiction, and no claim about unseen LMS changes.
 

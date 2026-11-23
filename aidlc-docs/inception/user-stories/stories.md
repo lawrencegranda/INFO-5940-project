@@ -2,13 +2,27 @@
 
 **Stage:** Inception / User Stories / Part 2: Generation
 
-**Status:** Corrective draft revised November 23, 2026; revised artifact approval is pending. The approval on 2026-11-20T03:04:34Z applies to the earlier 25-story version. The current 26 stories describe required behavior, not implemented or tested functionality.
+**Status:** Corrective draft revised November 23, 2026; revised artifact approval is pending. The approval on 2026-11-20T03:04:34Z applies to the earlier 25-story version. The 26-story catalog retains both MVP and post-MVP behavior; delivery phases below determine current acceptance. No functionality is reported as implemented or tested.
 
-**Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`, plus the team's Ask + local MCP direction reported by Xiaolong on November 23. That direction supersedes the earlier built-in-chat exclusion for focused local course Ask only; other historical decisions and clarifications remain in force unless explicitly amended. Coverage is FR-01–FR-16 and NFR-01–NFR-07.
+**Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`, plus the November 23 amendments for Ask + local MCP and phased delivery. Hosted Jev, scan/image OCR, advanced math/diagram recognition and audio/video extraction/transcription remain planned for post-MVP work. The earlier no-chat boundary is superseded for focused local course Ask. Coverage is FR-01–FR-16 and NFR-01–NFR-07.
 
 **Persona:** [P-01: Maya, a student managing several courses](personas.md). Context C is **Capture and organize**; context R is **Retrieve and verify**. These are contexts of one person, not separate account types. Maya is a synthetic scenario persona, not a research participant.
 
 **Inputs:** [Requirements and current amendments](../requirements/requirements.md), [decision register](../requirements/decision-register.md), [story approach and corrective checklist](../plans/story-generation-plan.md).
+
+## Delivery phases
+
+The [MVP scope and retained roadmap](../requirements/mvp-scope.md) define the delivery boundary. Story IDs and requirements remain in the catalog; deferral changes their timing, not their existence.
+
+| Stories or story portions | Delivery phase |
+| --- | --- |
+| US-01–US-04, US-08–US-23, US-25–US-26 | MVP for native HTML/text/PDF capture/import, local organization and retrieval, source/version/authority handling, grounded Ask and local read-only MCP; deferred portions are identified below. |
+| US-05 scan/image OCR; US-06 audio/video extraction/transcription | Post-MVP; retained planned stories and future acceptance criteria. |
+| US-07 original preservation/viewing and native extractable notation | MVP; advanced math/diagram recognition is post-MVP. |
+| Hosted Jev portions of US-09/US-19 and hosted permission portions of US-24 | Post-MVP; local/manual filing, local hybrid retrieval and untrusted-source handling remain MVP. |
+| Remote ChatGPT and hosted MCP integration | Post-MVP roadmap; no new story/client acceptance is added to this MVP. |
+
+MVP acceptance does not require the deferred adapters or hosted integration. Original preservation/viewing and honest unsupported/partial status remain required; retaining an unprocessed original is not successful OCR or transcription.
 
 ## Reading and acceptance conventions
 
@@ -50,11 +64,13 @@ As a student, I want to import a paper, PDF or local file, so that useful materi
 
 ### US-03 — Choose which embedded resources to capture
 
+**Delivery:** MVP for permitted native-text/PDF resources and honest resource status; audio/video extraction and transcription remain post-MVP.
+
 **Persona/context:** P-01 / C. **Requirements:** FR-03, FR-04; NFR-02, NFR-04. **Depends on:** US-01 or US-02.
 
 As a student, I want to see discovered embedded files and media and authorize their capture, so that I control what enters my library.
 
-- **Given** a saved page containing an embedded or linked PDF/media resource, **when** discovery finishes, **then** the resource is listed with its source and a way to select permitted capture.
+- **Given** a saved page containing an embedded or linked PDF, **when** discovery finishes, **then** the resource is listed with its source and a way to select permitted capture. A media reference can remain visible with an unsupported/deferred-processing limitation; the MVP does not claim media extraction or transcription.
 - **Given** a discovered resource I have not selected, **when** the parent page is saved, **then** discovery alone does not authorize fetching every linked resource or unrelated content.
 - **Given** a selected resource that is inaccessible, **when** capture is attempted, **then** the item remains listed with its limitation and a manual upload path; the parent does not imply that the missing child was fully indexed.
 
@@ -74,6 +90,8 @@ As a student, I want readable text from saved pages and documents to be searchab
 
 ### US-05 — Find text inside scans and images
 
+**Delivery:** Post-MVP. Retained roadmap feature; the criteria below apply when this capability is implemented and do not block MVP acceptance.
+
 **Persona/context:** P-01 / C and R. **Requirements:** FR-05; NFR-03, NFR-04. **Depends on:** authorized image/scan import.
 
 As a student, I want legible text in scans and images to be searchable while keeping the originals, so that photographed or scanned course material is useful alongside text files.
@@ -85,6 +103,8 @@ As a student, I want legible text in scans and images to be searchable while kee
 **Future evidence:** Permission-cleared scanned page and image, an unreadable example and inspection of source-to-text linkage. OCR quality is measured on these examples, not assumed from successful upload.
 
 ### US-06 — Retrieve evidence from accessible audio or video
+
+**Delivery:** Post-MVP. Retained roadmap feature; the criteria below apply when this capability is implemented and do not block MVP acceptance.
 
 **Persona/context:** P-01 / C and R. **Requirements:** FR-03, FR-05; NFR-02, NFR-03, NFR-04. **Depends on:** authorized accessible media capture/import.
 
@@ -98,15 +118,17 @@ As a student, I want accessible saved media to have searchable transcription whe
 
 ### US-07 — Inspect original equations and diagrams
 
+**Delivery:** MVP for original preservation/viewing and reliable native text/notation; advanced math/diagram recognition remains post-MVP.
+
 **Persona/context:** P-01 / C and R. **Requirements:** FR-04, FR-05; NFR-03, NFR-04. **Depends on:** saved material containing a formula or diagram.
 
 As a student, I want original equations and diagrams preserved beside reliable extracted text, so that text processing does not erase the meaning of technical course material.
 
 - **Given** an imported page containing equations or diagrams, **when** processing finishes, **then** the original visual/source remains available even if derived text is incomplete.
-- **Given** reliable text or notation can be extracted, **when** it is indexed, **then** a result links back to the corresponding saved original region or page where available.
+- **Given** reliable native text or literal notation is available from the source, **when** it is indexed in the MVP, **then** a result links back to the corresponding saved original region or page where available. Recognition or interpretation of non-text formulas/diagrams is deferred to post-MVP work.
 - **Given** uncertain notation or a diagram that cannot be represented as text, **when** I inspect the result, **then** the limitation is disclosed and a generated interpretation is not substituted for the original.
 
-**Future evidence:** Permission-cleared math source and diagram with original inspection and derived-text checks; record the exact portions successfully extracted and any limitation.
+**Future evidence:** MVP: inspect a preserved math/diagram original, native text where available and disclosed unrecognized regions. Post-MVP: validate advanced recognition against the original and record successfully extracted portions and limitations.
 
 ## E2 — Organize and correct
 
@@ -124,15 +146,15 @@ As a student, I want separate course libraries with folders/topics and tags, so 
 
 ### US-09 — Review uncertain filing suggestions
 
-**Persona/context:** P-01 / C. **Requirements:** FR-06; NFR-02, NFR-05. **Depends on:** US-08 and the hosted-use controls in US-24 when Jev is used.
+**Persona/context:** P-01 / C. **Requirements:** FR-06; NFR-02, NFR-05. **Depends on:** US-08; the post-MVP Jev extension also depends on the later hosted-use controls in US-24.
 
 As a student, I want to review uncertain course/folder suggestions, so that automatic organization does not hide incorrect filing.
 
-- **Given** classification is enabled and permitted, **when** an item is assessed, **then** the suggested course/folder and its review state are visible.
+- **Given** local classification is enabled, **when** an item is assessed, **then** the suggested course/folder and its review state are visible. Manual filing remains available; hosted Jev classification is a post-MVP extension.
 - **Given** a suggestion meets the configured and validated acceptance condition, **when** automatic filing is used, **then** the final destination is visible and remains correctable through US-10.
 - **Given** uncertainty or no permitted/available classifier, **when** I save the item, **then** I can confirm or choose its destination manually without requiring a hosted request.
 
-**Future evidence:** Controlled confident, uncertain and unavailable classifier outcomes; actual permitted Jev behavior is verified separately. No confidence threshold value is invented in this story.
+**Future evidence:** MVP: controlled confident, uncertain and unavailable local classifier outcomes plus manual filing/correction. Post-MVP: validate permitted hosted Jev behavior and its scoped authorization separately. No confidence threshold value is invented in this story.
 
 ### US-10 — Correct an item's metadata
 
@@ -263,9 +285,9 @@ As a student, I want lexical and semantic retrieval with course/topic and eviden
 - **Given** saved material in two courses, **when** I search within one course, **then** candidates remain in that requested scope, including when both courses use the same topic words.
 - **Given** a controlled saved corpus with an expected passage identified in advance for an exact-phrase query and a paraphrase query, **when** I search through the required lexical and semantic/vector retrieval paths, **then** the expected saved evidence appears in bounded results with source references and the requested course scope; verification records which path contributed.
 - **Given** indexed material with known course/topic, source, date and saved-version metadata, **when** I apply each required filter, **then** results contain only matching saved evidence. An explicit saved-version filter refers to retained versions; it does not introduce excluded historical-as-of querying.
-- **Given** optional Jev reranking is unavailable or not authorized, **when** I search, **then** the local keyword/metadata path remains usable and its mode is visible through US-25.
+- **Given** the MVP has no hosted Jev integration, **when** I search, **then** local lexical and semantic retrieval remain available as specified, with keyword/metadata fallback and disclosed capability status through US-25. Jev routing/reranking remains post-MVP work.
 
-**Future evidence:** Labeled exact/paraphrase queries, overlapping two-course fixtures, filter controls and Jev-disabled retrieval. Actual semantic integration is tested rather than inferred from keyword success.
+**Future evidence:** MVP: labeled exact/paraphrase queries, overlapping two-course fixtures, filter controls and local model/embedding-unavailable fallback. Actual semantic integration is tested rather than inferred from keyword success. Hosted Jev reranking has separate post-MVP acceptance.
 
 ### US-20 — Inspect compact search previews before fetching
 
@@ -319,16 +341,18 @@ As a student, I want clear processing outcomes and a recovery path, so that miss
 
 ### US-24 — Control hosted processing and keep captured text as data
 
-**Persona/context:** P-01 / C and R. **Requirements:** FR-06, FR-12; NFR-02. **Depends on:** optional Jev integration and saved material.
+**Delivery:** MVP for local-only processing and treating source instructions as untrusted data; hosted Jev permission/consent flows are retained for post-MVP implementation.
+
+**Persona/context:** P-01 / C and R. **Requirements:** FR-06, FR-12; NFR-02. **Depends on:** saved material; hosted authorization criteria apply only to the post-MVP Jev extension.
 
 As a student, I want control over which course excerpts leave my laptop, so that optional AI assistance follows my informed choices.
 
-- **Given** the default local setup without Jev opt-in, **when** I save, classify or search, **then** course content is not transmitted to hosted Jev and local/manual alternatives remain available.
-- **Given** a proposed hosted classification/reranking request, **when** I authorize it, **then** the destination and selected minimal title/metadata/excerpt scope are disclosed and the actual request stays within that authorized scope; complete original files and credentials are not implicitly included.
-- **Given** I decline, revoke or exceed the authorized scope, **when** further hosted processing would be needed, **then** that transmission is skipped or awaits the required permission while the local library remains usable.
+- **Given** the local-only MVP, **when** I save, classify or search, **then** course content is not transmitted to hosted Jev and local/manual paths remain available.
+- **Given** a proposed post-MVP hosted classification/reranking request, **when** I authorize it, **then** the destination and selected minimal title/metadata/excerpt scope are disclosed and the actual request stays within that authorized scope; complete original files and credentials are not implicitly included.
+- **Given** the post-MVP hosted extension is available and I decline, revoke or exceed the authorized scope, **when** further hosted processing would be needed, **then** that transmission is skipped or awaits the required permission while the local library remains usable.
 - **Given** saved content containing instructions to disclose secrets, run tools or change permissions, **when** it is processed or returned, **then** it remains labeled source data and does not itself authorize those actions or broaden access.
 
-**Future evidence:** Captured request inspection for denied/allowed/revoked consent, content-minimization cases and controlled adversarial source text. Do not send real course content to a hosted service merely to create this evidence.
+**Future evidence:** MVP: controlled adversarial source text and inspection that save/classify/search use local capabilities without a hosted request. Post-MVP: denied/allowed/revoked hosted permission and content-minimization cases. No hosted call or consent UI is required to accept the MVP.
 
 ### US-25 — Keep using the library when AI or the network is unavailable
 
@@ -336,11 +360,11 @@ As a student, I want control over which course excerpts leave my laptop, so that
 
 As a student, I want local browsing, manual filing and keyword/metadata search to keep working when optional AI fails, so that my saved material remains available without paid requests.
 
-- **Given** the saved library and no network or hosted Jev, **when** I browse or run keyword/metadata search, **then** stored content and source references remain available locally without a required cloud account, LMS API key or paid model call.
-- **Given** unavailable Jev or local summary/classification processing, **when** I save or organize a permitted item, **then** I can file it manually and see which AI enhancement is unavailable rather than losing access to the original.
+- **Given** the saved library and no network, **when** I browse or run keyword/metadata search, **then** stored content and source references remain available locally without a required cloud account, LMS API key or paid model call.
+- **Given** unavailable local summary/classification processing, **when** I save or organize a permitted item, **then** I can file it manually and see which AI enhancement is unavailable rather than losing access to the original.
 - **Given** the chosen local model is installed for later runtime verification, **when** the team performs its smoke test, **then** recorded hardware/model/version and observed behavior/latency support the feasibility claim; missing tests or failures are disclosed instead of fabricated performance numbers.
 
-**Future evidence:** Network/AI-disabled save-browse-search flow and local persistence check; actual local Ollama smoke test with its measured environment. Core fallback success does not establish that the AI enhancement itself works.
+**Future evidence:** Network/AI-disabled save-browse-search flow and local persistence check; actual local Ollama smoke test with its measured environment. Jev integration is not required for this MVP check. Core fallback success does not establish that the AI enhancement itself works.
 
 ## E7 — Ask and verify within the course
 
@@ -365,16 +389,16 @@ As a student, I want to ask a question in the selected course and receive an evi
 |---|---|---|
 | FR-01 | US-08, US-19, US-21 | Multi-course organization and scoped search/fetch. |
 | FR-02 | US-01, US-02 | Explicit three-LMS/ordinary-web save and external/local import. |
-| FR-03 | US-03, US-06, US-23 | Discovered resources, authorization and honest recovery. |
+| FR-03 | US-03, US-06, US-23 | MVP: native/PDF resources, authorization and honest recovery; media extraction in US-06 is post-MVP. |
 | FR-04 | US-01, US-02, US-03, US-07, US-12, US-13 | Originals, URLs, identities, dates and immutable saved versions. |
-| FR-05 | US-02, US-04, US-05, US-06, US-07, US-23 | Native text, OCR, media transcription and math/visual fidelity. |
-| FR-06 | US-09, US-10, US-24, US-25 | Permitted suggestions, review, correction and manual fallback. |
+| FR-05 | US-02, US-04, US-05, US-06, US-07, US-23 | MVP: native text, preserved originals and honest limits; post-MVP: OCR, advanced math/diagram recognition and media transcription. |
+| FR-06 | US-09, US-10, US-24, US-25 | MVP: local/manual suggestions, review and correction; hosted Jev suggestions/permission are post-MVP. |
 | FR-07 | US-11 | Incremental source-linked summaries and passage indexing. |
 | FR-08 | US-14, US-17, US-18 | Typed relationships and supporting change/conflict evidence. |
 | FR-09 | US-10, US-13, US-14, US-15 | Metadata separation, deterministic identity and preserved history. |
 | FR-10 | US-16, US-17 | Substantive sourced claims and grounded precedence. |
 | FR-11 | US-18, US-20 | Unresolved competing evidence without age-only alarms. |
-| FR-12 | US-19, US-24, US-25 | Hybrid/filter behavior, permitted reranking and local fallback. |
+| FR-12 | US-19, US-24, US-25 | MVP: local hybrid/filter behavior and fallback; hosted Jev routing/reranking is post-MVP. |
 | FR-13 | US-20, US-21, US-22 | Bounded previews followed by exact sourced fetch. |
 | FR-14 | US-22 | Actual local read-only Codex MCP integration. |
 | FR-15 | US-15, US-17, US-19 | Inspectable history and applicable saved-evidence defaults. |
@@ -385,11 +409,11 @@ As a student, I want to ask a question in the selected course and receive an evi
 | Requirement | Stories | Verification obligation |
 |---|---|---|
 | NFR-01 | US-08, US-22, US-25, US-26 | Laptop-local persistence and operation without required cloud hosting. |
-| NFR-02 | US-01, US-03, US-06, US-09, US-22, US-24, US-26 | Explicit capture/hosted authorization, no credential capture, untrusted-data and local access boundaries. |
+| NFR-02 | US-01, US-03, US-06, US-09, US-22, US-24, US-26 | MVP: explicit capture, no credentials/hosted transmission, untrusted-data and local access controls; media/hosted permission checks apply when those post-MVP features are implemented. |
 | NFR-03 | US-01, US-02, US-04–US-07, US-10–US-22, US-26 | Exact saved-source and version traceability; no invented freshness or precedence. |
 | NFR-04 | US-01–US-07, US-16, US-21, US-23, US-26 | Visible incomplete/failed/unsupported results and no fabricated extraction or unsupported answer. |
-| NFR-05 | US-09, US-19, US-25 | Jev-disabled manual organization and local retrieval. |
-| NFR-06 | All stories; especially US-13, US-17, US-21, US-22 | Repeatable examples for critical behavior; selected properties for pure transformations, version invariants and serialization/evidence-reference round trips. |
+| NFR-05 | US-09, US-19, US-25 | MVP: manual organization and local retrieval survive unavailable local AI; later hosted integration preserves that fallback. |
+| NFR-06 | All stories; especially US-13, US-17, US-21, US-22 | Repeatable evidence for the story's delivery phase; MVP acceptance excludes deferred criteria. Selected properties cover pure transformations, version invariants and serialization/evidence-reference round trips. |
 | NFR-07 | US-11, US-25, US-26 | Incremental processing, actual local-model measurements and no paid-call dependency for core access. |
 
 Future selected property tests retain the approved partial enforcement: realistic domain generators, shrinking and reproducible seeds for applicable round trips/invariants. Framework selection/configuration and executable tests belong in their later design/Construction stages; this artifact does not assert that such tests exist.
@@ -407,17 +431,19 @@ The important cross-story dependencies are capture/import before extraction; sav
 
 ## Future source/format evidence register
 
-| Capability | Minimum evidence retained from approved scope | Status at this stage |
+The register retains the full roadmap. Post-MVP rows are not current MVP acceptance requirements.
+
+| Capability | Minimum evidence and delivery phase | Status at this stage |
 |---|---|---|
 | Canvas save | Actual user-authorized saved page. | Specified; not run. |
 | Gradescope save | Actual user-authorized saved page. | Specified; not run. |
 | EdStem save | Actual user-authorized saved page. | Specified; not run. |
 | Ordinary web/paper/local import | Actual accessible webpage/PDF and local import. | Specified; not run. |
-| Embedded resources | Accessible resource plus inaccessible/unselected controls and recovery. | Specified; not run. |
+| Embedded resources | MVP: native/PDF resource plus inaccessible/unselected controls and recovery; advanced media extraction is post-MVP. | Specified; not run. |
 | Native extraction | Known HTML/PDF body text with source/page linkage. | Specified; not run. |
-| OCR/visual material | Scan/image plus original equations/diagrams and disclosed extraction limits. | Specified; not run. |
-| Audio/video | Accessible permitted media, searchable transcript/segment linkage and failure case. | Specified; not run. |
-| Hybrid retrieval | Labeled exact/paraphrase queries and course/filter isolation. | Specified; not run. |
+| OCR/visual material | MVP: preserve/view originals and disclose limits. Post-MVP: scan/image OCR and advanced math/diagram recognition. | Phased; not run. |
+| Audio/video | Post-MVP: permitted media extraction/transcription, source/segment linkage and failure case. | Retained for post-MVP; not run. |
+| Hybrid retrieval | MVP: local exact/paraphrase queries and course/filter isolation. Hosted Jev routing/reranking is post-MVP. | Specified; not run. |
 | Changes/conflicts | Explicit deadline supersession, later old-source recapture and unresolved competing evidence. | Specified; not run. |
 | Codex MCP | Actual local Codex CLI search-then-fetch and read-only inspection. | Specified; not run. |
 | Local Ask | Actual local-model answer with exact citations; insufficient/conflicting evidence, retrieval-only fallback and per-course navigation/in-flight controls. | Specified; not run. |
@@ -425,7 +451,7 @@ The important cross-story dependencies are capture/import before extraction; sav
 
 ## Review boundary
 
-This file and `personas.md` revise the earlier generated artifacts through the existing Step 2 corrective pass. The earlier separate planning/artifact approvals remain historical evidence. Xiaolong's new Ask + local MCP direction and instruction to continue authorize drafting the revisions, not the team's acceptance of unseen artifacts. Revised artifact review remains pending; neither this document nor its historical answer below clears that gate. Application code, runtime capability claims and Construction remain outside this pass.
+This file and `personas.md` revise the earlier generated artifacts through the existing Step 2 corrective pass. The earlier separate planning/artifact approvals remain historical evidence. The current scope amendments support the coordinated revision; approval of the revised artifact set remains pending. Revised artifact review remains pending; neither this document nor its historical answer below clears that gate. Application code, runtime capability claims and Construction remain outside this pass.
 
 ## Historical generated-artifact review — earlier 25-story version
 
@@ -456,7 +482,7 @@ Approval was recorded on 2026-11-20T03:04:34Z. Later design gates and Constructi
 
 ## Current corrective-artifact review — pending
 
-The draft now contains 26 stories and the synthetic Maya persona, with FR-16/local Ask added, US-17/18 authority conditions clarified and the technical-pilot boundary stated for US-22. The existing required source/format coverage remains unchanged; no media or Jev deferral is inferred. Historical approvals above do not approve this draft.
+The draft now contains 26 stories and the synthetic Maya persona, with FR-16/local Ask added, US-17/18 authority conditions clarified and the technical-pilot boundary stated for US-22. The feature catalog is retained with explicit delivery phases: Jev and advanced media processing are post-MVP, while local Ask/MCP and their native-text evidence foundation are the MVP. Deferral does not remove these roadmap features. Historical approvals above do not approve this draft.
 
 Review outcome to record after the team examines these concrete revisions: **Request Changes** with specific amendments, or **Approve the revised Inception artifacts** while retaining the stop before Construction. No response or approval is recorded here yet. The shared [Step 2 review package](../reviews/step2-review-package.md) consolidates feedback and the outstanding review boundary.
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | N/A to executable implementation in this stage | The partial-testing obligations remain explicit acceptance work for later stages; no framework configuration or runtime results are claimed. |
