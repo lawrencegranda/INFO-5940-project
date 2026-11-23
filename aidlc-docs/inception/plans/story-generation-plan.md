@@ -1,7 +1,9 @@
 # Course Copilot — User Stories Generation Plan
 
 **Stage:** Inception / User Stories / Part 1: Planning
-**Status:** Corrective revision on November 23, 2026. Earlier planning was approved on 2026-11-20T02:44:10Z and the earlier 25-story/persona artifacts separately on 2026-11-20T03:04:34Z. Those approvals remain historical; revised artifact acceptance is pending. The driver authorized continuing the Ask + local MCP revision approach, not approval of unseen revised artifacts.
+**Status:** Corrective revision on November 23, 2026. Earlier planning was approved on 2026-11-20T02:44:10Z and the earlier 25-story/persona artifacts separately on 2026-11-20T03:04:34Z. Those approvals remain historical. Lawrence's separate approval of the revised Inception artifacts is recorded below.
+**Current approval:** Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction.
+
 **Integration branch:** `candidate/course-copilot`
 **Stage branch:** `inception/02-user-stories`
 **Current corrective branch:** `inception/05-units-generation` / existing PR #8, as assigned in Issue #9. No additional branch or PR is created for this pass.
@@ -106,7 +108,7 @@ These are a planning illustration based on approved requirements, not generated 
 
 ## 7. Execution checklist
 
-The completed items below describe the historical November 20 pass. The separate November 23 corrective checklist in section 10 records the current work and pending revised artifact review.
+The completed items below describe the historical November 20 pass. The separate November 23 corrective checklist in section 10 records the corrective work and separately recorded revised-artifact approval.
 
 ### Part 1 — Planning
 
@@ -148,7 +150,7 @@ C) **Other.** Describe an alternative direction after the answer tag.
 
 [Answer]: A
 
-**Historical approval response (English translation):** A: Approve the plan and continue generation. The original raw response is preserved in the [audit](../../audit.md#user-stories--explicit-planning-approval-and-part-2-start). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
+**Historical approval response (English translation):** A: Approve the plan and continue generation. The original raw response is preserved in the [audit](../../audit.md#user-stories--explicit-planning-approval-and-part-2-start). This translation records the historical choice; it is not a new approval. The [current handoff](../../aidlc-state.md#current-checkpoint-and-handoff) records the separate corrective approval and the stop before Construction.
 
 Planning approval does not approve unseen generated stories, later design gates or Construction. The requested prototype remains a downstream deliverable following those gates.
 
@@ -170,9 +172,9 @@ Optional security and resiliency baseline extensions remain disabled according t
 
 ### Actual direction and limits
 
-The November 23 scope amendment includes local Ask and local MCP. The corrective approach generates and reconciles the amended artifacts on the existing branch for team review. Final model selection and approval of the revised artifacts remain pending.
+The November 23 scope amendment includes local Ask and local MCP. The corrective approach generates and reconciles the amended artifacts on the existing branch for team review. Final model selection remains a later validation task; Lawrence's approval of the revised artifacts is now recorded.
 
-The earlier bounded story-amendment question is withdrawn with no option selected. Current local Ask and phased-delivery amendments supersede that earlier proposal; revised artifact approval remains a separate pending gate.
+The earlier bounded story-amendment question is withdrawn with no option selected. Current local Ask and phased-delivery amendments supersede that earlier proposal; the revised-artifact gate is closed by Lawrence's separate PR #8 approval, not by that withdrawn question.
 
 ### Approach used for the corrective draft
 
@@ -191,7 +193,7 @@ The earlier bounded story-amendment question is withdrawn with no option selecte
 - [x] Update persona/context mapping and coverage to 26 stories, 16 functional requirements and seven non-functional requirements.
 - [x] Keep historical approvals separate from the current corrective artifact review.
 - [x] Complete cross-artifact consistency validation for the phased-delivery amendment with requirements, application design and unit maps.
-- [ ] Present the concrete revised artifact package for actual team review.
-- [ ] Record the actual revised artifact response before clearing the corrective hold or marking the pass complete.
+- [x] Present the concrete revised artifact package on PR #8 for review.
+- [x] Record Lawrence's explicit approval of the revised artifacts at 2026-11-23T22:37:29Z before completing the corrective artifact gate.
 
-The final review may request changes or approve the concrete revised Inception artifacts. There is no recorded team artifact response yet, and Construction remains outside this milestone.
+Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction. Proposed module leads and final implementation choices remain separate future decisions; this approval does not start Construction or claim runtime acceptance.

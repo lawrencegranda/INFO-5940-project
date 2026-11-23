@@ -1,9 +1,11 @@
 # Course Copilot — Execution Plan
 
-> **Current corrective draft - November 23, 2026:** The current MVP includes local Ask and read-only local MCP with their local evidence-library foundations. Jev and advanced media processing remain planned for post-MVP work. Historical approvals cover the earlier baseline; current revised artifact approval is pending. STOP before Construction.
+> **Corrective artifact approval recorded - November 23, 2026:** The current MVP includes local Ask and read-only local MCP with their local evidence-library foundations. Jev and advanced media processing remain planned for post-MVP work. Historical approvals cover the earlier baseline; Lawrence's separate approval of the revised Inception artifacts is recorded below. STOP before Construction.
 
 **Stage:** Inception / Workflow Planning
-**Status:** Historical approval recorded on 2026-11-20T03:18:17Z; current corrective revision pending team artifact approval.
+**Status:** Historical approval recorded on 2026-11-20T03:18:17Z; corrective revision approved by Lawrence on 2026-11-23T22:37:29Z.
+
+**Current approval:** Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction.
 **Historical baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`; 25 stories and P-01 approved on 2026-11-20T03:04:34Z.
 **Review:** [Draft PR #6](https://github.com/lawrencegranda/INFO-5940-project/pull/6).
 
@@ -47,17 +49,17 @@ The current MVP covers native HTML/text and machine-readable PDFs from Canvas, G
 
 ## 3. Stage selection and adaptive detail
 
-There are **14 stage slots**: seven Inception, six Construction, one Operations. **12 are selected for execution**, including the earlier completed stages through Workflow Planning, whose affected artifacts are now under corrective review. Reverse Engineering is skipped; Operations is a placeholder. Future Construction stages repeat as applicable to the units established later; selection is not current authorization.
+There are **14 stage slots**: seven Inception, six Construction, one Operations. **12 are selected for execution**, including the earlier completed stages through Workflow Planning, whose corrective Inception artifacts now have Lawrence's recorded approval. Reverse Engineering is skipped; Operations is a placeholder. Future Construction stages repeat as applicable to the units established later; selection is not current authorization.
 
 | Stage | Decision/status | Rationale and detail |
 |---|---|---|
 | Workspace Detection | COMPLETED | Greenfield workspace and rules verified. |
 | Reverse Engineering | SKIP | No existing application to analyze. |
-| Requirements Analysis | HISTORICAL COMPLETE; corrective draft pending review | Earlier 15 FRs/seven NFRs; current Ask revision adds FR-16 with existing NFR obligations retained. |
-| User Stories | HISTORICAL COMPLETE; corrective draft pending review | Earlier 25-story/P-01 approval retained; current concrete Maya/authority revision and US-26 require current artifact review. |
-| Workflow Planning | HISTORICAL COMPLETE; corrective draft pending review | Amended sequence/evidence includes local Ask and existing local MCP; current approval pending. |
-| Application Design | REVISED DRAFT; review pending | Substantial component/interface/orchestration and trust/data-boundary detail; no detailed algorithms yet. |
-| Units Generation | REVISED DRAFT; review pending | Substantial unit boundaries/dependencies, code organization and complete story ownership. |
+| Requirements Analysis | COMPLETE; corrective approval recorded | Earlier 15 FRs/seven NFRs; current Ask revision adds FR-16 with existing NFR obligations retained. |
+| User Stories | COMPLETE; corrective approval recorded | Earlier 25-story/P-01 approval retained; current concrete Maya/authority revision and US-26 are covered by Lawrence's separate approval. |
+| Workflow Planning | COMPLETE; corrective approval recorded | Amended sequence/evidence includes local Ask and existing local MCP; Lawrence's corrective approval recorded. |
+| Application Design | COMPLETE; corrective approval recorded | Substantial component/interface/orchestration and trust/data-boundary detail; no detailed algorithms yet. |
+| Units Generation | COMPLETE; corrective approval recorded | Substantial unit boundaries/dependencies, code organization and complete story ownership. |
 | Functional Design | EXECUTE later; DEFERRED | Per-unit identity/version/claim/precedence, extraction states and retrieval logic. |
 | NFR Requirements | EXECUTE later; DEFERRED | Performance, privacy, recovery and concrete tools/models/stack decisions informed by actual measurements. |
 | NFR Design | EXECUTE later; DEFERRED | Local concurrency, safe persistence, failure/permission boundaries and partial property testing. |
@@ -78,11 +80,11 @@ flowchart TD
     subgraph INCEPTION["INCEPTION"]
         WD["Workspace Detection: COMPLETED"]
         RE["Reverse Engineering: SKIP"]
-        RA["Requirements: historical complete / revision review"]
-        US["Stories: historical complete / revision review"]
-        WP["Workflow plan: revision review"]
-        AD["Application Design: revised draft review"]
-        UG["Units Generation: revised draft review"]
+        RA["Requirements: corrective approval recorded"]
+        US["Stories: corrective approval recorded"]
+        WP["Workflow plan: corrective approval recorded"]
+        AD["Application Design: corrective approval recorded"]
+        UG["Units Generation: corrective approval recorded"]
     end
     Stop(["STOP before Construction: Inception milestone"])
     Resume(["Later project selection and Construction authorization"])
@@ -126,7 +128,7 @@ flowchart TD
     linkStyle default stroke:#333,stroke-width:2px
 ```
 
-**Text alternative:** Workspace complete → Reverse Engineering skipped → historical Inception approvals retained → coordinated requirements/stories/workflow/design/unit revisions for Ask and review feedback → actual review and approval of the revised artifacts → **STOP before Construction for November 24**. After project selection and later authorization, each unit follows Functional Design → NFR Requirements → NFR Design → local Infrastructure Design → Code Generation → Build and Test, with each required review. Integrate units and demonstrate the local product; Operations remains a placeholder.
+**Text alternative:** Workspace complete → Reverse Engineering skipped → historical Inception approvals retained → coordinated requirements/stories/workflow/design/unit revisions for Ask and review feedback → Lawrence's recorded approval of the revised artifacts → **STOP before Construction for November 24**. After project selection and later authorization, each unit follows Functional Design → NFR Requirements → NFR Design → local Infrastructure Design → Code Generation → Build and Test, with each required review. Integrate units and demonstrate the local product; Operations remains a placeholder.
 
 ## 5. Remaining Inception deliverables and gates
 
@@ -135,7 +137,7 @@ flowchart TD
 | Application Design | `plans/application-design-plan.md`; `application-design/components.md`, `component-methods.md`, `services.md`, `component-dependency.md`, consolidated `application-design.md` (paths under `inception/`). | Resolve context-relevant design questions using existing decisions where sufficient; execute the agreed plan; obtain explicit artifact approval before Units Generation. |
 | Units Generation | `plans/unit-of-work-plan.md`; `application-design/unit-of-work.md`, `unit-of-work-dependency.md`, `unit-of-work-story-map.md`. Include greenfield code organization. | Separate plan and generated-artifact approvals; assign all 26 stories and NFR obligations; verify boundaries/dependencies; STOP at Inception after approval. |
 
-Driver remains `xiaolonglin1124-bit`. The same driver applies the coordinated revision on the existing PR #8 head; all four existing stage PRs remain unmerged, with revised approval still required before Ready/ordered integration. INFO5940-06 prohibits parallel Inception edits by **another teammate**. Preparation here follows completion and explicit approval of the prior gate, not an unapproved parallel gate. Before every stage fetch/status, list open PRs and check conversation, review and inline feedback. If another teammate has an active Inception PR, stop parallel documentation edits and reconcile through that workflow.
+Driver remains `xiaolonglin1124-bit`. The same driver applies the coordinated revision on the existing PR #8 head; all four existing stage PRs remain unmerged, with Lawrence's revised-artifact approval recorded; Ready/ordered integration remains a separate handoff action. INFO5940-06 prohibits parallel Inception edits by **another teammate**. Preparation here follows completion and explicit approval of the prior gate, not an unapproved parallel gate. Before every stage fetch/status, list open PRs and check conversation, review and inline feedback. If another teammate has an active Inception PR, stop parallel documentation edits and reconcile through that workflow.
 
 Integrate #5 first, then later stage PRs in order into `candidate/course-copilot`, preserving a single audit/state history; never hand-merge those files. If maintainers squash/rebase the prior PR, refresh the later branch from the integrated candidate through the single-writer workflow and reverify the audit prefix before merging it. Only the coherent selected Course Copilot documentation goes to `main` through the maintainer's ordered integration. This plan does not invent teammate acceptance of proposed module leads.
 
@@ -153,7 +155,7 @@ After approved contracts/unit boundaries, adapters and browsing UI may proceed i
 
 ## 7. Acceptance and evidence plan
 
-All rows below are **specified, not run**. The current story draft is the detailed acceptance source; historical approval does not approve its revisions.
+All rows below are **specified, not run**. The current story catalog is the detailed acceptance source; Lawrence's revised-artifact approval is separate from its historical approval and from future runtime acceptance.
 
 | Coverage | Stories | Required future evidence |
 |---|---|---|
@@ -208,9 +210,9 @@ C) **Other.** Describe the requested outcome after the answer tag.
 
 [Answer]: A
 
-**Historical approval response (English translation):** A: Approve the execution plan and proceed to Application Design. The original raw response is preserved in the [audit](../../audit.md#workflow-planning--explicit-execution-plan-approval). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
+**Historical approval response (English translation):** A: Approve the execution plan and proceed to Application Design. The original raw response is preserved in the [audit](../../audit.md#workflow-planning--explicit-execution-plan-approval). This translation records the historical choice; it is not a new approval. The [current handoff](../../aidlc-state.md#current-checkpoint-and-handoff) records the separate corrective approval and the stop before Construction.
 
-This historical approval completed the earlier Workflow Planning baseline. It does not approve this November 23 Ask/amendment draft; actual revised artifact review and approval remain pending. Construction authorization remains separate.
+This historical approval completed the earlier Workflow Planning baseline. It does not approve this November 23 Ask/amendment revision; that approval is separately recorded from Lawrence's PR #8 comment. Construction authorization remains separate.
 
 ## 11. Extension compliance
 
@@ -218,15 +220,15 @@ This historical approval completed the earlier Workflow Planning baseline. It do
 |---|---|---|
 | INFO5940-01 | Compliant | Follow Workflow Planning; record prior approval/current work in append-only audit/state. |
 | INFO5940-02 | Compliant | All remaining Inception artifacts listed; explicit stop; Construction only planned. |
-| INFO5940-03 | Current approval pending | Historical answers remain intact; revised artifacts require actual review/approval before the hold is released. |
+| INFO5940-03 | Corrective approval recorded | Historical answers remain intact; Lawrence's separate approval of the revised Inception artifacts is recorded with its source and timestamp. |
 | INFO5940-04 | Compliant | Local demo; named Ollama candidate; progressive read-only Codex MCP; Jev permission/fallback design retained post-MVP. |
 | INFO5940-05 | Compliant | Documentation only; no application code or credentials. |
-| INFO5940-06 | Existing branch and ordered dependency retained | Same driver on existing PR #8; current revised approval is pending before Ready/integration. No competing teammate workflow or manual audit/state merge. |
+| INFO5940-06 | Existing branch and ordered dependency retained | Same driver on existing PR #8; Lawrence's revised approval is recorded; Ready/integration remains a separate ordered handoff. No competing teammate workflow or manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Implementation deferred; obligations retained | Pure-transform/round-trip/version tests planned; no executable test result invented. |
 
-Runtime feasibility remains unverified. Earlier Workflow Planning review/publication/approval remain recorded historically. Current revisions require actual team artifact review and approval before the integration hold is released.
+Runtime feasibility remains unverified. Earlier Workflow Planning review/publication/approval remain recorded historically. Lawrence's explicit current approval completes the revised-artifact review gate; publication/Ready/integration actions remain separately tracked.
 
-## 12. Corrective-review amendment — pending team review
+## 12. Corrective-review amendment — approval recorded
 
 **Prepared:** November 23, 2026, America/New_York. Adapted from the preserved November 22 local draft during the authorized Step 2 preparation. This amendment records the proposed response to Iris's [model-probe feedback](https://github.com/lawrencegranda/INFO-5940-project/pull/6#discussion_r4660610515), [extraction checkpoint](https://github.com/lawrencegranda/INFO-5940-project/pull/6#discussion_r4660610523) and [stage-depth/timeline review](https://github.com/lawrencegranda/INFO-5940-project/pull/6#discussion_r4660610526). Her review is COMMENTED and explicitly non-blocking; it is not approval of this amendment. No model probe, extraction run or Construction stage is executed here.
 
@@ -276,6 +278,7 @@ These are proposed target windows, not accepted team commitments. The November 2
 
 - [x] Read all three PR #6 inline comments and the review summary.
 - [x] Prepare the model-probe, extraction-checkpoint and provisional schedule proposals without asserting runtime results.
-- [x] Preserve historical approvals and the current hold while applying the authorized Ask/source-authority revision across requirements, stories, design and units.
+- [x] Preserve historical approvals while applying the Ask/source-authority revision across requirements, stories, design and units; record Lawrence's separate corrective approval.
 - [ ] Agree concrete latency budgets, a live-LMS checkpoint date and team capacity during later planning. Retain model/embedding choices as open technical items and Jev/advanced media as explicitly phased post-MVP work; no future result is assumed.
-- [ ] Complete cross-artifact validation and record actual review/approval of the coordinated draft before releasing the hold or marking PRs Ready.
+- [x] Complete cross-artifact validation and record Lawrence's explicit PR #8 approval of the coordinated Inception artifacts.
+- [ ] Apply any required Ready transitions and the ordered integration handoff; Construction remains deferred.

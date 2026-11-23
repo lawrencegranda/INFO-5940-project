@@ -1,6 +1,8 @@
 # Course Copilot — Application Design Plan
 
-**Current review (2026-11-23):** Step 2 corrective draft with local Ask and local MCP in the MVP and retained Jev/media capabilities scheduled for later work. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
+**Current review (2026-11-23):** Step 2 corrective artifacts include local Ask and local MCP in the MVP and retain Jev/media capabilities for later work. The 2026-11-20 approval applies to the historical baseline; Lawrence's separate corrective approval is recorded below. No Construction or runtime acceptance is claimed.
+
+**Current approval:** Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction.
 
 **Delivery phases:** The current MVP includes native HTML/text/PDF capture and import, local organization and retrieval, source/version/authority handling, grounded Ask and read-only local MCP. Jev, scan/image OCR, advanced equation/diagram recognition, and audio/video extraction/transcription remain planned **post-MVP** features. Original preservation/viewing and honest extraction status remain in the MVP. C-08 and all hosted-permission/provider paths are retained design contracts but are not composed into the MVP. See the [MVP and later-work scope](../requirements/mvp-scope.md).
 
@@ -20,7 +22,7 @@ The original five-category assessment below records the Nov 20 engineering direc
 | Dependencies | SQLite/files store evidence; local model and hosted Jev have separate adapters. MCP depends exclusively on read-only query ports; mutations stay in the user-controlled library API. | None; trust boundaries follow approved requirements. |
 | Design patterns | Local single-user cost-conscious TypeScript stack, no hosting/accounts/graph DB. Use modular monolith, adapters, processing pipeline and separated write/query interfaces. | None; microservices or new cloud accounts would conflict with existing constraints. |
 
-The scope amendment includes local Ask and local MCP in the MVP and retains Jev/OCR/advanced-recognition/media features for post-MVP work. Approval of the revised interfaces remains pending. Final local model selection is a later validation task. Detailed algorithms and runtime tool/model choices await later design/measurement; design artifacts require their own explicit review.
+The scope amendment includes local Ask and local MCP in the MVP and retains Jev/OCR/advanced-recognition/media features for post-MVP work. Lawrence's separate approval covers the revised Inception interfaces; runtime verification remains future work. Final local model selection is a later validation task. Detailed algorithms and runtime tool/model choices await later design/measurement; those later detailed-design artifacts require their own explicit review.
 
 ## 2. Proposed component map and contracts
 
@@ -73,7 +75,7 @@ The consolidated artifact contains the generated-design review question with A a
 
 | Category | Current direction and reason | Decision status |
 |---|---|---|
-| Component identification | Add C-13 behind existing C-02/C-03 so ordinary students can use the Ask UI. Keep C-12 independently available for the technical pilot. | Ask + local MCP included in current MVP; detailed artifact review pending. |
+| Component identification | Add C-13 behind existing C-02/C-03 so ordinary students can use the Ask UI. Keep C-12 independently available for the technical pilot. | Ask + local MCP included in current MVP; Lawrence's corrective artifact approval recorded. |
 | Methods | Add AskRequest/AskResult, exact passage-grounded answer segments and per-course/request identity. Unknown citations fail safely. | Draft under the authorized Step 2 revision. |
 | Services | Add read-only S-05; local-only bounded search/fetch precedes C-07 generation. Unavailable model exposes retrieval-only mode; missing support exposes insufficient evidence. | Draft; no general agent, remote ChatGPT or write behavior introduced. |
 | Dependencies | C-13 receives C-11 query-only, C-05 scoped reads and C-07 local generation. All MVP C-11 query compositions exclude hosted Jev; C-08 dependencies remain post-MVP. | No writer/consent/index dependency is granted; verify during later Construction. |
@@ -84,5 +86,6 @@ The consolidated artifact contains the generated-design review question with A a
 - [x] Retain Jev/OCR/advanced-recognition/media capabilities with explicit post-MVP delivery; preserve native extraction/original viewing and local Ask/MCP as MVP acceptance.
 - [x] Preserve component/service IDs and future hosted/media contracts while excluding deferred capabilities from MVP runtime composition. Final local model selection remains later validation.
 - [x] Complete coordinated cross-artifact validation with the parent Step 2 review package.
-- [ ] Receive actual team approval of the concrete revised artifact package; do not substitute the historical A answer.
-- [ ] Close the corrective gate/Ready status only after that approval; continue to stop before Construction.
+- [x] Record Lawrence's explicit PR #8 approval of the concrete revised artifact package at 2026-11-23T22:37:29Z; do not substitute the historical A answer.
+- [x] Close the corrective Application Design artifact gate on the recorded approval; continue to stop before Construction.
+- [ ] Apply any required PR Ready transitions during the ordered integration handoff.

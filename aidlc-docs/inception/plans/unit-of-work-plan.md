@@ -1,16 +1,18 @@
 # Course Copilot — Unit of Work Plan
 
-> **Current corrective draft - November 23, 2026:** The current MVP includes local Ask and read-only local MCP with their local evidence-library foundations. Jev and advanced media processing remain planned for post-MVP work. Historical approvals cover the earlier baseline; current revised artifact approval is pending. STOP before Construction.
+> **Corrective artifact approval recorded - November 23, 2026:** The current MVP includes local Ask and read-only local MCP with their local evidence-library foundations. Jev and advanced media processing remain planned for post-MVP work. Historical approvals cover the earlier baseline; Lawrence's separate corrective approval is recorded below. STOP before Construction.
 
 **Stage:** Inception / Units Generation / Part 2: Generation
 
-**Status:** Corrective unit plan and three revised artifacts generated; current team artifact approval pending. Historical plan/artifact approvals dated November 20 remain recorded for the earlier baseline. STOP before Construction.
+**Status:** Corrective unit plan and three revised artifacts approved by Lawrence on 2026-11-23T22:37:29Z. Historical plan/artifact approvals dated November 20 remain recorded for the earlier baseline. STOP before Construction.
 
 **Historical baseline:** Requirements, 25 stories/P-01, Workflow Planning and five Application Design artifacts were approved in the earlier pass. The current coordinated draft adds FR-16/US-26 and C-13/S-05 for local Ask, concrete Maya context and source-authority criteria; it does not inherit those historical artifact approvals.
 
+**Current approval:** Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction.
+
 **Review:** [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8).
 
-**Branch:** `inception/05-units-generation`, based on approved design head `3acbe935f98d35512d07a4cffbf0bb21db0ea914`. Integrate #5 → #6 → #7 → this stage into `candidate/course-copilot`; one driver, xiaolonglin1124-bit. All stage PRs remain unmerged. Ready status and integration must wait for actual revised review/approval.
+**Branch:** `inception/05-units-generation`, based on approved design head `3acbe935f98d35512d07a4cffbf0bb21db0ea914`. Integrate #5 → #6 → #7 → this stage into `candidate/course-copilot`; one driver, xiaolonglin1124-bit. All stage PRs remain unmerged. Lawrence's revised-artifact approval is recorded; Ready status and ordered integration remain separate handoff actions.
 
 **Delivery phases:** The [MVP scope and deferred-feature catalog](../requirements/mvp-scope.md) distinguishes current acceptance from retained post-MVP work. All 26 story IDs, 16 FRs, seven NFRs, 13 component IDs, five services and U-01/nine modules remain in the planning catalog. A retained future contract is not a current-MVP dependency or acceptance blocker.
 
@@ -24,7 +26,7 @@ All US-01–US-26, FR-01–FR-16 and NFR-01–NFR-07 remain in U-01's catalog, w
 
 ## 2. Six decomposition categories - current corrective assessment
 
-The table evaluates the six required decomposition categories for the current corrective draft, including Ask and proposed leads. It is an assessment, not a transcript of historical questions or new team answers. Historical Q1 remains unchanged in section 8. The November 23 instruction authorizes this coordinated revision within the same U-01/nine-module boundary; it does not approve the revised artifacts. No teammate assignment or response is invented.
+The table evaluates the six required decomposition categories for the current corrective draft, including Ask and proposed leads. It is an assessment, not a transcript of historical questions or new team answers. Historical Q1 remains unchanged in section 8. The November 23 instruction authorizes this coordinated revision within the same U-01/nine-module boundary; it is distinct from Lawrence's later explicit approval of the revised artifacts. No teammate assignment or response is invented.
 
 | Category | Current review topic | Current proposal and evidence |
 |---|---|---|
@@ -100,8 +102,9 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 - [x] Add C-13/S-05, US-26/FR-16 and proposed leads with acceptance pending across the three unit artifacts.
 - [x] Retain the full catalog, phase OCR/advanced media/Jev for post-MVP, and preserve MVP source-authority controls and actual future Codex integration.
 - [x] Complete coordinated delivery-phase consistency validation with requirements, stories, design and unit maps.
-- [ ] Obtain the team's review of the concrete published revision.
-- [ ] Obtain actual team approval of the revised artifacts before clearing the hold or marking PRs Ready.
+- [x] Obtain Lawrence's review of the concrete published revision on PR #8.
+- [x] Record Lawrence's explicit approval of the revised Inception artifacts through Units Generation at 2026-11-23T22:37:29Z.
+- [ ] Apply any required Ready transitions during the ordered integration handoff.
 - [x] STOP before Construction; no application implementation is performed.
 
 ## 7. Extension compliance and milestone boundary
@@ -109,11 +112,11 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 | Rule | Historical result and current corrective boundary |
 |---|---|
 | INFO5940-01 | Follow Units Parts 1–2; explicit plan approval, artifact generation/review and gates tracked in audit/state. |
-| INFO5940-02 | All three mandatory unit artifacts plus greenfield strategy are revised; current approval pending. STOP before Construction. Generic stage text about continuing to Construction is overridden by the mandatory course checkpoint. |
-| INFO5940-03 | Historical Q1 remains recorded; it does not approve the current Ask revision. Actual revised artifact approval is still pending. |
+| INFO5940-02 | All three mandatory unit artifacts plus greenfield strategy are revised; Lawrence's corrective approval recorded. STOP before Construction. Generic stage text about continuing to Construction is overridden by the mandatory course checkpoint. |
+| INFO5940-03 | Historical Q1 remains recorded; it does not approve the current Ask revision. Lawrence's separate actual revised-artifact approval is recorded with its source and timestamp. |
 | INFO5940-04 | One local demo bundle, concrete local Ollama candidate and progressive read-only Codex MCP; Jev permission design retained for post-MVP integration. |
 | INFO5940-05 | Planning documentation only; no application code, credentials or secrets. |
-| INFO5940-06 | Same driver and ordered prior-stage dependency; corrective review pending before Ready/integration, no parallel teammate workflow or manual audit/state merge. |
+| INFO5940-06 | Same driver and ordered prior-stage dependency; corrective approval recorded, with Ready/integration separately tracked, no parallel teammate workflow or manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Carry pure-transform/round-trip/version obligations into unit evidence; implementation and runtime results deferred. |
 
 ## 8. Historical decomposition-plan approval
@@ -128,6 +131,6 @@ C) **Other.** Describe an alternative proposal after the answer tag.
 
 [Answer]: A
 
-**Historical approval response (English translation):** A: Approve the units plan and proceed with generation. The original raw response is preserved in the [audit](../../audit.md#units-generation--explicit-plan-approval-and-part-2-start). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
+**Historical approval response (English translation):** A: Approve the units plan and proceed with generation. The original raw response is preserved in the [audit](../../audit.md#units-generation--explicit-plan-approval-and-part-2-start). This translation records the historical choice; it is not a new approval. The [current handoff](../../aidlc-state.md#current-checkpoint-and-handoff) records the separate corrective approval and the stop before Construction.
 
-This answer approved the historical six-category proposal. Its historical artifact approval remains recorded in unit-of-work.md and the audit; neither answer approves the November 23 revised unit artifacts. Current team artifact approval remains pending. The milestone stop before Construction remains in force.
+This answer approved the historical six-category proposal. Its historical artifact approval remains recorded in unit-of-work.md and the audit; neither answer approves the November 23 revised unit artifacts. Lawrence's separate current approval is recorded above; no other teammate approval or personal ownership acceptance is inferred. The milestone stop before Construction remains in force.

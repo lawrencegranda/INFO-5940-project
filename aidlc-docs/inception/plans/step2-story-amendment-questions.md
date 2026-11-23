@@ -12,4 +12,4 @@ The current scope includes focused local course Ask and read-only local MCP. The
 
 The [decision register](../requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) separately records the scope amendment that supersedes the historical no-chat boundary. Remote ChatGPT/hosted MCP and autonomous actions remain excluded.
 
-Generated-artifact review remains pending in the [team review prompt](../reviews/step2-approval.md). The withdrawn question does not select an answer to that prompt or authorize Ready transitions, merging or Construction.
+Generated-artifact approval is separately recorded from Lawrence's [PR #8 comment](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z, as tracked in the [artifact review record](../reviews/step2-approval.md). This withdrawn question remains unanswered and is not the source of that approval. Ready transitions and merging are separate handoff actions; STOP before Construction.
