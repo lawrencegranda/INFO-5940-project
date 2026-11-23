@@ -3,7 +3,7 @@
 **Course:** Cornell INFO 5940, Fall 2026 — Group 17  
 **Method:** AWS AI-DLC v1.0.1. Historical input approval for the `candidate/course-copilot` Inception track: 2026-11-19T19:26:39Z. Runtime model and integration benchmarks remain unverified; proposed evaluation timing is distinguished below.
 
-**Current corrective-review draft:** November 23 on existing PR #8. Xiaolong reports the team's Ask + local MCP decision and authorized the coordinated revisions; final revised artifact approval remains pending. The six MCP tools/course scope reconcile existing contracts; focused local Ask is the separate FR-16/US-26 amendment. Safi's [three technical-review comments](https://github.com/lawrencegranda/INFO-5940-project/pull/7#discussion_r4669544807) supply named technical baselines and example feedback. Following Iris's review, a manual model probe is proposed during authorized early Construction as input to NFR Requirements; real-pipeline checks follow later. This pass runs no model or integration benchmark.
+**Current corrective-review draft:** November 23 on existing PR #8. The MVP includes local Ask and local MCP; Jev and advanced media capabilities are retained for later iterations. Revised artifact approval remains pending. The six MCP tools/course scope reconcile existing contracts; focused local Ask is the separate FR-16/US-26 amendment. Safi's [three technical-review comments](https://github.com/lawrencegranda/INFO-5940-project/pull/7#discussion_r4669544807) supply named technical baselines and example feedback. Following Iris's review, a manual model probe is proposed during authorized early Construction as input to NFR Requirements; real-pipeline checks follow later. This pass runs no model or integration benchmark.
 
 ## Language, framework, package management
 
@@ -17,32 +17,32 @@
 | Persistent storage | SQLite + FTS5, local immutable file/snapshot directory; semantic index for required hybrid acceptance, with keyword fallback |
 | Native PDF/HTML extraction | pdf.js 4.8.x and linkedom 0.18.x, matching the existing manifest as a compatibility starting point |
 | Local LLM | Ollama with `gemma3:4b` as an initial candidate (performance unverified) |
-| Optional structured classifier | Jev, enabled only with informed consent for hosted requests |
+| Deferred structured classifier | Jev retained for post-MVP classification/routing/reranking with explicit minimal-payload permission; not connected in the current MVP |
 | Tests | Vitest 5.x, fast-check 3.x for the inherited partial PBT scope, and supertest 7.x for local API fixtures; later manual Chrome/Codex smoke tests |
 
-These ranges are Safi's proposed technical direction, checked against the separately developed prototype's declared dependencies, not claims about latest releases, verified compatibility or whole-team adoption. Exact versions/lockfile, a Node 22 patch supporting the selected native SQLite API, SQLite/FTS5 capabilities, Ollama runtime/model tags and extraction adapters remain to be recorded and validated through the appropriate reviews. Safi supports comparing the Gemma baseline against Qwen and DeepSeek candidates before choosing; no comparison result or final model choice is inferred. His proposal to defer Jev requires a coordinated scope decision because it still appears in approved requirements and design.
+These ranges are Safi's proposed technical direction, checked against the separately developed prototype's declared dependencies, not claims about latest releases, verified compatibility or whole-team adoption. Exact versions/lockfile, a Node 22 patch supporting the selected native SQLite API, SQLite/FTS5 capabilities, Ollama runtime/model tags and extraction adapters remain to be recorded and validated through the appropriate reviews. Safi supports comparing the Gemma baseline against Qwen and DeepSeek candidates before choosing; no comparison result or final model choice is inferred. The current [delivery allocation](../aidlc-docs/inception/requirements/mvp-scope.md) retains Jev and advanced media design for later delivery and removes those paths from current MVP acceptance.
 
 The MVP uses typed links between course, topic, source, document, version, passage, and fact records; a dedicated graph database is not necessary.
 
-**Jev definition:** Jev is TypeSafe AI's typed-decision model/API, used here as an optional hosted classifier or candidate reranker, distinct from the local text-generating Ollama model. The provider's [playground](https://github.com/TypeSafeAI/typesafe-playground) and [reranker example](https://github.com/TypeSafeAI/typesafe-playground/blob/main/docs/reranker.md) show server-side API-key use and closed-set relevance decisions (checked November 23). A valid response/score is not proof of correctness, source authority or permission. Lawrence/Safi propose deferring this integration; no final deferral or current price is inferred from that proposal.
+**Jev definition:** Jev is TypeSafe AI's typed-decision model/API, retained as a later hosted classifier or candidate reranker, distinct from the local text-generating Ollama model. The provider's [playground](https://github.com/TypeSafeAI/typesafe-playground) and [reranker example](https://github.com/TypeSafeAI/typesafe-playground/blob/main/docs/reranker.md) show server-side API-key use and closed-set relevance decisions (checked November 23). A valid response/score is not proof of correctness, source authority or permission. This integration is deferred beyond the current MVP. Its design/privacy requirements remain in the backlog; no current price or implementation result is asserted.
 
 ## Deployment / cloud provider
 
-**No cloud provider is required.** Run the extension, local API, SQLite storage, Ollama, and a read-only MCP server on the team's laptop. **Codex CLI** is the initial target MCP host. Hosted Jev calls are optional, specifically authorized and minimized; the application must remain useful without them. Cloud deployment, hosted MCP and sharing are deferred.
+**No cloud provider is required.** Run the extension, local API, SQLite storage, Ollama, and a read-only MCP server on the team's laptop. **Codex CLI** is the initial target MCP host. No Jev calls or hosted-permission setup are required in the current MVP. When the deferred integration is implemented, requests must be specifically authorized and minimized. Cloud deployment, hosted MCP and sharing are deferred.
 
 The main library/Ask user uses the local UI without a terminal. The technical pilot still verifies an actual Codex CLI MCP connection. Local Ask uses the local model; the external Codex model/provider is configured separately and may process retrieved passages outside the laptop. Remote ChatGPT MCP integration/tunnels are not part of this amendment.
 
 ## Data, capture and processing
 
-A student explicitly selects **Save** on a page already accessible in Chrome, or imports a file. Do not automate login or capture secrets. Save the original accessible source, source URL, capture timestamp, content hash, discovered embedded-file references, and processing status. For embedded resources, attempt permitted capture; if inaccessible, report the limitation and support manual upload.
+A student explicitly selects **Save** on a page already accessible in Chrome, or imports a file. Do not automate login or capture secrets. Save the original accessible source, source URL, capture timestamp, content hash, discovered embedded-file references, and processing status. For linked/embedded native-text PDFs, attempt permitted capture; disclose inaccessible items and manual import. Media-specific acquisition/processing is retained for later work.
 
-Perform native text extraction for HTML/PDF first, then OCR for images/scanned pages and transcription for accessible audio/video **when needed** to make media searchable. Store extracted text with page/segment provenance. Never falsely declare incomplete extraction to be complete. A user can edit course, folder, title, tags and source authority metadata.
+The current MVP extracts available native HTML/PDF text with page/passage provenance, preserves supported originals and discloses non-text gaps. Scan/image OCR, advanced math/diagram recognition and audio/video transcription are deferred adapters; storing an original does not mean those capabilities have run. A user can edit course, folder, title, tags and source-authority metadata. Never label incomplete or deferred extraction as complete.
 
 Version identity is based on explicit source identity and content hashes; changing content creates a new immutable saved version. AI similarity may suggest relationships but cannot silently merge originals. Store source-linked facts and relations such as `related`, `updates`, and `supersedes`. Retrieve the latest applicable **saved** evidence by default, while exposing previous versions and substantive conflicts. For most static documents show URL and capture date without generalized freshness warnings; do not imply external sources have been checked since capture.
 
 ## Retrieval and MCP
 
-Local indexed retrieval combines exact/full-text queries, semantic embeddings, course/topic filters, and version/authority rules. FR-12 requires both lexical and semantic acceptance; temporary embedding unavailability must not block deterministic keyword/metadata fallback, but keyword success alone does not satisfy semantic acceptance. Jev may optionally classify, route or rerank bounded candidate sets. Fail closed on unsupported evidence and preserve the local fallback when Jev or Ollama is unavailable.
+Local indexed retrieval combines exact/full-text queries, semantic embeddings, course/topic filters, and version/authority rules. FR-12 requires both lexical and semantic acceptance; temporary embedding unavailability must not block deterministic keyword/metadata fallback, but keyword success alone does not satisfy semantic acceptance. Local retrieval operates independently of Jev; hosted classification/routing/reranking is retained for a later iteration. Fail closed on unsupported evidence and preserve native-text/metadata access when the local model or embeddings are unavailable.
 
 The six tools established in [Application Design](../aidlc-docs/inception/application-design/component-methods.md) are:
 
@@ -59,7 +59,7 @@ MCP cannot mutate or delete course materials. Ingestion and metadata correction 
 
 ## Local course Ask
 
-FR-16/US-26 add C-13 Course Ask Orchestrator and S-05 Local Course Ask. The controlled C-02/C-03 UI request carries course/request identity and composes C-11/C-05 query/read capabilities with C-07 local generation. It does not add an MCP tool or gain ingestion, metadata, consent or index-write dependencies. Ask uses a local-only retrieval composition; optional hosted Jev query routing is not invoked by this path.
+FR-16/US-26 add C-13 Course Ask Orchestrator and S-05 Local Course Ask. The controlled C-02/C-03 UI request carries course/request identity and composes C-11/C-05 query/read capabilities with C-07 local generation. It does not add an MCP tool or gain ingestion, metadata, consent or index-write dependencies. Ask uses a local-only retrieval composition. Deferred Jev routing is not part of either MVP Ask or MVP MCP query composition.
 
 Use bounded search previews then fetch selected exact passages before generating. Validate answer citation IDs against that request's retrieved course/source/document/version/extraction/passage set. Insufficient evidence stays explicit; substantive conflicts show competing evidence and the source-authority limitation. A student note or unknown publisher cannot become an instructor update through recency or model confidence. Invalid model output is rejected, and a missing model offers clearly labeled retrieval-only evidence.
 
@@ -67,7 +67,7 @@ Keep draft, pending request identity, answer/evidence and errors per course duri
 
 ## Testing and evaluation
 
-Use fixed, permission-cleared sample pages and documents. Automated tests should cover document identity, immutable versions, source citations, precedence/supersession rules, conflict flagging, course isolation, full-text fallback, input validation, and read-only MCP. Partial property-based tests may cover pure version/serialization invariants. Demo scenarios include deadline changes between a syllabus and later announcement, concept retrieval from course documents, and handling of inaccessible embeds. Perform an actual Codex MCP connection test and local LLM benchmark during Construction.
+Use fixed, permission-cleared sample pages and documents. Automated tests should cover document identity, immutable versions, source citations, precedence/supersession rules, conflict flagging, course isolation, full-text fallback, input validation, and read-only MCP. Partial property-based tests may cover pure version/serialization invariants. Demo scenarios include deadline changes between a syllabus and later announcement, concept retrieval from course documents, and handling of inaccessible embeds. Perform an actual Codex MCP connection test and local LLM benchmark during authorized Construction. Current MVP checks cover native-text/PDF inputs, local filing/retrieval/Ask and source/failure boundaries. Jev provider tests, OCR/advanced-recognition quality and media transcription/segment tests remain later acceptance work, not MVP gates.
 
 ## Prohibited libraries / patterns
 
@@ -81,7 +81,7 @@ Use fixed, permission-cleared sample pages and documents. Automated tests should
 
 ## Security basics
 
-Use minimal extension permissions and explicit saving, loopback binding for the local server, origin/request checks, bounded file sizes, safe parsing, and prompt-injection resistance when extracting untrusted course pages. Never store LMS tokens or passwords; never commit secrets. Restrict any hosted Jev request to user-approved minimal metadata or excerpts; keep original files and full-document model processing local by default. Handle student records and copyrighted materials conservatively.
+Use minimal extension permissions and explicit saving, loopback binding for the local server, origin/request checks, bounded file sizes, safe parsing, and prompt-injection resistance when extracting untrusted course pages. Never store LMS tokens or passwords; never commit secrets. The current MVP makes no Jev requests. Retain the minimal-payload explicit-permission requirement for that later integration; originals and full-document model processing stay local by default. Handle student records and copyrighted materials conservatively.
 
 ## Typical local endpoint (illustrative)
 
