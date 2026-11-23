@@ -438,3 +438,100 @@ A：批准单元文档，完成 Inception
 **User Input**: No new user input; closure under the final approval above.
 **AI Response**: Independent final status review confirmed both Units Q1 answers are A, zero unchecked unit-plan steps, every Inception stage complete, every Construction stage deferred and the exact final approval preserved. Reconciled stale approval-status headers in the four Application Design companion documents and its plan using the already-recorded 2026-11-20T03:43:36Z approval; no contracts or scope changed. Replaced final-stage Draft link labels with PR labels for ready-for-integration handoff. The canonical state/README explicitly distinguish completed documentation from unimplemented prototype, pending ordered upstream integration and unclaimed team selection/submission.
 **Context**: These are status-only consistency updates through the same single-writer workflow, not new product decisions or fabricated approvals. The workflow stops before Construction; no further approval question is opened.
+
+
+---
+
+## Corrective Review — Step 2 Preparation Authorized
+**Timestamp**: 2026-11-23T14:01:33Z
+**Stage**: INCEPTION corrective review; preparation only, no revised gate completion.
+**User Input (faithful English translation, not verbatim English)**: "Yes, let's start preparing this. I remember there was a prompt for me, right?"
+**AI Response**: Resumed Issue #9 Step 2 on the existing inception/05-units-generation branch at a4b52f82f32c9524c76f1538d974e5413f21f733. Fetched both remotes, checked status and all open PRs, and read conversation, review and inline feedback through GitHub connector equivalents because gh is unavailable locally. Only the same driver's four open Inception PRs were found; #5–#7 are Draft, #8 is non-Draft with an on-hold body, and none is merged. Preserved the older uncommitted review worktree and separate prototypes; created a working directory for the existing branch, not a new branch or PR.
+**Context**: This instruction authorizes available preparatory work. It does not supply missing team decisions, technical-member review, owner acceptance, meeting attendance, revised plan/artifact approval, push/ready/merge authorization or Construction authorization.
+
+## Corrective Review — Actual Published Feedback Intake
+**Timestamp**: 2026-11-23T14:01:33Z
+**User Input**: No additional user reply; factual intake under the preparation instruction above.
+**AI Response**: Recorded every published request in inception/reviews/step2-review-package.md with source, author, affected artifacts and disposition. Chloe's PR #5 comment addresses a concrete synthetic persona, CLI suitability, instructor/student authority and format priorities. Iris's three PR #6 inline comments and COMMENTED summary address the model probe, extraction checkpoints and design depth/calendar. Lawrence's three PR #8 comments and review summaries address proposed module leads, Jev/local filing and five Open questions. Issue #9 adds the paired function/test and capture response request, reading all comment channels, the proposed timeline, Iris's reported local README work and Chloe's README scope follow-up. PR #7 still has zero comments/reviews.
+**Additional Actual User Feedback**: Xiaolong's published Issue #9 comment https://github.com/lawrencegranda/INFO-5940-project/issues/9#issuecomment-7091526471 says no specific README changes at present and reports four prototype issues: collection effort, Ask input loss on navigation, unclear sorting and a missing ordinary deadline in the synthetic HCI example. These remain distinct from approved milestone scope; no bug fix is claimed.
+**Context**: PR comments are real review inputs, not automatic acceptance or a team vote. No published final decisions on model, Jev, Ask/remote MCP, CLI audience, format reduction, filing proposals, named leads or actual meeting evidence were found in the checked threads. Their absence from those threads is not a claim about unobserved off-platform conversations.
+
+## Corrective Review — Concrete Preparation and Contract Reconciliation
+**Timestamp**: 2026-11-23T14:01:33Z
+**User Input**: No additional user reply; preparing reviewable changes without advancing a gate.
+**AI Response**: Added the preparation checklist and source-linked review package. Reconciled the technical input with the already-approved six MCP tools, mandatory course scope and required hybrid acceptance versus keyword fallback. Added five attributed Open questions to the vision. Added Iris's pending-review execution-plan amendment with separate proposed model/evaluation, extraction/live-LMS checkpoints and provisional dates. Prepared proposed named stack versions, a paired illustrative deadline function/test and a capture response that separates original capture from queued extraction. Prepared exact synthetic Maya and US-17/18 authority additions in the review package; canonical persona/stories and all FR/NFR IDs remain unchanged pending the revised approach review.
+**Context**: Proposed frameworks/models/latency targets, illustrative provenance fields and example wire encoding are not final technical decisions or implemented contracts. No model benchmark, live extraction, LMS or Codex integration was run here. Document examples are not application code generation. The older local Q1–Q3 responses remain unanswered and preserved; their answers are not inferred from current feedback. No revised gate, publication, ready transition, merge, course submission or whole-team selection is claimed.
+
+## Corrective Review — Retrospective Web-Commit Reconciliation
+**Timestamp**: 2026-11-23T14:01:33Z
+**User Input**: No additional user reply; addressing the actual commit-note request in Issue #9.
+**AI Response**: Inspected the four exact historical Git diffs and commit metadata. a7cf0c3 updated the Application Design plan to artifacts-generated/approval-pending and checked generation/validation/presentation tasks, leaving approval unchecked. 0f82712 changed state from Workflow Planning handoff to Application Design artifacts generated/approval-pending, branch/PR #7 and the next review action. 1c064e3 removed only one trailing blank line from component-dependency.md; it did not change a contract or plan/state. 489de94 marked the Application Design plan complete and its final task checked against the already-recorded 2026-11-20T03:43:36Z explicit approval.
+**Context**: This note is written now, not backdated. The diffs support these file changes; they do not establish author intent, missing contemporaneous discussions or new approvals. The generic Issue #9 description of all four as plan/state edits is narrower than the actual blank-line-only diff for 1c064e3. The historical audit prefix remains unchanged.
+
+
+## Corrective Review — Preparation Validation and Remaining Handoff
+**Timestamp**: 2026-11-23T14:04:49Z
+**User Input**: No additional user reply; verification of the authorized preparation.
+**AI Response**: Checked all seven changed/new Markdown files for balanced fences, existing relative-link targets and final newlines. Git diff --check passed. Verified that the entire 45,685-byte HEAD audit prefix is unchanged and that canonical requirements, all 25 story IDs, persona, design and unit/story map are unchanged. No application, Construction, README or rule-file changes were made. Both illustrative HTTP bodies parse as JSON. Extracted the exact current two TypeScript Markdown blocks into an isolated temporary fixture outside this repository: strict TypeScript checking passed and Vitest 5.1.1 reported one test passed. That example checks the supported instructor date/version and preserved sources plus the student non-override; it is not an application or pipeline test.
+**Independent Review**: An AI reviewer inspected the tracked diff and both new documents, confirmed source/approval/scope boundaries and the original audit prefix, and found no blocking misleading factual claim. The reviewer requested distinct document/version IDs for the student reply in the illustrative test; those IDs and a conflicting November 24 value were added and the isolated typecheck/example test passed again. AI review is not teammate participation or gate approval. An initial generic whitespace check only flagged pre-existing intentional Markdown two-space hard breaks; the corrected Markdown-aware check passed without changing those breaks.
+**Context**: The available preparation checklist is complete. Safi's PR #7 input and actual team decisions/meeting evidence remain pending, followed by explicit revised approach/artifact review in sequence. No model/extraction/LMS/Codex benchmark or application validation was run, no integration hold was released and no commit, push, PR status change, merge or submission was performed.
+
+
+## Corrective Review — Safi Technical Input Received
+**Timestamp**: 2026-11-23T17:43:34Z
+**User Input (faithful English translation, not verbatim English)**: "Safi says his review comments are ready. Please take a look."
+**AI Response**: Re-read PR #7 conversation, inline comments and review submissions, plus Issue #9 and current PR metadata. Safi has now posted three actual technical comments: versions/tools (discussion_r4669544807), endpoint/test example (discussion_r4669553328), and model/local scope/wording (discussion_r4669558415). Updated the existing Step 2 checklist, state and review package to mark his input received, replacing the earlier current missing-input status while preserving the historical audit. Added his proposed Zod/pdf.js/linkedom/supertest baselines, corrected the illustrative default port to 4310 and recorded his model comparison and Jev/ChatGPT positions without inferring whole-team approval.
+**Technical Evaluation**: Independently re-ran Safi's exact two example tests in a temporary fixture outside the repository: two tests passed. Separate synthetic probes show his proposed resolver chooses a student note if it supplies a matching supersedes reference, and returns November 22 or November 25 for the same three-source update chain depending on array order. The technical draft records these limits and retains a clearly limited same-course/prevalidated-authority pair example, rather than claiming the sample is a complete precedence algorithm. Source inspection confirms port 4310 but shows the current prototype uses /api/capture or /api/import with content and an ImportResult, not the proposed plural route/capturedText/flat receipt. Proposed future transport and existing implementation are now explicitly distinguished; 201 is not rejected for a genuinely completed synchronous import.
+**Context**: These are actual technical-member review inputs and independent example checks, not a final team vote, revised gate approval, implemented fix or application acceptance result. All four assigned reviewers have now supplied inputs. Team scope/model/Jev/CLI/format/owner decisions, meeting evidence and revised approvals remain pending. No prototype code, original requirements/stories/design/unit map, remote files, PR status or integration hold was changed.
+
+
+## Corrective Review — Bounded Story Approach Prompt
+**Timestamp**: 2026-11-23T17:48:38Z
+**User Input (faithful English translation, not verbatim English)**: "Follow Issue #9 and the rubric."
+**AI Response**: Re-read the official assignment/rubric and narrowed the active correction route to changes that preserve the approved product scope. Final model/OCR choices, unadopted Jev/media/CLI changes and proposed module leads are not all mandatory current blockers; retain the approved baseline and explicit Open questions instead of manufacturing decisions. Prepared one concrete bounded story-amendment question covering the synthetic Maya profile, source-authority acceptance and dependent consistency checks. The wider old local questionnaire remains historical and unanswered; this proposal does not retroactively complete it.
+**Approval Prompt (English record; the same question is presented to Xiaolong in Chinese)**:
+```text
+Approve or revise this bounded story-amendment approach
+
+A) Approve this specific approach and generate the revised persona/stories, then reconcile dependent documents for team review. Preserve the existing scope and all 25 story IDs; do not infer acceptance of deferred scope proposals or final team approval.
+
+B) Request changes to this amendment approach before generation. State the specific change and reason.
+
+C) Other. Describe an alternative approach and its reason.
+```
+**Context**: User Stories step 13 requires an actual approach answer before revised persona/story generation. This is an approach-generation gate only, not whole-team artifact approval, meeting evidence, publication authorization, PR-ready authorization or permission to enter Construction. Actual answer is pending; no option is preselected in the record.
+
+
+## Corrective Review — Earlier Approach Question Withdrawn
+**Timestamp**: 2026-11-23T19:11:04Z
+**User Input (faithful English translation, not verbatim English)**: "What are you working on now? I only wanted to ask what else we need to do before entering Step 2."
+**AI Response**: Withdrew the premature bounded story-amendment question. Its A option was not selected and the older wider local questions remain unanswered. Explained prerequisites rather than treating this clarification as approval. The corresponding current question file now records withdrawal and the later separate instruction.
+**Context**: Recorded now as a retrospective clarification, not backdated to the earlier conversation. No gate approval or team engagement is invented.
+
+## Corrective Review — Ask and Local MCP Direction; Approach Authorized
+**Timestamp**: 2026-11-23T19:11:04Z
+**User Input (verbatim English)**:
+```text
+our team has settled on doing Ask and local MCP tell us what we need to do next according to the Issue
+```
+**AI Response**: Explained that Step 2 proceeds on the existing inception/05-units-generation / PR #8 branch: record the reported decision, reconcile requirements/stories/planning/design/units, apply actual feedback, validate and publish for team review. Team artifact approval remains separate, followed by Ready transitions, Lawrence's ordered merges and Iris's final README. No Construction or prototype merge.
+**User Follow-up (verbatim English)**:
+```text
+ok go on
+```
+**Interpretation**: This is explicit authorization of the described corrective approach and generation/publication for review, distinct from approval of unseen artifacts. D-44/D-45 in the decision register supersede historical Q34 only for focused local course Ask. Local read-only MCP remains; remote ChatGPT/hosted MCP remains excluded. The team direction is reported by Xiaolong; no votes, meeting date, attendees or unanimous artifact approval are inferred.
+
+## Corrective Review — Coordinated Artifacts Generated from Actual Pushback
+**Timestamp**: 2026-11-23T19:11:04Z
+**User Input**: No additional user answer; work under the approach authorization above.
+**AI Response**: Applied RC-05-01/02/03 to the concrete synthetic Maya persona, UI-versus-CLI-pilot distinction and instructor/student/unknown-publisher authority criteria. Preserved FR-05 breadth because RC-05-04's media/OCR reduction is not adopted. Incorporated Iris's RC-06-01/02/03 model/extraction evaluation and provisional stage/calendar proposals without claiming benchmarks or accepted numerical budgets. Applied Safi's RC-07-01/02 technical versions, six scoped tools, port/response and meaningful paired function/test, preserving its documented authority/chain/API limits. RC-07-03's model/Jev positions remain attributed proposals; Ask is included by the new separately reported decision and remote ChatGPT remains excluded. Recorded Lawrence's RC-08-01 proposed leads with acceptance pending, defined Jev with provider-owned examples for RC-08-02 while leaving deferral/changed filing unadopted, and added all five RC-08-03 Open questions. RC-09-01/02/03/04 remain source-linked in the review ledger with actual technical-example, README-role, comment-intake and timeline dispositions. PF-02 becomes US-26's future per-course Ask-continuity criterion; no prototype bug fix is claimed.
+**Resulting Draft**: FR-01–FR-15 and US-01–US-25 retain their IDs; FR-16/US-26/C-13/S-05 add local Ask. Counts are 16 FRs, seven NFRs, 26 stories, 13 components, five logical services and U-01/nine modules. Six MCP tools remain unchanged. Ask uses bounded local read-only evidence plus local generation, exact citation validation, visible conflicts/insufficient evidence and per-course navigation/request isolation. Jev/media obligations remain visible pending separate changes. Current vision/technical/README/state wording describes Course Copilot; historical answers and the original audit prefix remain unchanged.
+**Context**: All revised artifacts are a corrective draft pending actual team review. High-level TypeScript contracts/Markdown examples are documentation, not application code. Existing prototype branches/worktrees remain isolated; no new branch/PR, Ready transition, merge, assignment submission or Construction is claimed.
+
+## Corrective Review — Coordinated Documentation Validation
+**Timestamp**: 2026-11-23T19:11:04Z
+**User Input**: No additional user answer; verification under the same authorization.
+**AI Response**: Validated all 25 changed/new Markdown files for balanced fences, existing relative-link targets, final newlines, nonblank answer markers and English additions. Confirmed 16 unique FRs/seven NFRs/26 ordered stories and complete unique unit-story/FR mappings. Strict TypeScript checking of the extracted design contracts passed. Re-extracted the current paired technical example: strict TypeScript checking and one Vitest test passed; both HTTP JSON bodies parse. Dependency dimensions/declared-node structure and text alternatives were checked; no rendered-diagram or runtime acceptance is claimed. Git diff --check passed; no rule/application/Construction files changed. The original 45,685-byte audit prefix remains unchanged, SHA-256 9662b073ae16980105e3c15aef80b51dbbc9c05ae4c0126fb8f351fa0c7c48e4.
+**Independent AI Review**: Two read-only consistency reviews independently found the same model-unavailable versus invalid-output mismatch. Corrected US-26/FR-16: unavailable means disclosed retrieval-only evidence; invalid output means a safe error without an unvalidated answer, with local browsing/search retained. No other material inconsistency was found in the inspected scope, authority, component/service IDs, mappings, course/request continuity or historical/pending approval boundaries. AI review is not teammate approval.
+**Publication Plan**: Existing command-line/connector credentials do not match the requested publishing account, so they are not used for writes. The browser user menu was verified as xiaolonglin1124-bit. Publish the validated files through that existing session to the existing PR #8 head branch, then compare remote Git blobs with local files. No credential settings, new access grants or PR status changes are required.
+**Next Gate**: inception/reviews/step2-approval.md contains the concrete English Request Changes/Approve/Other prompt with a pending answer. The team must actually review/respond, and separately supply genuine problem-meeting date/format/attendees and cadence. Future model/embedding choices, unadopted scope reductions and proposed owners are not fabricated to close the gate.
