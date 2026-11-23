@@ -11,7 +11,7 @@
 - **Historical Inception Completed At**: 2026-11-20T04:20:19Z
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/05-units-generation`
-- **Latest Stage Review**: Historical approvals retained; revised artifacts on PR #8 require actual team review. Latest observed metadata: PRs #5–#7 Draft, #8 non-Draft with an older on-hold body, all unmerged. Platform status is not revised approval: https://github.com/lawrencegranda/INFO-5940-project/pull/8
+- **Latest Stage Review**: Historical approvals retained; revised artifacts on PR #8 require actual team review. Latest observed metadata: PRs #5–#7 Draft, #8 non-Draft with the revised review-pending description, all unmerged. Platform status is not revised approval: https://github.com/lawrencegranda/INFO-5940-project/pull/8
 - **Prior Stage Dependency**: Historical approvals in PRs #5–#8 remain in the audit. Chloe, Iris, Safi and Lawrence supplied their assigned review inputs. Xiaolong reports the team settled on Ask + local MCP and authorized the coordinated draft; actual review/approval of these artifacts remains pending before Ready or integration.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
 
@@ -74,7 +74,7 @@
 - **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (historically approved; corrective amendment pending review).
 - **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
 - **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
-- **Remaining corrective work**: Obtain actual team review/approval of the validated, published coordinated draft. Record genuine meeting evidence separately, then follow Issue #9 integration/README/submission. Historical approvals do not complete this pass.
+- **Remaining corrective work**: Obtain actual team review/approval of the validated, published coordinated draft. Add Iris's actual discussion minutes/decisions and confirmed cadence to the now-recorded meeting metadata, then follow Issue #9 integration/README/submission. Historical approvals do not complete this pass.
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
 - **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
@@ -82,7 +82,7 @@
 
 ## Current Checkpoint and Handoff
 
-**Current scope:** Focused local course Ask + local read-only MCP, as reported by Xiaolong on November 23. His subsequent "ok go on" authorizes the described coordinated document revisions and publication for review, not unseen-artifact approval. The [decision register](inception/requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) supersedes only the historical no-chat exclusion; remote ChatGPT/hosted MCP remains excluded. No meeting date, attendees, votes or ownership acceptance is inferred.
+**Current scope:** Focused local course Ask + local read-only MCP, as reported by Xiaolong on November 23. His subsequent "ok go on" authorizes the described coordinated document revisions and publication for review, not unseen-artifact approval. The [decision register](inception/requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) supersedes only the historical no-chat exclusion; remote ChatGPT/hosted MCP remains excluded. Meeting metadata is now separately confirmed below; no unreported vote, owner acceptance or revised-artifact approval is inferred.
 
 **Current draft:** 16 FRs, seven NFRs, 26 stories, P-01 with synthetic Maya, 13 components and five logical services, U-01/nine internal modules, and the unchanged six MCP tools. FR-16/US-26/C-13/S-05 describe local grounded Ask, exact citation validation, visible conflicts/insufficient evidence, per-course navigation continuity and in-flight isolation. Ask has no library-write or hosted-provider capability; external Codex model processing remains a separate boundary.
 
@@ -92,6 +92,8 @@ Technical inputs contain proposed version ranges, the six-tool course scope, a q
 
 **Publication checkpoint:** The 25-file corrective package was published through the verified xiaolonglin1124-bit browser session in eight commits on the existing PR #8 branch. Fetch and byte-for-byte comparison at remote c1202512668fea2d22d0154b466b830bae1174c6 found zero mismatches; all eight commit authors are xiaolonglin1124-bit. This state/audit/checklist follow-up records that observed result and remains review-only. No new branch/PR, Ready transition, merge or prototype integration. Other-account command-line/connector credentials were not used for writes. Latest observed PR metadata is #5–#7 Draft and #8 non-Draft; all remain unmerged and current artifact approval is pending.
 
-**Next actual input:** Team reviews the [concrete revised-artifact prompt](inception/reviews/step2-approval.md), requests specific changes or approves the artifacts with actual respondent/source/rationale. Record the required dedicated problem meeting's real date/format/attendees and cadence separately. No future technical choice, proposal or async review substitutes for missing meeting evidence.
+**Confirmed meeting metadata:** November 23, 2026, 10:00 AM EST (America/New_York), on Zoom, with all five members: Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. Source: Xiaolong's current confirmation. Iris will write the actual discussion minutes and decisions. A separately supplied group-chat screenshot shows Lawrence confirming "let's do Ask, and local MCP" at the displayed time of 1:18 PM. This supports the already-recorded product direction; it is not backdated as a morning vote or approval of the later revised artifacts.
+
+**Next actual input:** Team reviews the [concrete revised-artifact prompt](inception/reviews/step2-approval.md), requests specific changes or approves the artifacts with actual respondent/source/rationale. The meeting's date, time, Zoom format and full-team attendance have been confirmed by Xiaolong. Iris's discussion minutes/decisions and the recurring working cadence remain pending; the morning meeting does not automatically approve the later revised package.
 
 **Handoff after approval:** Xiaolong records corrected Inception complete through Units Generation and the STOP before Construction; follow the Issue #9 Ready sequence. Lawrence integrates existing stage PRs in order, Iris prepares the final README against the merged result, and the team completes final repository/submission checks. The independently developed prototype stays isolated. No application code or Construction is authorized here.
