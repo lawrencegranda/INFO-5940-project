@@ -95,13 +95,13 @@ The committed breadth (three authenticated LMS sites + arbitrary internet source
 
 ## November 23 scope amendment — Ask and local MCP
 
-**Source:** Xiaolong's current instruction: "our team has settled on doing Ask and local MCP tell us what we need to do next according to the Issue", followed by "ok go on" after the coordinated Step 2 approach was explained. This records a team decision reported by the driver, not independently witnessed votes or a held meeting. No attendees, meeting time or unanimous artifact approval are inferred.
+**Scope decision:** Include focused local course Ask and retain read-only local MCP. This product-scope decision is separate from acceptance of the revised Inception artifacts, which remains pending team review.
 
 | ID | Current disposition | Effect |
 | --- | --- | --- |
 | D-44 | Include focused local course Ask and retain local read-only MCP. | Supersedes historical Q34 for this bounded feature; revise FR-14 and add FR-16/US-26, C-13/S-05. UI Ask needs no terminal; the Codex integration remains a required technical path. |
-| D-45 | Generate coordinated corrective artifacts for review on the existing branch. | The driver's "ok go on" authorizes the stated document-revision approach and publication for review. It does not approve unseen artifacts, a Ready transition, merge or Construction. |
+| D-45 | Generate coordinated corrective artifacts for review on the existing branch. | Requirements, stories, planning, design and units are revised together. Artifact approval, Ready transitions, merging and Construction remain separate pending steps. |
 
 Ask answers from bounded saved course evidence through local retrieval and generation, validates exact citations, exposes uncertainty/conflicts and preserves per-course progress during app navigation. General autonomous actions, remote ChatGPT integration and hosted MCP remain excluded. Local MCP does not guarantee that an external host's model runs locally.
 
-The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. Jev deferral, reduced media/OCR scope, remembered course mapping and proposed module-lead acceptance are not implied by D-44/D-45. Preserve their existing obligations or explicit Open questions until an actual decision changes them. The revised artifact set, genuine problem-meeting evidence and final README remain separate review/submission work.
+The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. Jev deferral, reduced media/OCR scope, remembered course mapping and proposed module-lead acceptance are not implied by D-44/D-45. Preserve their existing obligations or explicit Open questions until an actual decision changes them. The revised artifact review, Iris's meeting minutes and the final README remain separate review/submission work.

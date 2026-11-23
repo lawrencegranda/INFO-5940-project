@@ -5,12 +5,12 @@
 **Status:** November 23 corrective draft; revised artifact approval is pending. The baseline was approved on 2026-11-19T19:26:39Z after reconciliation of 43 decisions and eight clarifications. That historical approval remains in `aidlc-docs/audit.md`; it does not approve this revision. Work continues on existing PR #8, before Construction.
 **Source of decisions:** `requirement-verification-questions.md`, `requirements-clarification-questions.md`, `decision-register.md`, `aidlc-docs/audit.md`.
 
-**Current scope amendment:** Xiaolong reported that the team settled on **Ask and local MCP**, then authorized this corrective pass. Local course-grounded Ask is added as FR-16; FR-14 retains local read-only Codex MCP. The historical Q34 no-chat choice is superseded for this bounded Ask feature, not rewritten. Remote ChatGPT/hosted MCP remains excluded. See the [amendment record](decision-register.md#november-23-scope-amendment--ask-and-local-mcp).
+**Current scope amendment:** The MVP includes **Ask and local MCP**. Local course-grounded Ask is added as FR-16; FR-14 retains local read-only Codex MCP. The historical Q34 no-chat choice is superseded for this bounded Ask feature, not rewritten. Remote ChatGPT/hosted MCP remains excluded. See the [amendment record](decision-register.md#november-23-scope-amendment--ask-and-local-mcp).
 
 ## 1. Intent analysis
 
-- **User request:** Course Copilot is a private student-managed, source-linked and version-aware course library with local Ask and access for external AI assistants via local MCP. It reduces context overload and errors caused by flat retrieval of contradictory/outdated materials.
-- **Request type:** New greenfield product.
+- **Product purpose:** Course Copilot is a private student-managed, source-linked and version-aware course library with local Ask and access for external AI assistants via local MCP. It reduces context overload and errors caused by flat retrieval of contradictory/outdated materials.
+- **Project type:** New greenfield product.
 - **Scope:** Multi-component (Chrome extension, local backend/file store, extraction/indexing, LLM-assisted organization, provenance/version graph, retrieval, MCP tools).
 - **Complexity:** Complex integration with authenticated web pages, diverse media and evidence-based updates; local-first MVP due December 16, 2026.
 - **Primary user:** One student with several courses. The local library/Ask interface does not require terminal use; Codex CLI remains a required technical integration path, not an assumption about every student's skills. No multi-user cloud collaboration is required.
@@ -88,4 +88,4 @@
 
 - 43 questions and eight clarifications have an accepted decision interpretation; optional extensions: Security Baseline **No**, Resiliency Baseline **No**, Property-Based Testing **Partial**. INFO5940 course extension mandatory.
 - **Current action:** Revise requirements, stories, workflow, design and units together on the existing `inception/05-units-generation` / PR #8 branch. Retain US-01–US-25 and add US-26/FR-16; the current draft has 26 stories, 16 FRs and seven NFRs.
-- **Next gate:** Obtain actual team review of the revised artifacts. No new branch/PR, Ready transition, merge or Construction is implied by the driver's authorization to generate the draft.
+- **Next gate:** Obtain team review of the revised artifacts. Ready transitions, merging and Construction remain pending until the applicable approval is recorded. No new branch or PR is needed for this corrective pass.
