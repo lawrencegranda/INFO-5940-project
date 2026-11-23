@@ -104,7 +104,7 @@ MCP receives read/query ports only: no jobs, writes, index initialization, migra
 - [x] Complete coordinated delivery-phase consistency validation with requirements, stories, design and unit maps.
 - [x] Obtain Lawrence's review of the concrete published revision on PR #8.
 - [x] Record Lawrence's explicit approval of the revised Inception artifacts through Units Generation at 2026-11-23T22:37:29Z.
-- [ ] Apply any required Ready transitions during the ordered integration handoff.
+- [x] Ready transitions complete: #5–#7 changed from Draft to Ready; #8 already non-Draft. Verified 2026-11-23T22:56:30Z; ordered integration remains Lawrence’s task.
 - [x] STOP before Construction; no application implementation is performed.
 
 ## 7. Extension compliance and milestone boundary

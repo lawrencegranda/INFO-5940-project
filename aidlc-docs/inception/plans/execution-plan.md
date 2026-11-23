@@ -281,4 +281,5 @@ These are proposed target windows, not accepted team commitments. The November 2
 - [x] Preserve historical approvals while applying the Ask/source-authority revision across requirements, stories, design and units; record Lawrence's separate corrective approval.
 - [ ] Agree concrete latency budgets, a live-LMS checkpoint date and team capacity during later planning. Retain model/embedding choices as open technical items and Jev/advanced media as explicitly phased post-MVP work; no future result is assumed.
 - [x] Complete cross-artifact validation and record Lawrence's explicit PR #8 approval of the coordinated Inception artifacts.
-- [ ] Apply any required Ready transitions and the ordered integration handoff; Construction remains deferred.
+- [x] Complete Ready transitions: #5–#7 changed from Draft to Ready; #8 already non-Draft. Verified 2026-11-23T22:56:30Z.
+- [ ] Lawrence performs the ordered integration handoff; Construction remains deferred.

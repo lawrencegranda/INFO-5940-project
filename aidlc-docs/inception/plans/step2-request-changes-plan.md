@@ -1,6 +1,6 @@
 # Step 2 — Corrective Inception Review
 
-**Status:** Corrected Inception complete through Units Generation after [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z. STOP before Construction; Ready/ordered-merge handoff follows Issue #9.
+**Status:** Corrected Inception complete through Units Generation after [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z. STOP before Construction. All four stage PRs are Ready; Xiaolong’s Step 2 is complete and Lawrence’s Step 3 ordered integration follows Issue #9.
 **Driver:** Xiaolong, existing inception/05-units-generation branch and PR #8.
 **Baseline:** a4b52f82f32c9524c76f1538d974e5413f21f733.
 **Instruction:** [Issue #9 Step 2](https://github.com/lawrencegranda/INFO-5940-project/issues/9). This continues the existing single-writer workflow; no new branch/PR or prototype merge.
@@ -43,7 +43,8 @@ The earlier [bounded amendment question](step2-story-amendment-questions.md) is 
 - [x] Record the collaboration schedule: meetings are scheduled flexibly based on project needs and team availability.
 - [x] Incorporate [Iris's published meeting minutes](../reviews/meeting-minutes-2026-11-23.md), including the 10:00–10:10 AM time and separately pending allocation/model-plan/artifact reviews.
 - [x] Update current state to corrected Inception complete through Units Generation and STOP before Construction following the actual approval.
-- [ ] Follow Issue #9's approved Ready sequence, Lawrence's ordered merges, Iris's final README and final submission checks. No application/prototype code is merged in this pass.
+- [x] Complete Issue #9’s Ready sequence: #5–#7 changed from Draft to Ready, #8 already non-Draft; all four descriptions updated. GitHub metadata verified all four non-Draft/unmerged/mergeable at 2026-11-23T22:56:30Z.
+- [ ] Lawrence performs ordered merges, then Iris prepares the final README and the team completes final submission checks. These remain later owners’ tasks; no application/prototype code is merged in this pass.
 
 ## Compliance boundary
 
