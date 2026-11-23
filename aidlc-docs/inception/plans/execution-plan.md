@@ -1,18 +1,20 @@
 # Course Copilot — Execution Plan
 
+> **Current corrective draft - November 23, 2026:** The reported team decision includes local Ask and local read-only MCP, and the driver authorized the coordinated revision. Historical approvals below do not approve this amended plan or clear the integration hold. Current team artifact approval remains pending. Final model selection, Jev/media proposals, budgets and owner acceptance remain explicit open items; the preserved baseline applies meanwhile. STOP before Construction.
+
 **Stage:** Inception / Workflow Planning
-**Status:** Approved on 2026-11-20T03:18:17Z.
-**Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`; 25 stories and P-01 approved on 2026-11-20T03:04:34Z.
+**Status:** Historical approval recorded on 2026-11-20T03:18:17Z; current corrective revision pending team artifact approval.
+**Historical baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`; 25 stories and P-01 approved on 2026-11-20T03:04:34Z.
 **Review:** [Draft PR #6](https://github.com/lawrencegranda/INFO-5940-project/pull/6).
 
-**Branch:** `inception/03-workflow-planning`, based on approved User Stories head `b185e9d421e8e44c165d78ebe9e152fbbed65b82`.
-**Integration:** `candidate/course-copilot` in the team repository. This stage depends on [PR #5](https://github.com/lawrencegranda/INFO-5940-project/pull/5), ready for maintainer integration. Merge #5 first, then this stage; do not merge a cumulative stage diff out of order.
+**Historical stage branch:** `inception/03-workflow-planning`, based on approved User Stories head `b185e9d421e8e44c165d78ebe9e152fbbed65b82`.
+**Current corrective branch:** `inception/05-units-generation` / PR #8. **Integration target:** `candidate/course-copilot` in the team repository, through the ordered #5 -> #6 -> #7 -> #8 chain after actual revised approval. Do not merge a cumulative stage diff out of order.
 
 ## 1. Inputs and preserved scope
 
-Inputs: [requirements](../requirements/requirements.md), [decision register](../requirements/decision-register.md), [stories](../user-stories/stories.md), [persona](../user-stories/personas.md), [state](../../aidlc-state.md) and [audit](../../audit.md). The 43 requirement answers and eight clarifications are resolved; no replacement product questionnaire is introduced.
+Inputs: [requirements](../requirements/requirements.md), [decision register](../requirements/decision-register.md), [stories](../user-stories/stories.md), [persona](../user-stories/personas.md), [state](../../aidlc-state.md) and [audit](../../audit.md). The 43 requirement answers and eight clarifications remain historical context, with the new reported Ask/local-MCP decision superseding the earlier built-in-chat exclusion. Current draft coverage is 16 functional requirements, seven NFRs and 26 stories; no unrelated product questionnaire is introduced.
 
-Retain a private multi-course library: Chrome MV3 capture, TypeScript/Node local runtime, SQLite/FTS5 plus local originals, source-linked extraction/summaries, hybrid keyword/vector retrieval and progressive read-only local MCP first demonstrated with Codex CLI. Ollama `gemma3:4b` is the first generative-model candidate, subject to laptop measurement. Jev receives only specifically disclosed minimal content after explicit opt-in. Manual filing and local keyword/metadata search remain available without Jev or AI.
+Retain a private multi-course library: Chrome MV3 capture, TypeScript/Node local runtime, SQLite/FTS5 plus local originals, source-linked extraction/summaries, hybrid keyword/vector retrieval and progressive read-only local MCP first demonstrated with Codex CLI. Add course-scoped local Ask with validated saved-evidence citations, explicit insufficient/conflicting evidence and honest model-unavailable behavior. The primary Ask user uses the local UI; CLI setup remains a technical integration/pilot task rather than an assumed skill of every student. Ollama `gemma3:4b` is the first generative-model candidate, subject to laptop measurement. Jev receives only specifically disclosed minimal content after explicit opt-in. Manual filing and local keyword/metadata search remain available without Jev or AI.
 
 All approved sources/formats remain required: Canvas, Gradescope, EdStem, ordinary web/papers/PDFs/local imports; native text, scan/image OCR, preserved math/diagrams with reliable derived text, and accessible authorized audio/video transcription. Inaccessible content must have explicit partial/failed/unsupported status and manual recovery. A failure-status test does not replace a successful accessible-format demonstration.
 
@@ -22,10 +24,10 @@ All approved sources/formats remain required: Canvas, Gradescope, EdStem, ordina
 
 | Impact | Assessment |
 |---|---|
-| User-facing | New save/import and embedded-resource selection, uncertain filing review, editable metadata, source/history and conflict inspection. No built-in chatbot. |
-| Structural | New extension, local library runtime, extraction/index workers and read-only MCP boundary. These are capability areas; Application Design determines components and contracts. |
+| User-facing | New save/import and embedded-resource selection, uncertain filing review, editable metadata, source/history and conflict inspection. Grounded course Ask is included; no general-purpose action agent or remote ChatGPT integration is added. |
+| Structural | New extension, local library runtime, extraction/index workers, course Ask orchestration and read-only MCP boundary. These are capability areas; Application Design determines components and contracts. |
 | Data model | Courses/topics, sources, immutable document versions/originals, passages, claims, typed relationships and ingestion runs. Editable metadata stays separate from originals. |
-| API | Extension-to-local ingestion/library APIs, extraction/model adapters, compact MCP search and exact evidence fetch. Exact signatures/tool names belong to Application Design. |
+| API | Extension-to-local ingestion/library APIs, extraction/model adapters, compact MCP search, exact evidence fetch and a bounded local Ask request/result path. Exact signatures/tool names belong to Application Design. |
 | NFR | Local persistence, provenance, privacy/permission boundaries, controlled loopback access, completeness, recovery, repeatable evaluation and measured latency/cost. |
 | Infrastructure | Laptop-local processes, SQLite/files, tool/model installations and start/stop instructions. No cloud hosting, hosted MCP, multi-user accounts or cloud IaC. |
 | Operations | Visible processing/error state and repeatable local setup/demo instructions. Production operations remains a placeholder. |
@@ -36,24 +38,24 @@ All approved sources/formats remain required: Canvas, Gradescope, EdStem, ordina
 |---|---|
 | LMS and embeds | User-triggered authorized capture without credentials/cookies/tokens; actual save on each LMS, ordinary web/PDF/local import and accessible embedded asset; restricted-resource case and manual recovery. |
 | OCR/media/math | Native extraction where available, local OCR/transcription adapters, preserved originals/locations and per-item status; successful text/scan/image/math/audio/video examples plus fidelity and failure inspection. Exact tools await later technology decisions. |
-| Local AI and embeddings | Benchmark gemma3:4b and select a local embedding path; record machine/input, latency, memory and output quality. Prove lexical and paraphrase retrieval. No model compatibility or speed claim until measured. |
-| Source/authority errors | Deterministic source/hash identity, immutable versions and evidence-based claim-scoped precedence. Test explicit deadline change, later old-syllabus recapture, unaffected syllabus facts and unresolved competing evidence. A changed deadline cannot supersede every syllabus fact. |
+| Local AI, Ask and embeddings | Benchmark gemma3:4b and select a local embedding path; record machine/input, latency, memory and output quality. Prove lexical and paraphrase retrieval. No model compatibility or speed claim until measured. Validate Ask citations against the exact retrieved evidence set; no evidence or model failure cannot produce a verified answer. |
+| Source/authority errors | Deterministic source/hash identity, immutable versions and evidence-based claim-scoped precedence. Test explicit deadline change, later old-syllabus recapture, unaffected syllabus facts and unresolved competing evidence. A changed deadline cannot supersede every syllabus fact. Unknown/student-authored publishers never gain instructor authority from platform labels, recency or model confidence; keep competing evidence visible. |
 | Privacy/trust | Controlled loopback ingestion, read-only MCP, untrusted source instructions and minimal Jev opt-in. Test denied opt-in, unauthorized calls and read-only tools. External Codex/model processing is a separate trust boundary: local MCP does not guarantee that a host keeps received passages local. |
 | Scope/schedule | Agree contracts before parallel work; run an early integrated slice and high-risk probes after Construction authorization. If breadth is infeasible, request an explicit scope decision; do not silently drop sources/formats. |
 
 ## 3. Stage selection and adaptive detail
 
-There are **14 stage slots**: seven Inception, six Construction, one Operations. **12 are selected for execution**, including the four completed stages through Workflow Planning. Reverse Engineering is skipped; Operations is a placeholder. Future Construction stages repeat as applicable to the units established later; selection is not current authorization.
+There are **14 stage slots**: seven Inception, six Construction, one Operations. **12 are selected for execution**, including the earlier completed stages through Workflow Planning, whose affected artifacts are now under corrective review. Reverse Engineering is skipped; Operations is a placeholder. Future Construction stages repeat as applicable to the units established later; selection is not current authorization.
 
 | Stage | Decision/status | Rationale and detail |
 |---|---|---|
 | Workspace Detection | COMPLETED | Greenfield workspace and rules verified. |
 | Reverse Engineering | SKIP | No existing application to analyze. |
-| Requirements Analysis | COMPLETED | Approved 15 FRs, seven NFRs and reconciled decisions. |
-| User Stories | COMPLETED | Separately approved plan, 25 stories and P-01 persona. |
-| Workflow Planning | COMPLETED | This execution plan, sequence, evidence and gates. |
-| Application Design | EXECUTE next after approval | Substantial component/interface/orchestration and trust/data-boundary detail; no detailed algorithms yet. |
-| Units Generation | EXECUTE after design approval | Substantial unit boundaries/dependencies, code organization and complete story ownership. |
+| Requirements Analysis | HISTORICAL COMPLETE; corrective draft pending review | Earlier 15 FRs/seven NFRs; current Ask revision adds FR-16 with existing NFR obligations retained. |
+| User Stories | HISTORICAL COMPLETE; corrective draft pending review | Earlier 25-story/P-01 approval retained; current concrete Maya/authority revision and US-26 require current artifact review. |
+| Workflow Planning | HISTORICAL COMPLETE; corrective draft pending review | Amended sequence/evidence includes local Ask and existing local MCP; current approval pending. |
+| Application Design | REVISED DRAFT; review pending | Substantial component/interface/orchestration and trust/data-boundary detail; no detailed algorithms yet. |
+| Units Generation | REVISED DRAFT; review pending | Substantial unit boundaries/dependencies, code organization and complete story ownership. |
 | Functional Design | EXECUTE later; DEFERRED | Per-unit identity/version/claim/precedence, extraction states and retrieval logic. |
 | NFR Requirements | EXECUTE later; DEFERRED | Performance, privacy, recovery and concrete tools/models/stack decisions informed by actual measurements. |
 | NFR Design | EXECUTE later; DEFERRED | Local concurrency, safe persistence, failure/permission boundaries and partial property testing. |
@@ -74,11 +76,11 @@ flowchart TD
     subgraph INCEPTION["INCEPTION"]
         WD["Workspace Detection: COMPLETED"]
         RE["Reverse Engineering: SKIP"]
-        RA["Requirements Analysis: COMPLETED"]
-        US["User Stories: COMPLETED"]
-        WP["Workflow Planning: COMPLETED"]
-        AD["Application Design: EXECUTE after approval"]
-        UG["Units Generation: EXECUTE after design approval"]
+        RA["Requirements: historical complete / revision review"]
+        US["Stories: historical complete / revision review"]
+        WP["Workflow plan: revision review"]
+        AD["Application Design: revised draft review"]
+        UG["Units Generation: revised draft review"]
     end
     Stop(["STOP before Construction: Inception milestone"])
     Resume(["Later project selection and Construction authorization"])
@@ -122,34 +124,34 @@ flowchart TD
     linkStyle default stroke:#333,stroke-width:2px
 ```
 
-**Text alternative:** Workspace complete → Reverse Engineering skipped → Requirements approved → User Stories approved → review execution plan → Application Design plan/decisions, artifacts and explicit approval → Units Generation plan approval, generation and artifact approval → **STOP before Construction for November 24**. After project selection and later authorization, each unit follows Functional Design → NFR Requirements → NFR Design → local Infrastructure Design → Code Generation → Build and Test, with each required review. Integrate units and demonstrate the local product; Operations remains a placeholder.
+**Text alternative:** Workspace complete → Reverse Engineering skipped → historical Inception approvals retained → coordinated requirements/stories/workflow/design/unit revisions for Ask and review feedback → actual review and approval of the revised artifacts → **STOP before Construction for November 24**. After project selection and later authorization, each unit follows Functional Design → NFR Requirements → NFR Design → local Infrastructure Design → Code Generation → Build and Test, with each required review. Integrate units and demonstrate the local product; Operations remains a placeholder.
 
 ## 5. Remaining Inception deliverables and gates
 
 | Stage | All mandatory deliverables | Gate |
 |---|---|---|
 | Application Design | `plans/application-design-plan.md`; `application-design/components.md`, `component-methods.md`, `services.md`, `component-dependency.md`, consolidated `application-design.md` (paths under `inception/`). | Resolve context-relevant design questions using existing decisions where sufficient; execute the agreed plan; obtain explicit artifact approval before Units Generation. |
-| Units Generation | `plans/unit-of-work-plan.md`; `application-design/unit-of-work.md`, `unit-of-work-dependency.md`, `unit-of-work-story-map.md`. Include greenfield code organization. | Separate plan and generated-artifact approvals; assign all 25 stories and NFR obligations; verify boundaries/dependencies; STOP at Inception after approval. |
+| Units Generation | `plans/unit-of-work-plan.md`; `application-design/unit-of-work.md`, `unit-of-work-dependency.md`, `unit-of-work-story-map.md`. Include greenfield code organization. | Separate plan and generated-artifact approvals; assign all 26 stories and NFR obligations; verify boundaries/dependencies; STOP at Inception after approval. |
 
-Driver remains `xiaolonglin1124-bit`. PR #5 is the completed prior gate awaiting maintainer integration; this stage is the sole active Draft gate from the same driver and discloses that dependency. INFO5940-06 prohibits parallel Inception edits by **another teammate**. Preparation here follows completion and explicit approval of the prior gate, not an unapproved parallel gate. Before every stage fetch/status, list open PRs and check conversation, review and inline feedback. If another teammate has an active Inception PR, stop parallel documentation edits and reconcile through that workflow.
+Driver remains `xiaolonglin1124-bit`. The same driver applies the coordinated revision on the existing PR #8 head; all four existing stage PRs remain unmerged, with revised approval still required before Ready/ordered integration. INFO5940-06 prohibits parallel Inception edits by **another teammate**. Preparation here follows completion and explicit approval of the prior gate, not an unapproved parallel gate. Before every stage fetch/status, list open PRs and check conversation, review and inline feedback. If another teammate has an active Inception PR, stop parallel documentation edits and reconcile through that workflow.
 
-Integrate #5 first, then later stage PRs in order into `candidate/course-copilot`, preserving a single audit/state history; never hand-merge those files. If maintainers squash/rebase the prior PR, refresh the later branch from the integrated candidate through the single-writer workflow and reverify the audit prefix before merging it. Keep Marketing isolated; only the selected coherent final candidate goes to `main`. This plan does not select the project for the whole team or assign teammates without agreement.
+Integrate #5 first, then later stage PRs in order into `candidate/course-copilot`, preserving a single audit/state history; never hand-merge those files. If maintainers squash/rebase the prior PR, refresh the later branch from the integrated candidate through the single-writer workflow and reverify the audit prefix before merging it. Only the coherent selected Course Copilot documentation goes to `main` through the maintainer's ordered integration. This plan does not invent teammate acceptance of proposed module leads.
 
 ## 6. Future implementation order and coordination
 
 This proposed capability sequence informs later unit decomposition; it is **not generated units, fixed packages or team assignments**. Brownfield package-change sequencing is N/A.
 
 1. Establish shared source/version/status/citation contracts and local persistence. Verify deterministic recapture and original preservation before dependent indexing or AI claims.
-2. Deliver a text/PDF vertical slice: explicit capture/import → preserved source → local keyword search → progressive read-only MCP. Begin three-LMS, OCR/media/math feasibility checks early in this window after Construction authorization.
+2. Deliver a text/PDF vertical slice: explicit capture/import → preserved source → local keyword search → progressive read-only MCP and a grounded local Ask answer using the same scoped read/query capabilities. Begin three-LMS, OCR/media/math feasibility checks early in this window after Construction authorization.
 3. Complete all source/format adapters with honest per-item status and manual recovery. Add correctable filing and source-linked incremental course/topic/document summaries; AI availability cannot block originals or lexical search.
 4. Add claim-scoped updates/supersession/conflicts and required hybrid retrieval with all metadata/version filters. Similarity may suggest relations but cannot establish identity or authority.
-5. Complete library/history/conflict views and actual Codex CLI integration; run both principal demos and the full source/format/failure matrix. Jev remains behind disclosed opt-in.
+5. Complete library/history/conflict views, local Ask citation/error/continuity behavior and actual Codex CLI integration; run both principal demos and the full source/format/failure matrix. Jev remains behind disclosed opt-in.
 
 After approved contracts/unit boundaries, adapters and browsing UI may proceed in parallel with isolated fixtures. Persistence/version semantics precede dependent claims and retrieval. Feature branches own application files per approved unit; one workflow driver serializes audit/state. Check contracts at integration; keep derived indexes rebuildable and originals preserved. No Construction work is executed by this plan.
 
 ## 7. Acceptance and evidence plan
 
-All rows below are **specified, not run**. The approved stories remain the detailed acceptance source.
+All rows below are **specified, not run**. The current story draft is the detailed acceptance source; historical approval does not approve its revisions.
 
 | Coverage | Stories | Required future evidence |
 |---|---|---|
@@ -159,9 +161,10 @@ All rows below are **specified, not run**. The approved stories remain the detai
 | Provenance, versions, typed links, history | US-12–US-15 | Same-source/same-hash idempotence, changed-hash preserved version, similarity-only suggestions, exact citation/history round trips. |
 | Updates and unresolved conflicts | US-16–US-18 | Nov 20 syllabus → explicit Nov 22 announcement; later old-syllabus recapture cannot win; unaffected facts and unresolved competing evidence remain visible. No age-only alarm. |
 | Hybrid/progressive retrieval and Codex | US-19–US-22 | Lexical/paraphrase queries with every filter; compact search then exact fetch; actual Codex CLI connection/use and read-only tool behavior. |
+| Local Ask | US-26 | Actual local-model answer on saved course evidence; exact citations, empty/conflicting evidence, rejected unsupported citations, model-unavailable retrieval-only disclosure, per-course navigation state and in-flight course isolation; no library writes or remote ChatGPT fallback. |
 | Privacy, outage and laptop feasibility | US-23–US-25 | Denied/disabled/unavailable Jev; AI/network-disabled manual filing/local search; untrusted input, loopback controls, extraction recovery; measured local resource/latency/cost log. |
 
-Use approved Vitest fixtures/manual E2E and partial property tests for pure transformations, round trips and version invariants. Carry FR-01–FR-15 and NFR-01–NFR-07 into unit/test mappings. A fixture/screenshot does not prove a live LMS integration; a tool listing alone does not prove a successful Codex search/fetch. Keep private course content and credentials out of published evidence.
+Use approved Vitest fixtures/manual E2E and partial property tests for pure transformations, round trips and version invariants. Carry FR-01–FR-16 and NFR-01–NFR-07 into unit/test mappings. A fixture/screenshot does not prove a live LMS integration; a tool listing alone does not prove a successful Codex search/fetch. Keep private course content and credentials out of published evidence.
 
 ## 8. Timeline and success criteria
 
@@ -177,9 +180,9 @@ Dates use **America/New_York**. Windows are proposals dependent on reviews/proje
 
 **Inception milestone success:** Approved execution plan, complete approved design/unit artifacts, deliberate gate answers, coherent audit/state, no application code or secrets in documentation.
 
-**Later product success:** Team-laptop demonstration of (1) scoped conceptual search/fetch in Codex and (2) evidence-grounded deadline changes/conflicts/history, with required source/format paths and local fallback verified. No live freshness, perfect contradiction detection or untested model-speed promise is added.
+**Later product success:** Team-laptop demonstration of scoped conceptual search/fetch in Codex, local Ask grounded in cited saved evidence, and evidence-grounded deadline changes/conflicts/history, with required source/format paths and local fallback verified. No live freshness, perfect contradiction detection or untested model-speed promise is added.
 
-## 9. Workflow Planning checklist
+## 9. Historical Workflow Planning checklist
 
 - [x] Load approved context, state, stage/course rules and existing decisions.
 - [x] Fetch/status, inspect open PRs and prior-stage feedback.
@@ -191,7 +194,7 @@ Dates use **America/New_York**. Windows are proposals dependent on reviews/proje
 - [x] Publish/present plan and check stage-PR feedback before approval.
 - [x] Record explicit execution-plan approval, complete stage and start Application Design.
 
-## 10. Execution-plan approval
+## 10. Historical execution-plan approval
 
 ### Q1 — Review this execution plan
 
@@ -205,7 +208,7 @@ C) **Other.** Describe the requested outcome after the answer tag.
 
 **Historical approval response (English translation):** A: Approve the execution plan and proceed to Application Design. The original raw response is preserved in the [audit](../../audit.md#workflow-planning--explicit-execution-plan-approval). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
 
-This explicit approval completes Workflow Planning and authorizes Application Design. Later artifact/units approvals and Construction authorization remain separate.
+This historical approval completed the earlier Workflow Planning baseline. It does not approve this November 23 Ask/amendment draft; actual revised artifact review and approval remain pending. Construction authorization remains separate.
 
 ## 11. Extension compliance
 
@@ -213,10 +216,64 @@ This explicit approval completes Workflow Planning and authorizes Application De
 |---|---|---|
 | INFO5940-01 | Compliant | Follow Workflow Planning; record prior approval/current work in append-only audit/state. |
 | INFO5940-02 | Compliant | All remaining Inception artifacts listed; explicit stop; Construction only planned. |
-| INFO5940-03 | Compliant at review boundary | All prior answers complete; execution-plan approval is explicitly recorded before Application Design. |
+| INFO5940-03 | Current approval pending | Historical answers remain intact; revised artifacts require actual review/approval before the hold is released. |
 | INFO5940-04 | Compliant | Local demo; named Ollama candidate; progressive read-only Codex MCP; Jev opt-in/fallback. |
 | INFO5940-05 | Compliant | Documentation only; no application code or credentials. |
-| INFO5940-06 | Compliant with disclosed dependency | Same driver, prior gate approved/ready, sole active Draft gate, ordered integration, no competing teammate workflow or manual audit/state merge. |
+| INFO5940-06 | Existing branch and ordered dependency retained | Same driver on existing PR #8; current revised approval is pending before Ready/integration. No competing teammate workflow or manual audit/state merge. |
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | Implementation deferred; obligations retained | Pure-transform/round-trip/version tests planned; no executable test result invented. |
 
-Runtime feasibility remains unverified. Workflow Planning is complete. Independent review, publication in PR #6, available feedback checks and explicit Q1 approval are recorded.
+Runtime feasibility remains unverified. Earlier Workflow Planning review/publication/approval remain recorded historically. Current revisions require actual team artifact review and approval before the integration hold is released.
+
+## 12. Corrective-review amendment — pending team review
+
+**Prepared:** November 23, 2026, America/New_York. Adapted from the preserved November 22 local draft during the authorized Step 2 preparation. This amendment records the proposed response to Iris's [model-probe feedback](https://github.com/lawrencegranda/INFO-5940-project/pull/6#discussion_r4660610515), [extraction checkpoint](https://github.com/lawrencegranda/INFO-5940-project/pull/6#discussion_r4660610523) and [stage-depth/timeline review](https://github.com/lawrencegranda/INFO-5940-project/pull/6#discussion_r4660610526). Her review is COMMENTED and explicitly non-blocking; it is not approval of this amendment. No model probe, extraction run or Construction stage is executed here.
+
+### 12.1 Model probe before stack selection
+
+After the Inception checkpoint and separate Construction authorization, run a small manual local-model probe before U-01's NFR Requirements finalizes its stack. Use permission-cleared course examples through the model runtime rather than starting application Code Generation early. Re-check the chosen configuration through the real pipeline during the first integrated slice.
+
+- Keep `gemma3:4b` as the existing unbenchmarked baseline candidate. Iris proposes comparing Qwen 3.5 9B and `deepseek-r1`; exact available runtime tags, model sizes and configurations must be verified during the probe. Her smaller-Qwen suggestion is an additional option, not a selected dependency.
+- Evaluate course/folder classification, a syllabus summary and structured deadline/claim extraction on the same recorded inputs. Preserve the source passages used to judge the outputs.
+- Record the laptop/OS/RAM, exact model tag and configuration, input size, prompt, thinking setting where supported, latency, memory use, output quality and structured-output validity. Select the embedding model separately and check paraphrase retrieval as well as exact terms.
+- Keep answer generation separate from plain MCP search/fetch. The included Ask path intentionally uses local generation after bounded evidence retrieval; measure that path separately. Saving originals and local keyword search must remain available while AI work is queued or unavailable.
+
+| Path | Proposed discussion budget | Required later decision/evidence |
+| --- | --- | --- |
+| Interactive MCP search/fetch | Iris suggests a few seconds; no numerical acceptance target has been agreed. | NFR Requirements sets the measured budget and conditions, separating SQLite retrieval from query-embedding time and recording the fallback. |
+| Local Ask retrieval and answer generation | No numerical target has been agreed. | Measure evidence-retrieval and generation latency separately; display progress and honest unavailable/insufficient-evidence states. Preserve per-course drafts/results and isolate in-flight requests. |
+| Background filing, summaries and claim extraction | About 60 seconds for a syllabus-sized PDF is Iris's discussion example, not an approved requirement. | Define the input size and quality checks, measure on the demo laptop, and decide the acceptable completion/progress behavior. |
+
+If results are inadequate, compare a smaller model or queue background processing. Limiting claims to deadlines or removing any approved capability requires an explicit scope decision and updates to dependent requirements, stories and design. A benchmark shortfall does not silently change the MVP.
+
+### 12.2 Extraction and live-capture checkpoints
+
+Propose a first per-format feasibility checkpoint around **December 2**. For native PDF text, scanned pages, images, math/diagrams and accessible audio/video, record an actual attempt on an authorized example: tool/version, machine, input, original location, extracted output, fidelity check, processing status and failure/recovery behavior. A `failed` or `unsupported` result is evidence of a limitation, not successful FR-05 acceptance.
+
+Before that checkpoint, inspect how each required LMS exposes pages, iframes, cross-origin PDFs and media. An inspection is not an extension capture. Set a separate dated live-save checkpoint once the vertical-slice plan is reviewed; that date remains an explicit open planning item, with successful authorized saves required for Canvas, Gradescope and EdStem.
+
+Tesseract is Iris's proposed OCR candidate. Existing captions first, followed by a local `whisper.cpp`/`small.en` path when appropriate, comes from Lawrence's recording proposal. These are unverified candidates, not newly approved tools. Record resource contention with Ollama and evaluate Lawrence's one-heavy-background-job proposal. Keep source text, timestamps and partial-result limitations visible.
+
+If a required format has no working path at the checkpoint, bring the recorded results to the team and request a change against FR-05 before reducing scope. Preserve successful captures and manual recovery while that decision is pending; recordings are not excluded by this draft.
+
+### 12.3 Provisional dates and stage depth
+
+Retain Functional Design, NFR Requirements, NFR Design and Infrastructure Design with their required artifacts and approvals. Keep the latter two concise for one laptop; mark irrelevant cloud/scaling question categories N/A with reasons, without omitting applicable local persistence, resource, security or recovery design. U-01 and its nine modules remain unchanged.
+
+| Proposed window | Outcome to review | Dependency/status |
+| --- | --- | --- |
+| Early Construction, before NFR Requirements selects the stack | Manual model/embedding probe and initial LMS-surface inspection. | Separate Construction authorization and available laptop/examples; no results claimed. |
+| Around December 1 | Review and approve all four U-01 design stages. | Model-probe input and actual team reviews; provisional target only. |
+| Around December 2 | Review the Code Generation plan with the text/PDF-to-MCP slice first; record first per-format feasibility attempts. | Design approvals and probe evidence; not automatic permission to code. |
+| After the vertical slice, date still to be agreed | Actual extension saves on all three required LMS sites and authorized embedded-resource cases. | A separate dated checkpoint must be agreed in the reviewed implementation plan. |
+| December 3–11 | Build and integrate the reviewed scope, resolving contract and evidence gaps. | Approved Code Generation plan and actual capacity. |
+| December 12–16 | Build and Test, demo video and recorded presentation. | Integrated product and required real-source/client evidence. |
+
+These are Iris's proposed target windows, not accepted team commitments. The November 24 Inception-only boundary remains unchanged. Local Ask and local MCP are included by the reported team decision; remote ChatGPT/hosted MCP integration and tunnels remain excluded. Jev deferral, final model selection, media-scope proposals and owner acceptance remain open; retain the existing optional Jev and required-format baseline meanwhile. If Jev changes, reconcile FR-06, FR-12, NFR-02, NFR-05, US-09, US-19, US-24, US-25, C-08 and the affected service, dependency, story-map and plan references together; do not only edit this amendment.
+
+### 12.4 Amendment preparation checklist
+
+- [x] Read all three PR #6 inline comments and the review summary.
+- [x] Prepare the model-probe, extraction-checkpoint and provisional schedule proposals without asserting runtime results.
+- [x] Preserve historical approvals and the current hold while applying the authorized Ask/source-authority revision across requirements, stories, design and units.
+- [ ] Agree concrete latency budgets, a live-LMS checkpoint date and team capacity during later planning; retain model/Jev/media choices as explicit open questions under the preserved baseline. These future implementation details do not by themselves prevent review of the current Inception draft.
+- [ ] Complete cross-artifact validation and record actual review/approval of the coordinated draft before releasing the hold or marking PRs Ready.

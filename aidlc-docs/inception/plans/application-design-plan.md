@@ -1,14 +1,14 @@
 # Course Copilot — Application Design Plan
 
-**Status:** Complete; all five artifacts generated/validated and explicitly approved on 2026-11-20T03:43:36Z. No separate planning approval is fabricated.
+**Current review (2026-11-23):** Step 2 corrective draft incorporating the reported team decision to include local Ask and local MCP. The 2026-11-20 approval applies to the historical baseline only; approval of these revisions is pending. No Construction or runtime acceptance is claimed.
 
-**Inputs:** Approved requirements/decision register, P-01 and US-01–US-25, execution-plan Q1 approval on 2026-11-20T03:18:17Z, application-design.md stage rules and course extension.
+**Inputs:** Historical requirements/story/design approvals plus the Nov 23 reported team decision for Ask + local MCP and authorization to continue Step 2. Current targets are P-01, US-01–US-26, FR-01–FR-16 and seven NFRs; application-design.md stage rules and course extension apply.
 
-**Branch:** `inception/04-application-design`, based on approved Workflow Planning head `ae4ce29f207bf67bc1390a23e3efe06feb9a2dbc`. Integrate #5 then #6 then this stage into `candidate/course-copilot`. Same single driver: xiaolonglin1124-bit.
+**Current branch:** Existing `inception/05-units-generation` / PR #8 holds the coordinated corrective pass. Historical Application Design was generated on `inception/04-application-design` after Workflow Planning head `ae4ce29f207bf67bc1390a23e3efe06feb9a2dbc`. Keep the existing #5→#6→#7→#8 merge order and single driver, xiaolonglin1124-bit; no new branch or PR is created.
 
 ## 1. Question-category assessment and authorization
 
-The five required categories have been evaluated. No genuinely missing product decision remains. The approved execution plan authorizes this stage and Q36 delegates routine technical choices to the agent. Application Design Steps 6–9 apply to actual unresolved questions; none is invented solely to create another approval round. This plan documents engineering choices transparently and proceeds to artifacts. The required separate design-artifact approval at Step 13 was subsequently recorded on 2026-11-20T03:43:36Z.
+The original five-category assessment below records the Nov 20 engineering direction. The Nov 23 corrective assessment adds the team-selected local Ask path; these revisions remain reviewable. The approved execution plan authorizes this stage and Q36 delegates routine technical choices to the agent. Application Design Steps 6–9 apply to actual unresolved questions; none is invented solely to create another approval round. This plan documents engineering choices transparently and proceeds to artifacts. The required separate design-artifact approval at Step 13 was subsequently recorded on 2026-11-20T03:43:36Z.
 
 | Category | Evidence and design resolution | New user question |
 |---|---|---|
@@ -18,14 +18,14 @@ The five required categories have been evaluated. No genuinely missing product d
 | Dependencies | SQLite/files store evidence; local model and hosted Jev have separate adapters. MCP depends exclusively on read-only query ports; mutations stay in the user-controlled library API. | None; trust boundaries follow approved requirements. |
 | Design patterns | Local single-user cost-conscious TypeScript stack, no hosting/accounts/graph DB. Use modular monolith, adapters, processing pipeline and separated write/query interfaces. | None; microservices or new cloud accounts would conflict with existing constraints. |
 
-There are zero new unanswered product questions. This is a rationale, not a claim that the user explicitly approved unseen detailed interfaces. Detailed algorithms and runtime tool/model choices await later design/measurement; design artifacts require their own explicit review.
+The reported team decision resolves inclusion of Ask and local MCP; no approval of unseen revised interfaces is asserted. Final model/media/Jev choices remain tracked separately in the review package. Detailed algorithms and runtime tool/model choices await later design/measurement; design artifacts require their own explicit review.
 
 ## 2. Proposed component map and contracts
 
 | ID | Component | Main responsibility |
 |---|---|---|
 | C-01 | Capture Extension | User-triggered page/embedded-resource selection; browser-authorized capture; metadata/bytes envelope; no credential/session export. |
-| C-02 | Local Library UI | Course/folder browsing, import, uncertain filing review, metadata correction, source/history/conflict inspection; no built-in chat. |
+| C-02 | Local Library UI | Course/folder browsing, import, uncertain filing review, metadata correction, source/history/conflict inspection and course-scoped local Ask; course-keyed draft/result continuity during tab navigation. |
 | C-03 | Local Library API | Controlled loopback mutations and UI queries; locally paired extension/UI; input/scope validation and status inspection. |
 | C-04 | Ingestion Coordinator | Durable run/item states, original preservation, bounded processing and explicit retry/recovery. |
 | C-05 | Evidence Store | SQLite/local originals; stable source identity, immutable versions, separate course memberships and metadata, passages/facts/relations/jobs; read/write ports separated. |
@@ -36,12 +36,13 @@ There are zero new unanswered product questions. This is a rationale, not a clai
 | C-10 | Claims and Relations | Evidence-linked substantive facts, proposed typed edges and claim-scoped precedence/conflict views; models cannot establish authority alone. |
 | C-11 | Index and Retrieval | Incremental FTS5/vector indexing; all filters; compact progressive candidates and exact saved evidence; lexical fallback. |
 | C-12 | Read-only MCP Adapter | Separate local stdio process with read-only persistence/query access; scoped list/search/fetch/history/conflicts; no ingestion or mutation tools. |
+| C-13 | Course Ask Orchestrator | Controlled local question, local-only bounded retrieval and generation, validated exact citations, explicit insufficient-evidence/model-outage behavior; no writes/hosted fallback. |
 
 Shared contract concepts: CourseId, SourceId, DocumentId, VersionId, PassageId, FactId, RelationshipId, IngestionRunId; immutable original references; course memberships distinct from source identity; captured/published/effective dates distinct; per-item complete/partial/failed/unsupported plus run progress; citations pinned to exact versions/passages. Final filenames/module packaging and detailed business algorithms belong to later stages.
 
-S-01 Capture/Ingest, S-02 Processing/Index, S-03 Metadata/Review and S-04 Evidence Query orchestrate these components. They are logical services, not independently hosted microservices. Writes occur only on authorized library paths; the query service/MCP cannot mutate evidence or regenerate persisted indexes on demand.
+S-01 Capture/Ingest, S-02 Processing/Index, S-03 Metadata/Review, S-04 Evidence Query and S-05 Local Course Ask orchestrate these components. They are logical services, not independently hosted microservices. Writes occur only on authorized library paths; the query service/MCP cannot mutate evidence or regenerate persisted indexes on demand.
 
-## 3. Generation and validation checklist
+## 3. Historical generation and validation checklist (Nov 20 baseline)
 
 - [x] Load approved context and check stage prerequisites.
 - [x] Fetch/status and inspect open PRs/feedback; no competing teammate stage.
@@ -64,4 +65,21 @@ Full approved source/format breadth is mandatory. Originals survive AI/index fai
 
 Controlled loopback access, explicit Jev data disclosure/consent, untrusted material and external Codex/model processing are separate trust boundaries. No runtime performance, provider compatibility or successful source/client integration is claimed. No application code is generated; after approved Units Generation the course milestone stops before Construction.
 
-The consolidated artifact contains the generated-design review question with A approve/continue, B changes and C Other. The user explicitly answered A on 2026-11-20T03:43:36Z; the Step 13 artifact gate is complete.
+The consolidated artifact contains the generated-design review question with A approve/continue, B changes and C Other. The user explicitly answered A on 2026-11-20T03:43:36Z for the historical baseline. That answer does not close the corrective-draft review gate.
+
+## 5. Nov 23 corrective assessment and generation
+
+| Category | Current direction and reason | Decision status |
+|---|---|---|
+| Component identification | Add C-13 behind existing C-02/C-03 so ordinary students can use the Ask UI. Keep C-12 independently available for the technical pilot. | Ask + local MCP selected by reported team decision; detailed artifact review pending. |
+| Methods | Add AskRequest/AskResult, exact passage-grounded answer segments and per-course/request identity. Unknown citations fail safely. | Draft under the authorized Step 2 revision. |
+| Services | Add read-only S-05; local-only bounded search/fetch precedes C-07 generation. Unavailable model exposes retrieval-only mode; missing support exposes insufficient evidence. | Draft; no general agent, remote ChatGPT or write behavior introduced. |
+| Dependencies | C-13 receives C-11 query-only, C-05 scoped reads and C-07 local generation. Its C-11 composition excludes hosted Jev. | No writer/consent/index dependency is granted; verify during later Construction. |
+| Patterns | Preserve modular local runtime, unchanged six MCP tools and explicit UI session state keyed by course/request. | Routine engineering direction within selected scope; revised artifacts require actual review. |
+
+- [x] Incorporate the reported Ask + local MCP choice into this corrective plan, retaining the original design decisions and approval as history.
+- [x] Revise all five design artifacts with C-13/S-05, FR-16/US-26, exact-citation, authority and course/request continuity boundaries.
+- [x] Retain unadopted media/Jev/model review requests as tracked questions rather than silently changing approved breadth.
+- [x] Complete coordinated cross-artifact validation with the parent Step 2 review package.
+- [ ] Receive actual team approval of the concrete revised artifact package; do not substitute the historical A answer.
+- [ ] Close the corrective gate/Ready status only after that approval; continue to stop before Construction.
