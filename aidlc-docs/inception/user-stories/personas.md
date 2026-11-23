@@ -2,7 +2,9 @@
 
 **Stage:** Inception / User Stories / Part 2: Generation
 
-**Status:** Corrective draft revised November 23, 2026; team review of the revised artifacts is pending. The November 20 approval applies to the earlier 25-story version, not these changes. This remains a synthetic, requirements-derived persona with no claim of completed user research.
+**Status:** Corrective persona revision approved by Lawrence on November 23, 2026. The November 20 approval remains historical. This is a synthetic, requirements-derived persona with no claim of completed user research.
+
+**Current approval:** Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction.
 
 **Persona:** P-01 — Maya, a student managing several courses
 

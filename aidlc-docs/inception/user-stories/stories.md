@@ -2,7 +2,9 @@
 
 **Stage:** Inception / User Stories / Part 2: Generation
 
-**Status:** Corrective draft revised November 23, 2026; revised artifact approval is pending. The approval on 2026-11-20T03:04:34Z applies to the earlier 25-story version. The 26-story catalog retains both MVP and post-MVP behavior; delivery phases below determine current acceptance. No functionality is reported as implemented or tested.
+**Status:** Corrective revision approved by Lawrence on November 23, 2026. The approval on 2026-11-20T03:04:34Z applies to the earlier 25-story version. The 26-story catalog retains both MVP and post-MVP behavior; delivery phases below determine current acceptance. No functionality is reported as implemented or tested.
+
+**Current approval:** Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction.
 
 **Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`, plus the November 23 amendments for Ask + local MCP and phased delivery. Hosted Jev, scan/image OCR, advanced math/diagram recognition and audio/video extraction/transcription remain planned for post-MVP work. The earlier no-chat boundary is superseded for focused local course Ask. Coverage is FR-01–FR-16 and NFR-01–NFR-07.
 
@@ -451,7 +453,7 @@ The register retains the full roadmap. Post-MVP rows are not current MVP accepta
 
 ## Review boundary
 
-This file and `personas.md` revise the earlier generated artifacts through the existing Step 2 corrective pass. The earlier separate planning/artifact approvals remain historical evidence. The current scope amendments support the coordinated revision; approval of the revised artifact set remains pending. Revised artifact review remains pending; neither this document nor its historical answer below clears that gate. Application code, runtime capability claims and Construction remain outside this pass.
+This file and `personas.md` revise the earlier generated artifacts through the existing Step 2 corrective pass. The earlier separate planning/artifact approvals remain historical evidence. The current scope amendments support the coordinated revision; approval of the revised artifact set is now recorded from Lawrence's separate PR #8 comment. The revised artifact review is complete through Lawrence's separate PR #8 approval above; the historical answer below is not used to infer that approval. Application code, runtime capability claims and Construction remain outside this pass.
 
 ## Historical generated-artifact review — earlier 25-story version
 
@@ -465,7 +467,7 @@ C) **Other.** Describe the requested review outcome after the answer tag.
 
 [Answer]: A
 
-**Historical approval response (English translation):** A: Approve the user stories and persona, and proceed to Workflow Planning. The original raw response is preserved in the [audit](../../audit.md#user-stories--explicit-generated-artifact-approval-and-stage-completion). This translation records the historical choice; it is not a new approval. The [current review hold](../../aidlc-state.md#current-checkpoint-and-handoff) remains in force.
+**Historical approval response (English translation):** A: Approve the user stories and persona, and proceed to Workflow Planning. The original raw response is preserved in the [audit](../../audit.md#user-stories--explicit-generated-artifact-approval-and-stage-completion). This translation records the historical choice; it is not a new approval. The [current handoff](../../aidlc-state.md#current-checkpoint-and-handoff) records the separate corrective approval and the stop before Construction.
 
 Approval was recorded on 2026-11-20T03:04:34Z. Later design gates and Construction authorization remain separate.
 
@@ -480,9 +482,9 @@ Approval was recorded on 2026-11-20T03:04:34Z. Later design gates and Constructi
 | INFO5940-05 | Compliant | Documentation only; no credentials or source application code. |
 | INFO5940-06 | Compliant | Single-writer Draft PR #5 is the active review location; remote state and all available feedback channels were checked. |
 
-## Current corrective-artifact review — pending
+## Current corrective-artifact review — approval recorded
 
-The draft now contains 26 stories and the synthetic Maya persona, with FR-16/local Ask added, US-17/18 authority conditions clarified and the technical-pilot boundary stated for US-22. The feature catalog is retained with explicit delivery phases: Jev and advanced media processing are post-MVP, while local Ask/MCP and their native-text evidence foundation are the MVP. Deferral does not remove these roadmap features. Historical approvals above do not approve this draft.
+The draft now contains 26 stories and the synthetic Maya persona, with FR-16/local Ask added, US-17/18 authority conditions clarified and the technical-pilot boundary stated for US-22. The feature catalog is retained with explicit delivery phases: Jev and advanced media processing are post-MVP, while local Ask/MCP and their native-text evidence foundation are the MVP. Deferral does not remove these roadmap features. Historical approvals above do not approve this revision; Lawrence's separate current approval is recorded at the top of this file.
 
-Review outcome to record after the team examines these concrete revisions: **Request Changes** with specific amendments, or **Approve the revised Inception artifacts** while retaining the stop before Construction. No response or approval is recorded here yet. The shared [Step 2 review package](../reviews/step2-review-package.md) consolidates feedback and the outstanding review boundary.
+**Review outcome:** Lawrence approved the revised Inception artifacts through Units Generation on 2026-11-23T22:37:29Z ([PR #8 approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386)). The approval covers Ask + local MCP and the documented post-MVP deferrals. STOP before Construction. This records Lawrence's explicit response, not five separate teammate approvals or approval of later metadata-only closure edits. The shared [Step 2 review package](../reviews/step2-review-package.md) consolidates feedback and the recorded approval boundary.
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | N/A to executable implementation in this stage | The partial-testing obligations remain explicit acceptance work for later stages; no framework configuration or runtime results are claimed. |
