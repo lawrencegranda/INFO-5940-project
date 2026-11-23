@@ -7,7 +7,7 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Corrected Inception complete through Units Generation; STOP before Construction; Ready handoff in progress
+- **Current Stage**: Corrected Inception complete through Units Generation; STOP before Construction; PRs #5–#8 Ready; ordered integration pending
 - **Historical Inception Completed At**: 2026-11-20T04:20:19Z
 - **Working Integration Branch**: `candidate/course-copilot`
 - **Active Stage Branch**: `inception/05-units-generation`
@@ -74,7 +74,7 @@
 - **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (historical baseline preserved; November 23 corrective artifacts separately approved).
 - **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
 - **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
-- **Remaining corrective work**: Artifact generation, consistency checks, minutes incorporation and actual approval recording are complete. Finish the existing PR Ready handoff; Lawrence’s ordered merges, Iris’s final README and final submission checks remain separate Issue #9 tasks.
+- **Remaining corrective work**: Artifact generation, consistency checks, minutes incorporation and actual approval recording are complete. The existing PR Ready handoff is complete; Lawrence’s ordered merges, Iris’s final README and final submission checks remain separate Issue #9 tasks.
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
 - **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
@@ -96,6 +96,8 @@ Technical inputs contain proposed version ranges, the six-tool course scope, a q
 
 **Meeting details:** November 23, 2026, 10:00–10:10 AM EST (America/New_York), on Zoom, with Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. [Iris's published minutes](inception/reviews/meeting-minutes-2026-11-23.md) are incorporated, including the Ask/local-MCP direction and separate follow-up confirmations. Product scope remains Ask + local MCP.
 
-**Next handoff:** Finish the existing PR #5–#8 Ready transitions, then Lawrence performs ordered merge-commit integration. The actual approval is recorded in [the review gate](inception/reviews/step2-approval.md). Final model selection, runtime benchmarks and proposed module-lead acceptance remain future work; they do not reopen the approved Inception gate.
+**Next handoff:** PRs #5–#8 are non-Draft, unmerged and mergeable as checked at 2026-11-23T22:56:30Z. Lawrence performs ordered merge-commit integration. The actual approval is recorded in [the review gate](inception/reviews/step2-approval.md). Final model selection, runtime benchmarks and proposed module-lead acceptance remain future work; they do not reopen the approved Inception gate.
 
-**Handoff:** Corrected Inception is complete through Units Generation. STOP before Construction. Xiaolong records the approval and completes Ready transitions; Lawrence integrates #5 → #6 → #7 → #8 with merge commits, then candidate/course-copilot into main. Iris prepares the final README and the team completes final verification/submission. The prototype remains separate.
+**Handoff:** Corrected Inception is complete through Units Generation. STOP before Construction. Xiaolong has recorded the approval and completed Ready transitions; Lawrence integrates #5 → #6 → #7 → #8 with merge commits, then candidate/course-copilot into main. Iris prepares the final README and the team completes final verification/submission. The prototype remains separate.
+
+**Verified Ready handoff (2026-11-23T22:56:30Z):** PRs #5, #6 and #7 were changed from Draft to Ready through xiaolonglin1124-bit; #8 was already non-Draft. All four PR descriptions now link the actual revised-artifact approval and ordered integration sequence. GitHub metadata reports all four unmerged and mergeable. The 26-file approval/status publication at `2b8a9eef52e8a9e1c23a6fa6c6f7a615bbd42994` exactly matches the checked local files and preserves the audit prefix. Xiaolong’s Step 2 is complete; Lawrence’s Step 3 integration remains pending.
