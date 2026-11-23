@@ -1,6 +1,6 @@
 # Course Copilot — MVP and Later Work
 
-**Status:** Current scope allocation for the coordinated Inception draft. Revised artifact approval remains pending on PR #8.
+**Status:** Itemized delivery allocation in the coordinated Inception draft, pending separate team confirmation together with the revised artifacts. The [November 23 minutes](../reviews/meeting-minutes-2026-11-23.md) confirm the Ask/local-MCP direction and retention of broader ideas; they do not approve each individual deferral listed below.
 **Delivery:** The current MVP targets December 16, 2026. Later work is retained in the product backlog without a committed delivery date. The November 24 milestone remains Inception only.
 
 ## Current MVP

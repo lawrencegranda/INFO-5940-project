@@ -106,7 +106,7 @@ Current MVP delivery risks include native capture across the three authenticated
 
 Ask answers from bounded saved course evidence through local retrieval and generation, validates exact citations, exposes uncertainty/conflicts and preserves per-course progress during app navigation. General autonomous actions, remote ChatGPT integration and hosted MCP remain excluded. Local MCP does not guarantee that an external host's model runs locally.
 
-The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. D-46 below retains Jev and advanced media features for later delivery; remembered course mapping and proposed module-lead acceptance remain separate Open questions. The revised artifact review, Iris's meeting minutes and the final README remain separate review/submission work.
+The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. D-46 below retains Jev and advanced media features for later delivery; remembered course mapping and proposed module-lead acceptance remain separate Open questions. The [meeting minutes](../reviews/meeting-minutes-2026-11-23.md) are incorporated. Detailed allocation/evaluation-plan confirmation, revised artifact approval and the final README remain separate review/submission work.
 
 ## November 23 delivery allocation — retained deferred features
 
@@ -115,3 +115,9 @@ The final model/embedding choice remains an early-Construction validation task w
 | D-46 | Keep Jev and advanced media capabilities in the product plan, and defer implementation beyond the current MVP. | Local Ask + local MCP and their native-text/PDF evidence library form the current MVP. Jev classification/routing/reranking, scan/image OCR, advanced math/diagram recognition, and audio/video processing remain planned later work. Remote ChatGPT/hosted MCP is also a deferred integration. |
 
 The [delivery allocation](mvp-scope.md) supersedes the earlier requirement that all OCR/media/provider paths pass current MVP acceptance. Existing IDs, stories and design contracts are retained; phase labels distinguish MVP commitments from future capabilities. Preserving an original is not proof that a deferred adapter is implemented. Later work has no committed delivery date. The coordinated revised artifacts still require team review; this allocation does not complete their approval gate or authorize Construction.
+
+## November 23 meeting minutes and remaining confirmation
+
+The [published minutes](../reviews/meeting-minutes-2026-11-23.md) record a 10:00–10:10 AM EST Zoom discussion with all five members. They confirm local Ask and local read-only MCP as the MVP direction, with broader features retained for later consideration.
+
+The minutes explicitly leave the precise feature allocation, local generation/embedding evaluation plan and revised Inception artifacts for separate confirmation. D-46 is the itemized allocation submitted in the current review package; it is not represented as a feature-by-feature approval during that meeting. The [artifact review gate](../reviews/step2-approval.md) covers that allocation and the documented evaluation plan together. No final model, benchmark result, Construction authorization or merge approval is established by the minutes.
