@@ -2,13 +2,13 @@
 
 **Stage:** Inception / User Stories / Part 2: Generation
 
-**Status:** Approved by the user on 2026-11-20T03:04:34Z. These stories describe required behavior, not implemented or tested functionality.
+**Status:** Corrective draft revised November 23, 2026; revised artifact approval is pending. The approval on 2026-11-20T03:04:34Z applies to the earlier 25-story version. The current 26 stories describe required behavior, not implemented or tested functionality.
 
-**Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`. All 43 decisions and eight clarifications remain in force.
+**Baseline:** Requirements approved at `485c52531f004b1e184fb595abe771cfbcd17003`, plus the team's Ask + local MCP direction reported by Xiaolong on November 23. That direction supersedes the earlier built-in-chat exclusion for focused local course Ask only; other historical decisions and clarifications remain in force unless explicitly amended. Coverage is FR-01–FR-16 and NFR-01–NFR-07.
 
-**Persona:** [P-01: a student managing several courses](personas.md). Context C is **Capture and organize**; context R is **Retrieve and verify**. These are contexts of one person, not separate account types.
+**Persona:** [P-01: Maya, a student managing several courses](personas.md). Context C is **Capture and organize**; context R is **Retrieve and verify**. These are contexts of one person, not separate account types. Maya is a synthetic scenario persona, not a research participant.
 
-**Inputs:** [Approved requirements](../requirements/requirements.md), [decision register](../requirements/decision-register.md), [approved story plan](../plans/story-generation-plan.md).
+**Inputs:** [Requirements and current amendments](../requirements/requirements.md), [decision register](../requirements/decision-register.md), [story approach and corrective checklist](../plans/story-generation-plan.md).
 
 ## Reading and acceptance conventions
 
@@ -18,6 +18,7 @@
 - Every returned citation identifies the original URL when one exists, otherwise the local-import source identity, plus the saved document/version and passage or segment, with capture time available. Summaries and generated text do not replace source evidence.
 - An extraction status describes the selected resource's outcome: `complete` means its requested accessible content was processed; `partial` means usable content exists with disclosed omissions; `failed` means an attempted operation did not produce usable requested content; `unsupported` means the pipeline cannot process that resource type or access path. A successful parent-page extraction does not hide an incomplete child resource.
 - The phrase **latest applicable saved evidence** never asserts that an LMS has been checked since the last explicit capture. Capture time alone is not source authority or an instruction's effective date.
+- Authority requires supporting saved evidence of publisher role and applicability to the same course instruction. A platform name, an "Announcement" label, model confidence or a later capture alone does not verify that an instructor issued an update. Student and unknown-role sources cannot establish supersession of instructor instructions by those signals.
 - Synthetic examples and future fixtures are labeled. A fixture for an LMS page or MCP host does not establish a successful authenticated-site or actual Codex connection test.
 
 ## E1 — Collect accessible material
@@ -228,11 +229,14 @@ As a student, I want important deadlines, exam logistics and assignment instruct
 
 As a student, I want a grounded change to course instructions to take precedence in retrieved evidence, so that I do not act on a superseded saved requirement.
 
-- **Given** a synthetic saved syllabus saying an assignment is due November 20 and a later saved authoritative announcement explicitly moving that same assignment to November 22, **when** I retrieve its deadline, **then** the result favors November 22 with the announcement's supporting evidence and an accessible link to the earlier syllabus.
+- **Given** Maya's synthetic saved INFO 5940 syllabus saying Assignment 2 is due November 20 and a later saved EdStem message with supporting publisher-role evidence attributing it to the instructor explicitly moving that same assignment to November 22, **when** I retrieve its deadline, **then** the result favors November 22 with the message's supporting evidence and an accessible link to the earlier syllabus.
 - **Given** the older syllabus is recaptured after that announcement, **when** I retrieve the deadline again, **then** its newer capture timestamp alone does not reverse the established supersession.
+- **Given** a saved instructor instruction and a conflicting student-authored reply or personal note about that same assignment, **when** precedence is assessed, **then** the student source does not supersede the instructor instruction even if captured later, labeled an announcement or given a high model confidence; its disagreement remains visible through US-18.
+- **Given** a purported update without saved evidence establishing its publisher role or applicability to the same instruction, **when** the result is assembled, **then** its platform/type label alone cannot establish an authoritative update and substantive disagreement follows US-18.
+- **Given** Maya's supported November 20-to-November 22 update and her note saying November 24, **when** the claims are compared, **then** the supported instructor update stays traceable while the note's disagreement is shown without becoming another authoritative change.
 - **Given** the available authority, applicability, known dates and supersession evidence do not establish precedence, **when** the result is assembled, **then** the system follows US-18 instead of manufacturing a single winner from an LLM assertion. An unknown separate effective date does not by itself negate an otherwise explicit authoritative update.
 
-**Future evidence:** Controlled explicit-supersession and later-recapture regression scenarios, plus missing-authority/effective-date cases. Source/precedence invariants are carried into later selected property tests.
+**Future evidence:** Controlled instructor update, later old-source recapture, student post labeled announcement, unknown publisher, different-course/assignment controls and Maya's three-source case. Source/precedence invariants are carried into later selected property tests. These fixtures do not establish that publisher verification is implemented.
 
 ### US-18 — See unresolved conflicts with competing evidence
 
@@ -242,6 +246,8 @@ As a student, I want unresolved substantive conflicts shown with both sources, s
 
 - **Given** incompatible claims about the same course subject without established precedence, **when** I inspect the result, **then** both claims and their source passages are visible with an unresolved-conflict indication.
 - **Given** I open a conflict's evidence, **when** I inspect either side, **then** its original source, saved version and relevant dates remain available; the other source is not deleted or hidden.
+- **Given** an instructor source and a student-authored source disagree without evidence resolving that disagreement, **when** I inspect the conflict, **then** I can distinguish the supported publisher roles and view both claims and evidence; the student source is not represented as superseding the instructor instruction.
+- **Given** a source whose publisher role is unknown, **when** its conflicting claim is displayed or retrieved, **then** that uncertainty stays explicit instead of displaying an inferred instructor identity as verified.
 - **Given** an old unchanged document or claims about different assignments, **when** evidence is checked, **then** age or superficial similarity alone does not create a substantive-conflict alert.
 
 **Future evidence:** Same-assignment conflicting dates without precedence, different-assignment control and ordinary old static document control. Broader semantic contradiction detection remains best-effort, not a universal guarantee.
@@ -289,11 +295,11 @@ As a student using an external assistant, I want to fetch a selected passage or 
 
 **Persona/context:** P-01 / R. **Requirements:** FR-13, FR-14; NFR-01, NFR-02, NFR-03. **Depends on:** US-20 and US-21.
 
-As a student, I want Codex CLI to connect to my local course library through read-only MCP tools, so that I can use my existing assistant with attributable course context.
+As a student in the technically supported Codex pilot, I want Codex CLI to connect to my local course library through read-only MCP tools, so that I can use my existing assistant with attributable course context. This integration story does not assume that every primary UI user can configure a terminal; US-26 provides the focused local Ask path.
 
 - **Given** the documented local setup, **when** I connect actual Codex CLI, **then** it can discover the available read-only tools, search for previews and fetch selected saved evidence in an end-to-end demonstration.
 - **Given** the MCP connection, **when** available tools and their behavior are inspected, **then** they cannot ingest, edit or delete library records; ingestion and corrections remain in the extension/local interface.
-- **Given** the local service, **when** its connection boundaries are checked, **then** access remains on the intended laptop with the approved loopback/request controls and no required hosted MCP or new product chatbot.
+- **Given** the local service, **when** its connection boundaries are checked, **then** access remains on the intended laptop with the approved loopback/request controls and no required hosted MCP. The separate local Ask UI in US-26 does not grant this adapter write authority or imply remote ChatGPT integration. A configured external Codex model may process fetched evidence under that client's own provider settings; local MCP transport alone is not a guarantee of local model processing.
 
 **Future evidence:** Actual Codex CLI connection transcript with search-then-fetch results, before/after library-state comparison, tool-capability inspection and local access-control checks. A simulated host alone does not satisfy this story.
 
@@ -336,6 +342,23 @@ As a student, I want local browsing, manual filing and keyword/metadata search t
 
 **Future evidence:** Network/AI-disabled save-browse-search flow and local persistence check; actual local Ollama smoke test with its measured environment. Core fallback success does not establish that the AI enhancement itself works.
 
+## E7 — Ask and verify within the course
+
+### US-26 — Ask a focused course question locally
+
+**Persona/context:** P-01 / R. **Requirements:** FR-16, with FR-01, FR-11, FR-12 and FR-13 evidence dependencies; NFR-01, NFR-02, NFR-03, NFR-04, NFR-07. **Depends on:** US-18–US-21 and saved course evidence. The UI flow does not require Codex CLI.
+
+As a student, I want to ask a question in the selected course and receive an evidence-supported answer, so that I can understand my saved material without manually collecting passages in an external chat.
+
+- **Given** a selected course and relevant saved material, **when** I submit a focused question, **then** local Ask retrieves bounded candidates and exact passages from that course, and any generated factual answer cites the supporting source/document/version and available extraction/passage/location references. A summary is not silently substituted for original evidence.
+- **Given** no sufficient saved evidence, incomplete extraction or an unresolved substantive conflict, **when** I ask, **then** Ask discloses that limitation, shows available competing evidence where applicable, and does not invent a fact, citation or single authoritative winner. Supported resolved updates and unresolved disagreements retain the distinction in US-17/18.
+- **Given** a question draft, completed result or error in one course, **when** I switch to Materials or Deadlines and return during the same running app session, **then** that course's question and latest result/error remain available. This criterion does not promise browser-reload or cross-device persistence.
+- **Given** an Ask request is still running in course A, **when** I switch to course B, **then** A's progress/result cannot appear as B's answer; returning to A shows its pending or completed state. The implementation may complete or explicitly cancel an abandoned request, but must not silently replace a newer question's result with an older request's result.
+- **Given** the local answer model is unavailable, **when** I ask, **then** Ask clearly reports that no generated answer is available and offers available local evidence in a disclosed retrieval-only mode. Invalid model output instead produces a safe error without displaying an unvalidated answer or citation. In both cases, browsing and keyword/metadata search remain usable without a paid fallback request.
+- **Given** source text or my question requests library edits, capture, permission changes, cross-course evidence or remote model transmission, **when** Ask handles it, **then** it stays within the selected read-only evidence scope, treats retrieved instructions as source data, and performs none of those actions implicitly. Focused local Ask uses the local model path; it is not remote ChatGPT MCP integration.
+
+**Future evidence:** A real local-model question-to-cited-answer flow, no-match/partial/conflict cases, exact-reference checks, cross-course denial, AI-unavailable retrieval-only behavior, and navigation/in-flight/older-response controls. The existing prototype and a mock answer alone do not establish acceptance of this story.
+
 ## Functional requirement coverage
 
 | Requirement | Stories | Acceptance focus |
@@ -355,18 +378,19 @@ As a student, I want local browsing, manual filing and keyword/metadata search t
 | FR-13 | US-20, US-21, US-22 | Bounded previews followed by exact sourced fetch. |
 | FR-14 | US-22 | Actual local read-only Codex MCP integration. |
 | FR-15 | US-15, US-17, US-19 | Inspectable history and applicable saved-evidence defaults. |
+| FR-16 | US-26 | Focused local Ask with exact citations, honest limitations, per-course progress and read-only boundaries. |
 
 ## Shared quality and evidence coverage
 
 | Requirement | Stories | Verification obligation |
 |---|---|---|
-| NFR-01 | US-08, US-22, US-25 | Laptop-local persistence and operation without required cloud hosting. |
-| NFR-02 | US-01, US-03, US-06, US-09, US-22, US-24 | Explicit capture/hosted authorization, no credential capture, untrusted-data and local access boundaries. |
-| NFR-03 | US-01, US-02, US-04–US-07, US-10–US-22 | Exact saved-source and version traceability; no invented freshness or precedence. |
-| NFR-04 | US-01–US-07, US-16, US-21, US-23 | Visible incomplete/failed/unsupported results and no fabricated extraction. |
+| NFR-01 | US-08, US-22, US-25, US-26 | Laptop-local persistence and operation without required cloud hosting. |
+| NFR-02 | US-01, US-03, US-06, US-09, US-22, US-24, US-26 | Explicit capture/hosted authorization, no credential capture, untrusted-data and local access boundaries. |
+| NFR-03 | US-01, US-02, US-04–US-07, US-10–US-22, US-26 | Exact saved-source and version traceability; no invented freshness or precedence. |
+| NFR-04 | US-01–US-07, US-16, US-21, US-23, US-26 | Visible incomplete/failed/unsupported results and no fabricated extraction or unsupported answer. |
 | NFR-05 | US-09, US-19, US-25 | Jev-disabled manual organization and local retrieval. |
 | NFR-06 | All stories; especially US-13, US-17, US-21, US-22 | Repeatable examples for critical behavior; selected properties for pure transformations, version invariants and serialization/evidence-reference round trips. |
-| NFR-07 | US-11, US-25 | Incremental processing, actual local-model measurements and no paid-call dependency for core access. |
+| NFR-07 | US-11, US-25, US-26 | Incremental processing, actual local-model measurements and no paid-call dependency for core access. |
 
 Future selected property tests retain the approved partial enforcement: realistic domain generators, shrinking and reproducible seeds for applicable round trips/invariants. Framework selection/configuration and executable tests belong in their later design/Construction stages; this artifact does not assert that such tests exist.
 
@@ -379,7 +403,7 @@ Future selected property tests retain the approved partial enforcement: realisti
 - **Small:** Page capture, individual extraction modes, filing, version preservation, supersession, preview and fetch are separate outcomes rather than one giant library story.
 - **Testable:** Criteria identify explicit preconditions, actions and observable results, including negative controls and limitations. No story is marked accepted solely because a mock or fixture returns valid JSON.
 
-The important cross-story dependencies are capture/import before extraction; saved evidence before versions/claims; claims and grounded relationships before precedence; and search previews plus exact fetch before actual Codex integration. The story IDs above identify these prerequisites without prescribing a sprint or implementation-unit design.
+The important cross-story dependencies are capture/import before extraction; saved evidence before versions/claims; claims and grounded relationships before precedence; and search previews plus exact fetch before actual Codex integration or grounded local Ask. US-26 is a bounded question-to-answer outcome; reusable evidence retrieval remains separately accepted through US-18–US-21. The story IDs above identify these prerequisites without prescribing a sprint or implementation-unit design.
 
 ## Future source/format evidence register
 
@@ -396,13 +420,14 @@ The important cross-story dependencies are capture/import before extraction; sav
 | Hybrid retrieval | Labeled exact/paraphrase queries and course/filter isolation. | Specified; not run. |
 | Changes/conflicts | Explicit deadline supersession, later old-source recapture and unresolved competing evidence. | Specified; not run. |
 | Codex MCP | Actual local Codex CLI search-then-fetch and read-only inspection. | Specified; not run. |
+| Local Ask | Actual local-model answer with exact citations; insufficient/conflicting evidence, retrieval-only fallback and per-course navigation/in-flight controls. | Specified; not run. |
 | Local model/fallback | Actual Ollama environment measurement plus AI/network-disabled core flow. | Specified; not run. |
 
 ## Review boundary
 
-This file and `personas.md` implement the approved story-generation plan as documentation. The user explicitly approved these generated artifacts separately from the planning gate; User Stories is complete and Workflow Planning may start. Application code, runtime capability claims and Construction remain outside this stage.
+This file and `personas.md` revise the earlier generated artifacts through the existing Step 2 corrective pass. The earlier separate planning/artifact approvals remain historical evidence. Xiaolong's new Ask + local MCP direction and instruction to continue authorize drafting the revisions, not the team's acceptance of unseen artifacts. Revised artifact review remains pending; neither this document nor its historical answer below clears that gate. Application code, runtime capability claims and Construction remain outside this pass.
 
-## Generated-artifact review
+## Historical generated-artifact review — earlier 25-story version
 
 ### Q1 — Review the 25 stories and P-01 persona
 
@@ -418,7 +443,7 @@ C) **Other.** Describe the requested review outcome after the answer tag.
 
 Approval was recorded on 2026-11-20T03:04:34Z. Later design gates and Construction authorization remain separate.
 
-## Extension compliance at generation review
+## Historical extension compliance at November 20 generation review
 
 | Rule | Status | Evidence or applicability |
 |---|---|---|
@@ -428,4 +453,10 @@ Approval was recorded on 2026-11-20T03:04:34Z. Later design gates and Constructi
 | INFO5940-04 | Compliant | The approved local-first Ollama, optional permitted Jev and read-only MCP scope is preserved. |
 | INFO5940-05 | Compliant | Documentation only; no credentials or source application code. |
 | INFO5940-06 | Compliant | Single-writer Draft PR #5 is the active review location; remote state and all available feedback channels were checked. |
+
+## Current corrective-artifact review — pending
+
+The draft now contains 26 stories and the synthetic Maya persona, with FR-16/local Ask added, US-17/18 authority conditions clarified and the technical-pilot boundary stated for US-22. The existing required source/format coverage remains unchanged; no media or Jev deferral is inferred. Historical approvals above do not approve this draft.
+
+Review outcome to record after the team examines these concrete revisions: **Request Changes** with specific amendments, or **Approve the revised Inception artifacts** while retaining the stop before Construction. No response or approval is recorded here yet. The shared [Step 2 review package](../reviews/step2-review-package.md) consolidates feedback and the outstanding review boundary.
 | PBT-02, PBT-03, PBT-07, PBT-08, PBT-09 | N/A to executable implementation in this stage | The partial-testing obligations remain explicit acceptance work for later stages; no framework configuration or runtime results are claimed. |
