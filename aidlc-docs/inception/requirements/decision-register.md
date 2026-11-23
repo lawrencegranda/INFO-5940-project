@@ -7,7 +7,7 @@
 - This is a **private, multi-course knowledge library** with focused local course Ask and read-only local MCP. Grounded source/version-aware retrieval remains its purpose; autonomous general-purpose actions are excluded.
 - Its differentiator is **structured, source-linked, version-aware retrieval**, rather than uploading entire course corpora or using only flat RAG.
 - **Original document/snapshot, source URL, captured time, publication/effective time when known, and immutable observed versions** are separate from generated descriptions and indexes.
-- **Full-content capture and selective text extraction:** capture every accessible component of the selected page/file, including embedded documents or media when fetchable with permission; derive indexed text via native extraction, OCR or transcription when needed. Maintain explicit per-item extraction status. Inaccessible media are not represented as fully extracted.
+- **Phased extraction:** The current MVP captures/extracts authorized native-text pages and PDFs and preserves supported originals with explicit status. Scan/image OCR, advanced math/diagram recognition and audio/video processing remain in the later-work backlog. The historical broad capture decisions below are retained with this explicit delivery-phase amendment.
 - **Calm freshness UX:** ordinary documents show source URL and capture date in details, without blanket stale-warning badges. Flag only observed conflicts, known supersessions, extraction gaps, or evidence of meaningful changes; never claim live LMS freshness without checking.
 - **Latest applicable** is determined by source relationships and precedence, not just the newest crawl/capture timestamp. Manual ingestion cannot guarantee that an unsaved update is known.
 - Retrieval is **progressive**: ranked compact candidates, then explicit source fetch, to control context size.
@@ -66,6 +66,8 @@ The original Q34 no-chat answer below is superseded only by the explicit Novembe
 
 ## Final reconciliation — clarifications closed
 
+This section records the historical baseline. D-46 and the current delivery allocation phase Jev and advanced media work beyond the MVP while retaining the requirements.
+
 - **Q14:** Original selection C superseded by user approval of editable metadata (original option B). AI suggestions remain correctable; immutable originals are not rewritten.
 - **Q17:** Graph-like typed relationships are required; a full open-ended knowledge graph and dedicated graph database are not required in this MVP.
 - **Q18:** Re-capture uses source ID/normalized URL and content hash. Semantic matching proposes related or duplicate links but never silently merges.
@@ -84,7 +86,7 @@ The original Q34 no-chat answer below is superseded only by the explicit Novembe
 
 ## Scope and schedule warning
 
-The committed breadth (three authenticated LMS sites + arbitrary internet sources + documents/images/math/embedded media) presents the largest December 16 delivery risk. Keep the breadth requirement visible and decide the per-source/per-format minimum acceptance test. Do not quietly reduce it to a single Canvas-only integration.
+Current MVP delivery risks include native capture across the three authenticated LMS sites, text/PDF evidence fidelity and local Ask/MCP integration. The broader OCR/math/media/Jev catalog is retained for later iterations under D-46; those deferred successes are not December 16 MVP acceptance gates. Keep both current and later per-format evidence obligations explicit.
 
 ## Workflow compliance
 
@@ -104,4 +106,12 @@ The committed breadth (three authenticated LMS sites + arbitrary internet source
 
 Ask answers from bounded saved course evidence through local retrieval and generation, validates exact citations, exposes uncertainty/conflicts and preserves per-course progress during app navigation. General autonomous actions, remote ChatGPT integration and hosted MCP remain excluded. Local MCP does not guarantee that an external host's model runs locally.
 
-The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. Jev deferral, reduced media/OCR scope, remembered course mapping and proposed module-lead acceptance are not implied by D-44/D-45. Preserve their existing obligations or explicit Open questions until an actual decision changes them. The revised artifact review, Iris's meeting minutes and the final README remain separate review/submission work.
+The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. D-46 below retains Jev and advanced media features for later delivery; remembered course mapping and proposed module-lead acceptance remain separate Open questions. The revised artifact review, Iris's meeting minutes and the final README remain separate review/submission work.
+
+## November 23 delivery allocation — retained deferred features
+
+| ID | Decision | Effect |
+| --- | --- | --- |
+| D-46 | Keep Jev and advanced media capabilities in the product plan, and defer implementation beyond the current MVP. | Local Ask + local MCP and their native-text/PDF evidence library form the current MVP. Jev classification/routing/reranking, scan/image OCR, advanced math/diagram recognition, and audio/video processing remain planned later work. Remote ChatGPT/hosted MCP is also a deferred integration. |
+
+The [delivery allocation](mvp-scope.md) supersedes the earlier requirement that all OCR/media/provider paths pass current MVP acceptance. Existing IDs, stories and design contracts are retained; phase labels distinguish MVP commitments from future capabilities. Preserving an original is not proof that a deferred adapter is implemented. Later work has no committed delivery date. The coordinated revised artifacts still require team review; this allocation does not complete their approval gate or authorize Construction.
