@@ -74,7 +74,7 @@
 - **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (historically approved; corrective amendment pending review).
 - **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
 - **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
-- **Remaining corrective work**: Obtain actual team review/approval of the validated, published coordinated draft. Add Iris's actual discussion minutes/decisions and confirmed cadence to the now-recorded meeting metadata, then follow Issue #9 integration/README/submission. Historical approvals do not complete this pass.
+- **Remaining corrective work**: Obtain actual team review/approval of the validated, published coordinated draft. Add Iris's discussion minutes/decisions to the recorded meeting details, then follow Issue #9 integration/README/submission. Historical approvals do not complete this pass.
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
 - **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
@@ -94,6 +94,6 @@ Technical inputs contain proposed version ranges, the six-tool course scope, a q
 
 **Meeting details:** November 23, 2026, 10:00 AM EST (America/New_York), on Zoom, with Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. Iris is preparing the minutes and detailed discussion decisions. Product scope remains Ask + local MCP.
 
-**Next actual input:** Team reviews the [concrete revised-artifact prompt](inception/reviews/step2-approval.md), requests specific changes or approves the artifacts with actual respondent/source/rationale. The meeting's date, time, Zoom format and full-team attendance are recorded. Iris's discussion minutes/decisions and the recurring working cadence remain pending; the morning meeting does not automatically approve the later revised package.
+**Next actual input:** Team reviews the [concrete revised-artifact prompt](inception/reviews/step2-approval.md), requests specific changes or approves the artifacts with actual respondent/source/rationale. The meeting's date, time, Zoom format and full-team attendance are recorded. Iris's discussion minutes/decisions remain pending. Meetings are scheduled as needed, based on project needs and team availability. Revised artifact approval remains a separate pending gate.
 
 **Handoff after approval:** Xiaolong records corrected Inception complete through Units Generation and the STOP before Construction; follow the Issue #9 Ready sequence. Lawrence integrates existing stage PRs in order, Iris prepares the final README against the merged result, and the team completes final repository/submission checks. The independently developed prototype stays isolated. No application code or Construction is authorized here.
