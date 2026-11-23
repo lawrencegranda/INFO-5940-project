@@ -170,7 +170,7 @@ Optional security and resiliency baseline extensions remain disabled according t
 
 ### Actual direction and limits
 
-Xiaolong reported: "our team has settled on doing Ask and local MCP tell us what we need to do next according to the Issue" and then instructed: "ok go on" after the existing-branch Step 2 approach was explained. This authorizes drafting and reconciling that approach. It does not establish a meeting date, attendance, independent teammate votes, final model selection or acceptance of these unseen revised artifacts.
+The November 23 scope amendment includes local Ask and local MCP. The corrective approach generates and reconciles the amended artifacts on the existing branch for team review. Final model selection and approval of the revised artifacts remain pending.
 
 The earlier bounded story-amendment prompt was withdrawn after Xiaolong clarified that he was asking about prerequisites; no option was selected. That prompt's lack of approval must not be replaced with a fabricated answer. The current scope instruction is separate and supersedes its no-Ask proposal.
 
