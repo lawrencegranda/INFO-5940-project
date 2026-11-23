@@ -26,6 +26,6 @@ C) Other. State the specific decision and rationale to record.
 
 ## Separate submission evidence
 
-The rubric also requires a dedicated full-team problem-discussion meeting. Its actual date, format and attendees, plus the confirmed working cadence, remain to be supplied. An asynchronous artifact approval or driver-reported product decision alone does not establish that meeting occurred. Final model/embedding selection, unadopted Jev/media proposals and proposed module leads remain accurately described future choices; do not invent answers to close this gate.
+Xiaolong confirmed the full-team project discussion took place on November 23, 2026, at 10:00 AM EST on Zoom, with all five members. The [meeting record](step2-review-package.md#12-confirmed-meeting-metadata-and-decision-evidence) preserves the source. Iris will supply the discussion minutes and actual decisions; the recurring cadence remains to be confirmed. That earlier meeting and the later Ask/local MCP confirmation do not automatically approve the revised artifacts in this prompt. Final model/embedding selection, unadopted Jev/media proposals and proposed module leads remain accurately described future choices; do not invent answers to close this gate.
 
 After actual approval, record the corrected Inception status and follow Issue #9's Ready/ordered-merge sequence. This prompt does not itself mark PRs Ready, merge documents, submit the assignment or authorize application code.
