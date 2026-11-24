@@ -13,34 +13,37 @@ Cornell University · **INFO 5940: Special Topics in Information Science (AI Cha
 | --- | --- | --- | --- |
 | Lawrence Granda Zarzuela | `lg626` | [`lawrencegranda`](https://github.com/lawrencegranda) | Claude Code, Codex, Cursor, Antigravity (`agy`) |
 | Jiaxin (Iris) Li | `jl2726` | [`irisli0926`](https://github.com/irisli0926) | Claude Code, Codex |
-| Xiaolong Lin | `xl2333` | [`XiaolongLin`](https://github.com/XiaolongLin) | Claude Code, Codex |
-| Safiullah Safdariyan | `ss3322` | [`safi902`](https://github.com/safi902) | TBD |
+| Xiaolong Lin | `xl2333` | [`xiaolonglin1124-bit`](https://github.com/xiaolonglin1124-bit) | Claude Code, Codex |
+| Safiullah Safdariyan | `ss3322` | [`safi902`](https://github.com/safi902) | Not yet reported; confirm for the final README |
 | Chloe Wang | `sw2322` | [`chloeshixuanwang-bit`](https://github.com/chloeshixuanwang-bit) | Claude Code, Codex |
 
 ---
 
+## Course Copilot
+
+**Status: Inception complete through Units Generation; STOP before Construction.** [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) on November 23 records acceptance of the revised artifacts, local Ask/read-only local MCP MVP and documented deferrals. Historical approvals remain preserved. The existing PRs proceed to the Ready/ordered-merge handoff in Issue #9. Construction and the separately developed prototype stay outside this milestone branch.
+
 ## 1. Problem & Rationale for Using LLMs
 
-> **[TBD after team alignment meeting]** — Summarize the problem our product addresses, target users, and why an LLM is well-suited to solve it.
+Course materials are scattered across Canvas, Gradescope, EdStem, web pages and PDFs, often behind student logins. Uploading everything into a chat creates context overload, while flat retrieval can miss an instructor's later deadline update. **Course Copilot** is a private local multi-course library with course-grounded **Ask** and **read-only local MCP**. Students save authorized materials, ask questions and inspect the exact saved evidence supporting an answer. Student notes and unknown publishers cannot supersede instructor instructions merely because they were saved later.
 
 ## 2. Planned LLM Integration
 
-> **[TBD after team alignment meeting]** — Detail how LLM capabilities power the product, which features depend on them, planned agent/tool patterns, and the planned model/provider (e.g., local via Ollama or hosted API).
+A Chrome extension saves accessible course pages, files and selected embedded resources with originals, source identity, dates, extracted text and processing status. A local model supports organization, summaries, structured fact extraction and grounded Ask. **Ollama with `gemma3:4b`** is the initial candidate; compare suitable Qwen/DeepSeek candidates and choose embeddings during authorized early Construction, without claiming benchmark results now. Ask uses bounded local retrieval, validates citations and reports insufficient/conflicting evidence or model failure honestly. **[Jev from TypeSafe AI](https://github.com/TypeSafeAI/typesafe-playground)** is a typed-decision model/API retained for later classification/routing/reranking with minimal-payload permission controls. It is deferred beyond the current MVP; Ask uses the local path. Source identity, immutable versions and precedence depend on explicit evidence/rules.
 
 ## 3. Project Scope & Feasibility
 
-> **[TBD after team alignment meeting]** — Define what the finished MVP will do by the December 16 final project deadline and why the scope is meaningful yet achievable.
+The December 16 MVP targets explicit capture from the three LMS sites and ordinary sites; PDF/local import; native-text page/PDF extraction with preserved originals and explicit gaps; multi-course organization; source-linked summaries/relations; version history, supported updates and unresolved conflicts; hybrid search; **local course Ask**; and **read-only local MCP demonstrated with Codex CLI**. The normal UI/Ask journey requires no terminal. Ask retains per-course progress while navigating within the running app and provides retrieval-only evidence when the local model is unavailable. Local storage, ingestion, Ollama and MCP run on the student's laptop, with no deployed server required. Native authenticated capture remains a delivery risk: failures are visible and manual import is offered. Jev integration, scan/image OCR, advanced math/diagram recognition, audio/video processing and remote assistant integration remain planned later work, outside current MVP acceptance. Automatic LMS synchronization/login, shared accounts and arbitrary autonomous actions remain excluded behaviors. Remote ChatGPT/hosted MCP is a deferred integration, with no later date committed.
+
+The approved corrective artifact catalog contains **16 functional requirements, seven non-functional requirements, 26 stories, 13 components, five logical services and one integrated unit with nine modules**. The six MCP tools are unchanged. See the [requirements](aidlc-docs/inception/requirements/requirements.md), [vision](docs/vision.md), [technical environment](docs/technical-environment.md) and [review package](aidlc-docs/inception/reviews/step2-review-package.md). These are the retained design catalog, not a claim that every deferred capability ships in the MVP. See the [MVP and later-work allocation](aidlc-docs/inception/requirements/mvp-scope.md).
 
 ## 4. Collaboration Plan
 
-- **Meetings**: *[TBD — add meeting cadence and in-person / Zoom split after team kickoff]*
-- **Async Communication**: Team group chat + GitHub Draft PR review comments.
-- **Inception Workflow (One Draft PR per Gate — Single-Writer Rule)**:
-  1. **Take the baton**: `git pull origin main`, create one stage branch (e.g., `inception/01-requirements`), and immediately open a **Draft PR** on GitHub. Only one Inception Draft PR may be open at a time.
-  2. **Push questions/drafts**: Run the active AI-DLC stage and push the generated `*-questions.md` or artifact to the Draft PR.
-  3. **Async team review**: Teammates review asynchronously and leave answers, critiques, and pushback directly as PR comments.
-  4. **Synthesize & merge**: The driver's agent reads the PR comments (`gh pr view --comments`), updates the AI-DLC stage and `aidlc-docs/audit.md`, and once the team approves, merges the PR to `main` to release the baton.
-- **Construction Workflow (Final Project)**: After Inception completes Units Generation, teammates work in parallel on feature branches mapped to individual Units of Work.
+- **Team members and coding agents:** See the team table above; the group can use multiple coding agents but must follow the same pinned AI-DLC v1.0.1 rules.
+- **Project discussion meeting:** November 23, 2026, 10:00–10:10 AM EST (America/New_York), on Zoom, with all five members: Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. [Meeting minutes](aidlc-docs/inception/reviews/meeting-minutes-2026-11-23.md) record the MVP direction and follow-up items. Meetings are scheduled as needed, based on project needs and team availability. The meeting record does not approve the later revised artifacts automatically.
+- **Async:** Team group chat and GitHub Draft PR comments. The stage driver incorporates team feedback and verifies explicit approvals before merging any stage PR.
+- **Current workflow:** Xiaolong records the approval on the existing `inception/05-units-generation` / PR #8 branch and completes the Ready transitions. Lawrence then integrates PRs #5–#8 in order and the established integration branch into `main`; Iris prepares the final README against that updated result. Follow [Issue #9](https://github.com/lawrencegranda/INFO-5940-project/issues/9); no new branch/PR is needed for this pass.
+- **Construction:** Stop before Construction for the November 24 checkpoint. Later, confirm proposed module leads, complete the selected design stages and integrate/test by December 16. The prototype remains separate.
 
 ---
 

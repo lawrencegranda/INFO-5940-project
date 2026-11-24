@@ -1,0 +1,103 @@
+# AI-DLC State Tracking
+
+## Project Information
+
+- **Project**: Course Copilot
+- **AI-DLC Version**: 1.0.1
+- **Project Type**: Greenfield
+- **Start Date**: 2026-11-19T17:28:00Z
+- **Current Phase**: INCEPTION
+- **Current Stage**: Corrected Inception complete through Units Generation; STOP before Construction; PRs #5–#8 Ready; ordered integration pending
+- **Historical Inception Completed At**: 2026-11-20T04:20:19Z
+- **Working Integration Branch**: `candidate/course-copilot`
+- **Active Stage Branch**: `inception/05-units-generation`
+- **Latest Stage Review**: [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386), `lawrencegranda`, 2026-11-23T22:37:29Z, explicitly accepts the revised Inception artifacts, local Ask/read-only local MCP MVP and documented deferrals. No other reviewer is recorded as approving.
+- **Prior Stage Dependency**: Historical approvals remain in the audit. Chloe, Iris, Safi and Lawrence supplied their assigned substantive review inputs; the corrective pass reconciles them, and Lawrence’s separate revised-artifact approval closes Inception through Units Generation.
+- **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
+
+## Workspace State
+
+- **Existing Application Code**: No
+- **Programming Languages Present**: None in application source; TypeScript proposed for Construction
+- **Build System Present**: No application build system yet; Node.js/npm proposed
+- **Project Structure**: Greenfield documentation and AI-DLC rule files
+- **Reverse Engineering Needed**: No (Greenfield)
+- **Workspace Root**: Root of `lawrencegranda/INFO-5940-project`
+
+## Code Location Rules
+
+- **Application Code**: Repository workspace root and application packages only; NEVER inside `aidlc-docs/`.
+- **Documentation**: Generated AI-DLC artifacts under `aidlc-docs/`; project input documents under `docs/`.
+- **No Secrets**: No LMS session tokens, credentials, or API secrets in version control or documentation.
+- **Structure Patterns**: Follow `.aidlc-rule-details/construction/code-generation.md` when Construction is authorized.
+
+## Extension Configuration
+
+| Extension | Enabled | Decided At |
+|---|---|---|
+| INFO 5940 Course Rubric (mandatory) | Yes | Workflow start; always enforced |
+| Security Baseline (optional) | No | Requirements Analysis, Q41 = B |
+| Resiliency Baseline (optional) | No | Requirements Analysis, Q42 = B |
+| Property-Based Testing (optional) | Yes (Partial) | Requirements Analysis, Q43 = B |
+
+**Property-Based Testing scope:** Partial option B: pure transformations, serialization round trips, and versioning invariants.
+
+## Historical Stage Progress (before the corrective pass)
+
+### INCEPTION PHASE
+
+- [x] **Workspace Detection** — Greenfield repository verified; rule files active; reverse engineering skipped (2026-11-19T17:28:00Z).
+- [x] **Reverse Engineering** — SKIPPED (Greenfield).
+- [x] **Requirements Analysis** — Vision, technical environment, 43 verification questions, and 8 follow-up clarifications reconciled; decision register locked and requirements specification (`FR-01`–`FR-15`, `NFR-01`–`NFR-07`) approved on 2026-11-19T19:26:39Z.
+- [x] **User Stories** — Planning and generated-artifact approvals explicitly recorded; P-01 persona and 25 stories validated in PR #5; approved on 2026-11-20T03:04:34Z.
+- [x] **Workflow Planning** — Execution plan explicitly approved on 2026-11-20T03:18:17Z in PR #6; Application Design selected next; future Construction remains deferred.
+- [x] **Application Design** — Five mandatory artifacts, twelve components and four logical services explicitly approved on 2026-11-20T03:43:36Z in PR #7.
+- [x] **Units Generation** — Plan and all three generated artifacts separately approved; final approval 2026-11-20T04:20:19Z in PR #8. U-01/nine modules cover all 25 stories, 15 FRs and seven NFRs.
+
+### CONSTRUCTION PHASE
+
+- [ ] **Functional Design** — EXECUTE later per unit; deferred.
+- [ ] **NFR Requirements** — EXECUTE later per unit; deferred.
+- [ ] **NFR Design** — EXECUTE later per unit; deferred.
+- [ ] **Infrastructure Design** — EXECUTE later with concise laptop-local mapping; deferred.
+- [ ] **Code Generation** — EXECUTE later; deferred.
+- [ ] **Build and Test** — EXECUTE later; deferred.
+
+**Construction is NOT AUTHORIZED at the November 24 milestone.** Stage selection is a future plan, not completion or permission to start.
+
+### OPERATIONS PHASE
+
+- [ ] **Operations** — Out of scope.
+
+## Execution Plan Summary
+
+- **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (historical baseline preserved; November 23 corrective artifacts separately approved).
+- **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
+- **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
+- **Remaining corrective work**: Artifact generation, consistency checks, minutes incorporation and actual approval recording are complete. The existing PR Ready handoff is complete; Lawrence’s ordered merges, Iris’s final README and final submission checks remain separate Issue #9 tasks.
+- **Skipped**: Reverse Engineering (Greenfield; no existing application).
+- **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
+- **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
+- **Risk**: High; real LMS/extraction/model/MCP integrations unverified.
+
+## Current Checkpoint and Handoff
+
+**Current scope:** Focused local course Ask + local read-only MCP. The November 23 [scope amendment](inception/requirements/decision-register.md#november-23-scope-amendment--ask-and-local-mcp) replaces the historical no-chat exclusion for this feature. Remote ChatGPT/hosted MCP is retained as a later integration, outside the current MVP. Coordinated artifacts follow the explicit [MVP/later-work allocation](inception/requirements/mvp-scope.md) and have Lawrence’s separate revised-artifact approval recorded in the current gate.
+
+**Retained catalog:** 16 FRs, seven NFRs, 26 stories, P-01 with synthetic Maya, 13 components and five logical services, U-01/nine internal modules, and the unchanged six MCP tools. Current MVP acceptance covers native HTML/text/PDF, local filing/retrieval, exact evidence and local Ask/MCP. Jev, scan/image OCR, advanced math/diagram recognition, audio/video processing and remote assistant integration remain planned post-MVP work; their IDs/contracts are retained. FR-16/US-26/C-13/S-05 describe local grounded Ask, exact citation validation, visible conflicts/insufficient evidence, per-course navigation continuity and in-flight isolation. Ask has no library-write or hosted-provider capability; external Codex model processing remains a separate boundary.
+
+The [corrective plan](inception/plans/step2-request-changes-plan.md) and [review package](inception/reviews/step2-review-package.md) record actual PR #5–#8/Issue #9 inputs and dispositions, proposed leads, five Open questions and the four web-commit explanations. The withdrawn earlier story question is not an approval. Historical gate answers/audit bytes remain preserved; the old wider local unanswered questionnaire is not silently filled or imposed on this bounded pass.
+
+Technical inputs contain proposed version ranges, the six-tool course scope, a queued capture example and a limited paired deadline function/test. Safi's exact two illustrative tests passed independently, while additional synthetic probes exposed authority/chain limitations; the draft explains those limits. Contract/example checks validate documentation only, not model performance, actual source capture or product acceptance. Jev and advanced media requirements remain in the post-MVP backlog. C-08 and deferred adapters are not part of the MVP composition, and their success tests do not block MVP acceptance. Original preservation, honest status and current local fallback still apply. Final model/embedding/OCR choices and measured budgets belong to later authorized design/Construction.
+
+**Delivery-allocation publication:** The 25-file phase-aware package was published on existing PR #8 through xiaolonglin1124-bit. Byte-for-byte comparison at f5ee67fad2e003bd3900cf58d6e01cd4c70cee6d found zero mismatches; all eight publication commits use that account. The retained feature catalog and current-MVP acceptance are consistent. At that earlier checkpoint, the revised gate was pending. The minutes and later actual approval are now incorporated; no Construction is authorized.
+
+**Earlier publication checkpoint:** The 25-file corrective package was published through the verified xiaolonglin1124-bit browser session in eight commits on the existing PR #8 branch. Fetch and byte-for-byte comparison at remote c1202512668fea2d22d0154b466b830bae1174c6 found zero mismatches; all eight commit authors are xiaolonglin1124-bit. This state/audit/checklist follow-up records that observed result and remains review-only. No new branch/PR, Ready transition, merge or prototype integration. Other-account command-line/connector credentials were not used for writes. At that earlier checkpoint, observed PR metadata was #5–#7 Draft and #8 non-Draft; all were unmerged and revised-artifact approval was pending.
+
+**Meeting details:** November 23, 2026, 10:00–10:10 AM EST (America/New_York), on Zoom, with Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. [Iris's published minutes](inception/reviews/meeting-minutes-2026-11-23.md) are incorporated, including the Ask/local-MCP direction and separate follow-up confirmations. Product scope remains Ask + local MCP.
+
+**Next handoff:** PRs #5–#8 are non-Draft, unmerged and mergeable as checked at 2026-11-23T22:56:30Z. Lawrence performs ordered merge-commit integration. The actual approval is recorded in [the review gate](inception/reviews/step2-approval.md). Final model selection, runtime benchmarks and proposed module-lead acceptance remain future work; they do not reopen the approved Inception gate.
+
+**Handoff:** Corrected Inception is complete through Units Generation. STOP before Construction. Xiaolong has recorded the approval and completed Ready transitions; Lawrence integrates #5 → #6 → #7 → #8 with merge commits, then candidate/course-copilot into main. Iris prepares the final README and the team completes final verification/submission. The prototype remains separate.
+
+**Verified Ready handoff (2026-11-23T22:56:30Z):** PRs #5, #6 and #7 were changed from Draft to Ready through xiaolonglin1124-bit; #8 was already non-Draft. All four PR descriptions now link the actual revised-artifact approval and ordered integration sequence. GitHub metadata reports all four unmerged and mergeable. The 26-file approval/status publication at `2b8a9eef52e8a9e1c23a6fa6c6f7a615bbd42994` exactly matches the checked local files and preserves the audit prefix. Xiaolong’s Step 2 is complete; Lawrence’s Step 3 integration remains pending.
