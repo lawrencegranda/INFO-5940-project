@@ -7,13 +7,20 @@
 - **Project Type**: Greenfield
 - **Start Date**: 2026-11-19T17:28:00Z
 - **Current Phase**: INCEPTION
-- **Current Stage**: Corrected Inception complete through Units Generation; STOP before Construction; PRs #5–#8 Ready; ordered integration pending
+- **Current Stage**: Inception complete through Units Generation; integration into main complete; STOP before Construction
 - **Historical Inception Completed At**: 2026-11-20T04:20:19Z
-- **Working Integration Branch**: `candidate/course-copilot`
-- **Active Stage Branch**: `inception/05-units-generation`
+- **Working Integration Branch**: `main` (candidate integrated through PR #10)
+- **Active Stage Branch**: None; Inception is complete and Construction has not started
 - **Latest Stage Review**: [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386), `lawrencegranda`, 2026-11-23T22:37:29Z, explicitly accepts the revised Inception artifacts, local Ask/read-only local MCP MVP and documented deferrals. No other reviewer is recorded as approving.
 - **Prior Stage Dependency**: Historical approvals remain in the audit. Chloe, Iris, Safi and Lawrence supplied their assigned substantive review inputs; the corrective pass reconciles them, and Lawrence’s separate revised-artifact approval closes Inception through Units Generation.
 - **Course Checkpoint**: Inception through Units Generation due 2026-11-24T23:59:00-05:00; STOP before Construction
+
+## Completed Inception Integration
+
+- [x] [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8) included the commits from PRs #5–#7 and merged into `candidate/course-copilot` at 2026-11-24T00:35:07Z.
+- [x] [PR #10](https://github.com/lawrencegranda/INFO-5940-project/pull/10) merged `candidate/course-copilot` into `main` at 2026-11-24T00:50:15Z.
+
+The integration used PR #8 to bring in the earlier stage commits, followed by PR #10 into `main`. Inception is complete through Units Generation. The workflow remains stopped before Construction.
 
 ## Workspace State
 
@@ -74,7 +81,7 @@
 - **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (historical baseline preserved; November 23 corrective artifacts separately approved).
 - **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
 - **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
-- **Remaining corrective work**: Artifact generation, consistency checks, minutes incorporation and actual approval recording are complete. The existing PR Ready handoff is complete; Lawrence’s ordered merges, Iris’s final README and final submission checks remain separate Issue #9 tasks.
+- **Remaining milestone work**: Corrective Inception documentation and integration into `main` are complete. Iris’s final README and the team’s final verification/submission remain separate Issue #9 tasks.
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
 - **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
@@ -96,8 +103,8 @@ Technical inputs contain proposed version ranges, the six-tool course scope, a q
 
 **Meeting details:** November 23, 2026, 10:00–10:10 AM EST (America/New_York), on Zoom, with Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. [Iris's published minutes](inception/reviews/meeting-minutes-2026-11-23.md) are incorporated, including the Ask/local-MCP direction and separate follow-up confirmations. Product scope remains Ask + local MCP.
 
-**Next handoff:** PRs #5–#8 are non-Draft, unmerged and mergeable as checked at 2026-11-23T22:56:30Z. Lawrence performs ordered merge-commit integration. The actual approval is recorded in [the review gate](inception/reviews/step2-approval.md). Final model selection, runtime benchmarks and proposed module-lead acceptance remain future work; they do not reopen the approved Inception gate.
+**Next handoff:** Inception integration into `main` is complete through PRs #8 and #10. Iris prepares the final README and the team completes final verification/submission under Issue #9. The actual approval remains recorded in [the review gate](inception/reviews/step2-approval.md). Final model selection, runtime benchmarks and proposed module-lead acceptance remain future work; they do not reopen the approved Inception gate.
 
-**Handoff:** Corrected Inception is complete through Units Generation. STOP before Construction. Xiaolong has recorded the approval and completed Ready transitions; Lawrence integrates #5 → #6 → #7 → #8 with merge commits, then candidate/course-copilot into main. Iris prepares the final README and the team completes final verification/submission. The prototype remains separate.
+**Handoff:** Corrected Inception is complete through Units Generation and integrated into `main`. PR #8 included the commits from PRs #5–#7, and PR #10 merged the candidate into `main`. STOP before Construction. The final README and final verification/submission follow Issue #9. The prototype remains separate.
 
-**Verified Ready handoff (2026-11-23T22:56:30Z):** PRs #5, #6 and #7 were changed from Draft to Ready through xiaolonglin1124-bit; #8 was already non-Draft. All four PR descriptions now link the actual revised-artifact approval and ordered integration sequence. GitHub metadata reports all four unmerged and mergeable. The 26-file approval/status publication at `2b8a9eef52e8a9e1c23a6fa6c6f7a615bbd42994` exactly matches the checked local files and preserves the audit prefix. Xiaolong’s Step 2 is complete; Lawrence’s Step 3 integration remains pending.
+**Historical Ready handoff (2026-11-23T22:56:30Z):** PRs #5, #6 and #7 were changed from Draft to Ready through xiaolonglin1124-bit; #8 was already non-Draft. At that checkpoint, the PR descriptions linked the revised-artifact approval and planned integration sequence, and GitHub metadata reported all four unmerged and mergeable. The 26-file approval/status publication at `2b8a9eef52e8a9e1c23a6fa6c6f7a615bbd42994` matched the checked local files and preserved the audit prefix. Step 2 was complete and Step 3 was pending at that time; the completed integration is recorded above.
