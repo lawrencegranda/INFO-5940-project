@@ -1,20 +1,22 @@
 # Course Copilot — Decision register (AI-DLC v1.0.1)
 
-**State:** All 43 requirement-question decisions resolved, eight clarifications explicitly accepted, and three further refinements integrated. **Requirements Analysis approved on 2026-11-19T19:26:39Z**, with full approval preserved in `aidlc-docs/audit.md`. This document is part of the `candidate/course-copilot` Inception track.
+**State:** The original 43 decisions, eight accepted clarifications and baseline approval on 2026-11-19T19:26:39Z are historical records below. The November 23 Ask/local-MCP amendment is separately recorded at the end; revised artifacts were separately approved in [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) on PR #8. Historical answer cells are not rewritten.
 
 ## Product intent and non-negotiable distinctions
 
-- This is a **private, multi-course second-brain / wiki-like knowledge provider**, not a second chatbot.
+- This is a **private, multi-course knowledge library** with focused local course Ask and read-only local MCP. Grounded source/version-aware retrieval remains its purpose; autonomous general-purpose actions are excluded.
 - Its differentiator is **structured, source-linked, version-aware retrieval**, rather than uploading entire course corpora or using only flat RAG.
 - **Original document/snapshot, source URL, captured time, publication/effective time when known, and immutable observed versions** are separate from generated descriptions and indexes.
-- **Full-content capture and selective text extraction:** capture every accessible component of the selected page/file, including embedded documents or media when fetchable with permission; derive indexed text via native extraction, OCR or transcription when needed. Maintain explicit per-item extraction status. Inaccessible media are not represented as fully extracted.
+- **Phased extraction:** The current MVP captures/extracts authorized native-text pages and PDFs and preserves supported originals with explicit status. Scan/image OCR, advanced math/diagram recognition and audio/video processing remain in the later-work backlog. The historical broad capture decisions below are retained with this explicit delivery-phase amendment.
 - **Calm freshness UX:** ordinary documents show source URL and capture date in details, without blanket stale-warning badges. Flag only observed conflicts, known supersessions, extraction gaps, or evidence of meaningful changes; never claim live LMS freshness without checking.
 - **Latest applicable** is determined by source relationships and precedence, not just the newest crawl/capture timestamp. Manual ingestion cannot guarantee that an unsaved update is known.
 - Retrieval is **progressive**: ranked compact candidates, then explicit source fetch, to control context size.
 - **No silent contradiction resolution** where the evidence does not establish authority. Suppressing or erasing old content is not allowed.
-- **Read-only local MCP** initially; external chat happens in the student's own assistant. No cloud deployment or sharing required.
+- **Read-only local MCP** remains the external integration, alongside local course Ask. External-host model processing is a separate privacy boundary. No cloud deployment or sharing is required.
 
-## Answer-by-answer traceability
+## Historical answer-by-answer traceability
+
+The original Q34 no-chat answer below is superseded only by the explicit November 23 amendment. The remaining baseline choices stand unless separately changed.
 
 | Q | User answer (verbatim) | Reconciled selection | Status and decision |
 |---:|---|---|---|
@@ -64,6 +66,8 @@
 
 ## Final reconciliation — clarifications closed
 
+This section records the historical baseline. D-46 and the current delivery allocation phase Jev and advanced media work beyond the MVP while retaining the requirements.
+
 - **Q14:** Original selection C superseded by user approval of editable metadata (original option B). AI suggestions remain correctable; immutable originals are not rewritten.
 - **Q17:** Graph-like typed relationships are required; a full open-ended knowledge graph and dedicated graph database are not required in this MVP.
 - **Q18:** Re-capture uses source ID/normalized URL and content hash. Semantic matching proposes related or duplicate links but never silently merges.
@@ -82,11 +86,42 @@
 
 ## Scope and schedule warning
 
-The committed breadth (three authenticated LMS sites + arbitrary internet sources + documents/images/math/embedded media) presents the largest December 16 delivery risk. Keep the breadth requirement visible and decide the per-source/per-format minimum acceptance test. Do not quietly reduce it to a single Canvas-only integration.
+Current MVP delivery risks include native capture across the three authenticated LMS sites, text/PDF evidence fidelity and local Ask/MCP integration. The broader OCR/math/media/Jev catalog is retained for later iterations under D-46; those deferred successes are not December 16 MVP acceptance gates. Keep both current and later per-format evidence obligations explicit.
 
 ## Workflow compliance
 
 - User-selected optional extensions: **Security No (Q41), Resiliency No (Q42), Property-Based Testing Partial (Q43)**.
 - Mandatory course rubric extension remains enforced.
-- All 43 original questions and eight clarifications are resolved. **Requirements Analysis was explicitly approved at 2026-11-19T19:26:39Z (2:26:39 PM EST)** and is marked complete in `aidlc-docs/aidlc-state.md`, with the verbatim approval recorded in `aidlc-docs/audit.md`. User Stories is the next stage.
-- Course Copilot Requirements Analysis artifacts are tracked on `candidate/course-copilot` (separate from `main` while candidate proposals are evaluated).
+- All 43 original questions and eight clarifications were resolved at baseline approval on 2026-11-19T19:26:39Z. Subsequent historical stage approvals remain in the audit; the November 23 revised artifacts have their own approval recorded below.
+- This corrective pass uses existing `inception/05-units-generation` / PR #8 and the established `candidate/course-copilot` integration branch. No new branch or PR is required.
+
+## November 23 scope amendment — Ask and local MCP
+
+**Scope decision:** Include focused local course Ask and retain read-only local MCP. The earlier product-scope decision is separate from [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) of the revised Inception artifacts at 2026-11-23T22:37:29Z.
+
+| ID | Current disposition | Effect |
+| --- | --- | --- |
+| D-44 | Include focused local course Ask and retain local read-only MCP. | Supersedes historical Q34 for this bounded feature; revise FR-14 and add FR-16/US-26, C-13/S-05. UI Ask needs no terminal; the Codex integration remains a required technical path. |
+| D-45 | Generate coordinated corrective artifacts for review on the existing branch. | Requirements, stories, planning, design and units are revised together. Artifact approval is now recorded below. Ready transitions and ordered integration are the current handoff; Construction remains stopped. |
+
+Ask answers from bounded saved course evidence through local retrieval and generation, validates exact citations, exposes uncertainty/conflicts and preserves per-course progress during app navigation. General autonomous actions, remote ChatGPT integration and hosted MCP remain excluded. Local MCP does not guarantee that an external host's model runs locally.
+
+The final model/embedding choice remains an early-Construction validation task with `gemma3:4b` as the initial candidate. D-46 below retains Jev and advanced media features for later delivery; remembered course mapping and proposed module-lead acceptance remain separate Open questions. The [meeting minutes](../reviews/meeting-minutes-2026-11-23.md) are incorporated. [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) accepts the revised artifacts and documented deferrals, including the existing evaluation approach. Final model selection, proposed leads, integration and the final README retain their separate status.
+
+## November 23 delivery allocation — retained deferred features
+
+| ID | Decision | Effect |
+| --- | --- | --- |
+| D-46 | Keep Jev and advanced media capabilities in the product plan, and defer implementation beyond the current MVP. | Local Ask + local MCP and their native-text/PDF evidence library form the current MVP. Jev classification/routing/reranking, scan/image OCR, advanced math/diagram recognition, and audio/video processing remain planned later work. Remote ChatGPT/hosted MCP is also a deferred integration. |
+
+The [delivery allocation](mvp-scope.md) supersedes the earlier requirement that all OCR/media/provider paths pass current MVP acceptance. Existing IDs, stories and design contracts are retained; phase labels distinguish MVP commitments from future capabilities. Preserving an original is not proof that a deferred adapter is implemented. Later work has no committed delivery date. [Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) separately accepts the revised artifacts and documented deferrals. That closes the Inception artifact gate and does not authorize Construction.
+
+## November 23 meeting minutes and remaining confirmation
+
+The [published minutes](../reviews/meeting-minutes-2026-11-23.md) record a 10:00–10:10 AM EST Zoom discussion with all five members. They confirm local Ask and local read-only MCP as the MVP direction, with broader features retained for later consideration.
+
+The minutes explicitly leave the precise feature allocation, local generation/embedding evaluation plan and revised Inception artifacts for separate confirmation. D-46 is the itemized allocation submitted in the current review package; it is not represented as a feature-by-feature approval during that meeting. The [artifact review gate](../reviews/step2-approval.md) covers that allocation and the documented evaluation plan together. No final model, benchmark result, Construction authorization or merge approval is established by the minutes.
+
+## November 23 revised-artifact approval
+
+[Lawrence’s approval](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7115984386) at 2026-11-23T22:37:29Z approves the revised Inception artifacts through Units Generation, including local Ask/read-only local MCP and documented deferrals. This covers the already-published scope and evaluation approach; it does not select a final model, accept proposed module leads or authorize Construction. Only Lawrence is recorded as the approving reviewer. Proceed to Issue #9’s Ready/ordered-merge handoff.
