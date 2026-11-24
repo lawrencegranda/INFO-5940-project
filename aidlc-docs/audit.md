@@ -618,4 +618,3 @@ ok go on
 
 **State Update**: Inception is complete through Units Generation and integration into `main` is complete. Corrected current branch/handoff metadata and marked the earlier Ready checkpoint as historical. The actual integration path was PR #8 followed by PR #10; the earlier stage commits were included through #8.
 **Milestone Boundary**: STOP before Construction. The final README and final verification/submission remain separate Issue #9 tasks.
-**Validation**: Verified merge metadata and Git ancestry; only the two documentation files changed. English additions, relative links, Markdown fences and whitespace checks passed. The original audit prefix and historical stage/Construction records are unchanged. Independent read-only review found no material issue. Property-based testing is not applicable to this documentation-only update.
