@@ -19,6 +19,7 @@
 
 - [x] [PR #8](https://github.com/lawrencegranda/INFO-5940-project/pull/8) included the commits from PRs #5–#7 and merged into `candidate/course-copilot` at 2026-11-24T00:35:07Z.
 - [x] [PR #10](https://github.com/lawrencegranda/INFO-5940-project/pull/10) merged `candidate/course-copilot` into `main` at 2026-11-24T00:50:15Z.
+- [x] [PR #11](https://github.com/lawrencegranda/INFO-5940-project/pull/11) merged the final milestone README into `main` at 2026-11-24T01:28:17Z.
 
 The integration used PR #8 to bring in the earlier stage commits, followed by PR #10 into `main`. Inception is complete through Units Generation. The workflow remains stopped before Construction.
 
@@ -81,7 +82,7 @@ The integration used PR #8 to bring in the earlier stage commits, followed by PR
 - **Plan**: `aidlc-docs/inception/plans/execution-plan.md` (historical baseline preserved; November 23 corrective artifacts separately approved).
 - **Stage slots**: 14 total; 12 selected for lifecycle execution, one skipped, one placeholder. Construction stages repeat as applicable to later approved units.
 - **Completed selected stages**: Workspace Detection, Requirements Analysis, User Stories, Workflow Planning, Application Design, Units Generation.
-- **Remaining milestone work**: Corrective Inception documentation and integration into `main` are complete. Iris’s final README and the team’s final verification/submission remain separate Issue #9 tasks.
+- **Remaining milestone work**: Corrective Inception documentation and integration into `main` are complete. The final README is merged through PR #11; the team’s final verification/submission remain separate Issue #9 tasks.
 - **Skipped**: Reverse Engineering (Greenfield; no existing application).
 - **Future only**: Functional Design, NFR Requirements, NFR Design, Infrastructure Design, Code Generation, Build and Test.
 - **Placeholder**: Operations (production deployment excluded; local demo setup remains required).
@@ -101,10 +102,10 @@ Technical inputs contain proposed version ranges, the six-tool course scope, a q
 
 **Earlier publication checkpoint:** The 25-file corrective package was published through the verified xiaolonglin1124-bit browser session in eight commits on the existing PR #8 branch. Fetch and byte-for-byte comparison at remote c1202512668fea2d22d0154b466b830bae1174c6 found zero mismatches; all eight commit authors are xiaolonglin1124-bit. This state/audit/checklist follow-up records that observed result and remains review-only. No new branch/PR, Ready transition, merge or prototype integration. Other-account command-line/connector credentials were not used for writes. At that earlier checkpoint, observed PR metadata was #5–#7 Draft and #8 non-Draft; all were unmerged and revised-artifact approval was pending.
 
-**Meeting details:** November 23, 2026, 10:00–10:10 AM EST (America/New_York), on Zoom, with Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. [Iris's published minutes](inception/reviews/meeting-minutes-2026-11-23.md) are incorporated, including the Ask/local-MCP direction and separate follow-up confirmations. Product scope remains Ask + local MCP.
+**Meeting details:** November 23, 2026, 10:00–10:10 AM EST (America/New_York), on Zoom, with Lawrence Granda Zarzuela, Jiaxin (Iris) Li, Xiaolong Lin, Safiullah Safdariyan and Chloe Wang. [Iris's original and expanded minutes](inception/reviews/meeting-minutes-2026-11-23.md) are incorporated. The [expanded record](https://github.com/lawrencegranda/INFO-5940-project/pull/8#issuecomment-7119034325) adds fragmented course information, changes/version history, exam-week workload, a dedicated course workspace and the rationale for LLM-supported retrieval and questions. Product scope remains Ask + local MCP; the meeting's direction is separate from the revised-artifact approval.
 
-**Next handoff:** Inception integration into `main` is complete through PRs #8 and #10. Iris prepares the final README and the team completes final verification/submission under Issue #9. The actual approval remains recorded in [the review gate](inception/reviews/step2-approval.md). Final model selection, runtime benchmarks and proposed module-lead acceptance remain future work; they do not reopen the approved Inception gate.
+**Next handoff:** Inception integration into `main` is complete through PRs #8 and #10, and the final README is merged through PR #11. After this documentation follow-up is merged, Iris and Chloe perform the final incognito check and Lawrence submits the repository URL on Canvas under Issue #9. The actual approval remains recorded in [the review gate](inception/reviews/step2-approval.md). Final model selection, runtime benchmarks and proposed module-lead acceptance remain future work; they do not reopen the approved Inception gate.
 
-**Handoff:** Corrected Inception is complete through Units Generation and integrated into `main`. PR #8 included the commits from PRs #5–#7, and PR #10 merged the candidate into `main`. STOP before Construction. The final README and final verification/submission follow Issue #9. The prototype remains separate.
+**Handoff:** Corrected Inception is complete through Units Generation and integrated into `main`. PR #8 included the commits from PRs #5–#7, PR #10 merged the candidate into `main`, and PR #11 merged the final README. STOP before Construction. Final verification/submission remain under Issue #9. The prototype remains separate.
 
 **Historical Ready handoff (2026-11-23T22:56:30Z):** PRs #5, #6 and #7 were changed from Draft to Ready through xiaolonglin1124-bit; #8 was already non-Draft. At that checkpoint, the PR descriptions linked the revised-artifact approval and planned integration sequence, and GitHub metadata reported all four unmerged and mergeable. The 26-file approval/status publication at `2b8a9eef52e8a9e1c23a6fa6c6f7a615bbd42994` matched the checked local files and preserved the audit prefix. Step 2 was complete and Step 3 was pending at that time; the completed integration is recorded above.
